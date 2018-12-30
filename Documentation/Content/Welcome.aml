@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="b2b7a19b-f506-4b95-91c1-f6cb4730e7a4" revisionNumber="1">
+  <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <introduction>
+      <para>This is the documentation Hgk.Zero, a library from hgk.us.</para>
+    </introduction>
+
+    <section>
+      <title>Getting Started</title>
+      <content>
+        <para>There isn't much to say here, yet.</para>
+      </content>
+    </section>
+
+    <relatedTopics>
+      <link xlink:href="7abd5354-7a07-45a6-8909-1b613b346385" />
+    </relatedTopics>
+  </developerConceptualDocument>
+</topic>
