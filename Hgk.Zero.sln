@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hgk.Zero", "Hgk.Zero\Hgk.Ze
 EndProject
 Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "Documentation", "Documentation\Documentation.shfbproj", "{C32D912F-13FB-4DD0-9234-581B6315D7A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hgk.Zero.Tests", "Hgk.Zero.Tests\Hgk.Zero.Tests.csproj", "{A9E82827-AC98-4FAE-9EC2-A883452C7A8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hgk.Zero.Tests", "Hgk.Zero.Tests\Hgk.Zero.Tests.csproj", "{A9E82827-AC98-4FAE-9EC2-A883452C7A8E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,9 +20,7 @@ Global
 		{16CAFF6E-EFCF-4F79-8CF8-E03DA0710DC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{16CAFF6E-EFCF-4F79-8CF8-E03DA0710DC6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C32D912F-13FB-4DD0-9234-581B6315D7A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C32D912F-13FB-4DD0-9234-581B6315D7A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C32D912F-13FB-4DD0-9234-581B6315D7A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C32D912F-13FB-4DD0-9234-581B6315D7A8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A9E82827-AC98-4FAE-9EC2-A883452C7A8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A9E82827-AC98-4FAE-9EC2-A883452C7A8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9E82827-AC98-4FAE-9EC2-A883452C7A8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
