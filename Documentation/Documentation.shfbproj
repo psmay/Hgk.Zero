@@ -43,7 +43,8 @@
     <Preliminary>False</Preliminary>
     <SdkLinkTarget>Blank</SdkLinkTarget>
     <DocumentationSources>
-      <DocumentationSource sourceFile="..\Hgk.Zero\Hgk.Zero.csproj" xmlns="" />
+      <DocumentationSource sourceFile="..\Hgk.Zero\bin\Release\netstandard2.0\Hgk.Zero.dll" />
+      <DocumentationSource sourceFile="..\Hgk.Zero\Hgk.Zero.xml" />
     </DocumentationSources>
     <NamingMethod>MemberName</NamingMethod>
     <NamespaceSummaries>
