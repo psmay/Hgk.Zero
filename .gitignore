@@ -265,4 +265,5 @@ __pycache__/
 *.pyc
 
 # Generated docs
+/Hgk.Zero/Hgk.Zero.xml
 /Documentation/Help
