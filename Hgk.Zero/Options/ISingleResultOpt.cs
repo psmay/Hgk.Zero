@@ -13,8 +13,8 @@ namespace Hgk.Zero.Options
     /// <para>
     /// <see cref="ISingleResultOpt"/> is a supertype of <see cref="ISingleResultOpt{T}"/>, the type
     /// returned by the single-element filter operations <see
-    /// cref="EnumerableToOpt.SingleToOpt{TSource}(IEnumerable{TSource})"/> and <see
-    /// cref="EnumerableToOpt.SingleToOpt{TSource}(IEnumerable{TSource}, Func{TSource, bool})"/>. If
+    /// cref="EnumerableToOpt.WhereSingle{TSource}(IEnumerable{TSource})"/> and <see
+    /// cref="EnumerableToOpt.WhereSingle{TSource}(IEnumerable{TSource}, Func{TSource, bool})"/>. If
     /// such an operation finds zero elements or one element, a single-result option behaves the same
     /// as an ordinary <see cref="IOpt"/>. However, if such an operation finds more than one element,
     /// it behaves differently:
@@ -98,8 +98,8 @@ namespace Hgk.Zero.Options
     /// <remarks>
     /// <para>
     /// <see cref="ISingleResultOpt{T}"/> is the type returned by the single-element filter
-    /// operations <see cref="EnumerableToOpt.SingleToOpt{TSource}(IEnumerable{TSource})"/> and <see
-    /// cref="EnumerableToOpt.SingleToOpt{TSource}(IEnumerable{TSource}, Func{TSource, bool})"/>. If
+    /// operations <see cref="EnumerableToOpt.WhereSingle{TSource}(IEnumerable{TSource})"/> and <see
+    /// cref="EnumerableToOpt.WhereSingle{TSource}(IEnumerable{TSource}, Func{TSource, bool})"/>. If
     /// such an operation finds zero elements or one element, a single-result option behaves the same
     /// as an ordinary <see cref="IOpt{T}"/>. However, if such an operation finds more than one
     /// element, it behaves differently:
@@ -150,8 +150,8 @@ namespace Hgk.Zero.Options
     /// </remarks>
     /// <typeparam name="T">The type of value that may be contained in this option.</typeparam>
     /// <seealso cref="ISingleResultOpt"/>
-    /// <seealso cref="EnumerableToOpt.SingleToOpt{TSource}(IEnumerable{TSource})"/>
-    /// <seealso cref="EnumerableToOpt.SingleToOpt{TSource}(IEnumerable{TSource}, Func{TSource, bool})"/>
+    /// <seealso cref="EnumerableToOpt.WhereSingle{TSource}(IEnumerable{TSource})"/>
+    /// <seealso cref="EnumerableToOpt.WhereSingle{TSource}(IEnumerable{TSource}, Func{TSource, bool})"/>
     public interface ISingleResultOpt<out T> : IOpt<T>, ISingleResultOpt
     {
         /// <summary>

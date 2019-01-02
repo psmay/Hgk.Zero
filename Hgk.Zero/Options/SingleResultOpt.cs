@@ -8,8 +8,8 @@ namespace Hgk.Zero.Options
     /// </summary>
     /// <seealso cref="ISingleResultOpt"/>
     /// <seealso cref="ISingleResultOpt{T}"/>
-    /// <seealso cref="Query.EnumerableToOpt.SingleToOpt{TSource}(IEnumerable{TSource})"/>
-    /// <seealso cref="Query.EnumerableToOpt.SingleToOpt{TSource}(IEnumerable{TSource}, Func{TSource, bool})"/>
+    /// <seealso cref="Query.EnumerableToOpt.WhereSingle{TSource}(IEnumerable{TSource})"/>
+    /// <seealso cref="Query.EnumerableToOpt.WhereSingle{TSource}(IEnumerable{TSource}, Func{TSource, bool})"/>
     public static class SingleResultOpt
     {
         /// <summary>

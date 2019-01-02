@@ -27,14 +27,14 @@ namespace Hgk.Zero.Options.Query
         /// name="index"/>, or an empty option if index is out of range.
         /// </returns>
         /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
-        public static IOpt<TSource> ElementAtToOpt<TSource>(this IEnumerable<TSource> source, int index)
+        public static IOpt<TSource> WhereElementAt<TSource>(this IEnumerable<TSource> source, int index)
         {
             if (source == null) throw new ArgumentNullException(nameof(source));
             if (index < 0)
             {
                 return Opt.Empty<TSource>();
             }
-            return Opt.Defer(() => source.ElementAtToOptImmediate(index));
+            return Opt.Defer(() => source.WhereElementAtImmediate(index));
         }
 
         /// <summary>
@@ -54,10 +54,10 @@ namespace Hgk.Zero.Options.Query
         /// if <paramref name="source"/> is empty.
         /// </returns>
         /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
-        public static IOpt<TSource> FirstToOpt<TSource>(this IEnumerable<TSource> source)
+        public static IOpt<TSource> WhereFirst<TSource>(this IEnumerable<TSource> source)
         {
             if (source == null) throw new ArgumentNullException(nameof(source));
-            return Opt.Defer(() => source.FirstToOptImmediate());
+            return Opt.Defer(() => source.WhereFirstImmediate());
         }
 
         /// <summary>
@@ -83,11 +83,11 @@ namespace Hgk.Zero.Options.Query
         /// <exception cref="ArgumentNullException">
         /// <paramref name="source"/> or predicate is <see langword="null"/>.
         /// </exception>
-        public static IOpt<TSource> FirstToOpt<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate)
+        public static IOpt<TSource> WhereFirst<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate)
         {
             if (source == null) throw new ArgumentNullException(nameof(source));
             if (predicate == null) throw new ArgumentNullException(nameof(source));
-            return Opt.Defer(() => source.FirstToOptImmediate(predicate));
+            return Opt.Defer(() => source.WhereFirstImmediate(predicate));
         }
 
         /// <summary>
@@ -107,10 +107,10 @@ namespace Hgk.Zero.Options.Query
         /// <paramref name="source"/> is empty.
         /// </returns>
         /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
-        public static IOpt<TSource> LastToOpt<TSource>(this IEnumerable<TSource> source)
+        public static IOpt<TSource> WhereLast<TSource>(this IEnumerable<TSource> source)
         {
             if (source == null) throw new ArgumentNullException(nameof(source));
-            return Opt.Defer(() => source.LastToOptImmediate());
+            return Opt.Defer(() => source.WhereLastImmediate());
         }
 
         /// <summary>
@@ -136,11 +136,11 @@ namespace Hgk.Zero.Options.Query
         /// <exception cref="ArgumentNullException">
         /// <paramref name="source"/> or predicate is <see langword="null"/>.
         /// </exception>
-        public static IOpt<TSource> LastToOpt<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate)
+        public static IOpt<TSource> WhereLast<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate)
         {
             if (source == null) throw new ArgumentNullException(nameof(source));
             if (predicate == null) throw new ArgumentNullException(nameof(source));
-            return Opt.Defer(() => source.LastToOptImmediate(predicate));
+            return Opt.Defer(() => source.WhereLastImmediate(predicate));
         }
 
         /// <summary>
@@ -175,10 +175,10 @@ namespace Hgk.Zero.Options.Query
         /// Returned single result was resolved as an ordinary option, but <paramref name="source"/>
         /// contained more than one element.
         /// </exception>
-        public static ISingleResultOpt<TSource> SingleToOpt<TSource>(this IEnumerable<TSource> source)
+        public static ISingleResultOpt<TSource> WhereSingle<TSource>(this IEnumerable<TSource> source)
         {
             if (source == null) throw new ArgumentNullException(nameof(source));
-            return SingleResultOpt.Defer(() => source.SingleToOptImmediate());
+            return SingleResultOpt.Defer(() => source.WhereSingleImmediate());
         }
 
         /// <summary>
@@ -220,14 +220,14 @@ namespace Hgk.Zero.Options.Query
         /// Returned single result was resolved as an ordinary option, but <paramref name="source"/>
         /// contained more than one element that satisfies <paramref name="predicate"/>.
         /// </exception>
-        public static IOpt<TSource> SingleToOpt<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate)
+        public static IOpt<TSource> WhereSingle<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate)
         {
             if (source == null) throw new ArgumentNullException(nameof(source));
             if (predicate == null) throw new ArgumentNullException(nameof(source));
-            return SingleResultOpt.Defer(() => source.SingleToOptImmediate(predicate));
+            return SingleResultOpt.Defer(() => source.WhereSingleImmediate(predicate));
         }
 
-        private static Opt<TSource> ElementAtToOptImmediate<TSource>(this IEnumerable<TSource> source, int index)
+        private static Opt<TSource> WhereElementAtImmediate<TSource>(this IEnumerable<TSource> source, int index)
         {
             if (index < 0)
             {
@@ -245,12 +245,12 @@ namespace Hgk.Zero.Options.Query
             {
                 using (var sourceEnumerator = source.GetEnumerator())
                 {
-                    return EnumeratorElementAtToOptImmediate(sourceEnumerator, index);
+                    return EnumeratorWhereElementAtImmediate(sourceEnumerator, index);
                 }
             }
         }
 
-        private static Opt<TSource> EnumeratorElementAtToOptImmediate<TSource>(IEnumerator<TSource> sourceEnumerator, int index)
+        private static Opt<TSource> EnumeratorWhereElementAtImmediate<TSource>(IEnumerator<TSource> sourceEnumerator, int index)
         {
             if (index >= 0)
             {
@@ -269,12 +269,12 @@ namespace Hgk.Zero.Options.Query
             return Opt.Empty<TSource>();
         }
 
-        private static Opt<TSource> EnumeratorFirstToOptImmediate<TSource>(IEnumerator<TSource> sourceEnumerator)
+        private static Opt<TSource> EnumeratorWhereFirstImmediate<TSource>(IEnumerator<TSource> sourceEnumerator)
         {
             return sourceEnumerator.MoveNext() ? Opt.Full(sourceEnumerator.Current) : Opt.Empty<TSource>();
         }
 
-        private static Opt<TSource> EnumeratorLastToOptImmediate<TSource>(IEnumerator<TSource> sourceEnumerator)
+        private static Opt<TSource> EnumeratorWhereLastImmediate<TSource>(IEnumerator<TSource> sourceEnumerator)
         {
             if (sourceEnumerator.MoveNext())
             {
@@ -317,7 +317,7 @@ namespace Hgk.Zero.Options.Query
             }
         }
 
-        private static Opt<TSource> FirstToOptImmediate<TSource>(this IEnumerable<TSource> source)
+        private static Opt<TSource> WhereFirstImmediate<TSource>(this IEnumerable<TSource> source)
         {
             if (source is IOpt<TSource> sourceOpt)
             {
@@ -331,12 +331,12 @@ namespace Hgk.Zero.Options.Query
             {
                 using (var sourceEnumerator = source.GetEnumerator())
                 {
-                    return EnumeratorFirstToOptImmediate(sourceEnumerator);
+                    return EnumeratorWhereFirstImmediate(sourceEnumerator);
                 }
             }
         }
 
-        private static Opt<TSource> FirstToOptImmediate<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate)
+        private static Opt<TSource> WhereFirstImmediate<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate)
         {
             if (source is IOpt<TSource> sourceOpt)
             {
@@ -355,7 +355,7 @@ namespace Hgk.Zero.Options.Query
             }
         }
 
-        private static Opt<TSource> LastToOptImmediate<TSource>(this IEnumerable<TSource> source)
+        private static Opt<TSource> WhereLastImmediate<TSource>(this IEnumerable<TSource> source)
         {
             if (source is IOpt<TSource> sourceOpt)
             {
@@ -369,12 +369,12 @@ namespace Hgk.Zero.Options.Query
             {
                 using (var sourceEnumerator = source.GetEnumerator())
                 {
-                    return EnumeratorLastToOptImmediate(sourceEnumerator);
+                    return EnumeratorWhereLastImmediate(sourceEnumerator);
                 }
             }
         }
 
-        private static Opt<TSource> LastToOptImmediate<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate)
+        private static Opt<TSource> WhereLastImmediate<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate)
         {
             if (source is IOpt<TSource> sourceOpt)
             {
@@ -398,7 +398,7 @@ namespace Hgk.Zero.Options.Query
             }
         }
 
-        private static FixedSingleResultOpt<TSource> SingleToOptImmediate<TSource>(this IEnumerable<TSource> source)
+        private static FixedSingleResultOpt<TSource> WhereSingleImmediate<TSource>(this IEnumerable<TSource> source)
         {
             const bool usingPredicate = false;
 
@@ -430,7 +430,7 @@ namespace Hgk.Zero.Options.Query
             }
         }
 
-        private static FixedSingleResultOpt<TSource> SingleToOptImmediate<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate)
+        private static FixedSingleResultOpt<TSource> WhereSingleImmediate<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate)
         {
             const bool usingPredicate = true;
 
