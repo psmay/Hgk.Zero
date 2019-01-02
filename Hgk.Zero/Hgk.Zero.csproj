@@ -14,7 +14,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>C:\Users\c-pmay\Google Drive\source\repos\Hgk.Zero\Hgk.Zero\Hgk.Zero.xml</DocumentationFile>
+    <DocumentationFile>Hgk.Zero.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
