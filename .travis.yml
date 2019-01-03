@@ -1,3 +1,6 @@
+env:
+- VERSION_SUFFIX=ci-$TRAVIS_BRANCH-$TRAVIS_BUILD_NUMBER
+
 language: csharp
 mono: none
 dotnet: 2.1
@@ -6,6 +9,13 @@ install:
 - dotnet restore
 
 script:
-- dotnet build
+- dotnet build -c Release --version-suffix $VERSION_SUFFIX
 - dotnet test Hgk.Zero.Tests/Hgk.Zero.Tests.csproj
+# pack step not necessary; build is configured to make package
 
+deploy:
+  skip_cleanup: true
+  provider: script
+  script: dotnet nuget push Hgk.Zero/bin/Release/*-$VERSION_SUFFIX.nupkg --api-key $NUGET_API_KEY --source $NUGET_SOURCE
+  on:
+    branch: master
