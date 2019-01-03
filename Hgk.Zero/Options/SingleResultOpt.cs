@@ -27,6 +27,39 @@ namespace Hgk.Zero.Options
             source.ReplaceIfMoreThanOne(Opt.Empty<TSource>());
 
         /// <summary>
+        /// Immediately computes the result of any deferred computation represented by a single
+        /// result option and returns a new single result option representing the final result.
+        /// </summary>
+        /// <typeparam name="TSource">The element type of <paramref name="source"/>.</typeparam>
+        /// <param name="source">A source single result option.</param>
+        /// <returns>
+        /// A single result option representing the final result of any deferred computation
+        /// represented by <paramref name="source"/>.
+        /// </returns>
+        /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
+        public static ISingleResultOpt<TSource> ForceSingleResultOpt<TSource>(this ISingleResultOpt<TSource> source)
+        {
+            if (source == null) throw new ArgumentNullException(nameof(source));
+            return source.ToFixedSingleResultOpt();
+        }
+
+        /// <summary>
+        /// Immediately computes the result of any deferred computation represented by a single
+        /// result option and returns a new single result option representing the final result.
+        /// </summary>
+        /// <param name="source">A source single result option.</param>
+        /// <returns>
+        /// A single result option representing the final result of any deferred computation
+        /// represented by <paramref name="source"/>.
+        /// </returns>
+        /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
+        public static ISingleResultOpt ForceSingleResultOpt(this ISingleResultOpt source)
+        {
+            if (source == null) throw new ArgumentNullException(nameof(source));
+            return source.ToFixedSingleResultOpt();
+        }
+
+        /// <summary>
         /// Converts a single result option to another option based on its contents.
         /// </summary>
         /// <remarks>
