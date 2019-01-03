@@ -18,4 +18,8 @@ deploy:
   provider: script
   script: dotnet nuget push Hgk.Zero/bin/Release/*-$VERSION_SUFFIX.nupkg --api-key $NUGET_API_KEY --source $NUGET_SOURCE
   on:
-    branch: master
+    # Will this even work?
+    branches:
+      only:
+      - master
+      - versioning-alterations
