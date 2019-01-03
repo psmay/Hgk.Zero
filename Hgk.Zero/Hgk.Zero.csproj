@@ -10,7 +10,7 @@
     <VersionSuffix>$(VersionSuffix)</VersionSuffix>
     <Authors>Peter S. May</Authors>
     <Company>hgk.us</Company>
-    <Copyright>© 2018 Peter S. May</Copyright>
+    <Copyright>© 2018-2019 Peter S. May</Copyright>
     <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/psmay/Hgk.Zero</PackageProjectUrl>
     <RepositoryUrl>https://github.com/psmay/Hgk.Zero</RepositoryUrl>
