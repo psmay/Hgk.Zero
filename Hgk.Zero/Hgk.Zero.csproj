@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <PackageId>TestPackageFor.Hgk.Zero</PackageId>
+    <PackageId>Hgk.Zero</PackageId>
     <Title>Hgk.Zero library (test package)</Title>
     <PackageDescription>Hgk.Zero library (test package) long description</PackageDescription>
     <TargetFramework>netstandard2.0</TargetFramework>
