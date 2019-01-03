@@ -56,17 +56,27 @@ namespace Hgk.Zero.Options
         /// <remarks>
         /// <para>This option is equal to another object if:</para>
         /// <list type="bullet">
-        /// <item>the other object is not <see langword="null"/> and</item>
-        /// <item>the other object is an instance of <see cref="IOpt"/> and</item>
         /// <item>
+        /// <description>the other object is not <see langword="null"/> and</description>
+        /// </item>
+        /// <item>
+        /// <description>the other object is an instance of <see cref="IOpt"/> and</description>
+        /// </item>
+        /// <item>
+        /// <description>
         /// either
         /// <list type="bullet">
-        /// <item>this option is empty and the other option is also empty, or</item>
         /// <item>
+        /// <description>this option is empty and the other option is also empty, or</description>
+        /// </item>
+        /// <item>
+        /// <description>
         /// this option is full, the other option is full, and the contained values of this option
         /// and the other option are equal (by <see cref="object.Equals(object, object)"/>).
+        /// </description>
         /// </item>
         /// </list>
+        /// </description>
         /// </item>
         /// </list>
         /// <para>
