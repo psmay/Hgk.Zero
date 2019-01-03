@@ -2,10 +2,11 @@
 
   <PropertyGroup>
     <PackageId>Hgk.Zero</PackageId>
-    <Title>Hgk.Zero library (test package)</Title>
-    <PackageDescription>Hgk.Zero library (test package) long description</PackageDescription>
+    <Title>Enumerable options and a few other things we wish were builtins</Title>
+    <PackageDescription>Utilities for C# (and maybe others) that we wish were builtins, including LINQ-compatible enumerable options</PackageDescription>
+    <PackageIconUrl>https://raw.githubusercontent.com/psmay/Hgk.Zero/master/icon64x64.png</PackageIconUrl>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <VersionPrefix>0.0.1</VersionPrefix>
+    <VersionPrefix>0.0.2</VersionPrefix>
     <VersionSuffix>$(VersionSuffix)</VersionSuffix>
     <Authors>Peter S. May</Authors>
     <Company>hgk.us</Company>
