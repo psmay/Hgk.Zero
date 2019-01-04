@@ -7,6 +7,9 @@ generally don't want to be without. Currently, this consists of:
     which contain zero elements or one element, enabling a more fluent
     alternative to `TryGetValue`/`TryParse` methods and
     `ElementAt`/`First`/`Last`/`Single` filters.
+*   Hgk.Zero.Strings, which makes the functionality of the static
+    `String.Concat()` and `String.Join()` methods available as extension
+    methods on strings and enumerables.
 
 ## Ulterior motives
 
