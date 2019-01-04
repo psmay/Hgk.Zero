@@ -1,120 +1,138 @@
 using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
 
 namespace Hgk.Zero.Options
 {
     /// <summary>
-    /// Extension method equivalents to static methods from <see cref="String"/>.
+    /// Extension method equivalents to static methods from <see cref="string"/>.
     /// </summary>
     public static class Strings
     {
-        public static int Compare(this String strA, int indexA, String strB, int indexB, int length, bool ignoreCase) =>
-            String.Compare(strA, indexA, strB, indexB, length, ignoreCase);
+        public static string Concat(this string str0, string str1, string str2) =>
+            string.Concat(str0, str1, str2);
 
-        public static int Compare(this String strA, int indexA, String strB, int indexB, int length) =>
-            String.Compare(strA, indexA, strB, indexB, length);
+        public static string Concat<T>(this string str, IEnumerable<T> values)
+        {
+            if (string.IsNullOrEmpty(str))
+            {
+                return string.Concat(values);
+            }
 
-        public static int Compare(this String strA, String strB, CultureInfo culture, CompareOptions options) =>
-            String.Compare(strA, strB, culture, options);
+            if (values == null) throw new ArgumentNullException(nameof(values));
 
-        public static int Compare(this String strA, String strB, bool ignoreCase, CultureInfo culture) =>
-            String.Compare(strA, strB, ignoreCase, culture);
+            if (values is IEnumerable<object> objectValues)
+            {
+                return string.Concat(objectValues.Prepend(str));
+            }
+            else
+            {
+                return string.Concat(values.Cast<object>().Prepend(str));
+            }
+        }
 
-        public static int Compare(this String strA, String strB, bool ignoreCase) =>
-            String.Compare(strA, strB, ignoreCase);
+        public static string Concat(this string str, params string[] values)
+        {
+            if (string.IsNullOrEmpty(str))
+            {
+                return string.Concat(values);
+            }
 
-        public static int Compare(this String strA, String strB, StringComparison comparisonType) =>
-            String.Compare(strA, strB, comparisonType);
+            if (values == null) throw new ArgumentNullException(nameof(values));
 
-        public static int Compare(this String strA, int indexA, String strB, int indexB, int length, StringComparison comparisonType) =>
-            String.Compare(strA, indexA, strB, indexB, length, comparisonType);
+            IEnumerable<string> valuesEnumerable = values;
+            return Concat(str, valuesEnumerable);
+        }
 
-        public static int Compare(this String strA, int indexA, String strB, int indexB, int length, CultureInfo culture, CompareOptions options) =>
-            String.Compare(strA, indexA, strB, indexB, length, culture, options);
+        public static string Concat(this string str0, string str1, string str2, string str3) =>
+            string.Concat(str0, str1, str2, str3);
 
-        public static int Compare(this String strA, int indexA, String strB, int indexB, int length, bool ignoreCase, CultureInfo culture) =>
-            String.Compare(strA, indexA, strB, indexB, length, ignoreCase, culture);
+        public static string Concat(this string str0, string str1) =>
+            string.Concat(str0, str1);
 
-        public static int Compare(this String strA, String strB) =>
-            String.Compare(strA, strB);
+        public static string Concat(this string str, object arg0, object arg1, object arg2) =>
+            string.Concat(str, string.Concat(arg0, arg1, arg2));
 
-        public static int CompareOrdinal(this String strA, int indexA, String strB, int indexB, int length) =>
-            String.CompareOrdinal(strA, indexA, strB, indexB, length);
+        public static string Concat(this string str, object arg0, object arg1) =>
+            string.Concat(str, arg0, arg1);
 
-        public static int CompareOrdinal(this String strA, String strB) =>
-            String.CompareOrdinal(strA, strB);
+        public static string Concat(this string str, object arg0) =>
+            string.Concat(str, arg0);
 
-        public static String Concat(this String str0, String str1, String str2) =>
-            String.Concat(str0, str1, str2);
+        public static string Concat(this string str, IEnumerable<string> values)
+        {
+            if (string.IsNullOrEmpty(str))
+            {
+                return string.Concat(values);
+            }
 
-        public static String Concat<T>(this String str, IEnumerable<T> values) => String.Concat(str, String.Concat(values));
+            if (values == null) throw new ArgumentNullException(nameof(values));
 
-        public static String Concat(this String str, params String[] values) => String.Concat(str, String.Concat(values));
+            return string.Concat(values.Prepend(str));
+        }
 
-        public static String Concat(this String str0, String str1, String str2, String str3) =>
-            String.Concat(str0, str1, str2, str3);
+        public static string Concat(this string str, params object[] args)
+        {
+            if (string.IsNullOrEmpty(str))
+            {
+                return string.Concat(args);
+            }
 
-        public static String Concat(this String str0, String str1) =>
-            String.Concat(str0, str1);
+            if (args == null) throw new ArgumentNullException(nameof(args));
 
-        public static String Concat(this String str, object arg0, object arg1, object arg2) => String.Concat(str, String.Concat(arg0, arg1, arg2));
+            IEnumerable<object> valuesEnumerable = args;
+            return Concat(str, valuesEnumerable);
+        }
 
-        public static String Concat(this String str, object arg0, object arg1) => String.Concat(str, arg0, arg1);
+        public static string Format(this string format, params object[] args) =>
+            string.Format(format, args);
 
-        public static String Concat(this String str, object arg0) => String.Concat(str, arg0);
+        public static string Format(this string format, object arg0, object arg1, object arg2) =>
+            string.Format(format, arg0, arg1, arg2);
 
-        public static String Concat(this String str, IEnumerable<String> values) => String.Concat(str, String.Concat(values));
+        public static string Format(this string format, object arg0, object arg1) =>
+            string.Format(format, arg0, arg1);
 
-        public static String Concat(this String str, params object[] args) => String.Concat(str, String.Concat(args));
+        public static string Format(this string format, object arg0) =>
+            string.Format(format, arg0);
 
-        public static String Format(this String format, params object[] args) =>
-            String.Format(format, args);
+        public static string FormatWithProvider(this string format, IFormatProvider provider, params object[] args) =>
+            string.Format(provider, format, args);
 
-        public static String Format(this String format, object arg0, object arg1, object arg2) =>
-            String.Format(format, arg0, arg1, arg2);
+        public static string FormatWithProvider(this string format, IFormatProvider provider, object arg0, object arg1, object arg2) =>
+            string.Format(provider, format, arg0, arg1, arg2);
 
-        public static String Format(this String format, object arg0, object arg1) =>
-            String.Format(format, arg0, arg1);
+        public static string FormatWithProvider(this string format, IFormatProvider provider, object arg0, object arg1) =>
+            string.Format(provider, format, arg0, arg1);
 
-        public static String Format(this String format, object arg0) =>
-            String.Format(format, arg0);
+        public static string FormatWithProvider(this string format, IFormatProvider provider, object arg0) =>
+            string.Format(provider, format, arg0);
 
-        public static String FormatWithProvider(this String format, IFormatProvider provider, params object[] args) => String.Format(provider, format, args);
+        public static string Intern(this string str) =>
+            string.Intern(str);
 
-        public static String FormatWithProvider(this String format, IFormatProvider provider, object arg0, object arg1, object arg2) => String.Format(provider, format, arg0, arg1, arg2);
+        public static string IsInterned(this string str) =>
+            string.IsInterned(str);
 
-        public static String FormatWithProvider(this String format, IFormatProvider provider, object arg0, object arg1) => String.Format(provider, format, arg0, arg1);
+        public static bool IsNullOrEmpty(this string value) =>
+            string.IsNullOrEmpty(value);
 
-        public static String FormatWithProvider(this String format, IFormatProvider provider, object arg0) => String.Format(provider, format, arg0);
+        public static bool IsNullOrWhiteSpace(this string value) =>
+            string.IsNullOrWhiteSpace(value);
 
-        public static String Intern(this String str) =>
-            String.Intern(str);
+        public static string Join(this string separator, IEnumerable<string> values) =>
+            string.Join(separator, values);
 
-        public static String IsInterned(this String str) =>
-            String.IsInterned(str);
+        public static string Join(this string separator, params object[] values) =>
+            string.Join(separator, values);
 
-        public static bool IsNullOrEmpty(this String value) =>
-            String.IsNullOrEmpty(value);
+        public static string Join(this string separator, params string[] value) =>
+            string.Join(separator, value);
 
-        public static bool IsNullOrWhiteSpace(this String value) =>
-            String.IsNullOrWhiteSpace(value);
+        public static string Join(this string separator, string[] value, int startIndex, int count) =>
+            string.Join(separator, value, startIndex, count);
 
-        public static String Join(this String separator, IEnumerable<String> values) =>
-            String.Join(separator, values);
-
-        public static String Join(this String separator, params object[] values) =>
-            String.Join(separator, values);
-
-        public static String Join(this String separator, params String[] value) =>
-            String.Join(separator, value);
-
-        public static String Join(this String separator, String[] value, int startIndex, int count) =>
-            String.Join(separator, value, startIndex, count);
-
-        public static String Join<T>(this String separator, IEnumerable<T> values) =>
-            String.Join<T>(separator, values);
-
+        public static string Join<T>(this string separator, IEnumerable<T> values) =>
+            string.Join(separator, values);
     }
 }
