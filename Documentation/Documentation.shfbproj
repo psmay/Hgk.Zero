@@ -49,10 +49,11 @@
     <NamingMethod>MemberName</NamingMethod>
     <NamespaceSummaries>
       <NamespaceSummaryItem name="Hgk.Zero.Options" isDocumented="True">Facilities for using options, which are containers that are either empty or full (that is, that contain either zero elements or one element).</NamespaceSummaryItem>
-      <NamespaceSummaryItem name="Hgk.Zero.Options.Convert" isDocumented="True">Facilities for performing conversions, producing a full option if successful or an empty option on failure.</NamespaceSummaryItem>
-      <NamespaceSummaryItem name="Hgk.Zero.Options.Try" isDocumented="True">Facilities for adapting typical try functions to produce options.</NamespaceSummaryItem>
-      <NamespaceSummaryItem name="Hgk.Zero.Options.Query" isDocumented="True">Facilities for using options with enumerables and dictionaries.</NamespaceSummaryItem>
-    </NamespaceSummaries>
+<NamespaceSummaryItem name="Hgk.Zero.Options.Convert" isDocumented="True">Facilities for performing conversions, producing a full option if successful or an empty option on failure.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="Hgk.Zero.Options.Try" isDocumented="True">Facilities for adapting typical try functions to produce options.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="Hgk.Zero.Options.Query" isDocumented="True">Facilities for using options with enumerables and dictionaries.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="Hgk.Zero.Strings" isDocumented="True">Facilities for using strings.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="Hgk.Zero.Strings.Query" isDocumented="True">Facilities for using strings with enumerables.</NamespaceSummaryItem></NamespaceSummaries>
     <PlugInConfigurations>
     </PlugInConfigurations>
   </PropertyGroup>
