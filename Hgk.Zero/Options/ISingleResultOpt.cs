@@ -21,40 +21,58 @@ namespace Hgk.Zero.Options
     /// </para>
     /// <list type="bullet">
     /// <item>
+    /// <description>
     /// Resolving a single-result option as an ordinary option ( <see cref="IOpt"/>) or enumerable (
     /// <see cref="IEnumerable"/>) will result in an <see cref="InvalidOperationException"/>.
     /// Operations that resolve immediately (such as a <see langword="foreach"/> loop or <see
     /// cref="Opt.ToFixed(IOpt)"/>) will cause the exception to be thrown immediately, while deferred
     /// operations (such as <see cref="Opt.OfType{TResult}(IOpt)"/>) will cause the exception to be
     /// thrown when they are resolved themselves.
+    /// </description>
     /// </item>
     /// <item>
+    /// <description>
     /// Explicit operations such as <see cref="Match{TResult}(Func{TResult}, Func{object, TResult},
     /// Func{TResult})"/> can be used to convert a single-result option to another kind of value
     /// without throwing an exception.
+    /// </description>
     /// </item>
     /// </list>
     /// <para>The following is information about the contract for this interface.</para>
     /// <list type="bullet">
     /// <item>
+    /// <description>
     /// <see cref="Match{TResult}(Func{TResult}, Func{object, TResult}, Func{TResult})"/> must be
     /// implemented as specified.
+    /// </description>
     /// </item>
     /// <item>
+    /// <description>
     /// <see cref="ISingleResultOpt"/> implements <see cref="IEnumerable"/>. The contract of this
     /// interface requires that the enumerator returned from <see cref="IEnumerable.GetEnumerator"/>
     /// behave as follows:
     /// <list type="bullet">
-    /// <item>If the operation produced no elements, the enumeration produces zero elements.</item>
-    /// <item>If the operation produced one element, the enumeration produces that one element.</item>
     /// <item>
+    /// <description>
+    /// If the operation produced no elements, the enumeration produces zero elements.
+    /// </description>
+    /// </item>
+    /// <item>
+    /// <description>
+    /// If the operation produced one element, the enumeration produces that one element.
+    /// </description>
+    /// </item>
+    /// <item>
+    /// <description>
     /// If the operation produced more than one element, the enumeration throws <see
     /// cref="InvalidOperationException"/> instead of producing any elements. (The throwing of the
     /// exception should be deferred to the first <see cref="IEnumerator.MoveNext"/> rather than
     /// occurring immediately.)
+    /// </description>
     /// </item>
     /// </list>
     /// <para>Behavior is undefined if the enumerable produces more than one value.</para>
+    /// </description>
     /// </item>
     /// </list>
     /// </remarks>
@@ -106,6 +124,7 @@ namespace Hgk.Zero.Options
     /// </para>
     /// <list type="bullet">
     /// <item>
+    /// <description>
     /// Resolving a single-result option as an ordinary option ( <see cref="IOpt"/> or <see
     /// cref="IOpt{T}"/>) or enumerable ( <see cref="IEnumerable"/> or <see cref="IEnumerable{T}"/>)
     /// will result in an <see cref="InvalidOperationException"/>. Operations that resolve
@@ -114,37 +133,58 @@ namespace Hgk.Zero.Options
     /// immediately, while deferred operations (such as <see cref="Opt.Select{TSource,
     /// TResult}(IOpt{TSource}, Func{TSource, TResult})"/>) will cause the exception to be thrown
     /// when they are resolved themselves.
+    /// </description>
     /// </item>
     /// <item>
+    /// <description>
     /// Explicit operations such as <see cref="Match{TResult}(Func{TResult}, Func{T, TResult},
     /// Func{TResult})"/> and methods from <see cref="SingleResultOpt"/> such as <see
     /// cref="SingleResultOpt.EmptyIfMoreThanOne{TSource}(ISingleResultOpt{TSource})"/> can be used
     /// to convert a single-result option to another kind of value without throwing an exception.
+    /// </description>
     /// </item>
     /// </list>
     /// <para>The following is information about the contract for this interface.</para>
     /// <list type="bullet">
-    /// <item>The interface <see cref="ISingleResultOpt"/> must be implemented as specified.</item>
     /// <item>
-    /// <see cref="Match{TResult}(Func{TResult}, Func{T, TResult}, Func{TResult})"/> must be
-    /// implemented as specified.
+    /// <description>
+    /// The interface <see cref="ISingleResultOpt"/> must be implemented as specified.
+    /// </description>
     /// </item>
     /// <item>
+    /// <description>
+    /// <see cref="Match{TResult}(Func{TResult}, Func{T, TResult}, Func{TResult})"/> must be
+    /// implemented as specified.
+    /// </description>
+    /// </item>
+    /// <item>
+    /// <description>
     /// <see cref="ISingleResultOpt{T}"/> implements <see cref="IEnumerable"/> and <see
     /// cref="IEnumerable{T}"/>. The contract of this interface requires that the enumerator returned
     /// from <see cref="IEnumerable.GetEnumerator"/> and <see cref="IEnumerable{T}.GetEnumerator"/>
     /// behave as follows:
     /// <list type="bullet">
-    /// <item>If the operation produced no elements, the enumeration produces zero elements.</item>
-    /// <item>If the operation produced one element, the enumeration produces that one element.</item>
     /// <item>
+    /// <description>
+    /// If the operation produced no elements, the enumeration produces zero elements.
+    /// </description>
+    /// </item>
+    /// <item>
+    /// <description>
+    /// If the operation produced one element, the enumeration produces that one element.
+    /// </description>
+    /// </item>
+    /// <item>
+    /// <description>
     /// If the operation produced more than one element, the enumeration throws <see
     /// cref="InvalidOperationException"/> instead of producing any elements. (The throwing of the
     /// exception should be deferred to the first <see cref="IEnumerator.MoveNext"/> rather than
     /// occurring immediately.)
+    /// </description>
     /// </item>
     /// </list>
     /// <para>Behavior is undefined if the enumerable produces more than one value.</para>
+    /// </description>
     /// </item>
     /// </list>
     /// </remarks>
