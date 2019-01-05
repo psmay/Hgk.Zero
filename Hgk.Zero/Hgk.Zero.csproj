@@ -21,6 +21,10 @@
     <DocumentationFile>Hgk.Zero.xml</DocumentationFile>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>Hgk.Zero.xml</DocumentationFile>
+  </PropertyGroup>
+
   <ItemGroup>
     <Compile Update="ErrorMessages.Designer.cs">
       <DesignTime>True</DesignTime>
