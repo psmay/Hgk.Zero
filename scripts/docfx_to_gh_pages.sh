@@ -13,17 +13,17 @@ INSTALLS="$TMPDIR/installs"
 mkdir -p "$INSTALLS" &&
 cd "$INSTALLS" &&
 
-# Install mono
+# Install mono and nuget in a rather ugly fashion
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
+sudo apt install apt-transport-https
+echo "deb https://download.mono-project.com/repo/ubuntu stable-xenial main" | sudo tee /etc/apt/sources.list.d/mono-official-stable.list
+sudo apt update
 sudo apt-get install mono-complete nuget &&
-nuget install System.AppContext &&
-
-# Get newer nuget
-curl -L -o nuget.exe 'https://dist.nuget.org/win-x86-commandline/latest/nuget.exe' &&
 
 # Install docfx.console
-mono nuget.exe install docfx.console -ExcludeVersion &&
+nuget install docfx.console -ExcludeVersion &&
 # Why the next two lines? See https://github.com/dotnet/docfx/issues/3389
-mono nuget.exe install SQLitePCLRaw.core -ExcludeVersion &&
+nuget install SQLitePCLRaw.core -ExcludeVersion &&
 cp SQLitePCLRaw.core/lib/net45/SQLitePCLRaw.core.dll docfx.console/tools/ &&
 
 # Build documentation to $TMPDIR/outputs
