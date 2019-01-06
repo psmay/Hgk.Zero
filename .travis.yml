@@ -2,7 +2,7 @@ env:
 - VERSION_SUFFIX=aa-ci-$TRAVIS_BRANCH-$TRAVIS_BUILD_NUMBER
 
 language: csharp
-mono: none
+mono: latest
 dotnet: 2.1
 
 install:
@@ -21,7 +21,6 @@ deploy:
     script: dotnet nuget push Hgk.Zero/bin/Release/*-$VERSION_SUFFIX.nupkg --api-key $NUGET_API_KEY --source $NUGET_SOURCE
   - on:
       branch: docfx-from-ci
-    mono: latest
     skip_cleanup: true
     provider: script
     script: bash scripts/docfx_to_gh_pages.sh
