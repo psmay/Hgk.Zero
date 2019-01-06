@@ -41,5 +41,9 @@ git add -A &&
 git commit -m "Update from CI #$TRAVIS_BUILD_NUMBER, branch $TRAVIS_BRANCH" -q &&
 git push origin gh-pages -q
 
+ACTUAL_EXIT_CODE=$?
+
 # Hide the evidence
 rm -rf "$TMPDIR"
+
+exit $ACTUAL_EXIT_CODE
