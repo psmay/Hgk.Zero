@@ -10,7 +10,7 @@ TMPDIR="`mktemp -d`"
 INSTALLS="$TMPDIR/installs"
 
 # Install mono or the rest won't work
-sudo apt-get install mono-runtime &&
+sudo apt-get install mono-complete &&
 
 # Install docfx.console
 mkdir -p "$INSTALLS" &&
