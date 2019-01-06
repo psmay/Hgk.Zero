@@ -12,7 +12,7 @@ INSTALLS="$TMPDIR/installs"
 # Install docfx.console
 mkdir -p "$INSTALLS" &&
 cd "$INSTALLS" &&
-curl -L -o nuget.exe 'https://api.nuget.org/downloads/nuget.exe' &&
+curl -L -o nuget.exe 'https://dist.nuget.org/win-x86-commandline/latest/nuget.exe' &&
 mono nuget.exe install docfx.console -ExcludeVersion &&
 # Why the next two lines? See https://github.com/dotnet/docfx/issues/3389
 mono nuget.exe install SQLitePCLRaw.core -ExcludeVersion &&
@@ -21,8 +21,8 @@ cp SQLitePCLRaw.core/lib/net45/SQLitePCLRaw.core.dll docfx.console/tools/ &&
 # Build documentation to $TMPDIR/outputs
 cd "$START" &&
 DOCFX="mono $INSTALLS/docfx.console/tools/docfx.exe" &&
-$DOCFX metadata $DOCFX_JSON -o "$TMPDIR/outputs" &&
-$DOCFX build $DOCFX_JSON -o "$TMPDIR/outputs" &&
+$DOCFX metadata $DOCFX_JSON_FILE -o "$TMPDIR/outputs" &&
+$DOCFX build $DOCFX_JSON_FILE -o "$TMPDIR/outputs" &&
 
 # Get repo for gh-pages
 cd "$TMPDIR" &&
