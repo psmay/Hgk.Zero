@@ -12,9 +12,9 @@ INSTALLS="$TMPDIR/installs"
 # Install docfx.console
 mkdir -p "$INSTALLS" &&
 cd "$INSTALLS" &&
-nuget install docfx.console -ExcludeVersion &&
+dotnet nuget install docfx.console -ExcludeVersion &&
 # Why the next two lines? See https://github.com/dotnet/docfx/issues/3389
-nuget install SQLitePCLRaw.core -ExcludeVersion &&
+dotnet nuget install SQLitePCLRaw.core -ExcludeVersion &&
 cp SQLitePCLRaw.core/lib/net45/SQLitePCLRaw.core.dll docfx.console/tools/ &&
 
 # Build documentation to $TMPDIR/outputs
