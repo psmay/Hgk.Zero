@@ -14,7 +14,8 @@ mkdir -p "$INSTALLS" &&
 cd "$INSTALLS" &&
 
 # Install mono
-sudo apt-get install mono-complete &&
+sudo apt-get install mono-complete nuget &&
+nuget install System.AppContext &&
 
 # Get newer nuget
 curl -L -o nuget.exe 'https://dist.nuget.org/win-x86-commandline/latest/nuget.exe' &&
