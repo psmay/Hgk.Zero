@@ -9,13 +9,18 @@ DOCFX_JSON_FILE="$START/Documentation.docfx/docfx.json"
 TMPDIR="`mktemp -d`"
 INSTALLS="$TMPDIR/installs"
 
-# Install mono or the rest won't work
-sudo apt-get install mono-complete &&
-
-# Install docfx.console
+# Create and go to our local installs dir
 mkdir -p "$INSTALLS" &&
 cd "$INSTALLS" &&
+
+# Install mono and system nuget
+sudo apt-get install mono-complete nuget &&
+nuget help &&
+
+# Get newer nuget
 curl -L -o nuget.exe 'https://dist.nuget.org/win-x86-commandline/latest/nuget.exe' &&
+
+# Install docfx.console
 mono nuget.exe install docfx.console -ExcludeVersion &&
 # Why the next two lines? See https://github.com/dotnet/docfx/issues/3389
 mono nuget.exe install SQLitePCLRaw.core -ExcludeVersion &&
