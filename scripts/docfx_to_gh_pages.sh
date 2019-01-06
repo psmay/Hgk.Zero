@@ -5,7 +5,7 @@ GITHUB_REPO=Hgk.Zero
 GITHUB_REPO_URL_WITH_TOKEN="https://$GITHUB_REPO_USER:$GITHUB_DOC_GENERATION_TOKEN@github.com/$GITHUB_REPO_USER/$GITHUB_REPO.git"
 
 START="`pwd`"
-DOCFX_JSON_FILE="$START/Documentation.docfx/docfx.json"
+DOCFX_PROJECT_DIR="$START/Documentation.docfx"
 TMPDIR="`mktemp -d`"
 INSTALLS="$TMPDIR/installs"
 
@@ -22,15 +22,16 @@ sudo apt-get install mono-runtime nuget &&
 
 # Install docfx.console
 nuget install docfx.console -ExcludeVersion &&
+DOCFX="mono $INSTALLS/docfx.console/tools/docfx.exe" &&
 # Why the next two lines? See https://github.com/dotnet/docfx/issues/3389
 nuget install SQLitePCLRaw.core -ExcludeVersion &&
 cp SQLitePCLRaw.core/lib/net45/SQLitePCLRaw.core.dll docfx.console/tools/ &&
 
+
 # Build documentation to $TMPDIR/outputs
-cd "$START" &&
-DOCFX="mono $INSTALLS/docfx.console/tools/docfx.exe" &&
-$DOCFX metadata $DOCFX_JSON_FILE -o "$TMPDIR/outputs" &&
-$DOCFX build $DOCFX_JSON_FILE -o "$TMPDIR/outputs" &&
+cd "$DOCFX_PROJECT_DIR" &&
+$DOCFX metadata docfx.json -o "$TMPDIR/outputs" &&
+$DOCFX build docfx.json -o "$TMPDIR/outputs" &&
 
 # Get repo for gh-pages
 cd "$TMPDIR" &&
