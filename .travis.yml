@@ -2,7 +2,7 @@ env:
 - VERSION_SUFFIX=aa-ci-$TRAVIS_BRANCH-$TRAVIS_BUILD_NUMBER
 
 language: csharp
-mono: latest
+mono: none
 dotnet: 2.1
 
 install:

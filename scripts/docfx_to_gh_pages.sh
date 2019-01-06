@@ -9,6 +9,9 @@ DOCFX_JSON_FILE="$START/Documentation.docfx/docfx.json"
 TMPDIR="`mktemp -d`"
 INSTALLS="$TMPDIR/installs"
 
+# Install mono or the rest won't work
+sudo apt-get install mono-runtime &&
+
 # Install docfx.console
 mkdir -p "$INSTALLS" &&
 cd "$INSTALLS" &&
