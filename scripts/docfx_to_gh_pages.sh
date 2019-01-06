@@ -12,6 +12,7 @@ INSTALLS="$TMPDIR/installs"
 # Install docfx.console
 mkdir -p "$INSTALLS" &&
 cd "$INSTALLS" &&
+curl -L -o nuget.exe 'https://api.nuget.org/downloads/nuget.exe' &&
 mono nuget.exe install docfx.console -ExcludeVersion &&
 # Why the next two lines? See https://github.com/dotnet/docfx/issues/3389
 mono nuget.exe install SQLitePCLRaw.core -ExcludeVersion &&
