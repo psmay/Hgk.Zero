@@ -13,9 +13,8 @@ INSTALLS="$TMPDIR/installs"
 mkdir -p "$INSTALLS" &&
 cd "$INSTALLS" &&
 
-# Install mono and system nuget
-sudo apt-get install mono-complete nuget &&
-nuget help &&
+# Install mono
+sudo apt-get install mono-complete &&
 
 # Get newer nuget
 curl -L -o nuget.exe 'https://dist.nuget.org/win-x86-commandline/latest/nuget.exe' &&
