@@ -18,7 +18,7 @@ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328
 sudo apt-get install apt-transport-https
 echo "deb https://download.mono-project.com/repo/ubuntu stable-xenial main" | sudo tee /etc/apt/sources.list.d/mono-official-stable.list
 sudo apt-get update
-sudo apt-get install ca-certificates-mono mono-runtime msbuild nuget &&
+sudo apt-get install ca-certificates-mono mono-devel msbuild nuget &&
 
 # Install docfx.console
 nuget install docfx.console -ExcludeVersion &&
