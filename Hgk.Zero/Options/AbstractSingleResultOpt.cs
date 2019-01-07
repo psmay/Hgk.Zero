@@ -29,6 +29,8 @@ namespace Hgk.Zero.Options
 
         public abstract FixedSingleResultOpt<T> ToFixedSingleResultOpt();
 
+        public override string ToString() => ToFixedSingleResultOpt().ToString();
+
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 
         Opt<object> IOptFixable.ToFixed()

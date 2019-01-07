@@ -220,33 +220,34 @@ namespace Hgk.Zero.Options.Query
         /// Returned single result was resolved as an ordinary option, but <paramref name="source"/>
         /// contained more than one element that satisfies <paramref name="predicate"/>.
         /// </exception>
-        public static IOpt<TSource> WhereSingle<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate)
+        public static ISingleResultOpt<TSource> WhereSingle<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate)
         {
             if (source == null) throw new ArgumentNullException(nameof(source));
             if (predicate == null) throw new ArgumentNullException(nameof(source));
             return SingleResultOpt.Defer(() => source.WhereSingleImmediate(predicate));
         }
 
-        private static Opt<TSource> WhereElementAtImmediate<TSource>(this IEnumerable<TSource> source, int index)
+        private static FixedSingleResultOpt<TSource> EnumeratorSingleToFixedOpt<TSource>(IEnumerator<TSource> source, bool usingPredicate)
         {
-            if (index < 0)
+            if (source.MoveNext())
             {
-                return Opt.Empty<TSource>();
-            }
-            else if (source is IOpt<TSource> sourceOpt)
-            {
-                return (index == 0) ? sourceOpt.ToFixed() : Opt.Empty<TSource>();
-            }
-            else if (source is IList<TSource> sourceList)
-            {
-                return (index < sourceList.Count) ? Opt.Full(sourceList[index]) : Opt.Empty<TSource>();
+                TSource value = source.Current;
+
+                if (source.MoveNext())
+                {
+                    // More than one element
+                    return SingleResultOpt.GetFixedMoreThanOne<TSource>(usingPredicate);
+                }
+                else
+                {
+                    // Exactly one element
+                    return SingleResultOpt.GetFixedOne(usingPredicate, value);
+                }
             }
             else
             {
-                using (var sourceEnumerator = source.GetEnumerator())
-                {
-                    return EnumeratorWhereElementAtImmediate(sourceEnumerator, index);
-                }
+                // No elements
+                return SingleResultOpt.GetFixedZero<TSource>(usingPredicate);
             }
         }
 
@@ -293,27 +294,26 @@ namespace Hgk.Zero.Options.Query
             }
         }
 
-        private static FixedSingleResultOpt<TSource> EnumeratorSingleToFixedOpt<TSource>(IEnumerator<TSource> source, bool usingPredicate)
+        private static Opt<TSource> WhereElementAtImmediate<TSource>(this IEnumerable<TSource> source, int index)
         {
-            if (source.MoveNext())
+            if (index < 0)
             {
-                TSource value = source.Current;
-
-                if (source.MoveNext())
-                {
-                    // More than one element
-                    return SingleResultOpt.GetFixedMoreThanOne<TSource>(usingPredicate);
-                }
-                else
-                {
-                    // Exactly one element
-                    return SingleResultOpt.GetFixedOne(usingPredicate, value);
-                }
+                return Opt.Empty<TSource>();
+            }
+            else if (source is IOpt<TSource> sourceOpt)
+            {
+                return (index == 0) ? sourceOpt.ToFixed() : Opt.Empty<TSource>();
+            }
+            else if (source is IList<TSource> sourceList)
+            {
+                return (index < sourceList.Count) ? Opt.Full(sourceList[index]) : Opt.Empty<TSource>();
             }
             else
             {
-                // No elements
-                return SingleResultOpt.GetFixedZero<TSource>(usingPredicate);
+                using (var sourceEnumerator = source.GetEnumerator())
+                {
+                    return EnumeratorWhereElementAtImmediate(sourceEnumerator, index);
+                }
             }
         }
 

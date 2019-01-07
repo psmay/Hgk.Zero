@@ -23,7 +23,7 @@ namespace Hgk.Zero.Strings
         /// <returns>
         /// The concatenation of <paramref name="str0"/>, <paramref name="str1"/>, and <paramref name="str2"/>.
         /// </returns>
-        public static string Concat(this string str0, string str1, string str2) =>
+        public static string ConcatString(this string str0, string str1, string str2) =>
             string.Concat(str0, str1, str2);
 
         /// <summary>
@@ -45,7 +45,7 @@ namespace Hgk.Zero.Strings
         /// The concatenation of <paramref name="str"/> and the values in <paramref name="values"/>.
         /// </returns>
         /// <exception cref="ArgumentNullException"><paramref name="values"/> is <see langword="null"/>.</exception>
-        public static string Concat<T>(this string str, IEnumerable<T> values)
+        public static string ConcatString<T>(this string str, IEnumerable<T> values)
         {
             if (string.IsNullOrEmpty(str))
             {
@@ -81,7 +81,7 @@ namespace Hgk.Zero.Strings
         /// The concatenation of <paramref name="str"/> and the strings in <paramref name="values"/>.
         /// </returns>
         /// <exception cref="ArgumentNullException"><paramref name="values"/> is <see langword="null"/>.</exception>
-        public static string Concat(this string str, params string[] values)
+        public static string ConcatString(this string str, params string[] values)
         {
             if (string.IsNullOrEmpty(str))
             {
@@ -110,7 +110,7 @@ namespace Hgk.Zero.Strings
         /// The concatenation of <paramref name="str0"/>, <paramref name="str1"/>, <paramref
         /// name="str2"/>, and <paramref name="str3"/>.
         /// </returns>
-        public static string Concat(this string str0, string str1, string str2, string str3) =>
+        public static string ConcatString(this string str0, string str1, string str2, string str3) =>
             string.Concat(str0, str1, str2, str3);
 
         /// <summary>
@@ -122,7 +122,7 @@ namespace Hgk.Zero.Strings
         /// <param name="str0">The first string value to concatenate.</param>
         /// <param name="str1">The second string value to concatenate.</param>
         /// <returns>The concatenation of <paramref name="str0"/> and <paramref name="str1"/>.</returns>
-        public static string Concat(this string str0, string str1) =>
+        public static string ConcatString(this string str0, string str1) =>
             string.Concat(str0, str1);
 
         /// <summary>
@@ -142,7 +142,7 @@ namespace Hgk.Zero.Strings
         /// The concatenation of <paramref name="str"/>, <paramref name="arg0"/>, <paramref
         /// name="arg1"/>, and <paramref name="arg2"/>.
         /// </returns>
-        public static string Concat(this string str, object arg0, object arg1, object arg2) =>
+        public static string ConcatString(this string str, object arg0, object arg1, object arg2) =>
             string.Concat(str, string.Concat(arg0, arg1, arg2));
 
         /// <summary>
@@ -159,7 +159,7 @@ namespace Hgk.Zero.Strings
         /// <returns>
         /// The concatenation of <paramref name="str"/>, <paramref name="arg0"/>, and <paramref name="arg1"/>.
         /// </returns>
-        public static string Concat(this string str, object arg0, object arg1) =>
+        public static string ConcatString(this string str, object arg0, object arg1) =>
             string.Concat(str, arg0, arg1);
 
         /// <summary>
@@ -171,7 +171,7 @@ namespace Hgk.Zero.Strings
         /// <param name="str">The first value to concatenate.</param>
         /// <param name="arg0">The second value to concatenate.</param>
         /// <returns>The concatenation of <paramref name="str"/> and <paramref name="arg0"/>.</returns>
-        public static string Concat(this string str, object arg0) =>
+        public static string ConcatString(this string str, object arg0) =>
             string.Concat(str, arg0);
 
         /// <summary>
@@ -191,7 +191,7 @@ namespace Hgk.Zero.Strings
         /// The concatenation of <paramref name="str"/> and the strings in <paramref name="values"/>.
         /// </returns>
         /// <exception cref="ArgumentNullException"><paramref name="values"/> is <see langword="null"/>.</exception>
-        public static string Concat(this string str, IEnumerable<string> values)
+        public static string ConcatString(this string str, IEnumerable<string> values)
         {
             if (string.IsNullOrEmpty(str))
             {
@@ -220,7 +220,7 @@ namespace Hgk.Zero.Strings
         /// The concatenation of <paramref name="str"/> and the values in <paramref name="args"/>.
         /// </returns>
         /// <exception cref="ArgumentNullException"><paramref name="args"/> is <see langword="null"/>.</exception>
-        public static string Concat(this string str, params object[] args)
+        public static string ConcatString(this string str, params object[] args)
         {
             if (string.IsNullOrEmpty(str))
             {
@@ -281,7 +281,7 @@ namespace Hgk.Zero.Strings
         /// empty string.
         /// </returns>
         /// <exception cref="ArgumentNullException"><paramref name="values"/> is <see langword="null"/>.</exception>
-        public static string Join(this string separator, IEnumerable<string> values) =>
+        public static string JoinString(this string separator, IEnumerable<string> values) =>
             string.Join(separator, values);
 
         /// <summary>
@@ -302,7 +302,7 @@ namespace Hgk.Zero.Strings
         /// contains any elements; otherwise, an empty string.
         /// </returns>
         /// <exception cref="ArgumentNullException"><paramref name="values"/> is <see langword="null"/>.</exception>
-        public static string Join<T>(this string separator, IEnumerable<T> values) =>
+        public static string JoinString<T>(this string separator, IEnumerable<T> values) =>
             string.Join(separator, values);
 
         /// <summary>
@@ -322,7 +322,7 @@ namespace Hgk.Zero.Strings
         /// contains any elements; otherwise, an empty string.
         /// </returns>
         /// <exception cref="ArgumentNullException"><paramref name="values"/> is <see langword="null"/>.</exception>
-        public static string Join(this string separator, params object[] values) =>
+        public static string JoinString(this string separator, params object[] values) =>
             string.Join(separator, values);
 
         /// <summary>
@@ -349,7 +349,7 @@ namespace Hgk.Zero.Strings
         /// <paramref name="startIndex"/> or <paramref name="count"/> is less than 0, or <paramref
         /// name="startIndex"/> plus <paramref name="count"/> is greater than the length of values.
         /// </exception>
-        public static string Join(this string separator, string[] values, int startIndex, int count) =>
+        public static string JoinString(this string separator, string[] values, int startIndex, int count) =>
             string.Join(separator, values, startIndex, count);
 
         /// <summary>
@@ -368,7 +368,7 @@ namespace Hgk.Zero.Strings
         /// empty string.
         /// </returns>
         /// <exception cref="ArgumentNullException"><paramref name="values"/> is <see langword="null"/>.</exception>
-        public static string Join(this string separator, params string[] values) =>
+        public static string JoinString(this string separator, params string[] values) =>
             string.Join(separator, values);
     }
 }

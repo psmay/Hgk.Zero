@@ -13,6 +13,38 @@ namespace Hgk.Zero.Options
     public static class SingleResultOpt
     {
         /// <summary>
+        /// Converts a single result option to another option, substituting a full option containing
+        /// the specified default value if this option represents more than one result.
+        /// </summary>
+        /// <typeparam name="TSource">The element type of <paramref name="source"/>.</typeparam>
+        /// <param name="source">A source single result option.</param>
+        /// <param name="defaultValue">
+        /// The value to be contained by the returned option if <paramref name="source"/> represents
+        /// more than one result.
+        /// </param>
+        /// <returns>
+        /// An option equivalent to <paramref name="source"/>, if it represents a result of zero or
+        /// one element; otherwise, an option containing <paramref name="defaultValue"/>.
+        /// </returns>
+        /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
+        public static IOpt<TSource> DefaultIfMoreThanOne<TSource>(this ISingleResultOpt<TSource> source, TSource defaultValue) =>
+            source.ReplaceIfMoreThanOne(Opt.Full<TSource>(defaultValue));
+
+        /// <summary>
+        /// Converts a single result option to another option, substituting a full option containing
+        /// the default value of the contained type if this option represents more than one result.
+        /// </summary>
+        /// <typeparam name="TSource">The element type of <paramref name="source"/>.</typeparam>
+        /// <param name="source">A source single result option.</param>
+        /// <returns>
+        /// An option equivalent to <paramref name="source"/>, if it represents a result of zero or
+        /// one element; otherwise, an option containing the default value of <typeparamref name="TSource"/>.
+        /// </returns>
+        /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
+        public static IOpt<TSource> DefaultIfMoreThanOne<TSource>(this ISingleResultOpt<TSource> source) =>
+            source.DefaultIfMoreThanOne(default(TSource));
+
+        /// <summary>
         /// Converts a single result option to another option, substituting an empty option if this
         /// option represents more than one result.
         /// </summary>
@@ -117,11 +149,11 @@ namespace Hgk.Zero.Options
         /// <exception cref="ArgumentNullException">
         /// <paramref name="source"/> or <paramref name="replacementFactory"/> is <see langword="null"/>.
         /// </exception>
-        public static IOpt<TSource> ReplaceIfMoreThanOne<TSource>(this ISingleResultOpt<TSource> source, Func<Opt<TSource>> replacementFactory)
+        public static IOpt<TSource> ReplaceIfMoreThanOne<TSource>(this ISingleResultOpt<TSource> source, Func<IOpt<TSource>> replacementFactory)
         {
             if (source == null) throw new ArgumentNullException(nameof(source));
             if (replacementFactory == null) throw new ArgumentNullException(nameof(replacementFactory));
-            return Opt.Defer(() => ReplaceIfMoreThanOneCore(source, Opt.Defer(replacementFactory)));
+            return Opt.Defer(() => ReplaceIfMoreThanOneCore(source, Opt.Defer(() => replacementFactory().ToFixed())));
         }
 
         /// <summary>
