@@ -21,7 +21,7 @@ deploy:
     provider: script
     script: dotnet nuget push Hgk.Zero/bin/Release/*-$VERSION_SUFFIX.nupkg --api-key $NUGET_API_KEY --source $NUGET_SOURCE
   - on:
-      branch: docfx-from-ci
+      branch: master
     skip_cleanup: true
     provider: script
     script: bash scripts/docfx_to_gh_pages.sh
