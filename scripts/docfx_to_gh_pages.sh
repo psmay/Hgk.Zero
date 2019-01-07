@@ -28,10 +28,10 @@ nuget install SQLitePCLRaw.core -ExcludeVersion &&
 cp SQLitePCLRaw.core/lib/net45/SQLitePCLRaw.core.dll docfx.console/tools/ &&
 
 
-# Build documentation to $TMPDIR/outputs
+# Build documentation
 cd "$DOCFX_PROJECT_DIR" &&
-$DOCFX metadata docfx.json -o "$TMPDIR/outputs" &&
-$DOCFX build docfx.json -o "$TMPDIR/outputs" &&
+$DOCFX metadata docfx.json &&
+$DOCFX build docfx.json &&
 
 # Get repo for gh-pages
 cd "$TMPDIR" &&
@@ -43,7 +43,7 @@ cd .. &&
 
 # Clobber current site dir with new one
 rm -rf pages_repo/docfx &&
-cp -a outputs/_site pages_repo/docfx &&
+cp -a "$DOCFX_PROJECT_DIR/_site" pages_repo/docfx &&
 
 # Commit new version and push
 cd pages_repo &&
