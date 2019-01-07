@@ -1,0 +1,3015 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class TryToOpt&lt;TResult&gt;
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class TryToOpt&lt;TResult&gt;
+   ">
+    <meta name="generator" content="docfx 2.40.7.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Hgk.Zero.Options.Try.TryToOpt`1">
+  
+  
+  <h1 id="Hgk_Zero_Options_Try_TryToOpt_1" data-uid="Hgk.Zero.Options.Try.TryToOpt`1" class="text-break">Class TryToOpt&lt;TResult&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>Facilities for adapting typical try functions to produce options.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">TryToOpt&lt;TResult&gt;</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Hgk.Zero.Options.Try.html">Hgk.Zero.Options.Try</a></h6>
+  <h6><strong>Assembly</strong>: Hgk.Zero.dll</h6>
+  <h5 id="Hgk_Zero_Options_Try_TryToOpt_1_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class TryToOpt&lt;TResult&gt;</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td><p>The type of the result parameter of a try function.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Hgk_Zero_Options_Try_TryToOpt_1_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+For the purposes of this class, a &quot;try function&quot; is a bool-returning function that accepts
+zero or more arbitrary parameters followed by a result <span class="xref">langword_csharp_out</span> parameter. If
+the operation succeeds, the function sets the result parameter to a valid value and then
+returns <span class="xref">true</span>. If the operation fails (in a non-exceptional way), the
+function sets the result parameter to the default value for its type and returns <span class="xref">false</span>.
+</p>
+<p>
+Try functions are often used to handle common, expected failures without throwing exceptions.
+For example, several types in the standard library have TryParse methods that produce a value
+and return true if successful, or set the value to default and return false otherwise.
+</p>
+<p>
+The same information can be expressed in an option; an option might contain the result value
+if the operation succeeds or be empty if the operation fails.
+</p>
+<p>
+The type parameters available for the delegates allow simple access to try functions with
+several parameters.
+</p>
+<example>
+<p>
+This sample shows how to wrap a call to <span class="xref">System.TimeSpan.TryParseExact(System.String,System.String[],System.IFormatProvider,System.Globalization.TimeSpanStyles,System.TimeSpan@)</span> to produce an option.
+(Note that this is already done for you by <a class="xref" href="Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseTimeSpanExact_System_String_System_String___System_IFormatProvider_System_Globalization_TimeSpanStyles_">ParseTimeSpanExact(String, String[], IFormatProvider, TimeSpanStyles)</a>.)
+</p>
+<pre><code>// Replaces a call to TimeSpan.TryParseExact(input, formats, formatProvider, styles, out TimeSpan result)
+public static Opt&lt;TimeSpan> ParseTimeSpanExactOpt(string input, string[] formats, IFormatProvider formatProvider, TimeSpanStyles styles) =>
+    TryToOpt&lt;TimeSpan>.Call(TimeSpan.TryParseExact, input, formats, formatProvider, styles);</code></pre>
+</example>
+</div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/psmay/Hgk.Zero/new/9d2c5f39fc7efdf16dc1e08018f5cd37ccb13b52/apiSpec/new?filename=Hgk_Zero_Options_Try_TryToOpt_1_Call_Hgk_Zero_Options_Try_TryFunction__0__.md&amp;value=---%0Auid%3A%20Hgk.Zero.Options.Try.TryToOpt%601.Call(Hgk.Zero.Options.Try.TryFunction%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/psmay/Hgk.Zero/blob/9d2c5f39fc7efdf16dc1e08018f5cd37ccb13b52/Hgk.Zero/Options/Try/TryToOpt.cs/#L60">View Source</a>
+  </span>
+  <a id="Hgk_Zero_Options_Try_TryToOpt_1_Call_" data-uid="Hgk.Zero.Options.Try.TryToOpt`1.Call*"></a>
+  <h4 id="Hgk_Zero_Options_Try_TryToOpt_1_Call_Hgk_Zero_Options_Try_TryFunction__0__" data-uid="Hgk.Zero.Options.Try.TryToOpt`1.Call(Hgk.Zero.Options.Try.TryFunction{`0})">Call(TryFunction&lt;TResult&gt;)</h4>
+  <div class="markdown level1 summary"><p>Calls the specified try function and returns an option containing the result.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Opt&lt;TResult&gt; Call(TryFunction&lt;TResult&gt; tryFunction)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Hgk.Zero.Options.Try.TryFunction-1.html">TryFunction</a>&lt;TResult&gt;</td>
+        <td><span class="parametername">tryFunction</span></td>
+        <td><p>The try function to call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Hgk.Zero.Options.Opt-1.html">Opt</a>&lt;TResult&gt;</td>
+        <td><p>An option containing the result parameter produced by calling <code data-dev-comment-type="paramref" class="paramref">tryFunction</code>,
+if the operation completed successfully; otherwise, an empty option.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">tryFunction</code> is <span class="xref">null</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/psmay/Hgk.Zero/new/9d2c5f39fc7efdf16dc1e08018f5cd37ccb13b52/apiSpec/new?filename=Hgk_Zero_Options_Try_TryToOpt_1_Call__1_Hgk_Zero_Options_Try_TryFunction___0__0____0_.md&amp;value=---%0Auid%3A%20Hgk.Zero.Options.Try.TryToOpt%601.Call%60%601(Hgk.Zero.Options.Try.TryFunction%7B%60%600%2C%600%7D%2C%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/psmay/Hgk.Zero/blob/9d2c5f39fc7efdf16dc1e08018f5cd37ccb13b52/Hgk.Zero/Options/Try/TryToOpt.cs/#L80">View Source</a>
+  </span>
+  <a id="Hgk_Zero_Options_Try_TryToOpt_1_Call_" data-uid="Hgk.Zero.Options.Try.TryToOpt`1.Call*"></a>
+  <h4 id="Hgk_Zero_Options_Try_TryToOpt_1_Call__1_Hgk_Zero_Options_Try_TryFunction___0__0____0_" data-uid="Hgk.Zero.Options.Try.TryToOpt`1.Call``1(Hgk.Zero.Options.Try.TryFunction{``0,`0},``0)">Call&lt;T1&gt;(TryFunction&lt;T1, TResult&gt;, T1)</h4>
+  <div class="markdown level1 summary"><p>Calls the specified try function with the specified parameter and returns an option containing the result.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Opt&lt;TResult&gt; Call&lt;T1&gt;(TryFunction&lt;T1, TResult&gt; tryFunction, T1 arg1)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Hgk.Zero.Options.Try.TryFunction-2.html">TryFunction</a>&lt;T1, TResult&gt;</td>
+        <td><span class="parametername">tryFunction</span></td>
+        <td><p>The try function to call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">arg1</span></td>
+        <td><p>The first parameter to be passed to the try function.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Hgk.Zero.Options.Opt-1.html">Opt</a>&lt;TResult&gt;</td>
+        <td><p>An option containing the result parameter produced by calling <code data-dev-comment-type="paramref" class="paramref">tryFunction</code>,
+if the operation completed successfully; otherwise, an empty option.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg1</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">tryFunction</code> is <span class="xref">null</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/psmay/Hgk.Zero/new/9d2c5f39fc7efdf16dc1e08018f5cd37ccb13b52/apiSpec/new?filename=Hgk_Zero_Options_Try_TryToOpt_1_Call__10_Hgk_Zero_Options_Try_TryFunction___0___1___2___3___4___5___6___7___8___9__0____0___1___2___3___4___5___6___7___8___9_.md&amp;value=---%0Auid%3A%20Hgk.Zero.Options.Try.TryToOpt%601.Call%60%6010(Hgk.Zero.Options.Try.TryFunction%7B%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606%2C%60%607%2C%60%608%2C%60%609%2C%600%7D%2C%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606%2C%60%607%2C%60%608%2C%60%609)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/psmay/Hgk.Zero/blob/9d2c5f39fc7efdf16dc1e08018f5cd37ccb13b52/Hgk.Zero/Options/Try/TryToOpt.cs/#L350">View Source</a>
+  </span>
+  <a id="Hgk_Zero_Options_Try_TryToOpt_1_Call_" data-uid="Hgk.Zero.Options.Try.TryToOpt`1.Call*"></a>
+  <h4 id="Hgk_Zero_Options_Try_TryToOpt_1_Call__10_Hgk_Zero_Options_Try_TryFunction___0___1___2___3___4___5___6___7___8___9__0____0___1___2___3___4___5___6___7___8___9_" data-uid="Hgk.Zero.Options.Try.TryToOpt`1.Call``10(Hgk.Zero.Options.Try.TryFunction{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,`0},``0,``1,``2,``3,``4,``5,``6,``7,``8,``9)">Call&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10&gt;(TryFunction&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, TResult&gt;, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10)</h4>
+  <div class="markdown level1 summary"><p>Calls the specified try function with the specified parameters and returns an option containing the result.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Opt&lt;TResult&gt; Call&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10&gt;(TryFunction&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, TResult&gt; tryFunction, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Hgk.Zero.Options.Try.TryFunction-11.html">TryFunction</a>&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, TResult&gt;</td>
+        <td><span class="parametername">tryFunction</span></td>
+        <td><p>The try function to call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">arg1</span></td>
+        <td><p>The first parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T2</span></td>
+        <td><span class="parametername">arg2</span></td>
+        <td><p>The second parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T3</span></td>
+        <td><span class="parametername">arg3</span></td>
+        <td><p>The third parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T4</span></td>
+        <td><span class="parametername">arg4</span></td>
+        <td><p>The fourth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T5</span></td>
+        <td><span class="parametername">arg5</span></td>
+        <td><p>The fifth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T6</span></td>
+        <td><span class="parametername">arg6</span></td>
+        <td><p>The sixth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T7</span></td>
+        <td><span class="parametername">arg7</span></td>
+        <td><p>The seventh parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T8</span></td>
+        <td><span class="parametername">arg8</span></td>
+        <td><p>The eighth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T9</span></td>
+        <td><span class="parametername">arg9</span></td>
+        <td><p>The ninth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T10</span></td>
+        <td><span class="parametername">arg10</span></td>
+        <td><p>The tenth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Hgk.Zero.Options.Opt-1.html">Opt</a>&lt;TResult&gt;</td>
+        <td><p>An option containing the result parameter produced by calling <code data-dev-comment-type="paramref" class="paramref">tryFunction</code>,
+if the operation completed successfully; otherwise, an empty option.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg1</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg2</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg3</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg4</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg5</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg6</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T7</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg7</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T8</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg8</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T9</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg9</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T10</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg10</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">tryFunction</code> is <span class="xref">null</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/psmay/Hgk.Zero/new/9d2c5f39fc7efdf16dc1e08018f5cd37ccb13b52/apiSpec/new?filename=Hgk_Zero_Options_Try_TryToOpt_1_Call__11_Hgk_Zero_Options_Try_TryFunction___0___1___2___3___4___5___6___7___8___9___10__0____0___1___2___3___4___5___6___7___8___9___10_.md&amp;value=---%0Auid%3A%20Hgk.Zero.Options.Try.TryToOpt%601.Call%60%6011(Hgk.Zero.Options.Try.TryFunction%7B%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606%2C%60%607%2C%60%608%2C%60%609%2C%60%6010%2C%600%7D%2C%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606%2C%60%607%2C%60%608%2C%60%609%2C%60%6010)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/psmay/Hgk.Zero/blob/9d2c5f39fc7efdf16dc1e08018f5cd37ccb13b52/Hgk.Zero/Options/Try/TryToOpt.cs/#L390">View Source</a>
+  </span>
+  <a id="Hgk_Zero_Options_Try_TryToOpt_1_Call_" data-uid="Hgk.Zero.Options.Try.TryToOpt`1.Call*"></a>
+  <h4 id="Hgk_Zero_Options_Try_TryToOpt_1_Call__11_Hgk_Zero_Options_Try_TryFunction___0___1___2___3___4___5___6___7___8___9___10__0____0___1___2___3___4___5___6___7___8___9___10_" data-uid="Hgk.Zero.Options.Try.TryToOpt`1.Call``11(Hgk.Zero.Options.Try.TryFunction{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,`0},``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10)">Call&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11&gt;(TryFunction&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, TResult&gt;, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11)</h4>
+  <div class="markdown level1 summary"><p>Calls the specified try function with the specified parameters and returns an option containing the result.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Opt&lt;TResult&gt; Call&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11&gt;(TryFunction&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, TResult&gt; tryFunction, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Hgk.Zero.Options.Try.TryFunction-12.html">TryFunction</a>&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, TResult&gt;</td>
+        <td><span class="parametername">tryFunction</span></td>
+        <td><p>The try function to call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">arg1</span></td>
+        <td><p>The first parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T2</span></td>
+        <td><span class="parametername">arg2</span></td>
+        <td><p>The second parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T3</span></td>
+        <td><span class="parametername">arg3</span></td>
+        <td><p>The third parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T4</span></td>
+        <td><span class="parametername">arg4</span></td>
+        <td><p>The fourth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T5</span></td>
+        <td><span class="parametername">arg5</span></td>
+        <td><p>The fifth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T6</span></td>
+        <td><span class="parametername">arg6</span></td>
+        <td><p>The sixth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T7</span></td>
+        <td><span class="parametername">arg7</span></td>
+        <td><p>The seventh parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T8</span></td>
+        <td><span class="parametername">arg8</span></td>
+        <td><p>The eighth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T9</span></td>
+        <td><span class="parametername">arg9</span></td>
+        <td><p>The ninth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T10</span></td>
+        <td><span class="parametername">arg10</span></td>
+        <td><p>The tenth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T11</span></td>
+        <td><span class="parametername">arg11</span></td>
+        <td><p>The eleventh parameter to be passed to the try function.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Hgk.Zero.Options.Opt-1.html">Opt</a>&lt;TResult&gt;</td>
+        <td><p>An option containing the result parameter produced by calling <code data-dev-comment-type="paramref" class="paramref">tryFunction</code>,
+if the operation completed successfully; otherwise, an empty option.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg1</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg2</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg3</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg4</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg5</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg6</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T7</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg7</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T8</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg8</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T9</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg9</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T10</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg10</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T11</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg11</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">tryFunction</code> is <span class="xref">null</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/psmay/Hgk.Zero/new/9d2c5f39fc7efdf16dc1e08018f5cd37ccb13b52/apiSpec/new?filename=Hgk_Zero_Options_Try_TryToOpt_1_Call__12_Hgk_Zero_Options_Try_TryFunction___0___1___2___3___4___5___6___7___8___9___10___11__0____0___1___2___3___4___5___6___7___8___9___10___11_.md&amp;value=---%0Auid%3A%20Hgk.Zero.Options.Try.TryToOpt%601.Call%60%6012(Hgk.Zero.Options.Try.TryFunction%7B%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606%2C%60%607%2C%60%608%2C%60%609%2C%60%6010%2C%60%6011%2C%600%7D%2C%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606%2C%60%607%2C%60%608%2C%60%609%2C%60%6010%2C%60%6011)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/psmay/Hgk.Zero/blob/9d2c5f39fc7efdf16dc1e08018f5cd37ccb13b52/Hgk.Zero/Options/Try/TryToOpt.cs/#L432">View Source</a>
+  </span>
+  <a id="Hgk_Zero_Options_Try_TryToOpt_1_Call_" data-uid="Hgk.Zero.Options.Try.TryToOpt`1.Call*"></a>
+  <h4 id="Hgk_Zero_Options_Try_TryToOpt_1_Call__12_Hgk_Zero_Options_Try_TryFunction___0___1___2___3___4___5___6___7___8___9___10___11__0____0___1___2___3___4___5___6___7___8___9___10___11_" data-uid="Hgk.Zero.Options.Try.TryToOpt`1.Call``12(Hgk.Zero.Options.Try.TryFunction{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,`0},``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11)">Call&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12&gt;(TryFunction&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, TResult&gt;, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12)</h4>
+  <div class="markdown level1 summary"><p>Calls the specified try function with the specified parameters and returns an option containing the result.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Opt&lt;TResult&gt; Call&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12&gt;(TryFunction&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, TResult&gt; tryFunction, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11, T12 arg12)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Hgk.Zero.Options.Try.TryFunction-13.html">TryFunction</a>&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, TResult&gt;</td>
+        <td><span class="parametername">tryFunction</span></td>
+        <td><p>The try function to call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">arg1</span></td>
+        <td><p>The first parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T2</span></td>
+        <td><span class="parametername">arg2</span></td>
+        <td><p>The second parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T3</span></td>
+        <td><span class="parametername">arg3</span></td>
+        <td><p>The third parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T4</span></td>
+        <td><span class="parametername">arg4</span></td>
+        <td><p>The fourth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T5</span></td>
+        <td><span class="parametername">arg5</span></td>
+        <td><p>The fifth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T6</span></td>
+        <td><span class="parametername">arg6</span></td>
+        <td><p>The sixth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T7</span></td>
+        <td><span class="parametername">arg7</span></td>
+        <td><p>The seventh parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T8</span></td>
+        <td><span class="parametername">arg8</span></td>
+        <td><p>The eighth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T9</span></td>
+        <td><span class="parametername">arg9</span></td>
+        <td><p>The ninth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T10</span></td>
+        <td><span class="parametername">arg10</span></td>
+        <td><p>The tenth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T11</span></td>
+        <td><span class="parametername">arg11</span></td>
+        <td><p>The eleventh parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T12</span></td>
+        <td><span class="parametername">arg12</span></td>
+        <td><p>The twelfth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Hgk.Zero.Options.Opt-1.html">Opt</a>&lt;TResult&gt;</td>
+        <td><p>An option containing the result parameter produced by calling <code data-dev-comment-type="paramref" class="paramref">tryFunction</code>,
+if the operation completed successfully; otherwise, an empty option.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg1</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg2</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg3</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg4</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg5</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg6</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T7</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg7</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T8</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg8</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T9</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg9</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T10</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg10</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T11</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg11</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T12</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg12</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">tryFunction</code> is <span class="xref">null</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/psmay/Hgk.Zero/new/9d2c5f39fc7efdf16dc1e08018f5cd37ccb13b52/apiSpec/new?filename=Hgk_Zero_Options_Try_TryToOpt_1_Call__13_Hgk_Zero_Options_Try_TryFunction___0___1___2___3___4___5___6___7___8___9___10___11___12__0____0___1___2___3___4___5___6___7___8___9___10___11___12_.md&amp;value=---%0Auid%3A%20Hgk.Zero.Options.Try.TryToOpt%601.Call%60%6013(Hgk.Zero.Options.Try.TryFunction%7B%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606%2C%60%607%2C%60%608%2C%60%609%2C%60%6010%2C%60%6011%2C%60%6012%2C%600%7D%2C%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606%2C%60%607%2C%60%608%2C%60%609%2C%60%6010%2C%60%6011%2C%60%6012)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/psmay/Hgk.Zero/blob/9d2c5f39fc7efdf16dc1e08018f5cd37ccb13b52/Hgk.Zero/Options/Try/TryToOpt.cs/#L476">View Source</a>
+  </span>
+  <a id="Hgk_Zero_Options_Try_TryToOpt_1_Call_" data-uid="Hgk.Zero.Options.Try.TryToOpt`1.Call*"></a>
+  <h4 id="Hgk_Zero_Options_Try_TryToOpt_1_Call__13_Hgk_Zero_Options_Try_TryFunction___0___1___2___3___4___5___6___7___8___9___10___11___12__0____0___1___2___3___4___5___6___7___8___9___10___11___12_" data-uid="Hgk.Zero.Options.Try.TryToOpt`1.Call``13(Hgk.Zero.Options.Try.TryFunction{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,`0},``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12)">Call&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13&gt;(TryFunction&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, TResult&gt;, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13)</h4>
+  <div class="markdown level1 summary"><p>Calls the specified try function with the specified parameters and returns an option containing the result.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Opt&lt;TResult&gt; Call&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13&gt;(TryFunction&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, TResult&gt; tryFunction, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11, T12 arg12, T13 arg13)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Hgk.Zero.Options.Try.TryFunction-14.html">TryFunction</a>&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, TResult&gt;</td>
+        <td><span class="parametername">tryFunction</span></td>
+        <td><p>The try function to call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">arg1</span></td>
+        <td><p>The first parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T2</span></td>
+        <td><span class="parametername">arg2</span></td>
+        <td><p>The second parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T3</span></td>
+        <td><span class="parametername">arg3</span></td>
+        <td><p>The third parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T4</span></td>
+        <td><span class="parametername">arg4</span></td>
+        <td><p>The fourth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T5</span></td>
+        <td><span class="parametername">arg5</span></td>
+        <td><p>The fifth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T6</span></td>
+        <td><span class="parametername">arg6</span></td>
+        <td><p>The sixth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T7</span></td>
+        <td><span class="parametername">arg7</span></td>
+        <td><p>The seventh parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T8</span></td>
+        <td><span class="parametername">arg8</span></td>
+        <td><p>The eighth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T9</span></td>
+        <td><span class="parametername">arg9</span></td>
+        <td><p>The ninth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T10</span></td>
+        <td><span class="parametername">arg10</span></td>
+        <td><p>The tenth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T11</span></td>
+        <td><span class="parametername">arg11</span></td>
+        <td><p>The eleventh parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T12</span></td>
+        <td><span class="parametername">arg12</span></td>
+        <td><p>The twelfth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T13</span></td>
+        <td><span class="parametername">arg13</span></td>
+        <td><p>The thirteenth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Hgk.Zero.Options.Opt-1.html">Opt</a>&lt;TResult&gt;</td>
+        <td><p>An option containing the result parameter produced by calling <code data-dev-comment-type="paramref" class="paramref">tryFunction</code>,
+if the operation completed successfully; otherwise, an empty option.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg1</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg2</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg3</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg4</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg5</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg6</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T7</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg7</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T8</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg8</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T9</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg9</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T10</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg10</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T11</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg11</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T12</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg12</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T13</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg13</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">tryFunction</code> is <span class="xref">null</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/psmay/Hgk.Zero/new/9d2c5f39fc7efdf16dc1e08018f5cd37ccb13b52/apiSpec/new?filename=Hgk_Zero_Options_Try_TryToOpt_1_Call__14_Hgk_Zero_Options_Try_TryFunction___0___1___2___3___4___5___6___7___8___9___10___11___12___13__0____0___1___2___3___4___5___6___7___8___9___10___11___12___13_.md&amp;value=---%0Auid%3A%20Hgk.Zero.Options.Try.TryToOpt%601.Call%60%6014(Hgk.Zero.Options.Try.TryFunction%7B%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606%2C%60%607%2C%60%608%2C%60%609%2C%60%6010%2C%60%6011%2C%60%6012%2C%60%6013%2C%600%7D%2C%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606%2C%60%607%2C%60%608%2C%60%609%2C%60%6010%2C%60%6011%2C%60%6012%2C%60%6013)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/psmay/Hgk.Zero/blob/9d2c5f39fc7efdf16dc1e08018f5cd37ccb13b52/Hgk.Zero/Options/Try/TryToOpt.cs/#L522">View Source</a>
+  </span>
+  <a id="Hgk_Zero_Options_Try_TryToOpt_1_Call_" data-uid="Hgk.Zero.Options.Try.TryToOpt`1.Call*"></a>
+  <h4 id="Hgk_Zero_Options_Try_TryToOpt_1_Call__14_Hgk_Zero_Options_Try_TryFunction___0___1___2___3___4___5___6___7___8___9___10___11___12___13__0____0___1___2___3___4___5___6___7___8___9___10___11___12___13_" data-uid="Hgk.Zero.Options.Try.TryToOpt`1.Call``14(Hgk.Zero.Options.Try.TryFunction{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,``13,`0},``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,``13)">Call&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14&gt;(TryFunction&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, TResult&gt;, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14)</h4>
+  <div class="markdown level1 summary"><p>Calls the specified try function with the specified parameters and returns an option containing the result.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Opt&lt;TResult&gt; Call&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14&gt;(TryFunction&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, TResult&gt; tryFunction, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11, T12 arg12, T13 arg13, T14 arg14)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Hgk.Zero.Options.Try.TryFunction-15.html">TryFunction</a>&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, TResult&gt;</td>
+        <td><span class="parametername">tryFunction</span></td>
+        <td><p>The try function to call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">arg1</span></td>
+        <td><p>The first parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T2</span></td>
+        <td><span class="parametername">arg2</span></td>
+        <td><p>The second parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T3</span></td>
+        <td><span class="parametername">arg3</span></td>
+        <td><p>The third parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T4</span></td>
+        <td><span class="parametername">arg4</span></td>
+        <td><p>The fourth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T5</span></td>
+        <td><span class="parametername">arg5</span></td>
+        <td><p>The fifth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T6</span></td>
+        <td><span class="parametername">arg6</span></td>
+        <td><p>The sixth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T7</span></td>
+        <td><span class="parametername">arg7</span></td>
+        <td><p>The seventh parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T8</span></td>
+        <td><span class="parametername">arg8</span></td>
+        <td><p>The eighth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T9</span></td>
+        <td><span class="parametername">arg9</span></td>
+        <td><p>The ninth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T10</span></td>
+        <td><span class="parametername">arg10</span></td>
+        <td><p>The tenth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T11</span></td>
+        <td><span class="parametername">arg11</span></td>
+        <td><p>The eleventh parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T12</span></td>
+        <td><span class="parametername">arg12</span></td>
+        <td><p>The twelfth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T13</span></td>
+        <td><span class="parametername">arg13</span></td>
+        <td><p>The thirteenth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T14</span></td>
+        <td><span class="parametername">arg14</span></td>
+        <td><p>The fourteenth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Hgk.Zero.Options.Opt-1.html">Opt</a>&lt;TResult&gt;</td>
+        <td><p>An option containing the result parameter produced by calling <code data-dev-comment-type="paramref" class="paramref">tryFunction</code>,
+if the operation completed successfully; otherwise, an empty option.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg1</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg2</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg3</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg4</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg5</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg6</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T7</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg7</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T8</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg8</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T9</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg9</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T10</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg10</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T11</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg11</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T12</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg12</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T13</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg13</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T14</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg14</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">tryFunction</code> is <span class="xref">null</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/psmay/Hgk.Zero/new/9d2c5f39fc7efdf16dc1e08018f5cd37ccb13b52/apiSpec/new?filename=Hgk_Zero_Options_Try_TryToOpt_1_Call__15_Hgk_Zero_Options_Try_TryFunction___0___1___2___3___4___5___6___7___8___9___10___11___12___13___14__0____0___1___2___3___4___5___6___7___8___9___10___11___12___13___14_.md&amp;value=---%0Auid%3A%20Hgk.Zero.Options.Try.TryToOpt%601.Call%60%6015(Hgk.Zero.Options.Try.TryFunction%7B%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606%2C%60%607%2C%60%608%2C%60%609%2C%60%6010%2C%60%6011%2C%60%6012%2C%60%6013%2C%60%6014%2C%600%7D%2C%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606%2C%60%607%2C%60%608%2C%60%609%2C%60%6010%2C%60%6011%2C%60%6012%2C%60%6013%2C%60%6014)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/psmay/Hgk.Zero/blob/9d2c5f39fc7efdf16dc1e08018f5cd37ccb13b52/Hgk.Zero/Options/Try/TryToOpt.cs/#L570">View Source</a>
+  </span>
+  <a id="Hgk_Zero_Options_Try_TryToOpt_1_Call_" data-uid="Hgk.Zero.Options.Try.TryToOpt`1.Call*"></a>
+  <h4 id="Hgk_Zero_Options_Try_TryToOpt_1_Call__15_Hgk_Zero_Options_Try_TryFunction___0___1___2___3___4___5___6___7___8___9___10___11___12___13___14__0____0___1___2___3___4___5___6___7___8___9___10___11___12___13___14_" data-uid="Hgk.Zero.Options.Try.TryToOpt`1.Call``15(Hgk.Zero.Options.Try.TryFunction{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,``13,``14,`0},``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,``13,``14)">Call&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15&gt;(TryFunction&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, TResult&gt;, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15)</h4>
+  <div class="markdown level1 summary"><p>Calls the specified try function with the specified parameters and returns an option containing the result.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Opt&lt;TResult&gt; Call&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15&gt;(TryFunction&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, TResult&gt; tryFunction, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11, T12 arg12, T13 arg13, T14 arg14, T15 arg15)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Hgk.Zero.Options.Try.TryFunction-16.html">TryFunction</a>&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, TResult&gt;</td>
+        <td><span class="parametername">tryFunction</span></td>
+        <td><p>The try function to call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">arg1</span></td>
+        <td><p>The first parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T2</span></td>
+        <td><span class="parametername">arg2</span></td>
+        <td><p>The second parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T3</span></td>
+        <td><span class="parametername">arg3</span></td>
+        <td><p>The third parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T4</span></td>
+        <td><span class="parametername">arg4</span></td>
+        <td><p>The fourth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T5</span></td>
+        <td><span class="parametername">arg5</span></td>
+        <td><p>The fifth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T6</span></td>
+        <td><span class="parametername">arg6</span></td>
+        <td><p>The sixth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T7</span></td>
+        <td><span class="parametername">arg7</span></td>
+        <td><p>The seventh parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T8</span></td>
+        <td><span class="parametername">arg8</span></td>
+        <td><p>The eighth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T9</span></td>
+        <td><span class="parametername">arg9</span></td>
+        <td><p>The ninth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T10</span></td>
+        <td><span class="parametername">arg10</span></td>
+        <td><p>The tenth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T11</span></td>
+        <td><span class="parametername">arg11</span></td>
+        <td><p>The eleventh parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T12</span></td>
+        <td><span class="parametername">arg12</span></td>
+        <td><p>The twelfth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T13</span></td>
+        <td><span class="parametername">arg13</span></td>
+        <td><p>The thirteenth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T14</span></td>
+        <td><span class="parametername">arg14</span></td>
+        <td><p>The fourteenth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T15</span></td>
+        <td><span class="parametername">arg15</span></td>
+        <td><p>The fifteenth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Hgk.Zero.Options.Opt-1.html">Opt</a>&lt;TResult&gt;</td>
+        <td><p>An option containing the result parameter produced by calling <code data-dev-comment-type="paramref" class="paramref">tryFunction</code>,
+if the operation completed successfully; otherwise, an empty option.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg1</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg2</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg3</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg4</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg5</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg6</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T7</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg7</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T8</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg8</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T9</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg9</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T10</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg10</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T11</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg11</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T12</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg12</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T13</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg13</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T14</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg14</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T15</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg15</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">tryFunction</code> is <span class="xref">null</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/psmay/Hgk.Zero/new/9d2c5f39fc7efdf16dc1e08018f5cd37ccb13b52/apiSpec/new?filename=Hgk_Zero_Options_Try_TryToOpt_1_Call__16_Hgk_Zero_Options_Try_TryFunction___0___1___2___3___4___5___6___7___8___9___10___11___12___13___14___15__0____0___1___2___3___4___5___6___7___8___9___10___11___12___13___14___15_.md&amp;value=---%0Auid%3A%20Hgk.Zero.Options.Try.TryToOpt%601.Call%60%6016(Hgk.Zero.Options.Try.TryFunction%7B%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606%2C%60%607%2C%60%608%2C%60%609%2C%60%6010%2C%60%6011%2C%60%6012%2C%60%6013%2C%60%6014%2C%60%6015%2C%600%7D%2C%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606%2C%60%607%2C%60%608%2C%60%609%2C%60%6010%2C%60%6011%2C%60%6012%2C%60%6013%2C%60%6014%2C%60%6015)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/psmay/Hgk.Zero/blob/9d2c5f39fc7efdf16dc1e08018f5cd37ccb13b52/Hgk.Zero/Options/Try/TryToOpt.cs/#L620">View Source</a>
+  </span>
+  <a id="Hgk_Zero_Options_Try_TryToOpt_1_Call_" data-uid="Hgk.Zero.Options.Try.TryToOpt`1.Call*"></a>
+  <h4 id="Hgk_Zero_Options_Try_TryToOpt_1_Call__16_Hgk_Zero_Options_Try_TryFunction___0___1___2___3___4___5___6___7___8___9___10___11___12___13___14___15__0____0___1___2___3___4___5___6___7___8___9___10___11___12___13___14___15_" data-uid="Hgk.Zero.Options.Try.TryToOpt`1.Call``16(Hgk.Zero.Options.Try.TryFunction{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,``13,``14,``15,`0},``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,``13,``14,``15)">Call&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16&gt;(TryFunction&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, TResult&gt;, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16)</h4>
+  <div class="markdown level1 summary"><p>Calls the specified try function with the specified parameters and returns an option containing the result.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Opt&lt;TResult&gt; Call&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16&gt;(TryFunction&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, TResult&gt; tryFunction, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11, T12 arg12, T13 arg13, T14 arg14, T15 arg15, T16 arg16)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Hgk.Zero.Options.Try.TryFunction-17.html">TryFunction</a>&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, TResult&gt;</td>
+        <td><span class="parametername">tryFunction</span></td>
+        <td><p>The try function to call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">arg1</span></td>
+        <td><p>The first parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T2</span></td>
+        <td><span class="parametername">arg2</span></td>
+        <td><p>The second parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T3</span></td>
+        <td><span class="parametername">arg3</span></td>
+        <td><p>The third parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T4</span></td>
+        <td><span class="parametername">arg4</span></td>
+        <td><p>The fourth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T5</span></td>
+        <td><span class="parametername">arg5</span></td>
+        <td><p>The fifth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T6</span></td>
+        <td><span class="parametername">arg6</span></td>
+        <td><p>The sixth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T7</span></td>
+        <td><span class="parametername">arg7</span></td>
+        <td><p>The seventh parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T8</span></td>
+        <td><span class="parametername">arg8</span></td>
+        <td><p>The eighth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T9</span></td>
+        <td><span class="parametername">arg9</span></td>
+        <td><p>The ninth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T10</span></td>
+        <td><span class="parametername">arg10</span></td>
+        <td><p>The tenth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T11</span></td>
+        <td><span class="parametername">arg11</span></td>
+        <td><p>The eleventh parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T12</span></td>
+        <td><span class="parametername">arg12</span></td>
+        <td><p>The twelfth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T13</span></td>
+        <td><span class="parametername">arg13</span></td>
+        <td><p>The thirteenth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T14</span></td>
+        <td><span class="parametername">arg14</span></td>
+        <td><p>The fourteenth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T15</span></td>
+        <td><span class="parametername">arg15</span></td>
+        <td><p>The fifteenth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T16</span></td>
+        <td><span class="parametername">arg16</span></td>
+        <td><p>The sixteenth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Hgk.Zero.Options.Opt-1.html">Opt</a>&lt;TResult&gt;</td>
+        <td><p>An option containing the result parameter produced by calling <code data-dev-comment-type="paramref" class="paramref">tryFunction</code>,
+if the operation completed successfully; otherwise, an empty option.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg1</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg2</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg3</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg4</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg5</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg6</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T7</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg7</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T8</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg8</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T9</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg9</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T10</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg10</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T11</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg11</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T12</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg12</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T13</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg13</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T14</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg14</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T15</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg15</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T16</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg16</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">tryFunction</code> is <span class="xref">null</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/psmay/Hgk.Zero/new/9d2c5f39fc7efdf16dc1e08018f5cd37ccb13b52/apiSpec/new?filename=Hgk_Zero_Options_Try_TryToOpt_1_Call__2_Hgk_Zero_Options_Try_TryFunction___0___1__0____0___1_.md&amp;value=---%0Auid%3A%20Hgk.Zero.Options.Try.TryToOpt%601.Call%60%602(Hgk.Zero.Options.Try.TryFunction%7B%60%600%2C%60%601%2C%600%7D%2C%60%600%2C%60%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/psmay/Hgk.Zero/blob/9d2c5f39fc7efdf16dc1e08018f5cd37ccb13b52/Hgk.Zero/Options/Try/TryToOpt.cs/#L102">View Source</a>
+  </span>
+  <a id="Hgk_Zero_Options_Try_TryToOpt_1_Call_" data-uid="Hgk.Zero.Options.Try.TryToOpt`1.Call*"></a>
+  <h4 id="Hgk_Zero_Options_Try_TryToOpt_1_Call__2_Hgk_Zero_Options_Try_TryFunction___0___1__0____0___1_" data-uid="Hgk.Zero.Options.Try.TryToOpt`1.Call``2(Hgk.Zero.Options.Try.TryFunction{``0,``1,`0},``0,``1)">Call&lt;T1, T2&gt;(TryFunction&lt;T1, T2, TResult&gt;, T1, T2)</h4>
+  <div class="markdown level1 summary"><p>Calls the specified try function with the specified parameters and returns an option containing the result.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Opt&lt;TResult&gt; Call&lt;T1, T2&gt;(TryFunction&lt;T1, T2, TResult&gt; tryFunction, T1 arg1, T2 arg2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Hgk.Zero.Options.Try.TryFunction-3.html">TryFunction</a>&lt;T1, T2, TResult&gt;</td>
+        <td><span class="parametername">tryFunction</span></td>
+        <td><p>The try function to call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">arg1</span></td>
+        <td><p>The first parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T2</span></td>
+        <td><span class="parametername">arg2</span></td>
+        <td><p>The second parameter to be passed to the try function.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Hgk.Zero.Options.Opt-1.html">Opt</a>&lt;TResult&gt;</td>
+        <td><p>An option containing the result parameter produced by calling <code data-dev-comment-type="paramref" class="paramref">tryFunction</code>,
+if the operation completed successfully; otherwise, an empty option.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg1</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg2</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">tryFunction</code> is <span class="xref">null</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/psmay/Hgk.Zero/new/9d2c5f39fc7efdf16dc1e08018f5cd37ccb13b52/apiSpec/new?filename=Hgk_Zero_Options_Try_TryToOpt_1_Call__3_Hgk_Zero_Options_Try_TryFunction___0___1___2__0____0___1___2_.md&amp;value=---%0Auid%3A%20Hgk.Zero.Options.Try.TryToOpt%601.Call%60%603(Hgk.Zero.Options.Try.TryFunction%7B%60%600%2C%60%601%2C%60%602%2C%600%7D%2C%60%600%2C%60%601%2C%60%602)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/psmay/Hgk.Zero/blob/9d2c5f39fc7efdf16dc1e08018f5cd37ccb13b52/Hgk.Zero/Options/Try/TryToOpt.cs/#L126">View Source</a>
+  </span>
+  <a id="Hgk_Zero_Options_Try_TryToOpt_1_Call_" data-uid="Hgk.Zero.Options.Try.TryToOpt`1.Call*"></a>
+  <h4 id="Hgk_Zero_Options_Try_TryToOpt_1_Call__3_Hgk_Zero_Options_Try_TryFunction___0___1___2__0____0___1___2_" data-uid="Hgk.Zero.Options.Try.TryToOpt`1.Call``3(Hgk.Zero.Options.Try.TryFunction{``0,``1,``2,`0},``0,``1,``2)">Call&lt;T1, T2, T3&gt;(TryFunction&lt;T1, T2, T3, TResult&gt;, T1, T2, T3)</h4>
+  <div class="markdown level1 summary"><p>Calls the specified try function with the specified parameters and returns an option containing the result.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Opt&lt;TResult&gt; Call&lt;T1, T2, T3&gt;(TryFunction&lt;T1, T2, T3, TResult&gt; tryFunction, T1 arg1, T2 arg2, T3 arg3)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Hgk.Zero.Options.Try.TryFunction-4.html">TryFunction</a>&lt;T1, T2, T3, TResult&gt;</td>
+        <td><span class="parametername">tryFunction</span></td>
+        <td><p>The try function to call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">arg1</span></td>
+        <td><p>The first parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T2</span></td>
+        <td><span class="parametername">arg2</span></td>
+        <td><p>The second parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T3</span></td>
+        <td><span class="parametername">arg3</span></td>
+        <td><p>The third parameter to be passed to the try function.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Hgk.Zero.Options.Opt-1.html">Opt</a>&lt;TResult&gt;</td>
+        <td><p>An option containing the result parameter produced by calling <code data-dev-comment-type="paramref" class="paramref">tryFunction</code>,
+if the operation completed successfully; otherwise, an empty option.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg1</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg2</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg3</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">tryFunction</code> is <span class="xref">null</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/psmay/Hgk.Zero/new/9d2c5f39fc7efdf16dc1e08018f5cd37ccb13b52/apiSpec/new?filename=Hgk_Zero_Options_Try_TryToOpt_1_Call__4_Hgk_Zero_Options_Try_TryFunction___0___1___2___3__0____0___1___2___3_.md&amp;value=---%0Auid%3A%20Hgk.Zero.Options.Try.TryToOpt%601.Call%60%604(Hgk.Zero.Options.Try.TryFunction%7B%60%600%2C%60%601%2C%60%602%2C%60%603%2C%600%7D%2C%60%600%2C%60%601%2C%60%602%2C%60%603)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/psmay/Hgk.Zero/blob/9d2c5f39fc7efdf16dc1e08018f5cd37ccb13b52/Hgk.Zero/Options/Try/TryToOpt.cs/#L152">View Source</a>
+  </span>
+  <a id="Hgk_Zero_Options_Try_TryToOpt_1_Call_" data-uid="Hgk.Zero.Options.Try.TryToOpt`1.Call*"></a>
+  <h4 id="Hgk_Zero_Options_Try_TryToOpt_1_Call__4_Hgk_Zero_Options_Try_TryFunction___0___1___2___3__0____0___1___2___3_" data-uid="Hgk.Zero.Options.Try.TryToOpt`1.Call``4(Hgk.Zero.Options.Try.TryFunction{``0,``1,``2,``3,`0},``0,``1,``2,``3)">Call&lt;T1, T2, T3, T4&gt;(TryFunction&lt;T1, T2, T3, T4, TResult&gt;, T1, T2, T3, T4)</h4>
+  <div class="markdown level1 summary"><p>Calls the specified try function with the specified parameters and returns an option containing the result.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Opt&lt;TResult&gt; Call&lt;T1, T2, T3, T4&gt;(TryFunction&lt;T1, T2, T3, T4, TResult&gt; tryFunction, T1 arg1, T2 arg2, T3 arg3, T4 arg4)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Hgk.Zero.Options.Try.TryFunction-5.html">TryFunction</a>&lt;T1, T2, T3, T4, TResult&gt;</td>
+        <td><span class="parametername">tryFunction</span></td>
+        <td><p>The try function to call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">arg1</span></td>
+        <td><p>The first parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T2</span></td>
+        <td><span class="parametername">arg2</span></td>
+        <td><p>The second parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T3</span></td>
+        <td><span class="parametername">arg3</span></td>
+        <td><p>The third parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T4</span></td>
+        <td><span class="parametername">arg4</span></td>
+        <td><p>The fourth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Hgk.Zero.Options.Opt-1.html">Opt</a>&lt;TResult&gt;</td>
+        <td><p>An option containing the result parameter produced by calling <code data-dev-comment-type="paramref" class="paramref">tryFunction</code>,
+if the operation completed successfully; otherwise, an empty option.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg1</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg2</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg3</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg4</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">tryFunction</code> is <span class="xref">null</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/psmay/Hgk.Zero/new/9d2c5f39fc7efdf16dc1e08018f5cd37ccb13b52/apiSpec/new?filename=Hgk_Zero_Options_Try_TryToOpt_1_Call__5_Hgk_Zero_Options_Try_TryFunction___0___1___2___3___4__0____0___1___2___3___4_.md&amp;value=---%0Auid%3A%20Hgk.Zero.Options.Try.TryToOpt%601.Call%60%605(Hgk.Zero.Options.Try.TryFunction%7B%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%600%7D%2C%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/psmay/Hgk.Zero/blob/9d2c5f39fc7efdf16dc1e08018f5cd37ccb13b52/Hgk.Zero/Options/Try/TryToOpt.cs/#L180">View Source</a>
+  </span>
+  <a id="Hgk_Zero_Options_Try_TryToOpt_1_Call_" data-uid="Hgk.Zero.Options.Try.TryToOpt`1.Call*"></a>
+  <h4 id="Hgk_Zero_Options_Try_TryToOpt_1_Call__5_Hgk_Zero_Options_Try_TryFunction___0___1___2___3___4__0____0___1___2___3___4_" data-uid="Hgk.Zero.Options.Try.TryToOpt`1.Call``5(Hgk.Zero.Options.Try.TryFunction{``0,``1,``2,``3,``4,`0},``0,``1,``2,``3,``4)">Call&lt;T1, T2, T3, T4, T5&gt;(TryFunction&lt;T1, T2, T3, T4, T5, TResult&gt;, T1, T2, T3, T4, T5)</h4>
+  <div class="markdown level1 summary"><p>Calls the specified try function with the specified parameters and returns an option containing the result.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Opt&lt;TResult&gt; Call&lt;T1, T2, T3, T4, T5&gt;(TryFunction&lt;T1, T2, T3, T4, T5, TResult&gt; tryFunction, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Hgk.Zero.Options.Try.TryFunction-6.html">TryFunction</a>&lt;T1, T2, T3, T4, T5, TResult&gt;</td>
+        <td><span class="parametername">tryFunction</span></td>
+        <td><p>The try function to call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">arg1</span></td>
+        <td><p>The first parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T2</span></td>
+        <td><span class="parametername">arg2</span></td>
+        <td><p>The second parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T3</span></td>
+        <td><span class="parametername">arg3</span></td>
+        <td><p>The third parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T4</span></td>
+        <td><span class="parametername">arg4</span></td>
+        <td><p>The fourth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T5</span></td>
+        <td><span class="parametername">arg5</span></td>
+        <td><p>The fifth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Hgk.Zero.Options.Opt-1.html">Opt</a>&lt;TResult&gt;</td>
+        <td><p>An option containing the result parameter produced by calling <code data-dev-comment-type="paramref" class="paramref">tryFunction</code>,
+if the operation completed successfully; otherwise, an empty option.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg1</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg2</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg3</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg4</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg5</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">tryFunction</code> is <span class="xref">null</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/psmay/Hgk.Zero/new/9d2c5f39fc7efdf16dc1e08018f5cd37ccb13b52/apiSpec/new?filename=Hgk_Zero_Options_Try_TryToOpt_1_Call__6_Hgk_Zero_Options_Try_TryFunction___0___1___2___3___4___5__0____0___1___2___3___4___5_.md&amp;value=---%0Auid%3A%20Hgk.Zero.Options.Try.TryToOpt%601.Call%60%606(Hgk.Zero.Options.Try.TryFunction%7B%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%600%7D%2C%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/psmay/Hgk.Zero/blob/9d2c5f39fc7efdf16dc1e08018f5cd37ccb13b52/Hgk.Zero/Options/Try/TryToOpt.cs/#L210">View Source</a>
+  </span>
+  <a id="Hgk_Zero_Options_Try_TryToOpt_1_Call_" data-uid="Hgk.Zero.Options.Try.TryToOpt`1.Call*"></a>
+  <h4 id="Hgk_Zero_Options_Try_TryToOpt_1_Call__6_Hgk_Zero_Options_Try_TryFunction___0___1___2___3___4___5__0____0___1___2___3___4___5_" data-uid="Hgk.Zero.Options.Try.TryToOpt`1.Call``6(Hgk.Zero.Options.Try.TryFunction{``0,``1,``2,``3,``4,``5,`0},``0,``1,``2,``3,``4,``5)">Call&lt;T1, T2, T3, T4, T5, T6&gt;(TryFunction&lt;T1, T2, T3, T4, T5, T6, TResult&gt;, T1, T2, T3, T4, T5, T6)</h4>
+  <div class="markdown level1 summary"><p>Calls the specified try function with the specified parameters and returns an option containing the result.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Opt&lt;TResult&gt; Call&lt;T1, T2, T3, T4, T5, T6&gt;(TryFunction&lt;T1, T2, T3, T4, T5, T6, TResult&gt; tryFunction, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Hgk.Zero.Options.Try.TryFunction-7.html">TryFunction</a>&lt;T1, T2, T3, T4, T5, T6, TResult&gt;</td>
+        <td><span class="parametername">tryFunction</span></td>
+        <td><p>The try function to call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">arg1</span></td>
+        <td><p>The first parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T2</span></td>
+        <td><span class="parametername">arg2</span></td>
+        <td><p>The second parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T3</span></td>
+        <td><span class="parametername">arg3</span></td>
+        <td><p>The third parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T4</span></td>
+        <td><span class="parametername">arg4</span></td>
+        <td><p>The fourth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T5</span></td>
+        <td><span class="parametername">arg5</span></td>
+        <td><p>The fifth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T6</span></td>
+        <td><span class="parametername">arg6</span></td>
+        <td><p>The sixth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Hgk.Zero.Options.Opt-1.html">Opt</a>&lt;TResult&gt;</td>
+        <td><p>An option containing the result parameter produced by calling <code data-dev-comment-type="paramref" class="paramref">tryFunction</code>,
+if the operation completed successfully; otherwise, an empty option.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg1</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg2</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg3</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg4</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg5</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg6</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">tryFunction</code> is <span class="xref">null</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/psmay/Hgk.Zero/new/9d2c5f39fc7efdf16dc1e08018f5cd37ccb13b52/apiSpec/new?filename=Hgk_Zero_Options_Try_TryToOpt_1_Call__7_Hgk_Zero_Options_Try_TryFunction___0___1___2___3___4___5___6__0____0___1___2___3___4___5___6_.md&amp;value=---%0Auid%3A%20Hgk.Zero.Options.Try.TryToOpt%601.Call%60%607(Hgk.Zero.Options.Try.TryFunction%7B%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606%2C%600%7D%2C%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/psmay/Hgk.Zero/blob/9d2c5f39fc7efdf16dc1e08018f5cd37ccb13b52/Hgk.Zero/Options/Try/TryToOpt.cs/#L242">View Source</a>
+  </span>
+  <a id="Hgk_Zero_Options_Try_TryToOpt_1_Call_" data-uid="Hgk.Zero.Options.Try.TryToOpt`1.Call*"></a>
+  <h4 id="Hgk_Zero_Options_Try_TryToOpt_1_Call__7_Hgk_Zero_Options_Try_TryFunction___0___1___2___3___4___5___6__0____0___1___2___3___4___5___6_" data-uid="Hgk.Zero.Options.Try.TryToOpt`1.Call``7(Hgk.Zero.Options.Try.TryFunction{``0,``1,``2,``3,``4,``5,``6,`0},``0,``1,``2,``3,``4,``5,``6)">Call&lt;T1, T2, T3, T4, T5, T6, T7&gt;(TryFunction&lt;T1, T2, T3, T4, T5, T6, T7, TResult&gt;, T1, T2, T3, T4, T5, T6, T7)</h4>
+  <div class="markdown level1 summary"><p>Calls the specified try function with the specified parameters and returns an option containing the result.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Opt&lt;TResult&gt; Call&lt;T1, T2, T3, T4, T5, T6, T7&gt;(TryFunction&lt;T1, T2, T3, T4, T5, T6, T7, TResult&gt; tryFunction, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Hgk.Zero.Options.Try.TryFunction-8.html">TryFunction</a>&lt;T1, T2, T3, T4, T5, T6, T7, TResult&gt;</td>
+        <td><span class="parametername">tryFunction</span></td>
+        <td><p>The try function to call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">arg1</span></td>
+        <td><p>The first parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T2</span></td>
+        <td><span class="parametername">arg2</span></td>
+        <td><p>The second parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T3</span></td>
+        <td><span class="parametername">arg3</span></td>
+        <td><p>The third parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T4</span></td>
+        <td><span class="parametername">arg4</span></td>
+        <td><p>The fourth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T5</span></td>
+        <td><span class="parametername">arg5</span></td>
+        <td><p>The fifth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T6</span></td>
+        <td><span class="parametername">arg6</span></td>
+        <td><p>The sixth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T7</span></td>
+        <td><span class="parametername">arg7</span></td>
+        <td><p>The seventh parameter to be passed to the try function.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Hgk.Zero.Options.Opt-1.html">Opt</a>&lt;TResult&gt;</td>
+        <td><p>An option containing the result parameter produced by calling <code data-dev-comment-type="paramref" class="paramref">tryFunction</code>,
+if the operation completed successfully; otherwise, an empty option.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg1</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg2</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg3</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg4</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg5</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg6</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T7</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg7</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">tryFunction</code> is <span class="xref">null</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/psmay/Hgk.Zero/new/9d2c5f39fc7efdf16dc1e08018f5cd37ccb13b52/apiSpec/new?filename=Hgk_Zero_Options_Try_TryToOpt_1_Call__8_Hgk_Zero_Options_Try_TryFunction___0___1___2___3___4___5___6___7__0____0___1___2___3___4___5___6___7_.md&amp;value=---%0Auid%3A%20Hgk.Zero.Options.Try.TryToOpt%601.Call%60%608(Hgk.Zero.Options.Try.TryFunction%7B%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606%2C%60%607%2C%600%7D%2C%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606%2C%60%607)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/psmay/Hgk.Zero/blob/9d2c5f39fc7efdf16dc1e08018f5cd37ccb13b52/Hgk.Zero/Options/Try/TryToOpt.cs/#L276">View Source</a>
+  </span>
+  <a id="Hgk_Zero_Options_Try_TryToOpt_1_Call_" data-uid="Hgk.Zero.Options.Try.TryToOpt`1.Call*"></a>
+  <h4 id="Hgk_Zero_Options_Try_TryToOpt_1_Call__8_Hgk_Zero_Options_Try_TryFunction___0___1___2___3___4___5___6___7__0____0___1___2___3___4___5___6___7_" data-uid="Hgk.Zero.Options.Try.TryToOpt`1.Call``8(Hgk.Zero.Options.Try.TryFunction{``0,``1,``2,``3,``4,``5,``6,``7,`0},``0,``1,``2,``3,``4,``5,``6,``7)">Call&lt;T1, T2, T3, T4, T5, T6, T7, T8&gt;(TryFunction&lt;T1, T2, T3, T4, T5, T6, T7, T8, TResult&gt;, T1, T2, T3, T4, T5, T6, T7, T8)</h4>
+  <div class="markdown level1 summary"><p>Calls the specified try function with the specified parameters and returns an option containing the result.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Opt&lt;TResult&gt; Call&lt;T1, T2, T3, T4, T5, T6, T7, T8&gt;(TryFunction&lt;T1, T2, T3, T4, T5, T6, T7, T8, TResult&gt; tryFunction, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Hgk.Zero.Options.Try.TryFunction-9.html">TryFunction</a>&lt;T1, T2, T3, T4, T5, T6, T7, T8, TResult&gt;</td>
+        <td><span class="parametername">tryFunction</span></td>
+        <td><p>The try function to call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">arg1</span></td>
+        <td><p>The first parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T2</span></td>
+        <td><span class="parametername">arg2</span></td>
+        <td><p>The second parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T3</span></td>
+        <td><span class="parametername">arg3</span></td>
+        <td><p>The third parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T4</span></td>
+        <td><span class="parametername">arg4</span></td>
+        <td><p>The fourth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T5</span></td>
+        <td><span class="parametername">arg5</span></td>
+        <td><p>The fifth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T6</span></td>
+        <td><span class="parametername">arg6</span></td>
+        <td><p>The sixth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T7</span></td>
+        <td><span class="parametername">arg7</span></td>
+        <td><p>The seventh parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T8</span></td>
+        <td><span class="parametername">arg8</span></td>
+        <td><p>The eighth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Hgk.Zero.Options.Opt-1.html">Opt</a>&lt;TResult&gt;</td>
+        <td><p>An option containing the result parameter produced by calling <code data-dev-comment-type="paramref" class="paramref">tryFunction</code>,
+if the operation completed successfully; otherwise, an empty option.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg1</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg2</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg3</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg4</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg5</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg6</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T7</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg7</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T8</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg8</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">tryFunction</code> is <span class="xref">null</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/psmay/Hgk.Zero/new/9d2c5f39fc7efdf16dc1e08018f5cd37ccb13b52/apiSpec/new?filename=Hgk_Zero_Options_Try_TryToOpt_1_Call__9_Hgk_Zero_Options_Try_TryFunction___0___1___2___3___4___5___6___7___8__0____0___1___2___3___4___5___6___7___8_.md&amp;value=---%0Auid%3A%20Hgk.Zero.Options.Try.TryToOpt%601.Call%60%609(Hgk.Zero.Options.Try.TryFunction%7B%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606%2C%60%607%2C%60%608%2C%600%7D%2C%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606%2C%60%607%2C%60%608)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/psmay/Hgk.Zero/blob/9d2c5f39fc7efdf16dc1e08018f5cd37ccb13b52/Hgk.Zero/Options/Try/TryToOpt.cs/#L312">View Source</a>
+  </span>
+  <a id="Hgk_Zero_Options_Try_TryToOpt_1_Call_" data-uid="Hgk.Zero.Options.Try.TryToOpt`1.Call*"></a>
+  <h4 id="Hgk_Zero_Options_Try_TryToOpt_1_Call__9_Hgk_Zero_Options_Try_TryFunction___0___1___2___3___4___5___6___7___8__0____0___1___2___3___4___5___6___7___8_" data-uid="Hgk.Zero.Options.Try.TryToOpt`1.Call``9(Hgk.Zero.Options.Try.TryFunction{``0,``1,``2,``3,``4,``5,``6,``7,``8,`0},``0,``1,``2,``3,``4,``5,``6,``7,``8)">Call&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9&gt;(TryFunction&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, TResult&gt;, T1, T2, T3, T4, T5, T6, T7, T8, T9)</h4>
+  <div class="markdown level1 summary"><p>Calls the specified try function with the specified parameters and returns an option containing the result.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Opt&lt;TResult&gt; Call&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9&gt;(TryFunction&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, TResult&gt; tryFunction, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Hgk.Zero.Options.Try.TryFunction-10.html">TryFunction</a>&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, TResult&gt;</td>
+        <td><span class="parametername">tryFunction</span></td>
+        <td><p>The try function to call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">arg1</span></td>
+        <td><p>The first parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T2</span></td>
+        <td><span class="parametername">arg2</span></td>
+        <td><p>The second parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T3</span></td>
+        <td><span class="parametername">arg3</span></td>
+        <td><p>The third parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T4</span></td>
+        <td><span class="parametername">arg4</span></td>
+        <td><p>The fourth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T5</span></td>
+        <td><span class="parametername">arg5</span></td>
+        <td><p>The fifth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T6</span></td>
+        <td><span class="parametername">arg6</span></td>
+        <td><p>The sixth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T7</span></td>
+        <td><span class="parametername">arg7</span></td>
+        <td><p>The seventh parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T8</span></td>
+        <td><span class="parametername">arg8</span></td>
+        <td><p>The eighth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T9</span></td>
+        <td><span class="parametername">arg9</span></td>
+        <td><p>The ninth parameter to be passed to the try function.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Hgk.Zero.Options.Opt-1.html">Opt</a>&lt;TResult&gt;</td>
+        <td><p>An option containing the result parameter produced by calling <code data-dev-comment-type="paramref" class="paramref">tryFunction</code>,
+if the operation completed successfully; otherwise, an empty option.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg1</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg2</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg3</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg4</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg5</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg6</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T7</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg7</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T8</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg8</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T9</span></td>
+        <td><p>The type of <code data-dev-comment-type="paramref" class="paramref">arg9</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">tryFunction</code> is <span class="xref">null</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/psmay/Hgk.Zero/new/9d2c5f39fc7efdf16dc1e08018f5cd37ccb13b52/apiSpec/new?filename=Hgk_Zero_Options_Try_TryToOpt_1.md&amp;value=---%0Auid%3A%20Hgk.Zero.Options.Try.TryToOpt%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/psmay/Hgk.Zero/blob/9d2c5f39fc7efdf16dc1e08018f5cd37ccb13b52/Hgk.Zero/Options/Try/TryToOpt.cs/#L47" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
