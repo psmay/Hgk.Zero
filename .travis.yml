@@ -3,6 +3,7 @@ env:
 
 language: csharp
 mono: none
+dist: xenial
 dotnet: 2.1
 
 install:
@@ -14,8 +15,13 @@ script:
 # pack step not necessary; build is configured to make package
 
 deploy:
-  skip_cleanup: true
-  provider: script
-  script: dotnet nuget push Hgk.Zero/bin/Release/*-$VERSION_SUFFIX.nupkg --api-key $NUGET_API_KEY --source $NUGET_SOURCE
-  on:
-    branch: master
+  - on:
+      branch: master
+    skip_cleanup: true
+    provider: script
+    script: dotnet nuget push Hgk.Zero/bin/Release/*-$VERSION_SUFFIX.nupkg --api-key $NUGET_API_KEY --source $NUGET_SOURCE
+  - on:
+      branch: master
+    skip_cleanup: true
+    provider: script
+    script: bash scripts/docfx_to_gh_pages.sh
