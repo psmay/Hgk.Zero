@@ -115,10 +115,196 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/psmay/Hgk.Zero/new/860ba44256e5c915e38e69b3bc5a94c0d310da28/apiSpec/new?filename=Hgk_Zero_Options_Query_DictionaryToOpt_GetValueOpt__2_System_Collections_Generic_IDictionary___0___1____0_.md&amp;value=---%0Auid%3A%20Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt%60%602(System.Collections.Generic.IDictionary%7B%60%600%2C%60%601%7D%2C%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/psmay/Hgk.Zero/new/92c27f21c46e418bb6849353f48705b1765a46eb/apiSpec/new?filename=Hgk_Zero_Options_Query_DictionaryToOpt_GetValueOpt__2_System_Collections_Concurrent_ConcurrentDictionary___0___1____0_.md&amp;value=---%0Auid%3A%20Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt%60%602(System.Collections.Concurrent.ConcurrentDictionary%7B%60%600%2C%60%601%7D%2C%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/psmay/Hgk.Zero/blob/860ba44256e5c915e38e69b3bc5a94c0d310da28/Hgk.Zero/Options/Query/DictionaryToOpt.cs/#L26">View Source</a>
+    <a href="https://github.com/psmay/Hgk.Zero/blob/92c27f21c46e418bb6849353f48705b1765a46eb/Hgk.Zero/Options/Query/DictionaryToOpt.cs/#L69">View Source</a>
+  </span>
+  <a id="Hgk_Zero_Options_Query_DictionaryToOpt_GetValueOpt_" data-uid="Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt*"></a>
+  <h4 id="Hgk_Zero_Options_Query_DictionaryToOpt_GetValueOpt__2_System_Collections_Concurrent_ConcurrentDictionary___0___1____0_" data-uid="Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},``0)">GetValueOpt&lt;TKey, TValue&gt;(ConcurrentDictionary&lt;TKey, TValue&gt;, TKey)</h4>
+  <div class="markdown level1 summary"><p>Gets the value associated with a specified key as an option.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Opt&lt;TValue&gt; GetValueOpt&lt;TKey, TValue&gt;(this ConcurrentDictionary&lt;TKey, TValue&gt; source, TKey key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.concurrent.concurrentdictionary-2">ConcurrentDictionary</a>&lt;TKey, TValue&gt;</td>
+        <td><span class="parametername">source</span></td>
+        <td><p>A source dictionary.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The key whose value to get.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Hgk.Zero.Options.Opt-1.html">Opt</a>&lt;TValue&gt;</td>
+        <td><p>An option containing the value associated with <code data-dev-comment-type="paramref" class="paramref">key</code> in <code data-dev-comment-type="paramref" class="paramref">source</code>, if it is found; otherwise, an empty option.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td><p>The type of the keys in <code data-dev-comment-type="paramref" class="paramref">source</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td><p>The type of the values in <code data-dev-comment-type="paramref" class="paramref">source</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">source</code> or <code data-dev-comment-type="paramref" class="paramref">key</code> is <span class="xref">null</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/psmay/Hgk.Zero/new/92c27f21c46e418bb6849353f48705b1765a46eb/apiSpec/new?filename=Hgk_Zero_Options_Query_DictionaryToOpt_GetValueOpt__2_System_Collections_Generic_Dictionary___0___1____0_.md&amp;value=---%0Auid%3A%20Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt%60%602(System.Collections.Generic.Dictionary%7B%60%600%2C%60%601%7D%2C%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/psmay/Hgk.Zero/blob/92c27f21c46e418bb6849353f48705b1765a46eb/Hgk.Zero/Options/Query/DictionaryToOpt.cs/#L86">View Source</a>
+  </span>
+  <a id="Hgk_Zero_Options_Query_DictionaryToOpt_GetValueOpt_" data-uid="Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt*"></a>
+  <h4 id="Hgk_Zero_Options_Query_DictionaryToOpt_GetValueOpt__2_System_Collections_Generic_Dictionary___0___1____0_" data-uid="Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt``2(System.Collections.Generic.Dictionary{``0,``1},``0)">GetValueOpt&lt;TKey, TValue&gt;(Dictionary&lt;TKey, TValue&gt;, TKey)</h4>
+  <div class="markdown level1 summary"><p>Gets the value associated with a specified key as an option.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Opt&lt;TValue&gt; GetValueOpt&lt;TKey, TValue&gt;(this Dictionary&lt;TKey, TValue&gt; source, TKey key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;TKey, TValue&gt;</td>
+        <td><span class="parametername">source</span></td>
+        <td><p>A source dictionary.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The key whose value to get.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Hgk.Zero.Options.Opt-1.html">Opt</a>&lt;TValue&gt;</td>
+        <td><p>An option containing the value associated with <code data-dev-comment-type="paramref" class="paramref">key</code> in <code data-dev-comment-type="paramref" class="paramref">source</code>, if it is found; otherwise, an empty option.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td><p>The type of the keys in <code data-dev-comment-type="paramref" class="paramref">source</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td><p>The type of the values in <code data-dev-comment-type="paramref" class="paramref">source</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">source</code> or <code data-dev-comment-type="paramref" class="paramref">key</code> is <span class="xref">null</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/psmay/Hgk.Zero/new/92c27f21c46e418bb6849353f48705b1765a46eb/apiSpec/new?filename=Hgk_Zero_Options_Query_DictionaryToOpt_GetValueOpt__2_System_Collections_Generic_IDictionary___0___1____0_.md&amp;value=---%0Auid%3A%20Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt%60%602(System.Collections.Generic.IDictionary%7B%60%600%2C%60%601%7D%2C%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/psmay/Hgk.Zero/blob/92c27f21c46e418bb6849353f48705b1765a46eb/Hgk.Zero/Options/Query/DictionaryToOpt.cs/#L29">View Source</a>
   </span>
   <a id="Hgk_Zero_Options_Query_DictionaryToOpt_GetValueOpt_" data-uid="Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt*"></a>
   <h4 id="Hgk_Zero_Options_Query_DictionaryToOpt_GetValueOpt__2_System_Collections_Generic_IDictionary___0___1____0_" data-uid="Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt``2(System.Collections.Generic.IDictionary{``0,``1},``0)">GetValueOpt&lt;TKey, TValue&gt;(IDictionary&lt;TKey, TValue&gt;, TKey)</h4>
@@ -208,10 +394,10 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/psmay/Hgk.Zero/new/860ba44256e5c915e38e69b3bc5a94c0d310da28/apiSpec/new?filename=Hgk_Zero_Options_Query_DictionaryToOpt_GetValueOpt__2_System_Collections_Generic_IReadOnlyDictionary___0___1____0_.md&amp;value=---%0Auid%3A%20Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt%60%602(System.Collections.Generic.IReadOnlyDictionary%7B%60%600%2C%60%601%7D%2C%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/psmay/Hgk.Zero/new/92c27f21c46e418bb6849353f48705b1765a46eb/apiSpec/new?filename=Hgk_Zero_Options_Query_DictionaryToOpt_GetValueOpt__2_System_Collections_Generic_IReadOnlyDictionary___0___1____0_.md&amp;value=---%0Auid%3A%20Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt%60%602(System.Collections.Generic.IReadOnlyDictionary%7B%60%600%2C%60%601%7D%2C%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/psmay/Hgk.Zero/blob/860ba44256e5c915e38e69b3bc5a94c0d310da28/Hgk.Zero/Options/Query/DictionaryToOpt.cs/#L46">View Source</a>
+    <a href="https://github.com/psmay/Hgk.Zero/blob/92c27f21c46e418bb6849353f48705b1765a46eb/Hgk.Zero/Options/Query/DictionaryToOpt.cs/#L49">View Source</a>
   </span>
   <a id="Hgk_Zero_Options_Query_DictionaryToOpt_GetValueOpt_" data-uid="Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt*"></a>
   <h4 id="Hgk_Zero_Options_Query_DictionaryToOpt_GetValueOpt__2_System_Collections_Generic_IReadOnlyDictionary___0___1____0_" data-uid="Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt``2(System.Collections.Generic.IReadOnlyDictionary{``0,``1},``0)">GetValueOpt&lt;TKey, TValue&gt;(IReadOnlyDictionary&lt;TKey, TValue&gt;, TKey)</h4>
@@ -299,6 +485,657 @@
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/psmay/Hgk.Zero/new/92c27f21c46e418bb6849353f48705b1765a46eb/apiSpec/new?filename=Hgk_Zero_Options_Query_DictionaryToOpt_GetValueOpt__2_System_Collections_Generic_SortedDictionary___0___1____0_.md&amp;value=---%0Auid%3A%20Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt%60%602(System.Collections.Generic.SortedDictionary%7B%60%600%2C%60%601%7D%2C%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/psmay/Hgk.Zero/blob/92c27f21c46e418bb6849353f48705b1765a46eb/Hgk.Zero/Options/Query/DictionaryToOpt.cs/#L103">View Source</a>
+  </span>
+  <a id="Hgk_Zero_Options_Query_DictionaryToOpt_GetValueOpt_" data-uid="Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt*"></a>
+  <h4 id="Hgk_Zero_Options_Query_DictionaryToOpt_GetValueOpt__2_System_Collections_Generic_SortedDictionary___0___1____0_" data-uid="Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt``2(System.Collections.Generic.SortedDictionary{``0,``1},``0)">GetValueOpt&lt;TKey, TValue&gt;(SortedDictionary&lt;TKey, TValue&gt;, TKey)</h4>
+  <div class="markdown level1 summary"><p>Gets the value associated with a specified key as an option.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Opt&lt;TValue&gt; GetValueOpt&lt;TKey, TValue&gt;(this SortedDictionary&lt;TKey, TValue&gt; source, TKey key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.sorteddictionary-2">SortedDictionary</a>&lt;TKey, TValue&gt;</td>
+        <td><span class="parametername">source</span></td>
+        <td><p>A source dictionary.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The key whose value to get.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Hgk.Zero.Options.Opt-1.html">Opt</a>&lt;TValue&gt;</td>
+        <td><p>An option containing the value associated with <code data-dev-comment-type="paramref" class="paramref">key</code> in <code data-dev-comment-type="paramref" class="paramref">source</code>, if it is found; otherwise, an empty option.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td><p>The type of the keys in <code data-dev-comment-type="paramref" class="paramref">source</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td><p>The type of the values in <code data-dev-comment-type="paramref" class="paramref">source</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">source</code> or <code data-dev-comment-type="paramref" class="paramref">key</code> is <span class="xref">null</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/psmay/Hgk.Zero/new/92c27f21c46e418bb6849353f48705b1765a46eb/apiSpec/new?filename=Hgk_Zero_Options_Query_DictionaryToOpt_GetValueOpt__2_System_Collections_Generic_SortedList___0___1____0_.md&amp;value=---%0Auid%3A%20Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt%60%602(System.Collections.Generic.SortedList%7B%60%600%2C%60%601%7D%2C%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/psmay/Hgk.Zero/blob/92c27f21c46e418bb6849353f48705b1765a46eb/Hgk.Zero/Options/Query/DictionaryToOpt.cs/#L120">View Source</a>
+  </span>
+  <a id="Hgk_Zero_Options_Query_DictionaryToOpt_GetValueOpt_" data-uid="Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt*"></a>
+  <h4 id="Hgk_Zero_Options_Query_DictionaryToOpt_GetValueOpt__2_System_Collections_Generic_SortedList___0___1____0_" data-uid="Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt``2(System.Collections.Generic.SortedList{``0,``1},``0)">GetValueOpt&lt;TKey, TValue&gt;(SortedList&lt;TKey, TValue&gt;, TKey)</h4>
+  <div class="markdown level1 summary"><p>Gets the value associated with a specified key as an option.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Opt&lt;TValue&gt; GetValueOpt&lt;TKey, TValue&gt;(this SortedList&lt;TKey, TValue&gt; source, TKey key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.sortedlist-2">SortedList</a>&lt;TKey, TValue&gt;</td>
+        <td><span class="parametername">source</span></td>
+        <td><p>A source dictionary.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The key whose value to get.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Hgk.Zero.Options.Opt-1.html">Opt</a>&lt;TValue&gt;</td>
+        <td><p>An option containing the value associated with <code data-dev-comment-type="paramref" class="paramref">key</code> in <code data-dev-comment-type="paramref" class="paramref">source</code>, if it is found; otherwise, an empty option.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td><p>The type of the keys in <code data-dev-comment-type="paramref" class="paramref">source</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td><p>The type of the values in <code data-dev-comment-type="paramref" class="paramref">source</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">source</code> or <code data-dev-comment-type="paramref" class="paramref">key</code> is <span class="xref">null</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/psmay/Hgk.Zero/new/92c27f21c46e418bb6849353f48705b1765a46eb/apiSpec/new?filename=Hgk_Zero_Options_Query_DictionaryToOpt_GetValueOpt__2_System_Collections_Immutable_ImmutableDictionary___0___1____0_.md&amp;value=---%0Auid%3A%20Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt%60%602(System.Collections.Immutable.ImmutableDictionary%7B%60%600%2C%60%601%7D%2C%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/psmay/Hgk.Zero/blob/92c27f21c46e418bb6849353f48705b1765a46eb/Hgk.Zero/Options/Query/DictionaryToOpt.cs/#L137">View Source</a>
+  </span>
+  <a id="Hgk_Zero_Options_Query_DictionaryToOpt_GetValueOpt_" data-uid="Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt*"></a>
+  <h4 id="Hgk_Zero_Options_Query_DictionaryToOpt_GetValueOpt__2_System_Collections_Immutable_ImmutableDictionary___0___1____0_" data-uid="Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt``2(System.Collections.Immutable.ImmutableDictionary{``0,``1},``0)">GetValueOpt&lt;TKey, TValue&gt;(ImmutableDictionary&lt;TKey, TValue&gt;, TKey)</h4>
+  <div class="markdown level1 summary"><p>Gets the value associated with a specified key as an option.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Opt&lt;TValue&gt; GetValueOpt&lt;TKey, TValue&gt;(this ImmutableDictionary&lt;TKey, TValue&gt; source, TKey key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.immutable.immutabledictionary-2">ImmutableDictionary</a>&lt;TKey, TValue&gt;</td>
+        <td><span class="parametername">source</span></td>
+        <td><p>A source dictionary.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The key whose value to get.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Hgk.Zero.Options.Opt-1.html">Opt</a>&lt;TValue&gt;</td>
+        <td><p>An option containing the value associated with <code data-dev-comment-type="paramref" class="paramref">key</code> in <code data-dev-comment-type="paramref" class="paramref">source</code>, if it is found; otherwise, an empty option.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td><p>The type of the keys in <code data-dev-comment-type="paramref" class="paramref">source</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td><p>The type of the values in <code data-dev-comment-type="paramref" class="paramref">source</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">source</code> or <code data-dev-comment-type="paramref" class="paramref">key</code> is <span class="xref">null</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/psmay/Hgk.Zero/new/92c27f21c46e418bb6849353f48705b1765a46eb/apiSpec/new?filename=Hgk_Zero_Options_Query_DictionaryToOpt_GetValueOpt__2_System_Collections_Immutable_ImmutableDictionary___0___1__Builder___0_.md&amp;value=---%0Auid%3A%20Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt%60%602(System.Collections.Immutable.ImmutableDictionary%7B%60%600%2C%60%601%7D.Builder%2C%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/psmay/Hgk.Zero/blob/92c27f21c46e418bb6849353f48705b1765a46eb/Hgk.Zero/Options/Query/DictionaryToOpt.cs/#L154">View Source</a>
+  </span>
+  <a id="Hgk_Zero_Options_Query_DictionaryToOpt_GetValueOpt_" data-uid="Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt*"></a>
+  <h4 id="Hgk_Zero_Options_Query_DictionaryToOpt_GetValueOpt__2_System_Collections_Immutable_ImmutableDictionary___0___1__Builder___0_" data-uid="Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt``2(System.Collections.Immutable.ImmutableDictionary{``0,``1}.Builder,``0)">GetValueOpt&lt;TKey, TValue&gt;(ImmutableDictionary&lt;TKey, TValue&gt;.Builder, TKey)</h4>
+  <div class="markdown level1 summary"><p>Gets the value associated with a specified key as an option.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Opt&lt;TValue&gt; GetValueOpt&lt;TKey, TValue&gt;(this ImmutableDictionary&lt;TKey, TValue&gt;.Builder source, TKey key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.immutable.immutabledictionary-2.builder">ImmutableDictionary.Builder</a>&lt;&gt;</td>
+        <td><span class="parametername">source</span></td>
+        <td><p>A source dictionary.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The key whose value to get.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Hgk.Zero.Options.Opt-1.html">Opt</a>&lt;TValue&gt;</td>
+        <td><p>An option containing the value associated with <code data-dev-comment-type="paramref" class="paramref">key</code> in <code data-dev-comment-type="paramref" class="paramref">source</code>, if it is found; otherwise, an empty option.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td><p>The type of the keys in <code data-dev-comment-type="paramref" class="paramref">source</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td><p>The type of the values in <code data-dev-comment-type="paramref" class="paramref">source</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">source</code> or <code data-dev-comment-type="paramref" class="paramref">key</code> is <span class="xref">null</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/psmay/Hgk.Zero/new/92c27f21c46e418bb6849353f48705b1765a46eb/apiSpec/new?filename=Hgk_Zero_Options_Query_DictionaryToOpt_GetValueOpt__2_System_Collections_Immutable_ImmutableSortedDictionary___0___1____0_.md&amp;value=---%0Auid%3A%20Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt%60%602(System.Collections.Immutable.ImmutableSortedDictionary%7B%60%600%2C%60%601%7D%2C%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/psmay/Hgk.Zero/blob/92c27f21c46e418bb6849353f48705b1765a46eb/Hgk.Zero/Options/Query/DictionaryToOpt.cs/#L188">View Source</a>
+  </span>
+  <a id="Hgk_Zero_Options_Query_DictionaryToOpt_GetValueOpt_" data-uid="Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt*"></a>
+  <h4 id="Hgk_Zero_Options_Query_DictionaryToOpt_GetValueOpt__2_System_Collections_Immutable_ImmutableSortedDictionary___0___1____0_" data-uid="Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt``2(System.Collections.Immutable.ImmutableSortedDictionary{``0,``1},``0)">GetValueOpt&lt;TKey, TValue&gt;(ImmutableSortedDictionary&lt;TKey, TValue&gt;, TKey)</h4>
+  <div class="markdown level1 summary"><p>Gets the value associated with a specified key as an option.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Opt&lt;TValue&gt; GetValueOpt&lt;TKey, TValue&gt;(this ImmutableSortedDictionary&lt;TKey, TValue&gt; source, TKey key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.immutable.immutablesorteddictionary-2">ImmutableSortedDictionary</a>&lt;TKey, TValue&gt;</td>
+        <td><span class="parametername">source</span></td>
+        <td><p>A source dictionary.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The key whose value to get.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Hgk.Zero.Options.Opt-1.html">Opt</a>&lt;TValue&gt;</td>
+        <td><p>An option containing the value associated with <code data-dev-comment-type="paramref" class="paramref">key</code> in <code data-dev-comment-type="paramref" class="paramref">source</code>, if it is found; otherwise, an empty option.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td><p>The type of the keys in <code data-dev-comment-type="paramref" class="paramref">source</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td><p>The type of the values in <code data-dev-comment-type="paramref" class="paramref">source</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">source</code> or <code data-dev-comment-type="paramref" class="paramref">key</code> is <span class="xref">null</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/psmay/Hgk.Zero/new/92c27f21c46e418bb6849353f48705b1765a46eb/apiSpec/new?filename=Hgk_Zero_Options_Query_DictionaryToOpt_GetValueOpt__2_System_Collections_Immutable_ImmutableSortedDictionary___0___1__Builder___0_.md&amp;value=---%0Auid%3A%20Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt%60%602(System.Collections.Immutable.ImmutableSortedDictionary%7B%60%600%2C%60%601%7D.Builder%2C%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/psmay/Hgk.Zero/blob/92c27f21c46e418bb6849353f48705b1765a46eb/Hgk.Zero/Options/Query/DictionaryToOpt.cs/#L171">View Source</a>
+  </span>
+  <a id="Hgk_Zero_Options_Query_DictionaryToOpt_GetValueOpt_" data-uid="Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt*"></a>
+  <h4 id="Hgk_Zero_Options_Query_DictionaryToOpt_GetValueOpt__2_System_Collections_Immutable_ImmutableSortedDictionary___0___1__Builder___0_" data-uid="Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt``2(System.Collections.Immutable.ImmutableSortedDictionary{``0,``1}.Builder,``0)">GetValueOpt&lt;TKey, TValue&gt;(ImmutableSortedDictionary&lt;TKey, TValue&gt;.Builder, TKey)</h4>
+  <div class="markdown level1 summary"><p>Gets the value associated with a specified key as an option.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Opt&lt;TValue&gt; GetValueOpt&lt;TKey, TValue&gt;(this ImmutableSortedDictionary&lt;TKey, TValue&gt;.Builder source, TKey key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.immutable.immutablesorteddictionary-2.builder">ImmutableSortedDictionary.Builder</a>&lt;&gt;</td>
+        <td><span class="parametername">source</span></td>
+        <td><p>A source dictionary.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The key whose value to get.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Hgk.Zero.Options.Opt-1.html">Opt</a>&lt;TValue&gt;</td>
+        <td><p>An option containing the value associated with <code data-dev-comment-type="paramref" class="paramref">key</code> in <code data-dev-comment-type="paramref" class="paramref">source</code>, if it is found; otherwise, an empty option.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td><p>The type of the keys in <code data-dev-comment-type="paramref" class="paramref">source</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td><p>The type of the values in <code data-dev-comment-type="paramref" class="paramref">source</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">source</code> or <code data-dev-comment-type="paramref" class="paramref">key</code> is <span class="xref">null</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/psmay/Hgk.Zero/new/92c27f21c46e418bb6849353f48705b1765a46eb/apiSpec/new?filename=Hgk_Zero_Options_Query_DictionaryToOpt_GetValueOpt__2_System_Collections_ObjectModel_ReadOnlyDictionary___0___1____0_.md&amp;value=---%0Auid%3A%20Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt%60%602(System.Collections.ObjectModel.ReadOnlyDictionary%7B%60%600%2C%60%601%7D%2C%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/psmay/Hgk.Zero/blob/92c27f21c46e418bb6849353f48705b1765a46eb/Hgk.Zero/Options/Query/DictionaryToOpt.cs/#L205">View Source</a>
+  </span>
+  <a id="Hgk_Zero_Options_Query_DictionaryToOpt_GetValueOpt_" data-uid="Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt*"></a>
+  <h4 id="Hgk_Zero_Options_Query_DictionaryToOpt_GetValueOpt__2_System_Collections_ObjectModel_ReadOnlyDictionary___0___1____0_" data-uid="Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt``2(System.Collections.ObjectModel.ReadOnlyDictionary{``0,``1},``0)">GetValueOpt&lt;TKey, TValue&gt;(ReadOnlyDictionary&lt;TKey, TValue&gt;, TKey)</h4>
+  <div class="markdown level1 summary"><p>Gets the value associated with a specified key as an option.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Opt&lt;TValue&gt; GetValueOpt&lt;TKey, TValue&gt;(this ReadOnlyDictionary&lt;TKey, TValue&gt; source, TKey key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.objectmodel.readonlydictionary-2">ReadOnlyDictionary</a>&lt;TKey, TValue&gt;</td>
+        <td><span class="parametername">source</span></td>
+        <td><p>A source dictionary.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The key whose value to get.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Hgk.Zero.Options.Opt-1.html">Opt</a>&lt;TValue&gt;</td>
+        <td><p>An option containing the value associated with <code data-dev-comment-type="paramref" class="paramref">key</code> in <code data-dev-comment-type="paramref" class="paramref">source</code>, if it is found; otherwise, an empty option.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td><p>The type of the keys in <code data-dev-comment-type="paramref" class="paramref">source</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td><p>The type of the values in <code data-dev-comment-type="paramref" class="paramref">source</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">source</code> or <code data-dev-comment-type="paramref" class="paramref">key</code> is <span class="xref">null</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           
@@ -307,10 +1144,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/psmay/Hgk.Zero/new/860ba44256e5c915e38e69b3bc5a94c0d310da28/apiSpec/new?filename=Hgk_Zero_Options_Query_DictionaryToOpt.md&amp;value=---%0Auid%3A%20Hgk.Zero.Options.Query.DictionaryToOpt%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/psmay/Hgk.Zero/new/92c27f21c46e418bb6849353f48705b1765a46eb/apiSpec/new?filename=Hgk_Zero_Options_Query_DictionaryToOpt.md&amp;value=---%0Auid%3A%20Hgk.Zero.Options.Query.DictionaryToOpt%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/psmay/Hgk.Zero/blob/860ba44256e5c915e38e69b3bc5a94c0d310da28/Hgk.Zero/Options/Query/DictionaryToOpt.cs/#L10" class="contribution-link">View Source</a>
+                    <a href="https://github.com/psmay/Hgk.Zero/blob/92c27f21c46e418bb6849353f48705b1765a46eb/Hgk.Zero/Options/Query/DictionaryToOpt.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -1667,6 +1667,31 @@ references:
   fullName.vb: Hgk.Zero.Options.Opt.OfType(Of TResult)(Hgk.Zero.Options.IOpt)
   nameWithType: Opt.OfType<TResult>(IOpt)
   nameWithType.vb: Opt.OfType(Of TResult)(IOpt)
+- uid: Hgk.Zero.Options.Opt.ReplaceIfEmpty*
+  name: ReplaceIfEmpty
+  href: api/Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_ReplaceIfEmpty_
+  commentId: Overload:Hgk.Zero.Options.Opt.ReplaceIfEmpty
+  isSpec: "True"
+  fullName: Hgk.Zero.Options.Opt.ReplaceIfEmpty
+  nameWithType: Opt.ReplaceIfEmpty
+- uid: Hgk.Zero.Options.Opt.ReplaceIfEmpty``1(Hgk.Zero.Options.IOpt{``0},Hgk.Zero.Options.IOpt{``0})
+  name: ReplaceIfEmpty<TSource>(IOpt<TSource>, IOpt<TSource>)
+  href: api/Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_ReplaceIfEmpty__1_Hgk_Zero_Options_IOpt___0__Hgk_Zero_Options_IOpt___0__
+  commentId: M:Hgk.Zero.Options.Opt.ReplaceIfEmpty``1(Hgk.Zero.Options.IOpt{``0},Hgk.Zero.Options.IOpt{``0})
+  name.vb: ReplaceIfEmpty(Of TSource)(IOpt(Of TSource), IOpt(Of TSource))
+  fullName: Hgk.Zero.Options.Opt.ReplaceIfEmpty<TSource>(Hgk.Zero.Options.IOpt<TSource>, Hgk.Zero.Options.IOpt<TSource>)
+  fullName.vb: Hgk.Zero.Options.Opt.ReplaceIfEmpty(Of TSource)(Hgk.Zero.Options.IOpt(Of TSource), Hgk.Zero.Options.IOpt(Of TSource))
+  nameWithType: Opt.ReplaceIfEmpty<TSource>(IOpt<TSource>, IOpt<TSource>)
+  nameWithType.vb: Opt.ReplaceIfEmpty(Of TSource)(IOpt(Of TSource), IOpt(Of TSource))
+- uid: Hgk.Zero.Options.Opt.ReplaceIfEmpty``1(Hgk.Zero.Options.IOpt{``0},System.Func{Hgk.Zero.Options.IOpt{``0}})
+  name: ReplaceIfEmpty<TSource>(IOpt<TSource>, Func<IOpt<TSource>>)
+  href: api/Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_ReplaceIfEmpty__1_Hgk_Zero_Options_IOpt___0__System_Func_Hgk_Zero_Options_IOpt___0___
+  commentId: M:Hgk.Zero.Options.Opt.ReplaceIfEmpty``1(Hgk.Zero.Options.IOpt{``0},System.Func{Hgk.Zero.Options.IOpt{``0}})
+  name.vb: ReplaceIfEmpty(Of TSource)(IOpt(Of TSource), Func(Of IOpt(Of TSource)))
+  fullName: Hgk.Zero.Options.Opt.ReplaceIfEmpty<TSource>(Hgk.Zero.Options.IOpt<TSource>, System.Func<Hgk.Zero.Options.IOpt<TSource>>)
+  fullName.vb: Hgk.Zero.Options.Opt.ReplaceIfEmpty(Of TSource)(Hgk.Zero.Options.IOpt(Of TSource), System.Func(Of Hgk.Zero.Options.IOpt(Of TSource)))
+  nameWithType: Opt.ReplaceIfEmpty<TSource>(IOpt<TSource>, Func<IOpt<TSource>>)
+  nameWithType.vb: Opt.ReplaceIfEmpty(Of TSource)(IOpt(Of TSource), Func(Of IOpt(Of TSource)))
 - uid: Hgk.Zero.Options.Opt.Reverse*
   name: Reverse
   href: api/Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Reverse_
@@ -2580,6 +2605,24 @@ references:
   isSpec: "True"
   fullName: Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt
   nameWithType: DictionaryToOpt.GetValueOpt
+- uid: Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},``0)
+  name: GetValueOpt<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, TKey)
+  href: api/Hgk.Zero.Options.Query.DictionaryToOpt.html#Hgk_Zero_Options_Query_DictionaryToOpt_GetValueOpt__2_System_Collections_Concurrent_ConcurrentDictionary___0___1____0_
+  commentId: M:Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},``0)
+  name.vb: GetValueOpt(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), TKey)
+  fullName: Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt<TKey, TValue>(System.Collections.Concurrent.ConcurrentDictionary<TKey, TValue>, TKey)
+  fullName.vb: Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt(Of TKey, TValue)(System.Collections.Concurrent.ConcurrentDictionary(Of TKey, TValue), TKey)
+  nameWithType: DictionaryToOpt.GetValueOpt<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, TKey)
+  nameWithType.vb: DictionaryToOpt.GetValueOpt(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), TKey)
+- uid: Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt``2(System.Collections.Generic.Dictionary{``0,``1},``0)
+  name: GetValueOpt<TKey, TValue>(Dictionary<TKey, TValue>, TKey)
+  href: api/Hgk.Zero.Options.Query.DictionaryToOpt.html#Hgk_Zero_Options_Query_DictionaryToOpt_GetValueOpt__2_System_Collections_Generic_Dictionary___0___1____0_
+  commentId: M:Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt``2(System.Collections.Generic.Dictionary{``0,``1},``0)
+  name.vb: GetValueOpt(Of TKey, TValue)(Dictionary(Of TKey, TValue), TKey)
+  fullName: Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt<TKey, TValue>(System.Collections.Generic.Dictionary<TKey, TValue>, TKey)
+  fullName.vb: Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt(Of TKey, TValue)(System.Collections.Generic.Dictionary(Of TKey, TValue), TKey)
+  nameWithType: DictionaryToOpt.GetValueOpt<TKey, TValue>(Dictionary<TKey, TValue>, TKey)
+  nameWithType.vb: DictionaryToOpt.GetValueOpt(Of TKey, TValue)(Dictionary(Of TKey, TValue), TKey)
 - uid: Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt``2(System.Collections.Generic.IDictionary{``0,``1},``0)
   name: GetValueOpt<TKey, TValue>(IDictionary<TKey, TValue>, TKey)
   href: api/Hgk.Zero.Options.Query.DictionaryToOpt.html#Hgk_Zero_Options_Query_DictionaryToOpt_GetValueOpt__2_System_Collections_Generic_IDictionary___0___1____0_
@@ -2598,6 +2641,69 @@ references:
   fullName.vb: Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt(Of TKey, TValue)(System.Collections.Generic.IReadOnlyDictionary(Of TKey, TValue), TKey)
   nameWithType: DictionaryToOpt.GetValueOpt<TKey, TValue>(IReadOnlyDictionary<TKey, TValue>, TKey)
   nameWithType.vb: DictionaryToOpt.GetValueOpt(Of TKey, TValue)(IReadOnlyDictionary(Of TKey, TValue), TKey)
+- uid: Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt``2(System.Collections.Generic.SortedDictionary{``0,``1},``0)
+  name: GetValueOpt<TKey, TValue>(SortedDictionary<TKey, TValue>, TKey)
+  href: api/Hgk.Zero.Options.Query.DictionaryToOpt.html#Hgk_Zero_Options_Query_DictionaryToOpt_GetValueOpt__2_System_Collections_Generic_SortedDictionary___0___1____0_
+  commentId: M:Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt``2(System.Collections.Generic.SortedDictionary{``0,``1},``0)
+  name.vb: GetValueOpt(Of TKey, TValue)(SortedDictionary(Of TKey, TValue), TKey)
+  fullName: Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt<TKey, TValue>(System.Collections.Generic.SortedDictionary<TKey, TValue>, TKey)
+  fullName.vb: Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt(Of TKey, TValue)(System.Collections.Generic.SortedDictionary(Of TKey, TValue), TKey)
+  nameWithType: DictionaryToOpt.GetValueOpt<TKey, TValue>(SortedDictionary<TKey, TValue>, TKey)
+  nameWithType.vb: DictionaryToOpt.GetValueOpt(Of TKey, TValue)(SortedDictionary(Of TKey, TValue), TKey)
+- uid: Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt``2(System.Collections.Generic.SortedList{``0,``1},``0)
+  name: GetValueOpt<TKey, TValue>(SortedList<TKey, TValue>, TKey)
+  href: api/Hgk.Zero.Options.Query.DictionaryToOpt.html#Hgk_Zero_Options_Query_DictionaryToOpt_GetValueOpt__2_System_Collections_Generic_SortedList___0___1____0_
+  commentId: M:Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt``2(System.Collections.Generic.SortedList{``0,``1},``0)
+  name.vb: GetValueOpt(Of TKey, TValue)(SortedList(Of TKey, TValue), TKey)
+  fullName: Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt<TKey, TValue>(System.Collections.Generic.SortedList<TKey, TValue>, TKey)
+  fullName.vb: Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt(Of TKey, TValue)(System.Collections.Generic.SortedList(Of TKey, TValue), TKey)
+  nameWithType: DictionaryToOpt.GetValueOpt<TKey, TValue>(SortedList<TKey, TValue>, TKey)
+  nameWithType.vb: DictionaryToOpt.GetValueOpt(Of TKey, TValue)(SortedList(Of TKey, TValue), TKey)
+- uid: Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt``2(System.Collections.Immutable.ImmutableDictionary{``0,``1},``0)
+  name: GetValueOpt<TKey, TValue>(ImmutableDictionary<TKey, TValue>, TKey)
+  href: api/Hgk.Zero.Options.Query.DictionaryToOpt.html#Hgk_Zero_Options_Query_DictionaryToOpt_GetValueOpt__2_System_Collections_Immutable_ImmutableDictionary___0___1____0_
+  commentId: M:Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt``2(System.Collections.Immutable.ImmutableDictionary{``0,``1},``0)
+  name.vb: GetValueOpt(Of TKey, TValue)(ImmutableDictionary(Of TKey, TValue), TKey)
+  fullName: Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt<TKey, TValue>(System.Collections.Immutable.ImmutableDictionary<TKey, TValue>, TKey)
+  fullName.vb: Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt(Of TKey, TValue)(System.Collections.Immutable.ImmutableDictionary(Of TKey, TValue), TKey)
+  nameWithType: DictionaryToOpt.GetValueOpt<TKey, TValue>(ImmutableDictionary<TKey, TValue>, TKey)
+  nameWithType.vb: DictionaryToOpt.GetValueOpt(Of TKey, TValue)(ImmutableDictionary(Of TKey, TValue), TKey)
+- uid: Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt``2(System.Collections.Immutable.ImmutableDictionary{``0,``1}.Builder,``0)
+  name: GetValueOpt<TKey, TValue>(ImmutableDictionary<TKey, TValue>.Builder, TKey)
+  href: api/Hgk.Zero.Options.Query.DictionaryToOpt.html#Hgk_Zero_Options_Query_DictionaryToOpt_GetValueOpt__2_System_Collections_Immutable_ImmutableDictionary___0___1__Builder___0_
+  commentId: M:Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt``2(System.Collections.Immutable.ImmutableDictionary{``0,``1}.Builder,``0)
+  name.vb: GetValueOpt(Of TKey, TValue)(ImmutableDictionary(Of TKey, TValue).Builder, TKey)
+  fullName: Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt<TKey, TValue>(System.Collections.Immutable.ImmutableDictionary<TKey, TValue>.Builder, TKey)
+  fullName.vb: Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt(Of TKey, TValue)(System.Collections.Immutable.ImmutableDictionary(Of TKey, TValue).Builder, TKey)
+  nameWithType: DictionaryToOpt.GetValueOpt<TKey, TValue>(ImmutableDictionary<TKey, TValue>.Builder, TKey)
+  nameWithType.vb: DictionaryToOpt.GetValueOpt(Of TKey, TValue)(ImmutableDictionary(Of TKey, TValue).Builder, TKey)
+- uid: Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt``2(System.Collections.Immutable.ImmutableSortedDictionary{``0,``1},``0)
+  name: GetValueOpt<TKey, TValue>(ImmutableSortedDictionary<TKey, TValue>, TKey)
+  href: api/Hgk.Zero.Options.Query.DictionaryToOpt.html#Hgk_Zero_Options_Query_DictionaryToOpt_GetValueOpt__2_System_Collections_Immutable_ImmutableSortedDictionary___0___1____0_
+  commentId: M:Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt``2(System.Collections.Immutable.ImmutableSortedDictionary{``0,``1},``0)
+  name.vb: GetValueOpt(Of TKey, TValue)(ImmutableSortedDictionary(Of TKey, TValue), TKey)
+  fullName: Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt<TKey, TValue>(System.Collections.Immutable.ImmutableSortedDictionary<TKey, TValue>, TKey)
+  fullName.vb: Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt(Of TKey, TValue)(System.Collections.Immutable.ImmutableSortedDictionary(Of TKey, TValue), TKey)
+  nameWithType: DictionaryToOpt.GetValueOpt<TKey, TValue>(ImmutableSortedDictionary<TKey, TValue>, TKey)
+  nameWithType.vb: DictionaryToOpt.GetValueOpt(Of TKey, TValue)(ImmutableSortedDictionary(Of TKey, TValue), TKey)
+- uid: Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt``2(System.Collections.Immutable.ImmutableSortedDictionary{``0,``1}.Builder,``0)
+  name: GetValueOpt<TKey, TValue>(ImmutableSortedDictionary<TKey, TValue>.Builder, TKey)
+  href: api/Hgk.Zero.Options.Query.DictionaryToOpt.html#Hgk_Zero_Options_Query_DictionaryToOpt_GetValueOpt__2_System_Collections_Immutable_ImmutableSortedDictionary___0___1__Builder___0_
+  commentId: M:Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt``2(System.Collections.Immutable.ImmutableSortedDictionary{``0,``1}.Builder,``0)
+  name.vb: GetValueOpt(Of TKey, TValue)(ImmutableSortedDictionary(Of TKey, TValue).Builder, TKey)
+  fullName: Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt<TKey, TValue>(System.Collections.Immutable.ImmutableSortedDictionary<TKey, TValue>.Builder, TKey)
+  fullName.vb: Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt(Of TKey, TValue)(System.Collections.Immutable.ImmutableSortedDictionary(Of TKey, TValue).Builder, TKey)
+  nameWithType: DictionaryToOpt.GetValueOpt<TKey, TValue>(ImmutableSortedDictionary<TKey, TValue>.Builder, TKey)
+  nameWithType.vb: DictionaryToOpt.GetValueOpt(Of TKey, TValue)(ImmutableSortedDictionary(Of TKey, TValue).Builder, TKey)
+- uid: Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt``2(System.Collections.ObjectModel.ReadOnlyDictionary{``0,``1},``0)
+  name: GetValueOpt<TKey, TValue>(ReadOnlyDictionary<TKey, TValue>, TKey)
+  href: api/Hgk.Zero.Options.Query.DictionaryToOpt.html#Hgk_Zero_Options_Query_DictionaryToOpt_GetValueOpt__2_System_Collections_ObjectModel_ReadOnlyDictionary___0___1____0_
+  commentId: M:Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt``2(System.Collections.ObjectModel.ReadOnlyDictionary{``0,``1},``0)
+  name.vb: GetValueOpt(Of TKey, TValue)(ReadOnlyDictionary(Of TKey, TValue), TKey)
+  fullName: Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt<TKey, TValue>(System.Collections.ObjectModel.ReadOnlyDictionary<TKey, TValue>, TKey)
+  fullName.vb: Hgk.Zero.Options.Query.DictionaryToOpt.GetValueOpt(Of TKey, TValue)(System.Collections.ObjectModel.ReadOnlyDictionary(Of TKey, TValue), TKey)
+  nameWithType: DictionaryToOpt.GetValueOpt<TKey, TValue>(ReadOnlyDictionary<TKey, TValue>, TKey)
+  nameWithType.vb: DictionaryToOpt.GetValueOpt(Of TKey, TValue)(ReadOnlyDictionary(Of TKey, TValue), TKey)
 - uid: Hgk.Zero.Options.Query.EnumerableToOpt
   name: EnumerableToOpt
   href: api/Hgk.Zero.Options.Query.EnumerableToOpt.html
@@ -2701,6 +2807,31 @@ references:
   commentId: T:Hgk.Zero.Options.SingleResultOpt
   fullName: Hgk.Zero.Options.SingleResultOpt
   nameWithType: SingleResultOpt
+- uid: Hgk.Zero.Options.SingleResultOpt.DefaultIfMoreThanOne*
+  name: DefaultIfMoreThanOne
+  href: api/Hgk.Zero.Options.SingleResultOpt.html#Hgk_Zero_Options_SingleResultOpt_DefaultIfMoreThanOne_
+  commentId: Overload:Hgk.Zero.Options.SingleResultOpt.DefaultIfMoreThanOne
+  isSpec: "True"
+  fullName: Hgk.Zero.Options.SingleResultOpt.DefaultIfMoreThanOne
+  nameWithType: SingleResultOpt.DefaultIfMoreThanOne
+- uid: Hgk.Zero.Options.SingleResultOpt.DefaultIfMoreThanOne``1(Hgk.Zero.Options.ISingleResultOpt{``0})
+  name: DefaultIfMoreThanOne<TSource>(ISingleResultOpt<TSource>)
+  href: api/Hgk.Zero.Options.SingleResultOpt.html#Hgk_Zero_Options_SingleResultOpt_DefaultIfMoreThanOne__1_Hgk_Zero_Options_ISingleResultOpt___0__
+  commentId: M:Hgk.Zero.Options.SingleResultOpt.DefaultIfMoreThanOne``1(Hgk.Zero.Options.ISingleResultOpt{``0})
+  name.vb: DefaultIfMoreThanOne(Of TSource)(ISingleResultOpt(Of TSource))
+  fullName: Hgk.Zero.Options.SingleResultOpt.DefaultIfMoreThanOne<TSource>(Hgk.Zero.Options.ISingleResultOpt<TSource>)
+  fullName.vb: Hgk.Zero.Options.SingleResultOpt.DefaultIfMoreThanOne(Of TSource)(Hgk.Zero.Options.ISingleResultOpt(Of TSource))
+  nameWithType: SingleResultOpt.DefaultIfMoreThanOne<TSource>(ISingleResultOpt<TSource>)
+  nameWithType.vb: SingleResultOpt.DefaultIfMoreThanOne(Of TSource)(ISingleResultOpt(Of TSource))
+- uid: Hgk.Zero.Options.SingleResultOpt.DefaultIfMoreThanOne``1(Hgk.Zero.Options.ISingleResultOpt{``0},``0)
+  name: DefaultIfMoreThanOne<TSource>(ISingleResultOpt<TSource>, TSource)
+  href: api/Hgk.Zero.Options.SingleResultOpt.html#Hgk_Zero_Options_SingleResultOpt_DefaultIfMoreThanOne__1_Hgk_Zero_Options_ISingleResultOpt___0____0_
+  commentId: M:Hgk.Zero.Options.SingleResultOpt.DefaultIfMoreThanOne``1(Hgk.Zero.Options.ISingleResultOpt{``0},``0)
+  name.vb: DefaultIfMoreThanOne(Of TSource)(ISingleResultOpt(Of TSource), TSource)
+  fullName: Hgk.Zero.Options.SingleResultOpt.DefaultIfMoreThanOne<TSource>(Hgk.Zero.Options.ISingleResultOpt<TSource>, TSource)
+  fullName.vb: Hgk.Zero.Options.SingleResultOpt.DefaultIfMoreThanOne(Of TSource)(Hgk.Zero.Options.ISingleResultOpt(Of TSource), TSource)
+  nameWithType: SingleResultOpt.DefaultIfMoreThanOne<TSource>(ISingleResultOpt<TSource>, TSource)
+  nameWithType.vb: SingleResultOpt.DefaultIfMoreThanOne(Of TSource)(ISingleResultOpt(Of TSource), TSource)
 - uid: Hgk.Zero.Options.SingleResultOpt.EmptyIfMoreThanOne*
   name: EmptyIfMoreThanOne
   href: api/Hgk.Zero.Options.SingleResultOpt.html#Hgk_Zero_Options_SingleResultOpt_EmptyIfMoreThanOne_
@@ -2771,15 +2902,15 @@ references:
   fullName.vb: Hgk.Zero.Options.SingleResultOpt.ReplaceIfMoreThanOne(Of TSource)(Hgk.Zero.Options.ISingleResultOpt(Of TSource), Hgk.Zero.Options.IOpt(Of TSource))
   nameWithType: SingleResultOpt.ReplaceIfMoreThanOne<TSource>(ISingleResultOpt<TSource>, IOpt<TSource>)
   nameWithType.vb: SingleResultOpt.ReplaceIfMoreThanOne(Of TSource)(ISingleResultOpt(Of TSource), IOpt(Of TSource))
-- uid: Hgk.Zero.Options.SingleResultOpt.ReplaceIfMoreThanOne``1(Hgk.Zero.Options.ISingleResultOpt{``0},System.Func{Hgk.Zero.Options.Opt{``0}})
-  name: ReplaceIfMoreThanOne<TSource>(ISingleResultOpt<TSource>, Func<Opt<TSource>>)
-  href: api/Hgk.Zero.Options.SingleResultOpt.html#Hgk_Zero_Options_SingleResultOpt_ReplaceIfMoreThanOne__1_Hgk_Zero_Options_ISingleResultOpt___0__System_Func_Hgk_Zero_Options_Opt___0___
-  commentId: M:Hgk.Zero.Options.SingleResultOpt.ReplaceIfMoreThanOne``1(Hgk.Zero.Options.ISingleResultOpt{``0},System.Func{Hgk.Zero.Options.Opt{``0}})
-  name.vb: ReplaceIfMoreThanOne(Of TSource)(ISingleResultOpt(Of TSource), Func(Of Opt(Of TSource)))
-  fullName: Hgk.Zero.Options.SingleResultOpt.ReplaceIfMoreThanOne<TSource>(Hgk.Zero.Options.ISingleResultOpt<TSource>, System.Func<Hgk.Zero.Options.Opt<TSource>>)
-  fullName.vb: Hgk.Zero.Options.SingleResultOpt.ReplaceIfMoreThanOne(Of TSource)(Hgk.Zero.Options.ISingleResultOpt(Of TSource), System.Func(Of Hgk.Zero.Options.Opt(Of TSource)))
-  nameWithType: SingleResultOpt.ReplaceIfMoreThanOne<TSource>(ISingleResultOpt<TSource>, Func<Opt<TSource>>)
-  nameWithType.vb: SingleResultOpt.ReplaceIfMoreThanOne(Of TSource)(ISingleResultOpt(Of TSource), Func(Of Opt(Of TSource)))
+- uid: Hgk.Zero.Options.SingleResultOpt.ReplaceIfMoreThanOne``1(Hgk.Zero.Options.ISingleResultOpt{``0},System.Func{Hgk.Zero.Options.IOpt{``0}})
+  name: ReplaceIfMoreThanOne<TSource>(ISingleResultOpt<TSource>, Func<IOpt<TSource>>)
+  href: api/Hgk.Zero.Options.SingleResultOpt.html#Hgk_Zero_Options_SingleResultOpt_ReplaceIfMoreThanOne__1_Hgk_Zero_Options_ISingleResultOpt___0__System_Func_Hgk_Zero_Options_IOpt___0___
+  commentId: M:Hgk.Zero.Options.SingleResultOpt.ReplaceIfMoreThanOne``1(Hgk.Zero.Options.ISingleResultOpt{``0},System.Func{Hgk.Zero.Options.IOpt{``0}})
+  name.vb: ReplaceIfMoreThanOne(Of TSource)(ISingleResultOpt(Of TSource), Func(Of IOpt(Of TSource)))
+  fullName: Hgk.Zero.Options.SingleResultOpt.ReplaceIfMoreThanOne<TSource>(Hgk.Zero.Options.ISingleResultOpt<TSource>, System.Func<Hgk.Zero.Options.IOpt<TSource>>)
+  fullName.vb: Hgk.Zero.Options.SingleResultOpt.ReplaceIfMoreThanOne(Of TSource)(Hgk.Zero.Options.ISingleResultOpt(Of TSource), System.Func(Of Hgk.Zero.Options.IOpt(Of TSource)))
+  nameWithType: SingleResultOpt.ReplaceIfMoreThanOne<TSource>(ISingleResultOpt<TSource>, Func<IOpt<TSource>>)
+  nameWithType.vb: SingleResultOpt.ReplaceIfMoreThanOne(Of TSource)(ISingleResultOpt(Of TSource), Func(Of IOpt(Of TSource)))
 - uid: Hgk.Zero.Options.Try
   name: Hgk.Zero.Options.Try
   href: api/Hgk.Zero.Options.Try.html
@@ -3229,85 +3360,85 @@ references:
   commentId: T:Hgk.Zero.Strings.Strings
   fullName: Hgk.Zero.Strings.Strings
   nameWithType: Strings
-- uid: Hgk.Zero.Strings.Strings.Concat(System.String,System.Collections.Generic.IEnumerable{System.String})
-  name: Concat(String, IEnumerable<String>)
-  href: api/Hgk.Zero.Strings.Strings.html#Hgk_Zero_Strings_Strings_Concat_System_String_System_Collections_Generic_IEnumerable_System_String__
-  commentId: M:Hgk.Zero.Strings.Strings.Concat(System.String,System.Collections.Generic.IEnumerable{System.String})
-  name.vb: Concat(String, IEnumerable(Of String))
-  fullName: Hgk.Zero.Strings.Strings.Concat(System.String, System.Collections.Generic.IEnumerable<System.String>)
-  fullName.vb: Hgk.Zero.Strings.Strings.Concat(System.String, System.Collections.Generic.IEnumerable(Of System.String))
-  nameWithType: Strings.Concat(String, IEnumerable<String>)
-  nameWithType.vb: Strings.Concat(String, IEnumerable(Of String))
-- uid: Hgk.Zero.Strings.Strings.Concat(System.String,System.Object)
-  name: Concat(String, Object)
-  href: api/Hgk.Zero.Strings.Strings.html#Hgk_Zero_Strings_Strings_Concat_System_String_System_Object_
-  commentId: M:Hgk.Zero.Strings.Strings.Concat(System.String,System.Object)
-  fullName: Hgk.Zero.Strings.Strings.Concat(System.String, System.Object)
-  nameWithType: Strings.Concat(String, Object)
-- uid: Hgk.Zero.Strings.Strings.Concat(System.String,System.Object,System.Object)
-  name: Concat(String, Object, Object)
-  href: api/Hgk.Zero.Strings.Strings.html#Hgk_Zero_Strings_Strings_Concat_System_String_System_Object_System_Object_
-  commentId: M:Hgk.Zero.Strings.Strings.Concat(System.String,System.Object,System.Object)
-  fullName: Hgk.Zero.Strings.Strings.Concat(System.String, System.Object, System.Object)
-  nameWithType: Strings.Concat(String, Object, Object)
-- uid: Hgk.Zero.Strings.Strings.Concat(System.String,System.Object,System.Object,System.Object)
-  name: Concat(String, Object, Object, Object)
-  href: api/Hgk.Zero.Strings.Strings.html#Hgk_Zero_Strings_Strings_Concat_System_String_System_Object_System_Object_System_Object_
-  commentId: M:Hgk.Zero.Strings.Strings.Concat(System.String,System.Object,System.Object,System.Object)
-  fullName: Hgk.Zero.Strings.Strings.Concat(System.String, System.Object, System.Object, System.Object)
-  nameWithType: Strings.Concat(String, Object, Object, Object)
-- uid: Hgk.Zero.Strings.Strings.Concat(System.String,System.Object[])
-  name: Concat(String, Object[])
-  href: api/Hgk.Zero.Strings.Strings.html#Hgk_Zero_Strings_Strings_Concat_System_String_System_Object___
-  commentId: M:Hgk.Zero.Strings.Strings.Concat(System.String,System.Object[])
-  name.vb: Concat(String, Object())
-  fullName: Hgk.Zero.Strings.Strings.Concat(System.String, System.Object[])
-  fullName.vb: Hgk.Zero.Strings.Strings.Concat(System.String, System.Object())
-  nameWithType: Strings.Concat(String, Object[])
-  nameWithType.vb: Strings.Concat(String, Object())
-- uid: Hgk.Zero.Strings.Strings.Concat(System.String,System.String)
-  name: Concat(String, String)
-  href: api/Hgk.Zero.Strings.Strings.html#Hgk_Zero_Strings_Strings_Concat_System_String_System_String_
-  commentId: M:Hgk.Zero.Strings.Strings.Concat(System.String,System.String)
-  fullName: Hgk.Zero.Strings.Strings.Concat(System.String, System.String)
-  nameWithType: Strings.Concat(String, String)
-- uid: Hgk.Zero.Strings.Strings.Concat(System.String,System.String,System.String)
-  name: Concat(String, String, String)
-  href: api/Hgk.Zero.Strings.Strings.html#Hgk_Zero_Strings_Strings_Concat_System_String_System_String_System_String_
-  commentId: M:Hgk.Zero.Strings.Strings.Concat(System.String,System.String,System.String)
-  fullName: Hgk.Zero.Strings.Strings.Concat(System.String, System.String, System.String)
-  nameWithType: Strings.Concat(String, String, String)
-- uid: Hgk.Zero.Strings.Strings.Concat(System.String,System.String,System.String,System.String)
-  name: Concat(String, String, String, String)
-  href: api/Hgk.Zero.Strings.Strings.html#Hgk_Zero_Strings_Strings_Concat_System_String_System_String_System_String_System_String_
-  commentId: M:Hgk.Zero.Strings.Strings.Concat(System.String,System.String,System.String,System.String)
-  fullName: Hgk.Zero.Strings.Strings.Concat(System.String, System.String, System.String, System.String)
-  nameWithType: Strings.Concat(String, String, String, String)
-- uid: Hgk.Zero.Strings.Strings.Concat(System.String,System.String[])
-  name: Concat(String, String[])
-  href: api/Hgk.Zero.Strings.Strings.html#Hgk_Zero_Strings_Strings_Concat_System_String_System_String___
-  commentId: M:Hgk.Zero.Strings.Strings.Concat(System.String,System.String[])
-  name.vb: Concat(String, String())
-  fullName: Hgk.Zero.Strings.Strings.Concat(System.String, System.String[])
-  fullName.vb: Hgk.Zero.Strings.Strings.Concat(System.String, System.String())
-  nameWithType: Strings.Concat(String, String[])
-  nameWithType.vb: Strings.Concat(String, String())
-- uid: Hgk.Zero.Strings.Strings.Concat*
-  name: Concat
-  href: api/Hgk.Zero.Strings.Strings.html#Hgk_Zero_Strings_Strings_Concat_
-  commentId: Overload:Hgk.Zero.Strings.Strings.Concat
+- uid: Hgk.Zero.Strings.Strings.ConcatString(System.String,System.Collections.Generic.IEnumerable{System.String})
+  name: ConcatString(String, IEnumerable<String>)
+  href: api/Hgk.Zero.Strings.Strings.html#Hgk_Zero_Strings_Strings_ConcatString_System_String_System_Collections_Generic_IEnumerable_System_String__
+  commentId: M:Hgk.Zero.Strings.Strings.ConcatString(System.String,System.Collections.Generic.IEnumerable{System.String})
+  name.vb: ConcatString(String, IEnumerable(Of String))
+  fullName: Hgk.Zero.Strings.Strings.ConcatString(System.String, System.Collections.Generic.IEnumerable<System.String>)
+  fullName.vb: Hgk.Zero.Strings.Strings.ConcatString(System.String, System.Collections.Generic.IEnumerable(Of System.String))
+  nameWithType: Strings.ConcatString(String, IEnumerable<String>)
+  nameWithType.vb: Strings.ConcatString(String, IEnumerable(Of String))
+- uid: Hgk.Zero.Strings.Strings.ConcatString(System.String,System.Object)
+  name: ConcatString(String, Object)
+  href: api/Hgk.Zero.Strings.Strings.html#Hgk_Zero_Strings_Strings_ConcatString_System_String_System_Object_
+  commentId: M:Hgk.Zero.Strings.Strings.ConcatString(System.String,System.Object)
+  fullName: Hgk.Zero.Strings.Strings.ConcatString(System.String, System.Object)
+  nameWithType: Strings.ConcatString(String, Object)
+- uid: Hgk.Zero.Strings.Strings.ConcatString(System.String,System.Object,System.Object)
+  name: ConcatString(String, Object, Object)
+  href: api/Hgk.Zero.Strings.Strings.html#Hgk_Zero_Strings_Strings_ConcatString_System_String_System_Object_System_Object_
+  commentId: M:Hgk.Zero.Strings.Strings.ConcatString(System.String,System.Object,System.Object)
+  fullName: Hgk.Zero.Strings.Strings.ConcatString(System.String, System.Object, System.Object)
+  nameWithType: Strings.ConcatString(String, Object, Object)
+- uid: Hgk.Zero.Strings.Strings.ConcatString(System.String,System.Object,System.Object,System.Object)
+  name: ConcatString(String, Object, Object, Object)
+  href: api/Hgk.Zero.Strings.Strings.html#Hgk_Zero_Strings_Strings_ConcatString_System_String_System_Object_System_Object_System_Object_
+  commentId: M:Hgk.Zero.Strings.Strings.ConcatString(System.String,System.Object,System.Object,System.Object)
+  fullName: Hgk.Zero.Strings.Strings.ConcatString(System.String, System.Object, System.Object, System.Object)
+  nameWithType: Strings.ConcatString(String, Object, Object, Object)
+- uid: Hgk.Zero.Strings.Strings.ConcatString(System.String,System.Object[])
+  name: ConcatString(String, Object[])
+  href: api/Hgk.Zero.Strings.Strings.html#Hgk_Zero_Strings_Strings_ConcatString_System_String_System_Object___
+  commentId: M:Hgk.Zero.Strings.Strings.ConcatString(System.String,System.Object[])
+  name.vb: ConcatString(String, Object())
+  fullName: Hgk.Zero.Strings.Strings.ConcatString(System.String, System.Object[])
+  fullName.vb: Hgk.Zero.Strings.Strings.ConcatString(System.String, System.Object())
+  nameWithType: Strings.ConcatString(String, Object[])
+  nameWithType.vb: Strings.ConcatString(String, Object())
+- uid: Hgk.Zero.Strings.Strings.ConcatString(System.String,System.String)
+  name: ConcatString(String, String)
+  href: api/Hgk.Zero.Strings.Strings.html#Hgk_Zero_Strings_Strings_ConcatString_System_String_System_String_
+  commentId: M:Hgk.Zero.Strings.Strings.ConcatString(System.String,System.String)
+  fullName: Hgk.Zero.Strings.Strings.ConcatString(System.String, System.String)
+  nameWithType: Strings.ConcatString(String, String)
+- uid: Hgk.Zero.Strings.Strings.ConcatString(System.String,System.String,System.String)
+  name: ConcatString(String, String, String)
+  href: api/Hgk.Zero.Strings.Strings.html#Hgk_Zero_Strings_Strings_ConcatString_System_String_System_String_System_String_
+  commentId: M:Hgk.Zero.Strings.Strings.ConcatString(System.String,System.String,System.String)
+  fullName: Hgk.Zero.Strings.Strings.ConcatString(System.String, System.String, System.String)
+  nameWithType: Strings.ConcatString(String, String, String)
+- uid: Hgk.Zero.Strings.Strings.ConcatString(System.String,System.String,System.String,System.String)
+  name: ConcatString(String, String, String, String)
+  href: api/Hgk.Zero.Strings.Strings.html#Hgk_Zero_Strings_Strings_ConcatString_System_String_System_String_System_String_System_String_
+  commentId: M:Hgk.Zero.Strings.Strings.ConcatString(System.String,System.String,System.String,System.String)
+  fullName: Hgk.Zero.Strings.Strings.ConcatString(System.String, System.String, System.String, System.String)
+  nameWithType: Strings.ConcatString(String, String, String, String)
+- uid: Hgk.Zero.Strings.Strings.ConcatString(System.String,System.String[])
+  name: ConcatString(String, String[])
+  href: api/Hgk.Zero.Strings.Strings.html#Hgk_Zero_Strings_Strings_ConcatString_System_String_System_String___
+  commentId: M:Hgk.Zero.Strings.Strings.ConcatString(System.String,System.String[])
+  name.vb: ConcatString(String, String())
+  fullName: Hgk.Zero.Strings.Strings.ConcatString(System.String, System.String[])
+  fullName.vb: Hgk.Zero.Strings.Strings.ConcatString(System.String, System.String())
+  nameWithType: Strings.ConcatString(String, String[])
+  nameWithType.vb: Strings.ConcatString(String, String())
+- uid: Hgk.Zero.Strings.Strings.ConcatString*
+  name: ConcatString
+  href: api/Hgk.Zero.Strings.Strings.html#Hgk_Zero_Strings_Strings_ConcatString_
+  commentId: Overload:Hgk.Zero.Strings.Strings.ConcatString
   isSpec: "True"
-  fullName: Hgk.Zero.Strings.Strings.Concat
-  nameWithType: Strings.Concat
-- uid: Hgk.Zero.Strings.Strings.Concat``1(System.String,System.Collections.Generic.IEnumerable{``0})
-  name: Concat<T>(String, IEnumerable<T>)
-  href: api/Hgk.Zero.Strings.Strings.html#Hgk_Zero_Strings_Strings_Concat__1_System_String_System_Collections_Generic_IEnumerable___0__
-  commentId: M:Hgk.Zero.Strings.Strings.Concat``1(System.String,System.Collections.Generic.IEnumerable{``0})
-  name.vb: Concat(Of T)(String, IEnumerable(Of T))
-  fullName: Hgk.Zero.Strings.Strings.Concat<T>(System.String, System.Collections.Generic.IEnumerable<T>)
-  fullName.vb: Hgk.Zero.Strings.Strings.Concat(Of T)(System.String, System.Collections.Generic.IEnumerable(Of T))
-  nameWithType: Strings.Concat<T>(String, IEnumerable<T>)
-  nameWithType.vb: Strings.Concat(Of T)(String, IEnumerable(Of T))
+  fullName: Hgk.Zero.Strings.Strings.ConcatString
+  nameWithType: Strings.ConcatString
+- uid: Hgk.Zero.Strings.Strings.ConcatString``1(System.String,System.Collections.Generic.IEnumerable{``0})
+  name: ConcatString<T>(String, IEnumerable<T>)
+  href: api/Hgk.Zero.Strings.Strings.html#Hgk_Zero_Strings_Strings_ConcatString__1_System_String_System_Collections_Generic_IEnumerable___0__
+  commentId: M:Hgk.Zero.Strings.Strings.ConcatString``1(System.String,System.Collections.Generic.IEnumerable{``0})
+  name.vb: ConcatString(Of T)(String, IEnumerable(Of T))
+  fullName: Hgk.Zero.Strings.Strings.ConcatString<T>(System.String, System.Collections.Generic.IEnumerable<T>)
+  fullName.vb: Hgk.Zero.Strings.Strings.ConcatString(Of T)(System.String, System.Collections.Generic.IEnumerable(Of T))
+  nameWithType: Strings.ConcatString<T>(String, IEnumerable<T>)
+  nameWithType.vb: Strings.ConcatString(Of T)(String, IEnumerable(Of T))
 - uid: Hgk.Zero.Strings.Strings.IsNullOrEmpty(System.String)
   name: IsNullOrEmpty(String)
   href: api/Hgk.Zero.Strings.Strings.html#Hgk_Zero_Strings_Strings_IsNullOrEmpty_System_String_
@@ -3334,55 +3465,55 @@ references:
   isSpec: "True"
   fullName: Hgk.Zero.Strings.Strings.IsNullOrWhiteSpace
   nameWithType: Strings.IsNullOrWhiteSpace
-- uid: Hgk.Zero.Strings.Strings.Join(System.String,System.Collections.Generic.IEnumerable{System.String})
-  name: Join(String, IEnumerable<String>)
-  href: api/Hgk.Zero.Strings.Strings.html#Hgk_Zero_Strings_Strings_Join_System_String_System_Collections_Generic_IEnumerable_System_String__
-  commentId: M:Hgk.Zero.Strings.Strings.Join(System.String,System.Collections.Generic.IEnumerable{System.String})
-  name.vb: Join(String, IEnumerable(Of String))
-  fullName: Hgk.Zero.Strings.Strings.Join(System.String, System.Collections.Generic.IEnumerable<System.String>)
-  fullName.vb: Hgk.Zero.Strings.Strings.Join(System.String, System.Collections.Generic.IEnumerable(Of System.String))
-  nameWithType: Strings.Join(String, IEnumerable<String>)
-  nameWithType.vb: Strings.Join(String, IEnumerable(Of String))
-- uid: Hgk.Zero.Strings.Strings.Join(System.String,System.Object[])
-  name: Join(String, Object[])
-  href: api/Hgk.Zero.Strings.Strings.html#Hgk_Zero_Strings_Strings_Join_System_String_System_Object___
-  commentId: M:Hgk.Zero.Strings.Strings.Join(System.String,System.Object[])
-  name.vb: Join(String, Object())
-  fullName: Hgk.Zero.Strings.Strings.Join(System.String, System.Object[])
-  fullName.vb: Hgk.Zero.Strings.Strings.Join(System.String, System.Object())
-  nameWithType: Strings.Join(String, Object[])
-  nameWithType.vb: Strings.Join(String, Object())
-- uid: Hgk.Zero.Strings.Strings.Join(System.String,System.String[])
-  name: Join(String, String[])
-  href: api/Hgk.Zero.Strings.Strings.html#Hgk_Zero_Strings_Strings_Join_System_String_System_String___
-  commentId: M:Hgk.Zero.Strings.Strings.Join(System.String,System.String[])
-  name.vb: Join(String, String())
-  fullName: Hgk.Zero.Strings.Strings.Join(System.String, System.String[])
-  fullName.vb: Hgk.Zero.Strings.Strings.Join(System.String, System.String())
-  nameWithType: Strings.Join(String, String[])
-  nameWithType.vb: Strings.Join(String, String())
-- uid: Hgk.Zero.Strings.Strings.Join(System.String,System.String[],System.Int32,System.Int32)
-  name: Join(String, String[], Int32, Int32)
-  href: api/Hgk.Zero.Strings.Strings.html#Hgk_Zero_Strings_Strings_Join_System_String_System_String___System_Int32_System_Int32_
-  commentId: M:Hgk.Zero.Strings.Strings.Join(System.String,System.String[],System.Int32,System.Int32)
-  name.vb: Join(String, String(), Int32, Int32)
-  fullName: Hgk.Zero.Strings.Strings.Join(System.String, System.String[], System.Int32, System.Int32)
-  fullName.vb: Hgk.Zero.Strings.Strings.Join(System.String, System.String(), System.Int32, System.Int32)
-  nameWithType: Strings.Join(String, String[], Int32, Int32)
-  nameWithType.vb: Strings.Join(String, String(), Int32, Int32)
-- uid: Hgk.Zero.Strings.Strings.Join*
-  name: Join
-  href: api/Hgk.Zero.Strings.Strings.html#Hgk_Zero_Strings_Strings_Join_
-  commentId: Overload:Hgk.Zero.Strings.Strings.Join
+- uid: Hgk.Zero.Strings.Strings.JoinString(System.String,System.Collections.Generic.IEnumerable{System.String})
+  name: JoinString(String, IEnumerable<String>)
+  href: api/Hgk.Zero.Strings.Strings.html#Hgk_Zero_Strings_Strings_JoinString_System_String_System_Collections_Generic_IEnumerable_System_String__
+  commentId: M:Hgk.Zero.Strings.Strings.JoinString(System.String,System.Collections.Generic.IEnumerable{System.String})
+  name.vb: JoinString(String, IEnumerable(Of String))
+  fullName: Hgk.Zero.Strings.Strings.JoinString(System.String, System.Collections.Generic.IEnumerable<System.String>)
+  fullName.vb: Hgk.Zero.Strings.Strings.JoinString(System.String, System.Collections.Generic.IEnumerable(Of System.String))
+  nameWithType: Strings.JoinString(String, IEnumerable<String>)
+  nameWithType.vb: Strings.JoinString(String, IEnumerable(Of String))
+- uid: Hgk.Zero.Strings.Strings.JoinString(System.String,System.Object[])
+  name: JoinString(String, Object[])
+  href: api/Hgk.Zero.Strings.Strings.html#Hgk_Zero_Strings_Strings_JoinString_System_String_System_Object___
+  commentId: M:Hgk.Zero.Strings.Strings.JoinString(System.String,System.Object[])
+  name.vb: JoinString(String, Object())
+  fullName: Hgk.Zero.Strings.Strings.JoinString(System.String, System.Object[])
+  fullName.vb: Hgk.Zero.Strings.Strings.JoinString(System.String, System.Object())
+  nameWithType: Strings.JoinString(String, Object[])
+  nameWithType.vb: Strings.JoinString(String, Object())
+- uid: Hgk.Zero.Strings.Strings.JoinString(System.String,System.String[])
+  name: JoinString(String, String[])
+  href: api/Hgk.Zero.Strings.Strings.html#Hgk_Zero_Strings_Strings_JoinString_System_String_System_String___
+  commentId: M:Hgk.Zero.Strings.Strings.JoinString(System.String,System.String[])
+  name.vb: JoinString(String, String())
+  fullName: Hgk.Zero.Strings.Strings.JoinString(System.String, System.String[])
+  fullName.vb: Hgk.Zero.Strings.Strings.JoinString(System.String, System.String())
+  nameWithType: Strings.JoinString(String, String[])
+  nameWithType.vb: Strings.JoinString(String, String())
+- uid: Hgk.Zero.Strings.Strings.JoinString(System.String,System.String[],System.Int32,System.Int32)
+  name: JoinString(String, String[], Int32, Int32)
+  href: api/Hgk.Zero.Strings.Strings.html#Hgk_Zero_Strings_Strings_JoinString_System_String_System_String___System_Int32_System_Int32_
+  commentId: M:Hgk.Zero.Strings.Strings.JoinString(System.String,System.String[],System.Int32,System.Int32)
+  name.vb: JoinString(String, String(), Int32, Int32)
+  fullName: Hgk.Zero.Strings.Strings.JoinString(System.String, System.String[], System.Int32, System.Int32)
+  fullName.vb: Hgk.Zero.Strings.Strings.JoinString(System.String, System.String(), System.Int32, System.Int32)
+  nameWithType: Strings.JoinString(String, String[], Int32, Int32)
+  nameWithType.vb: Strings.JoinString(String, String(), Int32, Int32)
+- uid: Hgk.Zero.Strings.Strings.JoinString*
+  name: JoinString
+  href: api/Hgk.Zero.Strings.Strings.html#Hgk_Zero_Strings_Strings_JoinString_
+  commentId: Overload:Hgk.Zero.Strings.Strings.JoinString
   isSpec: "True"
-  fullName: Hgk.Zero.Strings.Strings.Join
-  nameWithType: Strings.Join
-- uid: Hgk.Zero.Strings.Strings.Join``1(System.String,System.Collections.Generic.IEnumerable{``0})
-  name: Join<T>(String, IEnumerable<T>)
-  href: api/Hgk.Zero.Strings.Strings.html#Hgk_Zero_Strings_Strings_Join__1_System_String_System_Collections_Generic_IEnumerable___0__
-  commentId: M:Hgk.Zero.Strings.Strings.Join``1(System.String,System.Collections.Generic.IEnumerable{``0})
-  name.vb: Join(Of T)(String, IEnumerable(Of T))
-  fullName: Hgk.Zero.Strings.Strings.Join<T>(System.String, System.Collections.Generic.IEnumerable<T>)
-  fullName.vb: Hgk.Zero.Strings.Strings.Join(Of T)(System.String, System.Collections.Generic.IEnumerable(Of T))
-  nameWithType: Strings.Join<T>(String, IEnumerable<T>)
-  nameWithType.vb: Strings.Join(Of T)(String, IEnumerable(Of T))
+  fullName: Hgk.Zero.Strings.Strings.JoinString
+  nameWithType: Strings.JoinString
+- uid: Hgk.Zero.Strings.Strings.JoinString``1(System.String,System.Collections.Generic.IEnumerable{``0})
+  name: JoinString<T>(String, IEnumerable<T>)
+  href: api/Hgk.Zero.Strings.Strings.html#Hgk_Zero_Strings_Strings_JoinString__1_System_String_System_Collections_Generic_IEnumerable___0__
+  commentId: M:Hgk.Zero.Strings.Strings.JoinString``1(System.String,System.Collections.Generic.IEnumerable{``0})
+  name.vb: JoinString(Of T)(String, IEnumerable(Of T))
+  fullName: Hgk.Zero.Strings.Strings.JoinString<T>(System.String, System.Collections.Generic.IEnumerable<T>)
+  fullName.vb: Hgk.Zero.Strings.Strings.JoinString(Of T)(System.String, System.Collections.Generic.IEnumerable(Of T))
+  nameWithType: Strings.JoinString<T>(String, IEnumerable<T>)
+  nameWithType.vb: Strings.JoinString(Of T)(String, IEnumerable(Of T))
