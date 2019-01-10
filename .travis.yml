@@ -1,18 +1,25 @@
+dist: xenial
+
 env:
-- VERSION_SUFFIX=aa-ci-$TRAVIS_BRANCH-$TRAVIS_BUILD_NUMBER
+  global:
+    - CONFIGURATION=Release
+    - VERSION_SUFFIX=aa-ci-$TRAVIS_BRANCH-$TRAVIS_BUILD_NUMBER
+    - DOTNET_CLI_TELEMETRY_OPTOUT=1
+    - DOTNET_SKIP_FIRST_TIME_EXPERIENCE=1
+    - GITHUB_DOC_REPO_OWNER=psmay
+    - GITHUB_DOC_REPO=Hgk.Zero
 
 language: csharp
 mono: none
-dist: xenial
 dotnet: 2.1
 
 install:
-- dotnet restore
+  - dotnet restore
 
 script:
-- dotnet build -c Release --version-suffix $VERSION_SUFFIX
-- dotnet test Hgk.Zero.Tests/Hgk.Zero.Tests.csproj
-# pack step not necessary; build is configured to make package
+  - dotnet build -c Release --version-suffix $VERSION_SUFFIX
+  - dotnet test Hgk.Zero.Tests/Hgk.Zero.Tests.csproj
+  # pack step not necessary; build is configured to make package
 
 deploy:
   - on:
@@ -24,4 +31,4 @@ deploy:
       branch: master
     skip_cleanup: true
     provider: script
-    script: bash scripts/docfx_to_gh_pages.sh
+    script: bash scripts/documentation_all.sh
