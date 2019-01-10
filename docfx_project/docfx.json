@@ -54,6 +54,11 @@
     ],
     "dest": "_site",
     "globalMetadataFiles": [],
+    "globalMetadata": {
+      "_appTitle": "Hgk.Zero",
+      "_appLogoPath": "images/logo.svg",
+      "_appFaviconPath": "images/favicon.png"
+    },
     "fileMetadataFiles": [],
     "template": [
       "default"
