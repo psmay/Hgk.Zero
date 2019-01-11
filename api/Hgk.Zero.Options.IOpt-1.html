@@ -1,0 +1,500 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IOpt&lt;T&gt;
+   | Hgk.Zero </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IOpt&lt;T&gt;
+   | Hgk.Zero ">
+    <meta name="generator" content="docfx 2.40.7.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Hgk.Zero.Options.IOpt`1">
+  
+  
+  <h1 id="Hgk_Zero_Options_IOpt_1" data-uid="Hgk.Zero.Options.IOpt`1" class="text-break">Interface IOpt&lt;T&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>Generic type for options.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator#System_Collections_Generic_IEnumerable_1_GetEnumerator">IEnumerable&lt;T&gt;.GetEnumerator()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Hgk.Zero.Options.html">Hgk.Zero.Options</a></h6>
+  <h6><strong>Assembly</strong>: Hgk.Zero.dll</h6>
+  <h5 id="Hgk_Zero_Options_IOpt_1_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IOpt&lt;out T&gt; : IOpt, IEnumerable&lt;T&gt;, IEnumerable</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of value that may be contained in this option.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Hgk_Zero_Options_IOpt_1_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+<a class="xref" href="Hgk.Zero.Options.IOpt-1.html">IOpt&lt;T&gt;</a> implements <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a> and <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable&lt;T&gt;</a>.
+The contract of this interface requires that the enumerators returned from <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerable.getenumerator#System_Collections_IEnumerable_GetEnumerator">GetEnumerator()</a> and <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator#System_Collections_Generic_IEnumerable_1_GetEnumerator">GetEnumerator()</a> produce
+either zero values, if the option is empty, or one value, if the option is full. Behavior is
+undefined if the enumerable produces more than one value.
+</p>
+</div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_AsIOpt__1_Hgk_Zero_Options_IOpt___0__">Opt.AsIOpt&lt;TSource&gt;(IOpt&lt;TSource&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Match__2_Hgk_Zero_Options_IOpt___0__System_Func___1__System_Func___0___1__">Opt.Match&lt;TSource, TResult&gt;(IOpt&lt;TSource&gt;, Func&lt;TResult&gt;, Func&lt;TSource, TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_MatchOpt__2_Hgk_Zero_Options_IOpt___0__System_Func_Hgk_Zero_Options_Opt___1___System_Func___0_Hgk_Zero_Options_Opt___1___">Opt.MatchOpt&lt;TSource, TResult&gt;(IOpt&lt;TSource&gt;, Func&lt;Opt&lt;TResult&gt;&gt;, Func&lt;TSource, Opt&lt;TResult&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_ReplaceIfEmpty__1_Hgk_Zero_Options_IOpt___0__System_Func_Hgk_Zero_Options_IOpt___0___">Opt.ReplaceIfEmpty&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;IOpt&lt;TSource&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_ReplaceIfEmpty__1_Hgk_Zero_Options_IOpt___0__Hgk_Zero_Options_IOpt___0__">Opt.ReplaceIfEmpty&lt;TSource&gt;(IOpt&lt;TSource&gt;, IOpt&lt;TSource&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_ToFixed_Hgk_Zero_Options_IOpt_">Opt.ToFixed(IOpt)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_ToFixed__1_Hgk_Zero_Options_IOpt___0__">Opt.ToFixed&lt;TSource&gt;(IOpt&lt;TSource&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_TryGetValue__1_Hgk_Zero_Options_IOpt___0____0__">Opt.TryGetValue&lt;TSource&gt;(IOpt&lt;TSource&gt;, out TSource)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Aggregate__1_Hgk_Zero_Options_IOpt___0__System_Func___0___0___0__">Opt.Aggregate&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, TSource, TSource&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Aggregate__2_Hgk_Zero_Options_IOpt___0____1_System_Func___1___0___1__">Opt.Aggregate&lt;TSource, TAccumulate&gt;(IOpt&lt;TSource&gt;, TAccumulate, Func&lt;TAccumulate, TSource, TAccumulate&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Aggregate__3_Hgk_Zero_Options_IOpt___0____1_System_Func___1___0___1__System_Func___1___2__">Opt.Aggregate&lt;TSource, TAccumulate, TResult&gt;(IOpt&lt;TSource&gt;, TAccumulate, Func&lt;TAccumulate, TSource, TAccumulate&gt;, Func&lt;TAccumulate, TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_All__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Boolean__">Opt.All&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Boolean&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Any__1_Hgk_Zero_Options_IOpt___0__">Opt.Any&lt;TSource&gt;(IOpt&lt;TSource&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Any__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Boolean__">Opt.Any&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Boolean&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Average__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Int64__">Opt.Average&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Int64&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Average__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Nullable_System_Decimal___">Opt.Average&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Nullable&lt;Decimal&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Average__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Nullable_System_Double___">Opt.Average&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Nullable&lt;Double&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Average__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Single__">Opt.Average&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Single&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Average__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Nullable_System_Int64___">Opt.Average&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Nullable&lt;Int64&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Average__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Nullable_System_Single___">Opt.Average&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Nullable&lt;Single&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Average__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Int32__">Opt.Average&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Int32&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Average__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Nullable_System_Int32___">Opt.Average&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Nullable&lt;Int32&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Average__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Double__">Opt.Average&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Double&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Average__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Decimal__">Opt.Average&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Decimal&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Cast__1_Hgk_Zero_Options_IOpt_">Opt.Cast&lt;TResult&gt;(IOpt)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Contains__1_Hgk_Zero_Options_IOpt___0____0_">Opt.Contains&lt;TSource&gt;(IOpt&lt;TSource&gt;, TSource)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Contains__1_Hgk_Zero_Options_IOpt___0____0_System_Collections_Generic_IEqualityComparer___0__">Opt.Contains&lt;TSource&gt;(IOpt&lt;TSource&gt;, TSource, IEqualityComparer&lt;TSource&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Count__1_Hgk_Zero_Options_IOpt___0__">Opt.Count&lt;TSource&gt;(IOpt&lt;TSource&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Count__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Boolean__">Opt.Count&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Boolean&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_DefaultIfEmpty__1_Hgk_Zero_Options_IOpt___0__">Opt.DefaultIfEmpty&lt;TSource&gt;(IOpt&lt;TSource&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_DefaultIfEmpty__1_Hgk_Zero_Options_IOpt___0____0_">Opt.DefaultIfEmpty&lt;TSource&gt;(IOpt&lt;TSource&gt;, TSource)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Distinct__1_Hgk_Zero_Options_IOpt___0__">Opt.Distinct&lt;TSource&gt;(IOpt&lt;TSource&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Distinct__1_Hgk_Zero_Options_IOpt___0__System_Collections_Generic_IEqualityComparer___0__">Opt.Distinct&lt;TSource&gt;(IOpt&lt;TSource&gt;, IEqualityComparer&lt;TSource&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_ElementAt__1_Hgk_Zero_Options_IOpt___0__System_Int32_">Opt.ElementAt&lt;TSource&gt;(IOpt&lt;TSource&gt;, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_ElementAtOrDefault__1_Hgk_Zero_Options_IOpt___0__System_Int32_">Opt.ElementAtOrDefault&lt;TSource&gt;(IOpt&lt;TSource&gt;, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Except__1_Hgk_Zero_Options_IOpt___0__System_Collections_Generic_IEnumerable___0__">Opt.Except&lt;TSource&gt;(IOpt&lt;TSource&gt;, IEnumerable&lt;TSource&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Except__1_Hgk_Zero_Options_IOpt___0__System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEqualityComparer___0__">Opt.Except&lt;TSource&gt;(IOpt&lt;TSource&gt;, IEnumerable&lt;TSource&gt;, IEqualityComparer&lt;TSource&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_First__1_Hgk_Zero_Options_IOpt___0__">Opt.First&lt;TSource&gt;(IOpt&lt;TSource&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_First__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Boolean__">Opt.First&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Boolean&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_FirstOrDefault__1_Hgk_Zero_Options_IOpt___0__">Opt.FirstOrDefault&lt;TSource&gt;(IOpt&lt;TSource&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_FirstOrDefault__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Boolean__">Opt.FirstOrDefault&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Boolean&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Intersect__1_Hgk_Zero_Options_IOpt___0__System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEqualityComparer___0__">Opt.Intersect&lt;TSource&gt;(IOpt&lt;TSource&gt;, IEnumerable&lt;TSource&gt;, IEqualityComparer&lt;TSource&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Intersect__1_Hgk_Zero_Options_IOpt___0__System_Collections_Generic_IEnumerable___0__">Opt.Intersect&lt;TSource&gt;(IOpt&lt;TSource&gt;, IEnumerable&lt;TSource&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Last__1_Hgk_Zero_Options_IOpt___0__">Opt.Last&lt;TSource&gt;(IOpt&lt;TSource&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Last__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Boolean__">Opt.Last&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Boolean&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_LastOrDefault__1_Hgk_Zero_Options_IOpt___0__">Opt.LastOrDefault&lt;TSource&gt;(IOpt&lt;TSource&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_LastOrDefault__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Boolean__">Opt.LastOrDefault&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Boolean&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_LongCount__1_Hgk_Zero_Options_IOpt___0__">Opt.LongCount&lt;TSource&gt;(IOpt&lt;TSource&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_LongCount__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Boolean__">Opt.LongCount&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Boolean&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Max__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Int32__">Opt.Max&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Int32&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Max__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Int64__">Opt.Max&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Int64&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Max__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Nullable_System_Decimal___">Opt.Max&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Nullable&lt;Decimal&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Max__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Nullable_System_Double___">Opt.Max&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Nullable&lt;Double&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Max__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Single__">Opt.Max&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Single&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Max__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Nullable_System_Int64___">Opt.Max&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Nullable&lt;Int64&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Max__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Nullable_System_Single___">Opt.Max&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Nullable&lt;Single&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Max__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Double__">Opt.Max&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Double&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Max__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Nullable_System_Int32___">Opt.Max&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Nullable&lt;Int32&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Max__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Decimal__">Opt.Max&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Decimal&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Max__2_Hgk_Zero_Options_IOpt___0__System_Func___0___1__">Opt.Max&lt;TSource, TResult&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Max__1_Hgk_Zero_Options_IOpt___0__">Opt.Max&lt;TSource&gt;(IOpt&lt;TSource&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Min__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Int32__">Opt.Min&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Int32&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Min__2_Hgk_Zero_Options_IOpt___0__System_Func___0___1__">Opt.Min&lt;TSource, TResult&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Min__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Single__">Opt.Min&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Single&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Min__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Nullable_System_Single___">Opt.Min&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Nullable&lt;Single&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Min__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Nullable_System_Int64___">Opt.Min&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Nullable&lt;Int64&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Min__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Nullable_System_Int32___">Opt.Min&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Nullable&lt;Int32&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Min__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Nullable_System_Double___">Opt.Min&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Nullable&lt;Double&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Min__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Nullable_System_Decimal___">Opt.Min&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Nullable&lt;Decimal&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Min__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Int64__">Opt.Min&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Int64&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Min__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Decimal__">Opt.Min&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Decimal&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Min__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Double__">Opt.Min&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Double&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Min__1_Hgk_Zero_Options_IOpt___0__">Opt.Min&lt;TSource&gt;(IOpt&lt;TSource&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_OfType__1_Hgk_Zero_Options_IOpt_">Opt.OfType&lt;TResult&gt;(IOpt)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Reverse__1_Hgk_Zero_Options_IOpt___0__">Opt.Reverse&lt;TSource&gt;(IOpt&lt;TSource&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Select__2_Hgk_Zero_Options_IOpt___0__System_Func___0___1__">Opt.Select&lt;TSource, TResult&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Select__2_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Int32___1__">Opt.Select&lt;TSource, TResult&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Int32, TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_SequenceEqual__1_Hgk_Zero_Options_IOpt___0__System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEqualityComparer___0__">Opt.SequenceEqual&lt;TSource&gt;(IOpt&lt;TSource&gt;, IEnumerable&lt;TSource&gt;, IEqualityComparer&lt;TSource&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_SequenceEqual__1_Hgk_Zero_Options_IOpt___0__System_Collections_Generic_IEnumerable___0__">Opt.SequenceEqual&lt;TSource&gt;(IOpt&lt;TSource&gt;, IEnumerable&lt;TSource&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Single__1_Hgk_Zero_Options_IOpt___0__">Opt.Single&lt;TSource&gt;(IOpt&lt;TSource&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Single__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Boolean__">Opt.Single&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Boolean&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_SingleOrDefault__1_Hgk_Zero_Options_IOpt___0__">Opt.SingleOrDefault&lt;TSource&gt;(IOpt&lt;TSource&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_SingleOrDefault__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Boolean__">Opt.SingleOrDefault&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Boolean&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Skip__1_Hgk_Zero_Options_IOpt___0__System_Int32_">Opt.Skip&lt;TSource&gt;(IOpt&lt;TSource&gt;, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_SkipWhile__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Boolean__">Opt.SkipWhile&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Boolean&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_SkipWhile__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Int32_System_Boolean__">Opt.SkipWhile&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Int32, Boolean&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Sum__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Nullable_System_Int32___">Opt.Sum&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Nullable&lt;Int32&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Sum__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Int32__">Opt.Sum&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Int32&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Sum__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Int64__">Opt.Sum&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Int64&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Sum__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Nullable_System_Decimal___">Opt.Sum&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Nullable&lt;Decimal&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Sum__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Single__">Opt.Sum&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Single&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Sum__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Nullable_System_Single___">Opt.Sum&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Nullable&lt;Single&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Sum__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Double__">Opt.Sum&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Double&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Sum__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Nullable_System_Int64___">Opt.Sum&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Nullable&lt;Int64&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Sum__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Decimal__">Opt.Sum&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Decimal&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Sum__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Nullable_System_Double___">Opt.Sum&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Nullable&lt;Double&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Take__1_Hgk_Zero_Options_IOpt___0__System_Int32_">Opt.Take&lt;TSource&gt;(IOpt&lt;TSource&gt;, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_TakeWhile__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Boolean__">Opt.TakeWhile&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Boolean&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_TakeWhile__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Int32_System_Boolean__">Opt.TakeWhile&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Int32, Boolean&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_ToArray__1_Hgk_Zero_Options_IOpt___0__">Opt.ToArray&lt;TSource&gt;(IOpt&lt;TSource&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_ToList__1_Hgk_Zero_Options_IOpt___0__">Opt.ToList&lt;TSource&gt;(IOpt&lt;TSource&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Where__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Int32_System_Boolean__">Opt.Where&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Int32, Boolean&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Where__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Boolean__">Opt.Where&lt;TSource&gt;(IOpt&lt;TSource&gt;, Func&lt;TSource, Boolean&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Zip__3_Hgk_Zero_Options_IOpt___0__System_Collections_Generic_IEnumerable___1__System_Func___0___1___2__">Opt.Zip&lt;TFirst, TSecond, TResult&gt;(IOpt&lt;TFirst&gt;, IEnumerable&lt;TSecond&gt;, Func&lt;TFirst, TSecond, TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Query.EnumerableToOpt.html#Hgk_Zero_Options_Query_EnumerableToOpt_WhereElementAt__1_System_Collections_Generic_IEnumerable___0__System_Int32_">EnumerableToOpt.WhereElementAt&lt;TSource&gt;(IEnumerable&lt;TSource&gt;, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Query.EnumerableToOpt.html#Hgk_Zero_Options_Query_EnumerableToOpt_WhereFirst__1_System_Collections_Generic_IEnumerable___0__">EnumerableToOpt.WhereFirst&lt;TSource&gt;(IEnumerable&lt;TSource&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Query.EnumerableToOpt.html#Hgk_Zero_Options_Query_EnumerableToOpt_WhereFirst__1_System_Collections_Generic_IEnumerable___0__System_Func___0_System_Boolean__">EnumerableToOpt.WhereFirst&lt;TSource&gt;(IEnumerable&lt;TSource&gt;, Func&lt;TSource, Boolean&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Query.EnumerableToOpt.html#Hgk_Zero_Options_Query_EnumerableToOpt_WhereLast__1_System_Collections_Generic_IEnumerable___0__">EnumerableToOpt.WhereLast&lt;TSource&gt;(IEnumerable&lt;TSource&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Query.EnumerableToOpt.html#Hgk_Zero_Options_Query_EnumerableToOpt_WhereLast__1_System_Collections_Generic_IEnumerable___0__System_Func___0_System_Boolean__">EnumerableToOpt.WhereLast&lt;TSource&gt;(IEnumerable&lt;TSource&gt;, Func&lt;TSource, Boolean&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Query.EnumerableToOpt.html#Hgk_Zero_Options_Query_EnumerableToOpt_WhereSingle__1_System_Collections_Generic_IEnumerable___0__">EnumerableToOpt.WhereSingle&lt;TSource&gt;(IEnumerable&lt;TSource&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Query.EnumerableToOpt.html#Hgk_Zero_Options_Query_EnumerableToOpt_WhereSingle__1_System_Collections_Generic_IEnumerable___0__System_Func___0_System_Boolean__">EnumerableToOpt.WhereSingle&lt;TSource&gt;(IEnumerable&lt;TSource&gt;, Func&lt;TSource, Boolean&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Strings.Query.EnumerableToString.html#Hgk_Zero_Strings_Query_EnumerableToString_ConcatToString__1_System_Collections_Generic_IEnumerable___0__">EnumerableToString.ConcatToString&lt;T&gt;(IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Strings.Query.EnumerableToString.html#Hgk_Zero_Strings_Query_EnumerableToString_JoinToString__1_System_Collections_Generic_IEnumerable___0__System_String_">EnumerableToString.JoinToString&lt;T&gt;(IEnumerable&lt;T&gt;, String)</a>
+  </div>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="Hgk.Zero.Options.IOpt.html">IOpt</a></div>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/psmay/Hgk.Zero/new/081ffb9a5d596d65bf757d35d37350a78cbac31f/apiSpec/new?filename=Hgk_Zero_Options_IOpt_1.md&amp;value=---%0Auid%3A%20Hgk.Zero.Options.IOpt%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/psmay/Hgk.Zero/blob/081ffb9a5d596d65bf757d35d37350a78cbac31f/Hgk.Zero/Options/IOpt.cs/#L42" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
