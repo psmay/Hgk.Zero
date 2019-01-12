@@ -447,6 +447,53 @@ namespace Hgk.Zero.Options
         public static bool TryGetValue<TSource>(this IOpt<TSource> source, out TSource value) =>
             source.ToFixed().TryGetValueRaw(out value);
 
+        /// <summary>
+        /// Filters the contents of an option to include only non- <see langword="null"/> values.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// This method is implemented using deferred execution; the query represented by this method
+        /// is not performed until the contents of the returned option are resolved, such as by enumeration.
+        /// </para>
+        /// </remarks>
+        /// <typeparam name="TSource">The type of the elements of <paramref name="source"/>.</typeparam>
+        /// <param name="source">An option to filter.</param>
+        /// <returns>
+        /// An option equivalent to <paramref name="source"/>, if it is full and contains a non- <see
+        /// langword="null"/> value; otherwise, an empty option.
+        /// </returns>
+        /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
+        public static IOpt<TSource> WhereNotNull<TSource>(this IOpt<TSource> source)
+        {
+            if (source == null) throw new ArgumentNullException(nameof(source));
+            return source.MetaSelect(opt => opt.WhereNotNullRaw());
+        }
+
+        /// <summary>
+        /// Filters the contents of an option to include only non- <see langword="null"/> values,
+        /// converting the results to their non-nullable type.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// This method is implemented using deferred execution; the query represented by this method
+        /// is not performed until the contents of the returned option are resolved, such as by enumeration.
+        /// </para>
+        /// </remarks>
+        /// <typeparam name="TSource">
+        /// The non-nullable basis type of the type of the elements of <paramref name="source"/>.
+        /// </typeparam>
+        /// <param name="source">An option to filter.</param>
+        /// <returns>
+        /// An option containing the same value as source, if it is full and contains a non- <see
+        /// langword="null"/> value; otherwise, an empty option.
+        /// </returns>
+        /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
+        public static IOpt<TSource> WhereNotNullSelectValue<TSource>(this IOpt<TSource?> source) where TSource : struct
+        {
+            if (source == null) throw new ArgumentNullException(nameof(source));
+            return source.MetaSelect(opt => opt.WhereNotNullSelectValueRaw());
+        }
+
         internal static bool Contains<TSource>(Opt<TSource> source, TSource value, IEqualityComparer<TSource> comparer)
         {
             if (source.HasValue)
@@ -655,10 +702,10 @@ namespace Hgk.Zero.Options
             return source.HasValue;
         }
 
-        private static Opt<TSource> WhereNotNull<TSource>(this Opt<TSource> source) where TSource : class =>
+        private static Opt<TSource> WhereNotNullRaw<TSource>(this Opt<TSource> source) =>
             source.HasValue && source.ValueOrDefault != null ? source : Empty<TSource>();
 
-        private static Opt<TSource> WhereNotNull<TSource>(this Opt<TSource?> source) where TSource : struct =>
+        private static Opt<TSource> WhereNotNullSelectValueRaw<TSource>(this Opt<TSource?> source) where TSource : struct =>
             (source.HasValue && source.ValueOrDefault.HasValue) ? Full(source.ValueOrDefault.Value) : Empty<TSource>();
 
         private static Opt<TSource> WhereNotRaw<TSource>(this Opt<TSource> source, Func<TSource, bool> predicate)
