@@ -93,6 +93,35 @@ namespace Hgk.Zero.Options
         public static Opt<T> Create<T>(bool hasValue, T value) => new Opt<T>(hasValue, value);
 
         /// <summary>
+        /// Returns the element at a specified index in an option or a default value if the index is
+        /// out of range.
+        /// </summary>
+        /// <typeparam name="TSource">The type of the elements of <paramref name="source"/>.</typeparam>
+        /// <param name="source">An option to return an element from.</param>
+        /// <param name="index">The index of the element to retrieve.</param>
+        /// <param name="defaultValue">
+        /// A default value to return if <paramref name="index"/> is out of bounds.
+        /// </param>
+        /// <returns>
+        /// <paramref name="defaultValue"/> if the index is outside the bounds of <paramref
+        /// name="source"/>; otherwise, the element at the specified position in <paramref name="source"/>.
+        /// </returns>
+        /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
+        public static TSource ElementAtOrDefault<TSource>(this IOpt<TSource> source, int index, TSource defaultValue)
+        {
+            if (source == null) throw new ArgumentNullException(nameof(source));
+            if (index == 0)
+            {
+                var opt = source.ToFixed();
+                if (opt.HasValue)
+                {
+                    return opt.ValueOrDefault;
+                }
+            }
+            return defaultValue;
+        }
+
+        /// <summary>
         /// Creates a fixed, empty option.
         /// </summary>
         /// <typeparam name="T">The element type of the new option.</typeparam>
@@ -102,6 +131,27 @@ namespace Hgk.Zero.Options
         /// <seealso cref="Create{T}(T?)"/>
         /// <seealso cref="Create{T}(bool, T)"/>
         public static Opt<T> Empty<T>() => new Opt<T>();
+
+        /// <summary>
+        /// Returns the first element of an option, or a default value if the option contains no elements.
+        /// </summary>
+        /// <typeparam name="TSource">The type of the elements of <paramref name="source"/>.</typeparam>
+        /// <param name="source">An option to return an element from.</param>
+        /// <param name="defaultValue">A default value to return if <paramref name="source"/> contains no elements.</param>
+        /// <returns><paramref name="defaultValue"/> if <paramref name="source"/> is empty; otherwise, the first element in <paramref name="source"/>.</returns>
+        /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
+        public static TSource FirstOrDefault<TSource>(this IOpt<TSource> source, TSource defaultValue) => source.SingleOrDefault(defaultValue);
+
+        /// <summary>
+        /// Returns the first element of the option that satisfies a condition or a default value if no such element is found.
+        /// </summary>
+        /// <typeparam name="TSource">The type of the elements of <paramref name="source"/>.</typeparam>
+        /// <param name="source">An option to return an element from.</param>
+        /// <param name="predicate">A function to test each element for a condition.</param>
+        /// <param name="defaultValue">A default value to return if <paramref name="source"/> contains no elements that satisfy <paramref name="predicate"/>.</param>
+        /// <returns><paramref name="defaultValue"/> if <paramref name="source"/> is empty or if no element passes the test specified by <paramref name="predicate"/>; otherwise, the first element in <paramref name="source"/> that passes the test specified by <paramref name="predicate"/>.</returns>
+        /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
+        public static TSource FirstOrDefault<TSource>(this IOpt<TSource> source, Func<TSource, bool> predicate, TSource defaultValue) => source.SingleOrDefault(predicate, defaultValue);
 
         /// <summary>
         /// Collapses an option containing another option into a single option.
@@ -154,6 +204,27 @@ namespace Hgk.Zero.Options
         /// <seealso cref="Create{T}(T?)"/>
         /// <seealso cref="Create{T}(bool, T)"/>
         public static Opt<T> Full<T>(T value) => new Opt<T>(true, value);
+
+        /// <summary>
+        /// Returns the last element of an option, or a default value if the option contains no elements.
+        /// </summary>
+        /// <typeparam name="TSource"></typeparam>
+        /// <param name="source">An option to return an element from.</param>
+        /// <param name="defaultValue">A default value to return if <paramref name="source"/> contains no elements.</param>
+        /// <returns><paramref name="defaultValue"/> if <paramref name="source"/> is empty; otherwise, the last element in <paramref name="source"/>.</returns>
+        /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
+        public static TSource LastOrDefault<TSource>(this IOpt<TSource> source, TSource defaultValue) => source.SingleOrDefault(defaultValue);
+
+        /// <summary>
+        /// Returns the last element of an option that satisfies a condition or a default value if no such element is found.
+        /// </summary>
+        /// <typeparam name="TSource"></typeparam>
+        /// <param name="source">An option to return an element from.</param>
+        /// <param name="predicate">A function to test each element for a condition.</param>
+        /// <param name="defaultValue">A default value to return if <paramref name="source"/> contains no elements that satisfy <paramref name="predicate"/>.</param>
+        /// <returns><paramref name="defaultValue"/> if the option is empty or if no elements pass the test in the predicate function; otherwise, the last element that passes the test in the predicate function.</returns>
+        /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
+        public static TSource LastOrDefault<TSource>(this IOpt<TSource> source, Func<TSource, bool> predicate, TSource defaultValue) => source.SingleOrDefault(predicate, defaultValue);
 
         /// <summary>
         /// Converts this option to another value based on its contents.
@@ -276,6 +347,36 @@ namespace Hgk.Zero.Options
             if (source == null) throw new ArgumentNullException(nameof(source));
             if (replacement == null) throw new ArgumentNullException(nameof(replacement));
             return Defer(() => source.ToFixed().ReplaceIfEmptyImmediate(replacement));
+        }
+
+        /// <summary>
+        /// Returns the only element of an option, or a default value if the option is empty.
+        /// </summary>
+        /// <typeparam name="TSource"></typeparam>
+        /// <param name="source">An option to return an element from.</param>
+        /// <param name="defaultValue">A default value to return if <paramref name="source"/> contains no elements.</param>
+        /// <returns>The single element of the input option, or <paramref name="defaultValue"/> if the option contains no elements.</returns>
+        /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
+        public static TSource SingleOrDefault<TSource>(this IOpt<TSource> source, TSource defaultValue)
+        {
+            var opt = source.ToFixed();
+            return opt.HasValue ? opt.ValueOrDefault : defaultValue;
+        }
+
+        /// <summary>
+        /// Returns the only element of an option that satisfies a specified condition or a default value if no such element exists.
+        /// </summary>
+        /// <typeparam name="TSource"></typeparam>
+        /// <param name="source">An option to return an element from.</param>
+        /// <param name="predicate">A function to test each element for a condition.</param>
+        /// <param name="defaultValue">A default value to return if <paramref name="source"/> contains no elements that satisfy <paramref name="predicate"/>.</param>
+        /// <returns>The single element of the input option that satisfies the condition, or <paramref name="defaultValue"/> if no such element is found.</returns>
+        /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
+        public static TSource SingleOrDefault<TSource>(this IOpt<TSource> source, Func<TSource, bool> predicate, TSource defaultValue)
+        {
+            if (predicate == null) throw new ArgumentNullException(nameof(predicate));
+            var opt = source.ToFixed();
+            return (opt.HasValue && predicate(opt.ValueOrDefault)) ? opt.ValueOrDefault : defaultValue;
         }
 
         /// <summary>
