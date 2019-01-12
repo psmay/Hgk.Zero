@@ -1778,6 +1778,49 @@ references:
   fullName.vb: Hgk.Zero.Options.Opt.Select(Of TSource, TResult)(Hgk.Zero.Options.IOpt(Of TSource), System.Func(Of TSource, System.Int32, TResult))
   nameWithType: Opt.Select<TSource, TResult>(IOpt<TSource>, Func<TSource, Int32, TResult>)
   nameWithType.vb: Opt.Select(Of TSource, TResult)(IOpt(Of TSource), Func(Of TSource, Int32, TResult))
+- uid: Hgk.Zero.Options.Opt.SelectMany*
+  name: SelectMany
+  href: api/Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_SelectMany_
+  commentId: Overload:Hgk.Zero.Options.Opt.SelectMany
+  isSpec: "True"
+  fullName: Hgk.Zero.Options.Opt.SelectMany
+  nameWithType: Opt.SelectMany
+- uid: Hgk.Zero.Options.Opt.SelectMany``2(Hgk.Zero.Options.IOpt{``0},System.Func{``0,Hgk.Zero.Options.IOpt{``1}})
+  name: SelectMany<TSource, TResult>(IOpt<TSource>, Func<TSource, IOpt<TResult>>)
+  href: api/Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_SelectMany__2_Hgk_Zero_Options_IOpt___0__System_Func___0_Hgk_Zero_Options_IOpt___1___
+  commentId: M:Hgk.Zero.Options.Opt.SelectMany``2(Hgk.Zero.Options.IOpt{``0},System.Func{``0,Hgk.Zero.Options.IOpt{``1}})
+  name.vb: SelectMany(Of TSource, TResult)(IOpt(Of TSource), Func(Of TSource, IOpt(Of TResult)))
+  fullName: Hgk.Zero.Options.Opt.SelectMany<TSource, TResult>(Hgk.Zero.Options.IOpt<TSource>, System.Func<TSource, Hgk.Zero.Options.IOpt<TResult>>)
+  fullName.vb: Hgk.Zero.Options.Opt.SelectMany(Of TSource, TResult)(Hgk.Zero.Options.IOpt(Of TSource), System.Func(Of TSource, Hgk.Zero.Options.IOpt(Of TResult)))
+  nameWithType: Opt.SelectMany<TSource, TResult>(IOpt<TSource>, Func<TSource, IOpt<TResult>>)
+  nameWithType.vb: Opt.SelectMany(Of TSource, TResult)(IOpt(Of TSource), Func(Of TSource, IOpt(Of TResult)))
+- uid: Hgk.Zero.Options.Opt.SelectMany``2(Hgk.Zero.Options.IOpt{``0},System.Func{``0,System.Int32,Hgk.Zero.Options.IOpt{``1}})
+  name: SelectMany<TSource, TResult>(IOpt<TSource>, Func<TSource, Int32, IOpt<TResult>>)
+  href: api/Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_SelectMany__2_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Int32_Hgk_Zero_Options_IOpt___1___
+  commentId: M:Hgk.Zero.Options.Opt.SelectMany``2(Hgk.Zero.Options.IOpt{``0},System.Func{``0,System.Int32,Hgk.Zero.Options.IOpt{``1}})
+  name.vb: SelectMany(Of TSource, TResult)(IOpt(Of TSource), Func(Of TSource, Int32, IOpt(Of TResult)))
+  fullName: Hgk.Zero.Options.Opt.SelectMany<TSource, TResult>(Hgk.Zero.Options.IOpt<TSource>, System.Func<TSource, System.Int32, Hgk.Zero.Options.IOpt<TResult>>)
+  fullName.vb: Hgk.Zero.Options.Opt.SelectMany(Of TSource, TResult)(Hgk.Zero.Options.IOpt(Of TSource), System.Func(Of TSource, System.Int32, Hgk.Zero.Options.IOpt(Of TResult)))
+  nameWithType: Opt.SelectMany<TSource, TResult>(IOpt<TSource>, Func<TSource, Int32, IOpt<TResult>>)
+  nameWithType.vb: Opt.SelectMany(Of TSource, TResult)(IOpt(Of TSource), Func(Of TSource, Int32, IOpt(Of TResult)))
+- uid: Hgk.Zero.Options.Opt.SelectMany``3(Hgk.Zero.Options.IOpt{``0},System.Func{``0,Hgk.Zero.Options.IOpt{``1}},System.Func{``0,``1,``2})
+  name: SelectMany<TSource, TCollection, TResult>(IOpt<TSource>, Func<TSource, IOpt<TCollection>>, Func<TSource, TCollection, TResult>)
+  href: api/Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_SelectMany__3_Hgk_Zero_Options_IOpt___0__System_Func___0_Hgk_Zero_Options_IOpt___1___System_Func___0___1___2__
+  commentId: M:Hgk.Zero.Options.Opt.SelectMany``3(Hgk.Zero.Options.IOpt{``0},System.Func{``0,Hgk.Zero.Options.IOpt{``1}},System.Func{``0,``1,``2})
+  name.vb: SelectMany(Of TSource, TCollection, TResult)(IOpt(Of TSource), Func(Of TSource, IOpt(Of TCollection)), Func(Of TSource, TCollection, TResult))
+  fullName: Hgk.Zero.Options.Opt.SelectMany<TSource, TCollection, TResult>(Hgk.Zero.Options.IOpt<TSource>, System.Func<TSource, Hgk.Zero.Options.IOpt<TCollection>>, System.Func<TSource, TCollection, TResult>)
+  fullName.vb: Hgk.Zero.Options.Opt.SelectMany(Of TSource, TCollection, TResult)(Hgk.Zero.Options.IOpt(Of TSource), System.Func(Of TSource, Hgk.Zero.Options.IOpt(Of TCollection)), System.Func(Of TSource, TCollection, TResult))
+  nameWithType: Opt.SelectMany<TSource, TCollection, TResult>(IOpt<TSource>, Func<TSource, IOpt<TCollection>>, Func<TSource, TCollection, TResult>)
+  nameWithType.vb: Opt.SelectMany(Of TSource, TCollection, TResult)(IOpt(Of TSource), Func(Of TSource, IOpt(Of TCollection)), Func(Of TSource, TCollection, TResult))
+- uid: Hgk.Zero.Options.Opt.SelectMany``3(Hgk.Zero.Options.IOpt{``0},System.Func{``0,System.Int32,Hgk.Zero.Options.IOpt{``1}},System.Func{``0,``1,``2})
+  name: SelectMany<TSource, TCollection, TResult>(IOpt<TSource>, Func<TSource, Int32, IOpt<TCollection>>, Func<TSource, TCollection, TResult>)
+  href: api/Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_SelectMany__3_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Int32_Hgk_Zero_Options_IOpt___1___System_Func___0___1___2__
+  commentId: M:Hgk.Zero.Options.Opt.SelectMany``3(Hgk.Zero.Options.IOpt{``0},System.Func{``0,System.Int32,Hgk.Zero.Options.IOpt{``1}},System.Func{``0,``1,``2})
+  name.vb: SelectMany(Of TSource, TCollection, TResult)(IOpt(Of TSource), Func(Of TSource, Int32, IOpt(Of TCollection)), Func(Of TSource, TCollection, TResult))
+  fullName: Hgk.Zero.Options.Opt.SelectMany<TSource, TCollection, TResult>(Hgk.Zero.Options.IOpt<TSource>, System.Func<TSource, System.Int32, Hgk.Zero.Options.IOpt<TCollection>>, System.Func<TSource, TCollection, TResult>)
+  fullName.vb: Hgk.Zero.Options.Opt.SelectMany(Of TSource, TCollection, TResult)(Hgk.Zero.Options.IOpt(Of TSource), System.Func(Of TSource, System.Int32, Hgk.Zero.Options.IOpt(Of TCollection)), System.Func(Of TSource, TCollection, TResult))
+  nameWithType: Opt.SelectMany<TSource, TCollection, TResult>(IOpt<TSource>, Func<TSource, Int32, IOpt<TCollection>>, Func<TSource, TCollection, TResult>)
+  nameWithType.vb: Opt.SelectMany(Of TSource, TCollection, TResult)(IOpt(Of TSource), Func(Of TSource, Int32, IOpt(Of TCollection)), Func(Of TSource, TCollection, TResult))
 - uid: Hgk.Zero.Options.Opt.SequenceEqual*
   name: SequenceEqual
   href: api/Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_SequenceEqual_
