@@ -2278,6 +2278,38 @@ references:
   fullName.vb: Hgk.Zero.Options.Opt.Where(Of TSource)(Hgk.Zero.Options.IOpt(Of TSource), System.Func(Of TSource, System.Int32, System.Boolean))
   nameWithType: Opt.Where<TSource>(IOpt<TSource>, Func<TSource, Int32, Boolean>)
   nameWithType.vb: Opt.Where(Of TSource)(IOpt(Of TSource), Func(Of TSource, Int32, Boolean))
+- uid: Hgk.Zero.Options.Opt.WhereNotNull*
+  name: WhereNotNull
+  href: api/Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_WhereNotNull_
+  commentId: Overload:Hgk.Zero.Options.Opt.WhereNotNull
+  isSpec: "True"
+  fullName: Hgk.Zero.Options.Opt.WhereNotNull
+  nameWithType: Opt.WhereNotNull
+- uid: Hgk.Zero.Options.Opt.WhereNotNull``1(Hgk.Zero.Options.IOpt{``0})
+  name: WhereNotNull<TSource>(IOpt<TSource>)
+  href: api/Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_WhereNotNull__1_Hgk_Zero_Options_IOpt___0__
+  commentId: M:Hgk.Zero.Options.Opt.WhereNotNull``1(Hgk.Zero.Options.IOpt{``0})
+  name.vb: WhereNotNull(Of TSource)(IOpt(Of TSource))
+  fullName: Hgk.Zero.Options.Opt.WhereNotNull<TSource>(Hgk.Zero.Options.IOpt<TSource>)
+  fullName.vb: Hgk.Zero.Options.Opt.WhereNotNull(Of TSource)(Hgk.Zero.Options.IOpt(Of TSource))
+  nameWithType: Opt.WhereNotNull<TSource>(IOpt<TSource>)
+  nameWithType.vb: Opt.WhereNotNull(Of TSource)(IOpt(Of TSource))
+- uid: Hgk.Zero.Options.Opt.WhereNotNullSelectValue*
+  name: WhereNotNullSelectValue
+  href: api/Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_WhereNotNullSelectValue_
+  commentId: Overload:Hgk.Zero.Options.Opt.WhereNotNullSelectValue
+  isSpec: "True"
+  fullName: Hgk.Zero.Options.Opt.WhereNotNullSelectValue
+  nameWithType: Opt.WhereNotNullSelectValue
+- uid: Hgk.Zero.Options.Opt.WhereNotNullSelectValue``1(Hgk.Zero.Options.IOpt{System.Nullable{``0}})
+  name: WhereNotNullSelectValue<TSource>(IOpt<Nullable<TSource>>)
+  href: api/Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_WhereNotNullSelectValue__1_Hgk_Zero_Options_IOpt_System_Nullable___0___
+  commentId: M:Hgk.Zero.Options.Opt.WhereNotNullSelectValue``1(Hgk.Zero.Options.IOpt{System.Nullable{``0}})
+  name.vb: WhereNotNullSelectValue(Of TSource)(IOpt(Of Nullable(Of TSource)))
+  fullName: Hgk.Zero.Options.Opt.WhereNotNullSelectValue<TSource>(Hgk.Zero.Options.IOpt<System.Nullable<TSource>>)
+  fullName.vb: Hgk.Zero.Options.Opt.WhereNotNullSelectValue(Of TSource)(Hgk.Zero.Options.IOpt(Of System.Nullable(Of TSource)))
+  nameWithType: Opt.WhereNotNullSelectValue<TSource>(IOpt<Nullable<TSource>>)
+  nameWithType.vb: Opt.WhereNotNullSelectValue(Of TSource)(IOpt(Of Nullable(Of TSource)))
 - uid: Hgk.Zero.Options.Opt.Zip*
   name: Zip
   href: api/Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Zip_
