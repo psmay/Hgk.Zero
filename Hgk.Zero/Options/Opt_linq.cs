@@ -620,19 +620,19 @@ namespace Hgk.Zero.Options
         public static double? Sum<TSource>(this IOpt<TSource> source, Func<TSource, double?> selector) => Sum(source.Select(selector));
 
         /// <inheritdoc cref="Enumerable.Sum(IEnumerable{float?})"/>
-        public static float? Sum(this IOpt<float?> source) => source.ToFixed().WhereNotNull().SingleOrDefault();
+        public static float? Sum(this IOpt<float?> source) => source.ToFixed().WhereNotNullRaw().SingleOrDefault();
 
         /// <inheritdoc cref="Enumerable.Sum(IEnumerable{long?})"/>
-        public static long? Sum(this IOpt<long?> source) => source.ToFixed().WhereNotNull().SingleOrDefault();
+        public static long? Sum(this IOpt<long?> source) => source.ToFixed().WhereNotNullRaw().SingleOrDefault();
 
         /// <inheritdoc cref="Enumerable.Sum(IEnumerable{int?})"/>
-        public static int? Sum(this IOpt<int?> source) => source.ToFixed().WhereNotNull().SingleOrDefault();
+        public static int? Sum(this IOpt<int?> source) => source.ToFixed().WhereNotNullRaw().SingleOrDefault();
 
         /// <inheritdoc cref="Enumerable.Sum(IEnumerable{double?})"/>
-        public static double? Sum(this IOpt<double?> source) => source.ToFixed().WhereNotNull().SingleOrDefault();
+        public static double? Sum(this IOpt<double?> source) => source.ToFixed().WhereNotNullRaw().SingleOrDefault();
 
         /// <inheritdoc cref="Enumerable.Sum(IEnumerable{decimal?})"/>
-        public static decimal? Sum(this IOpt<decimal?> source) => source.ToFixed().WhereNotNull().SingleOrDefault();
+        public static decimal? Sum(this IOpt<decimal?> source) => source.ToFixed().WhereNotNullRaw().SingleOrDefault();
 
         /// <inheritdoc cref="Enumerable.Sum(IEnumerable{float})"/>
         public static float Sum(this IOpt<float> source) => source.SingleOrDefault();
