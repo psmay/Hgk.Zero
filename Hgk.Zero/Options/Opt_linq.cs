@@ -479,6 +479,64 @@ namespace Hgk.Zero.Options
             return source.MetaSelect(opt => opt.SelectRaw(selector));
         }
 
+        /// <inheritdoc cref="Enumerable.SelectMany{TSource, TCollection, TResult}(IEnumerable{TSource}, Func{TSource, int, IEnumerable{TCollection}}, Func{TSource, TCollection, TResult})"/>
+        /// <remarks>
+        /// <para>
+        /// This method is implemented using deferred execution; the query represented by this method
+        /// is not performed until the contents of the returned option are resolved, such as by enumeration.
+        /// </para>
+        /// </remarks>
+        public static IOpt<TResult> SelectMany<TSource, TCollection, TResult>(this IOpt<TSource> source, Func<TSource, int, IOpt<TCollection>> collectionSelector, Func<TSource, TCollection, TResult> resultSelector)
+        {
+            if (source == null) throw new ArgumentNullException(nameof(source));
+            if (collectionSelector == null) throw new ArgumentNullException(nameof(collectionSelector));
+            if (resultSelector == null) throw new ArgumentNullException(nameof(resultSelector));
+            return source.MetaSelect(opt => SelectManyRaw(opt, collectionSelector, resultSelector));
+        }
+
+        /// <inheritdoc cref="Enumerable.SelectMany{TSource, TCollection, TResult}(IEnumerable{TSource}, Func{TSource, IEnumerable{TCollection}}, Func{TSource, TCollection, TResult})"/>
+        /// <remarks>
+        /// <para>
+        /// This method is implemented using deferred execution; the query represented by this method
+        /// is not performed until the contents of the returned option are resolved, such as by enumeration.
+        /// </para>
+        /// </remarks>
+        public static IOpt<TResult> SelectMany<TSource, TCollection, TResult>(this IOpt<TSource> source, Func<TSource, IOpt<TCollection>> collectionSelector, Func<TSource, TCollection, TResult> resultSelector)
+        {
+            if (source == null) throw new ArgumentNullException(nameof(source));
+            if (collectionSelector == null) throw new ArgumentNullException(nameof(collectionSelector));
+            if (resultSelector == null) throw new ArgumentNullException(nameof(resultSelector));
+            return source.MetaSelect(opt => SelectManyRaw(opt, collectionSelector, resultSelector));
+        }
+
+        /// <inheritdoc cref="Enumerable.SelectMany{TSource, TResult}(IEnumerable{TSource}, Func{TSource, int, IEnumerable{TResult}})"/>
+        /// <remarks>
+        /// <para>
+        /// This method is implemented using deferred execution; the query represented by this method
+        /// is not performed until the contents of the returned option are resolved, such as by enumeration.
+        /// </para>
+        /// </remarks>
+        public static IOpt<TResult> SelectMany<TSource, TResult>(this IOpt<TSource> source, Func<TSource, int, IOpt<TResult>> selector)
+        {
+            if (source == null) throw new ArgumentNullException(nameof(source));
+            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            return source.MetaSelect(opt => opt.SelectManyRaw(selector));
+        }
+
+        /// <inheritdoc cref="Enumerable.SelectMany{TSource, TResult}(IEnumerable{TSource}, Func{TSource, IEnumerable{TResult}})"/>
+        /// <remarks>
+        /// <para>
+        /// This method is implemented using deferred execution; the query represented by this method
+        /// is not performed until the contents of the returned option are resolved, such as by enumeration.
+        /// </para>
+        /// </remarks>
+        public static IOpt<TResult> SelectMany<TSource, TResult>(this IOpt<TSource> source, Func<TSource, IOpt<TResult>> selector)
+        {
+            if (source == null) throw new ArgumentNullException(nameof(source));
+            if (selector == null) throw new ArgumentNullException(nameof(selector));
+            return source.MetaSelect(opt => opt.SelectManyRaw(selector));
+        }
+
         /// <inheritdoc cref="Enumerable.SequenceEqual{TSource}(IEnumerable{TSource}, IEnumerable{TSource}, IEqualityComparer{TSource})"/>
         public static bool SequenceEqual<TSource>(this IOpt<TSource> first, IEnumerable<TSource> second, IEqualityComparer<TSource> comparer)
         {
