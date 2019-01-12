@@ -466,6 +466,26 @@ namespace Hgk.Zero.Options
             return source.HasValue ? source : replacement.ToFixed();
         }
 
+        private static Opt<TResult> SelectManyRaw<TSource, TResult>(this Opt<TSource> source, Func<TSource, IOpt<TResult>> selector)
+        {
+            return FlattenFixedOpt(source.SelectRaw(selector));
+        }
+
+        private static Opt<TResult> SelectManyRaw<TSource, TResult>(this Opt<TSource> source, Func<TSource, int, IOpt<TResult>> selector)
+        {
+            return FlattenFixedOpt(source.SelectRaw(selector));
+        }
+
+        private static Opt<TResult> SelectManyRaw<TSource, TCollection, TResult>(this Opt<TSource> source, Func<TSource, IOpt<TCollection>> collectionSelector, Func<TSource, TCollection, TResult> resultSelector)
+        {
+            return source.SelectManyRaw(element => SubSelect(element, collectionSelector(element), resultSelector));
+        }
+
+        private static Opt<TResult> SelectManyRaw<TSource, TCollection, TResult>(this Opt<TSource> source, Func<TSource, int, IOpt<TCollection>> collectionSelector, Func<TSource, TCollection, TResult> resultSelector)
+        {
+            return source.SelectManyRaw(element => SubSelect(element, collectionSelector(element, 0), resultSelector));
+        }
+
         private static Opt<TResult> SelectRaw<TSource, TResult>(this Opt<TSource> source, Func<TSource, TResult> selector)
         {
             return source.HasValue ? Full(selector(source.ValueOrDefault)) : Empty<TResult>();
@@ -481,6 +501,12 @@ namespace Hgk.Zero.Options
         // If the source is empty and the type is nullable, return null.
         // Otherwise, return the contained value (even if it is null).
         private static TSource SingleOrNull<TSource>(this IOpt<TSource> source) => default(TSource) == null ? source.SingleOrDefault() : source.Single();
+
+        // Performs the later half of the long-form SelectManyRaw.
+        private static IOpt<TResult> SubSelect<TSource, TCollection, TResult>(TSource sourceElement, IOpt<TCollection> subCollection, Func<TSource, TCollection, TResult> resultSelector)
+        {
+            return subCollection.ToFixed().SelectRaw(subelement => resultSelector(sourceElement, subelement));
+        }
 
         private static Opt<TSource> ToFixed<TSource>(IEnumerator<TSource> source)
         {
