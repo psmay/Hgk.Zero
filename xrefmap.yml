@@ -977,6 +977,15 @@ references:
   fullName.vb: Hgk.Zero.Options.Opt.ElementAtOrDefault(Of TSource)(Hgk.Zero.Options.IOpt(Of TSource), System.Int32)
   nameWithType: Opt.ElementAtOrDefault<TSource>(IOpt<TSource>, Int32)
   nameWithType.vb: Opt.ElementAtOrDefault(Of TSource)(IOpt(Of TSource), Int32)
+- uid: Hgk.Zero.Options.Opt.ElementAtOrDefault``1(Hgk.Zero.Options.IOpt{``0},System.Int32,``0)
+  name: ElementAtOrDefault<TSource>(IOpt<TSource>, Int32, TSource)
+  href: api/Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_ElementAtOrDefault__1_Hgk_Zero_Options_IOpt___0__System_Int32___0_
+  commentId: M:Hgk.Zero.Options.Opt.ElementAtOrDefault``1(Hgk.Zero.Options.IOpt{``0},System.Int32,``0)
+  name.vb: ElementAtOrDefault(Of TSource)(IOpt(Of TSource), Int32, TSource)
+  fullName: Hgk.Zero.Options.Opt.ElementAtOrDefault<TSource>(Hgk.Zero.Options.IOpt<TSource>, System.Int32, TSource)
+  fullName.vb: Hgk.Zero.Options.Opt.ElementAtOrDefault(Of TSource)(Hgk.Zero.Options.IOpt(Of TSource), System.Int32, TSource)
+  nameWithType: Opt.ElementAtOrDefault<TSource>(IOpt<TSource>, Int32, TSource)
+  nameWithType.vb: Opt.ElementAtOrDefault(Of TSource)(IOpt(Of TSource), Int32, TSource)
 - uid: Hgk.Zero.Options.Opt.Empty*
   name: Empty
   href: api/Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Empty_
@@ -1059,6 +1068,15 @@ references:
   fullName.vb: Hgk.Zero.Options.Opt.FirstOrDefault(Of TSource)(Hgk.Zero.Options.IOpt(Of TSource))
   nameWithType: Opt.FirstOrDefault<TSource>(IOpt<TSource>)
   nameWithType.vb: Opt.FirstOrDefault(Of TSource)(IOpt(Of TSource))
+- uid: Hgk.Zero.Options.Opt.FirstOrDefault``1(Hgk.Zero.Options.IOpt{``0},``0)
+  name: FirstOrDefault<TSource>(IOpt<TSource>, TSource)
+  href: api/Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_FirstOrDefault__1_Hgk_Zero_Options_IOpt___0____0_
+  commentId: M:Hgk.Zero.Options.Opt.FirstOrDefault``1(Hgk.Zero.Options.IOpt{``0},``0)
+  name.vb: FirstOrDefault(Of TSource)(IOpt(Of TSource), TSource)
+  fullName: Hgk.Zero.Options.Opt.FirstOrDefault<TSource>(Hgk.Zero.Options.IOpt<TSource>, TSource)
+  fullName.vb: Hgk.Zero.Options.Opt.FirstOrDefault(Of TSource)(Hgk.Zero.Options.IOpt(Of TSource), TSource)
+  nameWithType: Opt.FirstOrDefault<TSource>(IOpt<TSource>, TSource)
+  nameWithType.vb: Opt.FirstOrDefault(Of TSource)(IOpt(Of TSource), TSource)
 - uid: Hgk.Zero.Options.Opt.FirstOrDefault``1(Hgk.Zero.Options.IOpt{``0},System.Func{``0,System.Boolean})
   name: FirstOrDefault<TSource>(IOpt<TSource>, Func<TSource, Boolean>)
   href: api/Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_FirstOrDefault__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Boolean__
@@ -1068,6 +1086,15 @@ references:
   fullName.vb: Hgk.Zero.Options.Opt.FirstOrDefault(Of TSource)(Hgk.Zero.Options.IOpt(Of TSource), System.Func(Of TSource, System.Boolean))
   nameWithType: Opt.FirstOrDefault<TSource>(IOpt<TSource>, Func<TSource, Boolean>)
   nameWithType.vb: Opt.FirstOrDefault(Of TSource)(IOpt(Of TSource), Func(Of TSource, Boolean))
+- uid: Hgk.Zero.Options.Opt.FirstOrDefault``1(Hgk.Zero.Options.IOpt{``0},System.Func{``0,System.Boolean},``0)
+  name: FirstOrDefault<TSource>(IOpt<TSource>, Func<TSource, Boolean>, TSource)
+  href: api/Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_FirstOrDefault__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Boolean____0_
+  commentId: M:Hgk.Zero.Options.Opt.FirstOrDefault``1(Hgk.Zero.Options.IOpt{``0},System.Func{``0,System.Boolean},``0)
+  name.vb: FirstOrDefault(Of TSource)(IOpt(Of TSource), Func(Of TSource, Boolean), TSource)
+  fullName: Hgk.Zero.Options.Opt.FirstOrDefault<TSource>(Hgk.Zero.Options.IOpt<TSource>, System.Func<TSource, System.Boolean>, TSource)
+  fullName.vb: Hgk.Zero.Options.Opt.FirstOrDefault(Of TSource)(Hgk.Zero.Options.IOpt(Of TSource), System.Func(Of TSource, System.Boolean), TSource)
+  nameWithType: Opt.FirstOrDefault<TSource>(IOpt<TSource>, Func<TSource, Boolean>, TSource)
+  nameWithType.vb: Opt.FirstOrDefault(Of TSource)(IOpt(Of TSource), Func(Of TSource, Boolean), TSource)
 - uid: Hgk.Zero.Options.Opt.Flatten*
   name: Flatten
   href: api/Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Flatten_
@@ -1175,6 +1202,15 @@ references:
   fullName.vb: Hgk.Zero.Options.Opt.LastOrDefault(Of TSource)(Hgk.Zero.Options.IOpt(Of TSource))
   nameWithType: Opt.LastOrDefault<TSource>(IOpt<TSource>)
   nameWithType.vb: Opt.LastOrDefault(Of TSource)(IOpt(Of TSource))
+- uid: Hgk.Zero.Options.Opt.LastOrDefault``1(Hgk.Zero.Options.IOpt{``0},``0)
+  name: LastOrDefault<TSource>(IOpt<TSource>, TSource)
+  href: api/Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_LastOrDefault__1_Hgk_Zero_Options_IOpt___0____0_
+  commentId: M:Hgk.Zero.Options.Opt.LastOrDefault``1(Hgk.Zero.Options.IOpt{``0},``0)
+  name.vb: LastOrDefault(Of TSource)(IOpt(Of TSource), TSource)
+  fullName: Hgk.Zero.Options.Opt.LastOrDefault<TSource>(Hgk.Zero.Options.IOpt<TSource>, TSource)
+  fullName.vb: Hgk.Zero.Options.Opt.LastOrDefault(Of TSource)(Hgk.Zero.Options.IOpt(Of TSource), TSource)
+  nameWithType: Opt.LastOrDefault<TSource>(IOpt<TSource>, TSource)
+  nameWithType.vb: Opt.LastOrDefault(Of TSource)(IOpt(Of TSource), TSource)
 - uid: Hgk.Zero.Options.Opt.LastOrDefault``1(Hgk.Zero.Options.IOpt{``0},System.Func{``0,System.Boolean})
   name: LastOrDefault<TSource>(IOpt<TSource>, Func<TSource, Boolean>)
   href: api/Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_LastOrDefault__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Boolean__
@@ -1184,6 +1220,15 @@ references:
   fullName.vb: Hgk.Zero.Options.Opt.LastOrDefault(Of TSource)(Hgk.Zero.Options.IOpt(Of TSource), System.Func(Of TSource, System.Boolean))
   nameWithType: Opt.LastOrDefault<TSource>(IOpt<TSource>, Func<TSource, Boolean>)
   nameWithType.vb: Opt.LastOrDefault(Of TSource)(IOpt(Of TSource), Func(Of TSource, Boolean))
+- uid: Hgk.Zero.Options.Opt.LastOrDefault``1(Hgk.Zero.Options.IOpt{``0},System.Func{``0,System.Boolean},``0)
+  name: LastOrDefault<TSource>(IOpt<TSource>, Func<TSource, Boolean>, TSource)
+  href: api/Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_LastOrDefault__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Boolean____0_
+  commentId: M:Hgk.Zero.Options.Opt.LastOrDefault``1(Hgk.Zero.Options.IOpt{``0},System.Func{``0,System.Boolean},``0)
+  name.vb: LastOrDefault(Of TSource)(IOpt(Of TSource), Func(Of TSource, Boolean), TSource)
+  fullName: Hgk.Zero.Options.Opt.LastOrDefault<TSource>(Hgk.Zero.Options.IOpt<TSource>, System.Func<TSource, System.Boolean>, TSource)
+  fullName.vb: Hgk.Zero.Options.Opt.LastOrDefault(Of TSource)(Hgk.Zero.Options.IOpt(Of TSource), System.Func(Of TSource, System.Boolean), TSource)
+  nameWithType: Opt.LastOrDefault<TSource>(IOpt<TSource>, Func<TSource, Boolean>, TSource)
+  nameWithType.vb: Opt.LastOrDefault(Of TSource)(IOpt(Of TSource), Func(Of TSource, Boolean), TSource)
 - uid: Hgk.Zero.Options.Opt.LongCount*
   name: LongCount
   href: api/Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_LongCount_
@@ -1799,6 +1844,15 @@ references:
   fullName.vb: Hgk.Zero.Options.Opt.SingleOrDefault(Of TSource)(Hgk.Zero.Options.IOpt(Of TSource))
   nameWithType: Opt.SingleOrDefault<TSource>(IOpt<TSource>)
   nameWithType.vb: Opt.SingleOrDefault(Of TSource)(IOpt(Of TSource))
+- uid: Hgk.Zero.Options.Opt.SingleOrDefault``1(Hgk.Zero.Options.IOpt{``0},``0)
+  name: SingleOrDefault<TSource>(IOpt<TSource>, TSource)
+  href: api/Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_SingleOrDefault__1_Hgk_Zero_Options_IOpt___0____0_
+  commentId: M:Hgk.Zero.Options.Opt.SingleOrDefault``1(Hgk.Zero.Options.IOpt{``0},``0)
+  name.vb: SingleOrDefault(Of TSource)(IOpt(Of TSource), TSource)
+  fullName: Hgk.Zero.Options.Opt.SingleOrDefault<TSource>(Hgk.Zero.Options.IOpt<TSource>, TSource)
+  fullName.vb: Hgk.Zero.Options.Opt.SingleOrDefault(Of TSource)(Hgk.Zero.Options.IOpt(Of TSource), TSource)
+  nameWithType: Opt.SingleOrDefault<TSource>(IOpt<TSource>, TSource)
+  nameWithType.vb: Opt.SingleOrDefault(Of TSource)(IOpt(Of TSource), TSource)
 - uid: Hgk.Zero.Options.Opt.SingleOrDefault``1(Hgk.Zero.Options.IOpt{``0},System.Func{``0,System.Boolean})
   name: SingleOrDefault<TSource>(IOpt<TSource>, Func<TSource, Boolean>)
   href: api/Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_SingleOrDefault__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Boolean__
@@ -1808,6 +1862,15 @@ references:
   fullName.vb: Hgk.Zero.Options.Opt.SingleOrDefault(Of TSource)(Hgk.Zero.Options.IOpt(Of TSource), System.Func(Of TSource, System.Boolean))
   nameWithType: Opt.SingleOrDefault<TSource>(IOpt<TSource>, Func<TSource, Boolean>)
   nameWithType.vb: Opt.SingleOrDefault(Of TSource)(IOpt(Of TSource), Func(Of TSource, Boolean))
+- uid: Hgk.Zero.Options.Opt.SingleOrDefault``1(Hgk.Zero.Options.IOpt{``0},System.Func{``0,System.Boolean},``0)
+  name: SingleOrDefault<TSource>(IOpt<TSource>, Func<TSource, Boolean>, TSource)
+  href: api/Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_SingleOrDefault__1_Hgk_Zero_Options_IOpt___0__System_Func___0_System_Boolean____0_
+  commentId: M:Hgk.Zero.Options.Opt.SingleOrDefault``1(Hgk.Zero.Options.IOpt{``0},System.Func{``0,System.Boolean},``0)
+  name.vb: SingleOrDefault(Of TSource)(IOpt(Of TSource), Func(Of TSource, Boolean), TSource)
+  fullName: Hgk.Zero.Options.Opt.SingleOrDefault<TSource>(Hgk.Zero.Options.IOpt<TSource>, System.Func<TSource, System.Boolean>, TSource)
+  fullName.vb: Hgk.Zero.Options.Opt.SingleOrDefault(Of TSource)(Hgk.Zero.Options.IOpt(Of TSource), System.Func(Of TSource, System.Boolean), TSource)
+  nameWithType: Opt.SingleOrDefault<TSource>(IOpt<TSource>, Func<TSource, Boolean>, TSource)
+  nameWithType.vb: Opt.SingleOrDefault(Of TSource)(IOpt(Of TSource), Func(Of TSource, Boolean), TSource)
 - uid: Hgk.Zero.Options.Opt.Skip*
   name: Skip
   href: api/Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Skip_
