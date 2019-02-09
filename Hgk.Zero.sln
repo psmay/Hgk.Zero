@@ -5,11 +5,11 @@ VisualStudioVersion = 15.0.28307.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "Documentation", "Documentation\Documentation.shfbproj", "{C32D912F-13FB-4DD0-9234-581B6315D7A8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hgk.Zero.Tests", "Hgk.Zero.Tests\Hgk.Zero.Tests.csproj", "{A9E82827-AC98-4FAE-9EC2-A883452C7A8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests.Hgk.Zero", "Tests.Hgk.Zero\Tests.Hgk.Zero.csproj", "{A9E82827-AC98-4FAE-9EC2-A883452C7A8E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hgk.Zero.Options", "Hgk.Zero.Options\Hgk.Zero.Options.csproj", "{D3EBFECF-11E4-4C1C-8240-3EC8A883A499}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hgk.Zero.Options", "Hgk.Zero.Options\Hgk.Zero.Options.csproj", "{D3EBFECF-11E4-4C1C-8240-3EC8A883A499}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hgk.Zero.Strings", "Hgk.Zero.Strings\Hgk.Zero.Strings.csproj", "{1D65BA29-3557-4B22-98E8-9E53B860D13C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hgk.Zero.Strings", "Hgk.Zero.Strings\Hgk.Zero.Strings.csproj", "{1D65BA29-3557-4B22-98E8-9E53B860D13C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

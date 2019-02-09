@@ -3,7 +3,7 @@ using System;
 using System.Linq;
 using Xunit;
 
-namespace Hgk.Zero.Tests
+namespace Tests.Hgk.Zero
 {
     public class FixedOptTests
     {
