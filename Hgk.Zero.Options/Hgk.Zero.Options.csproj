@@ -1,9 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <PackageId>Hgk.Zero</PackageId>
-    <Title>Enumerable options and a few other things we wish were builtins</Title>
-    <PackageDescription>Utilities for C# (and maybe others) that we wish were builtins, including LINQ-compatible enumerable options</PackageDescription>
+    <PackageId>Hgk.Zero.Options</PackageId>
+    <Title>Enumerable options for C#</Title>
+    <PackageDescription>LINQ-compatible enumerable options</PackageDescription>
     <PackageIconUrl>https://raw.githubusercontent.com/psmay/Hgk.Zero/master/icon64x64.png</PackageIconUrl>
     <TargetFramework>netstandard2.0</TargetFramework>
     <VersionPrefix>0.0.3</VersionPrefix>
@@ -18,11 +18,11 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>Hgk.Zero.xml</DocumentationFile>
+    <DocumentationFile>Hgk.Zero.Options.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile>Hgk.Zero.xml</DocumentationFile>
+    <DocumentationFile>Hgk.Zero.Options.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -31,25 +31,31 @@
 
   <ItemGroup>
     <Compile Update="ErrorMessages.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
       <DependentUpon>ErrorMessages.resx</DependentUpon>
-    </Compile>
-    <Compile Update="Options\OptStrings.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>OptStrings.resx</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Update="ErrorMessages.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>ErrorMessages.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Options\OptStrings.resx">
       <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="OptStrings.Designer.cs">
+      <DependentUpon>OptStrings.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="OptStrings.resx">
       <LastGenOutput>OptStrings.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
     </EmbeddedResource>
   </ItemGroup>
 

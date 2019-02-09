@@ -5,7 +5,8 @@
         {
           "src": "..",
           "files": [
-            "Hgk.Zero/**.csproj"
+            "Hgk.Zero.Options/**.csproj",
+            "Hgk.Zero.Strings/**.csproj"
           ]
         }
       ],

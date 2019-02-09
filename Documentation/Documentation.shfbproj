@@ -43,17 +43,20 @@
     <Preliminary>False</Preliminary>
     <SdkLinkTarget>Blank</SdkLinkTarget>
     <DocumentationSources>
-      <DocumentationSource sourceFile="..\Hgk.Zero\bin\Release\netstandard2.0\Hgk.Zero.dll" />
-      <DocumentationSource sourceFile="..\Hgk.Zero\Hgk.Zero.xml" />
+      <DocumentationSource sourceFile="..\Hgk.Zero.Options\bin\Release\netstandard2.0\Hgk.Zero.Options.dll" />
+      <DocumentationSource sourceFile="..\Hgk.Zero.Options\bin\Release\netstandard2.0\Hgk.Zero.Options.xml" />
+      <DocumentationSource sourceFile="..\Hgk.Zero.Strings\bin\Release\netstandard2.0\Hgk.Zero.Strings.dll" />
+      <DocumentationSource sourceFile="..\Hgk.Zero.Strings\bin\Release\netstandard2.0\Hgk.Zero.Strings.xml" />
     </DocumentationSources>
     <NamingMethod>MemberName</NamingMethod>
     <NamespaceSummaries>
       <NamespaceSummaryItem name="Hgk.Zero.Options" isDocumented="True">Facilities for using options, which are containers that are either empty or full (that is, that contain either zero elements or one element).</NamespaceSummaryItem>
-<NamespaceSummaryItem name="Hgk.Zero.Options.Convert" isDocumented="True">Facilities for performing conversions, producing a full option if successful or an empty option on failure.</NamespaceSummaryItem>
-<NamespaceSummaryItem name="Hgk.Zero.Options.Try" isDocumented="True">Facilities for adapting typical try functions to produce options.</NamespaceSummaryItem>
-<NamespaceSummaryItem name="Hgk.Zero.Options.Query" isDocumented="True">Facilities for using options with enumerables and dictionaries.</NamespaceSummaryItem>
-<NamespaceSummaryItem name="Hgk.Zero.Strings" isDocumented="True">Facilities for using strings.</NamespaceSummaryItem>
-<NamespaceSummaryItem name="Hgk.Zero.Strings.Query" isDocumented="True">Facilities for using strings with enumerables.</NamespaceSummaryItem></NamespaceSummaries>
+      <NamespaceSummaryItem name="Hgk.Zero.Options.Convert" isDocumented="True">Facilities for performing conversions, producing a full option if successful or an empty option on failure.</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Hgk.Zero.Options.Try" isDocumented="True">Facilities for adapting typical try functions to produce options.</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Hgk.Zero.Options.Query" isDocumented="True">Facilities for using options with enumerables and dictionaries.</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Hgk.Zero.Strings" isDocumented="True">Facilities for using strings.</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Hgk.Zero.Strings.Query" isDocumented="True">Facilities for using strings with enumerables.</NamespaceSummaryItem>
+    </NamespaceSummaries>
     <PlugInConfigurations>
     </PlugInConfigurations>
   </PropertyGroup>

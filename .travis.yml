@@ -26,7 +26,10 @@ deploy:
       branch: master
     skip_cleanup: true
     provider: script
-    script: dotnet nuget push Hgk.Zero/bin/Release/*-$VERSION_SUFFIX.nupkg --api-key $NUGET_API_KEY --source $NUGET_SOURCE
+    script: |-
+      for i in Options Strings; do
+        dotnet nuget push Hgk.Zero.$i/bin/Release/*-$VERSION_SUFFIX.nupkg --api-key $NUGET_API_KEY --source $NUGET_SOURCE || exit ;
+      done
   - on:
       branch: master
     skip_cleanup: true

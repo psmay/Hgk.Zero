@@ -13,7 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Hgk.Zero\Hgk.Zero.csproj" />
+    <ProjectReference Include="..\Hgk.Zero.Options\Hgk.Zero.Options.csproj" />
+    <ProjectReference Include="..\Hgk.Zero.Strings\Hgk.Zero.Strings.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Hgk.Zero
+namespace Hgk.Zero.Options
 {
     internal static class Error
     {
