@@ -92,7 +92,7 @@ zero, one, or more than one element.</p>
   <h5 id="Hgk_Zero_Options_ISingleResultOpt_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>
 <a class="xref" href="Hgk.Zero.Options.ISingleResultOpt.html">ISingleResultOpt</a> is a supertype of <a class="xref" href="Hgk.Zero.Options.ISingleResultOpt-1.html">ISingleResultOpt&lt;T&gt;</a>, the type
-returned by the single-element filter operations <a class="xref" href="Hgk.Zero.Options.Query.EnumerableToOpt.html#Hgk_Zero_Options_Query_EnumerableToOpt_WhereSingle__1_System_Collections_Generic_IEnumerable___0__">WhereSingle&lt;TSource&gt;(IEnumerable&lt;TSource&gt;)</a> and <a class="xref" href="Hgk.Zero.Options.Query.EnumerableToOpt.html#Hgk_Zero_Options_Query_EnumerableToOpt_WhereSingle__1_System_Collections_Generic_IEnumerable___0__System_Func___0_System_Boolean__">WhereSingle&lt;TSource&gt;(IEnumerable&lt;TSource&gt;, Func&lt;TSource, Boolean&gt;)</a>. If
+returned by the single-element filter operations <a class="xref" href="Hgk.Zero.Options.Linq.EnumerableToOpt.html#Hgk_Zero_Options_Linq_EnumerableToOpt_WhereSingle__1_System_Collections_Generic_IEnumerable___0__">WhereSingle&lt;TSource&gt;(IEnumerable&lt;TSource&gt;)</a> and <a class="xref" href="Hgk.Zero.Options.Linq.EnumerableToOpt.html#Hgk_Zero_Options_Linq_EnumerableToOpt_WhereSingle__1_System_Collections_Generic_IEnumerable___0__System_Func___0_System_Boolean__">WhereSingle&lt;TSource&gt;(IEnumerable&lt;TSource&gt;, Func&lt;TSource, Boolean&gt;)</a>. If
 such an operation finds zero elements or one element, a single-result option behaves the same
 as an ordinary <a class="xref" href="Hgk.Zero.Options.IOpt.html">IOpt</a>. However, if such an operation finds more than one element,
 it behaves differently:
@@ -100,9 +100,9 @@ it behaves differently:
 <ul><li>
 Resolving a single-result option as an ordinary option ( <a class="xref" href="Hgk.Zero.Options.IOpt.html">IOpt</a>) or enumerable (
 <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a>) will result in an <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a>.
-Operations that resolve immediately (such as a <span class="xref">langword_csharp_foreach</span> loop or <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_ToFixed_Hgk_Zero_Options_IOpt_">ToFixed(IOpt)</a>) will cause the exception to be thrown immediately, while deferred
-operations (such as <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_OfType__1_Hgk_Zero_Options_IOpt_">OfType&lt;TResult&gt;(IOpt)</a>) will cause the exception to be
-thrown when they are resolved themselves.
+Operations that resolve immediately (such as a <span class="xref">langword_csharp_foreach</span> loop or <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_FixUntyped_Hgk_Zero_Options_IOpt_">FixUntyped(IOpt)</a>) will cause the exception to be thrown immediately, while
+deferred operations (such as <a class="xref" href="Hgk.Zero.Options.Linq.LinqToOpt.html#Hgk_Zero_Options_Linq_LinqToOpt_OfType__1_Hgk_Zero_Options_IOpt_">OfType&lt;TResult&gt;(IOpt)</a>) will cause the
+exception to be thrown when they are resolved themselves.
 </li><li>
 Explicit operations such as <a class="xref" href="Hgk.Zero.Options.ISingleResultOpt.html#Hgk_Zero_Options_ISingleResultOpt_Match__1_System_Func___0__System_Func_System_Object___0__System_Func___0__">Match&lt;TResult&gt;(Func&lt;TResult&gt;, Func&lt;Object, TResult&gt;, Func&lt;TResult&gt;)</a> can be used to convert a single-result option to another kind of value
 without throwing an exception.
@@ -131,10 +131,10 @@ occurring immediately.)
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/psmay/Hgk.Zero/new/886bf8b7e791de2328f24345fa78ed38d62a40c2/apiSpec/new?filename=Hgk_Zero_Options_ISingleResultOpt_Match__1_System_Func___0__System_Func_System_Object___0__System_Func___0__.md&amp;value=---%0Auid%3A%20Hgk.Zero.Options.ISingleResultOpt.Match%60%601(System.Func%7B%60%600%7D%2CSystem.Func%7BSystem.Object%2C%60%600%7D%2CSystem.Func%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/psmay/Hgk.Zero/new/e4ae5b7dfdff3742da4d282ee36244f9736d190c/apiSpec/new?filename=Hgk_Zero_Options_ISingleResultOpt_Match__1_System_Func___0__System_Func_System_Object___0__System_Func___0__.md&amp;value=---%0Auid%3A%20Hgk.Zero.Options.ISingleResultOpt.Match%60%601(System.Func%7B%60%600%7D%2CSystem.Func%7BSystem.Object%2C%60%600%7D%2CSystem.Func%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/psmay/Hgk.Zero/blob/886bf8b7e791de2328f24345fa78ed38d62a40c2/Hgk.Zero.Options/ISingleResultOpt.cs/#L109">View Source</a>
+    <a href="https://github.com/psmay/Hgk.Zero/blob/e4ae5b7dfdff3742da4d282ee36244f9736d190c/Hgk.Zero.Options/ISingleResultOpt.cs/#L109">View Source</a>
   </span>
   <a id="Hgk_Zero_Options_ISingleResultOpt_Match_" data-uid="Hgk.Zero.Options.ISingleResultOpt.Match*"></a>
   <h4 id="Hgk_Zero_Options_ISingleResultOpt_Match__1_System_Func___0__System_Func_System_Object___0__System_Func___0__" data-uid="Hgk.Zero.Options.ISingleResultOpt.Match``1(System.Func{``0},System.Func{System.Object,``0},System.Func{``0})">Match&lt;TResult&gt;(Func&lt;TResult&gt;, Func&lt;Object, TResult&gt;, Func&lt;TResult&gt;)</h4>
@@ -231,16 +231,16 @@ represents a result of more than one element.</p>
   </table>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
-      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_ToFixed_Hgk_Zero_Options_IOpt_">Opt.ToFixed(IOpt)</a>
-  </div>
-  <div>
-      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Cast__1_Hgk_Zero_Options_IOpt_">Opt.Cast&lt;TResult&gt;(IOpt)</a>
-  </div>
-  <div>
-      <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_OfType__1_Hgk_Zero_Options_IOpt_">Opt.OfType&lt;TResult&gt;(IOpt)</a>
-  </div>
-  <div>
       <a class="xref" href="Hgk.Zero.Options.SingleResultOpt.html#Hgk_Zero_Options_SingleResultOpt_ForceSingleResultOpt_Hgk_Zero_Options_ISingleResultOpt_">SingleResultOpt.ForceSingleResultOpt(ISingleResultOpt)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Linq.LinqToOpt.html#Hgk_Zero_Options_Linq_LinqToOpt_ToFixed_Hgk_Zero_Options_IOpt_">LinqToOpt.ToFixed(IOpt)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Linq.LinqToOpt.html#Hgk_Zero_Options_Linq_LinqToOpt_Cast__1_Hgk_Zero_Options_IOpt_">LinqToOpt.Cast&lt;TResult&gt;(IOpt)</a>
+  </div>
+  <div>
+      <a class="xref" href="Hgk.Zero.Options.Linq.LinqToOpt.html#Hgk_Zero_Options_Linq_LinqToOpt_OfType__1_Hgk_Zero_Options_IOpt_">LinqToOpt.OfType&lt;TResult&gt;(IOpt)</a>
   </div>
   <h3 id="seealso">See Also</h3>
   <div class="seealso">
@@ -254,10 +254,10 @@ represents a result of more than one element.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/psmay/Hgk.Zero/new/886bf8b7e791de2328f24345fa78ed38d62a40c2/apiSpec/new?filename=Hgk_Zero_Options_ISingleResultOpt.md&amp;value=---%0Auid%3A%20Hgk.Zero.Options.ISingleResultOpt%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/psmay/Hgk.Zero/new/e4ae5b7dfdff3742da4d282ee36244f9736d190c/apiSpec/new?filename=Hgk_Zero_Options_ISingleResultOpt.md&amp;value=---%0Auid%3A%20Hgk.Zero.Options.ISingleResultOpt%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/psmay/Hgk.Zero/blob/886bf8b7e791de2328f24345fa78ed38d62a40c2/Hgk.Zero.Options/ISingleResultOpt.cs/#L80" class="contribution-link">View Source</a>
+                    <a href="https://github.com/psmay/Hgk.Zero/blob/e4ae5b7dfdff3742da4d282ee36244f9736d190c/Hgk.Zero.Options/ISingleResultOpt.cs/#L80" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
