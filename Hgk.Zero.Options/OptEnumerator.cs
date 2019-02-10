@@ -30,7 +30,7 @@ namespace Hgk.Zero.Options
             }
             else
             {
-                var fixedSource = source.ToFixed();
+                var fixedSource = Opt.Fix(source);
                 var moved = fixedSource.HasValue;
                 Current = fixedSource.ValueOrDefault;
                 isResolved = true;

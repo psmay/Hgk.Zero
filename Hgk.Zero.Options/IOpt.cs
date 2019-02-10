@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Hgk.Zero.Options.Linq;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace Hgk.Zero.Options
@@ -9,9 +10,9 @@ namespace Hgk.Zero.Options
     /// <remarks>
     /// <para>
     /// An <see cref="IOpt"/> can be coerced to a typed option by using <see
-    /// cref="Opt.Cast{TResult}(IOpt)"/>, which forcibly casts the contained value to the specified
-    /// type if necessary, or <see cref="Opt.OfType{TResult}(IOpt)"/>, which produces an empty option
-    /// if the contained value cannot be cast to the specified type.
+    /// cref="LinqToOpt.Cast{TResult}(IOpt)"/>, which forcibly casts the contained value to the
+    /// specified type if necessary, or <see cref="LinqToOpt.OfType{TResult}(IOpt)"/>, which produces
+    /// an empty option if the contained value cannot be cast to the specified type.
     /// </para>
     /// <para>
     /// <see cref="IOpt"/> implements the non-generic <see cref="IEnumerable"/>. The contract of this

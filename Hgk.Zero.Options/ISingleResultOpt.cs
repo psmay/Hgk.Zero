@@ -1,4 +1,4 @@
-﻿using Hgk.Zero.Options.Query;
+﻿using Hgk.Zero.Options.Linq;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -25,9 +25,9 @@ namespace Hgk.Zero.Options
     /// Resolving a single-result option as an ordinary option ( <see cref="IOpt"/>) or enumerable (
     /// <see cref="IEnumerable"/>) will result in an <see cref="InvalidOperationException"/>.
     /// Operations that resolve immediately (such as a <see langword="foreach"/> loop or <see
-    /// cref="Opt.ToFixed(IOpt)"/>) will cause the exception to be thrown immediately, while deferred
-    /// operations (such as <see cref="Opt.OfType{TResult}(IOpt)"/>) will cause the exception to be
-    /// thrown when they are resolved themselves.
+    /// cref="Opt.FixUntyped(IOpt)"/>) will cause the exception to be thrown immediately, while
+    /// deferred operations (such as <see cref="LinqToOpt.OfType{TResult}(IOpt)"/>) will cause the
+    /// exception to be thrown when they are resolved themselves.
     /// </description>
     /// </item>
     /// <item>
@@ -129,8 +129,8 @@ namespace Hgk.Zero.Options
     /// cref="IOpt{T}"/>) or enumerable ( <see cref="IEnumerable"/> or <see cref="IEnumerable{T}"/>)
     /// will result in an <see cref="InvalidOperationException"/>. Operations that resolve
     /// immediately (such as a <see langword="foreach"/> loop or <see
-    /// cref="Opt.ToFixed{TSource}(IOpt{TSource})"/>) will cause the exception to be thrown
-    /// immediately, while deferred operations (such as <see cref="Opt.Select{TSource,
+    /// cref="Opt.Fix{TSource}(IOpt{TSource})"/>) will cause the exception to be thrown immediately,
+    /// while deferred operations (such as <see cref="LinqToOpt.Select{TSource,
     /// TResult}(IOpt{TSource}, Func{TSource, TResult})"/>) will cause the exception to be thrown
     /// when they are resolved themselves.
     /// </description>

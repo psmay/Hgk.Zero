@@ -104,6 +104,20 @@ namespace Hgk.Zero.Options
         public override string ToString() =>
             HasValue ? string.Concat("Opt.Full(", ValueOrDefault, ")") : "Opt.Empty()";
 
+        /// <summary>
+        /// Gets the value contained by this option, if it exists.
+        /// </summary>
+        /// <param name="value">
+        /// When this method returns, is set to the value contained by this option, if any, or the
+        /// default value of <typeparamref name="T"/>, otherwise.
+        /// </param>
+        /// <returns><see langword="true"/>, if source contains a value; otherwise, <see langword="false"/>.</returns>
+        public bool TryGetValue(out T value)
+        {
+            value = ValueOrDefault;
+            return HasValue;
+        }
+
         void ICollection<T>.Add(T item) => throw new NotSupportedException();
 
         void ICollection<T>.Clear() => throw new NotSupportedException();
@@ -138,12 +152,15 @@ namespace Hgk.Zero.Options
 
         void IList<T>.RemoveAt(int index) => throw new NotSupportedException();
 
+        internal bool Contains(T value, IEqualityComparer<T> comparer) =>
+            HasValue && (comparer ?? EqualityComparer<T>.Default).Equals(ValueOrDefault, value);
+
         internal T ElementAt(int index) =>
             (HasValue && index == 0) ? ValueOrDefault : throw new ArgumentOutOfRangeException(nameof(index));
 
         internal Opt<object> UntypedToFixed() => new Opt<object>(HasValue, ValueOrDefault);
 
-        private bool Contains(T item) => Opt.Contains(this, item, null);
+        private bool Contains(T item) => Contains(item, null);
 
         private IEnumerator<T> GetEnumerator()
         {

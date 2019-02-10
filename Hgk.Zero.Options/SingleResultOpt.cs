@@ -8,8 +8,8 @@ namespace Hgk.Zero.Options
     /// </summary>
     /// <seealso cref="ISingleResultOpt"/>
     /// <seealso cref="ISingleResultOpt{T}"/>
-    /// <seealso cref="Query.EnumerableToOpt.WhereSingle{TSource}(IEnumerable{TSource})"/>
-    /// <seealso cref="Query.EnumerableToOpt.WhereSingle{TSource}(IEnumerable{TSource}, Func{TSource, bool})"/>
+    /// <seealso cref="Linq.EnumerableToOpt.WhereSingle{TSource}(IEnumerable{TSource})"/>
+    /// <seealso cref="Linq.EnumerableToOpt.WhereSingle{TSource}(IEnumerable{TSource}, Func{TSource, bool})"/>
     public static class SingleResultOpt
     {
         /// <summary>
@@ -129,7 +129,7 @@ namespace Hgk.Zero.Options
         public static IOpt<TResult> MatchOpt<TSource, TResult>(this ISingleResultOpt<TSource> source, Func<Opt<TResult>> ifZero = null, Func<TSource, Opt<TResult>> ifOne = null, Func<Opt<TResult>> ifMoreThanOne = null)
         {
             if (source == null) throw new ArgumentNullException(nameof(source));
-            return Opt.Defer(() => source.Match(ifZero, ifOne, ifMoreThanOne));
+            return Opt.DeferRaw(() => source.Match(ifZero, ifOne, ifMoreThanOne));
         }
 
         /// <summary>
@@ -153,7 +153,7 @@ namespace Hgk.Zero.Options
         {
             if (source == null) throw new ArgumentNullException(nameof(source));
             if (replacementFactory == null) throw new ArgumentNullException(nameof(replacementFactory));
-            return Opt.Defer(() => ReplaceIfMoreThanOneCore(source, Opt.Defer(() => replacementFactory().ToFixed())));
+            return Opt.DeferRaw(() => ReplaceIfMoreThanOneCore(source, Opt.DeferRaw(() => Opt.Fix(replacementFactory()))));
         }
 
         /// <summary>
@@ -177,7 +177,7 @@ namespace Hgk.Zero.Options
         {
             if (source == null) throw new ArgumentNullException(nameof(source));
             if (replacement == null) throw new ArgumentNullException(nameof(replacement));
-            return Opt.Defer(() => ReplaceIfMoreThanOneCore(source, replacement));
+            return Opt.DeferRaw(() => ReplaceIfMoreThanOneCore(source, replacement));
         }
 
         internal static DeferredSingleResultOpt<TSource> Defer<TSource>(Func<FixedSingleResultOpt<TSource>> toFixedSingleResultOptFunction)
@@ -392,7 +392,7 @@ namespace Hgk.Zero.Options
             }
             else
             {
-                return GetFixedFromOpt(source.ToFixed(), false);
+                return GetFixedFromOpt(Opt.Fix(source), false);
             }
         }
 
@@ -408,7 +408,7 @@ namespace Hgk.Zero.Options
             }
             else
             {
-                return GetFixedFromOpt(source.ToFixed(), false);
+                return GetFixedFromOpt(Opt.FixUntyped(source), false);
             }
         }
 
@@ -469,7 +469,7 @@ namespace Hgk.Zero.Options
                     return Opt.Full(x.ValueOrDefault);
 
                 case SingleResultQuantity.MoreThanOne:
-                    return replacement.ToFixed();
+                    return Opt.Fix(replacement);
 
                 default:
                     throw Error.InvalidSingleResultQuantity();

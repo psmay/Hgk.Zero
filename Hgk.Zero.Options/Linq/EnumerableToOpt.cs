@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Hgk.Zero.Options.Query
+namespace Hgk.Zero.Options.Linq
 {
     /// <summary>
     /// Facilities for narrowing an existing enumerable to an option value.
@@ -34,7 +34,7 @@ namespace Hgk.Zero.Options.Query
             {
                 return Opt.Empty<TSource>();
             }
-            return Opt.Defer(() => source.WhereElementAtImmediate(index));
+            return Opt.DeferRaw(() => source.WhereElementAtImmediate(index));
         }
 
         /// <summary>
@@ -57,7 +57,7 @@ namespace Hgk.Zero.Options.Query
         public static IOpt<TSource> WhereFirst<TSource>(this IEnumerable<TSource> source)
         {
             if (source == null) throw new ArgumentNullException(nameof(source));
-            return Opt.Defer(() => source.WhereFirstImmediate());
+            return Opt.DeferRaw(() => source.WhereFirstImmediate());
         }
 
         /// <summary>
@@ -87,7 +87,7 @@ namespace Hgk.Zero.Options.Query
         {
             if (source == null) throw new ArgumentNullException(nameof(source));
             if (predicate == null) throw new ArgumentNullException(nameof(source));
-            return Opt.Defer(() => source.WhereFirstImmediate(predicate));
+            return Opt.DeferRaw(() => source.WhereFirstImmediate(predicate));
         }
 
         /// <summary>
@@ -110,7 +110,7 @@ namespace Hgk.Zero.Options.Query
         public static IOpt<TSource> WhereLast<TSource>(this IEnumerable<TSource> source)
         {
             if (source == null) throw new ArgumentNullException(nameof(source));
-            return Opt.Defer(() => source.WhereLastImmediate());
+            return Opt.DeferRaw(() => source.WhereLastImmediate());
         }
 
         /// <summary>
@@ -140,7 +140,7 @@ namespace Hgk.Zero.Options.Query
         {
             if (source == null) throw new ArgumentNullException(nameof(source));
             if (predicate == null) throw new ArgumentNullException(nameof(source));
-            return Opt.Defer(() => source.WhereLastImmediate(predicate));
+            return Opt.DeferRaw(() => source.WhereLastImmediate(predicate));
         }
 
         /// <summary>

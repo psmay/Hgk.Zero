@@ -18,6 +18,6 @@ namespace Hgk.Zero.Options
             this.metaselector = metaselector;
         }
 
-        public override Opt<T> ToFixed() => metaselector(source.ToFixed());
+        public override Opt<T> ToFixed() => metaselector(Opt.Fix(source));
     }
 }
