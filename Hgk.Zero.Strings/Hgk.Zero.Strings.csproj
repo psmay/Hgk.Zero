@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageId>Hgk.Zero.Strings</PackageId>
+    <Title>Enumerable Strings for C#</Title>
+    <PackageDescription>Utilities for strings</PackageDescription>
+    <PackageIconUrl>https://raw.githubusercontent.com/psmay/Hgk.Zero/master/icon64x64.png</PackageIconUrl>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <VersionPrefix>0.0.3</VersionPrefix>
+    <VersionSuffix>$(VersionSuffix)</VersionSuffix>
+    <Authors>Peter S. May</Authors>
+    <Company>hgk.us</Company>
+    <Copyright>© 2018-2019 Peter S. May</Copyright>
+    <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
+    <PackageProjectUrl>http://zero.hgk.us/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/psmay/Hgk.Zero</RepositoryUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>Hgk.Zero.Strings.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>Hgk.Zero.Strings.xml</DocumentationFile>
+  </PropertyGroup>
+
+
+
+
+
+
+</Project>

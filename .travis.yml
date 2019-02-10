@@ -18,7 +18,7 @@ install:
 
 script:
   - dotnet build -c Release --version-suffix $VERSION_SUFFIX
-  - dotnet test Hgk.Zero.Tests/Hgk.Zero.Tests.csproj
+  - dotnet test Tests.Hgk.Zero/Tests.Hgk.Zero.csproj
   # pack step not necessary; build is configured to make package
 
 deploy:
@@ -26,7 +26,7 @@ deploy:
       branch: master
     skip_cleanup: true
     provider: script
-    script: dotnet nuget push Hgk.Zero/bin/Release/*-$VERSION_SUFFIX.nupkg --api-key $NUGET_API_KEY --source $NUGET_SOURCE
+    script: bash scripts/deploy_all.sh
   - on:
       branch: master
     skip_cleanup: true
