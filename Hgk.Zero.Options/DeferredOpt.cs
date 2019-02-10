@@ -4,7 +4,7 @@ namespace Hgk.Zero.Options
 {
     /// <summary>
     /// A complete deferred option based on the return value of a callback (use <see
-    /// cref="Opt.Defer{TSource}(Func{Opt{TSource}})"/> to instantiate).
+    /// cref="Opt.DeferRaw{TSource}(Func{Opt{TSource}})"/> to instantiate).
     /// </summary>
     internal class DeferredOpt<T> : AbstractOpt<T>
     {

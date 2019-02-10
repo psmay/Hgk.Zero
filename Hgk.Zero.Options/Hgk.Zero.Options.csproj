@@ -15,6 +15,7 @@
     <PackageProjectUrl>http://zero.hgk.us/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/psmay/Hgk.Zero</RepositoryUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <LangVersion>7.1</LangVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

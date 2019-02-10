@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Collections.ObjectModel;
 
-namespace Hgk.Zero.Options.Query
+namespace Hgk.Zero.Options.Linq
 {
     /// <summary>
     /// Facility for retrieving a value from a dictionary as an option.

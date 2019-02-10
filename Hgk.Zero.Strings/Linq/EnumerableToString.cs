@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Hgk.Zero.Strings.Query
+namespace Hgk.Zero.Strings.Linq
 {
     /// <summary>
     /// Extension method equivalents to static methods from <see cref="string"/> that apply to enumerables.
