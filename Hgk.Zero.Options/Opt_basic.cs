@@ -57,6 +57,23 @@ namespace Hgk.Zero.Options
         public static Opt<T> Create<T>(bool hasValue, T value) => new Opt<T>(hasValue, value);
 
         /// <summary>
+        /// Creates a deferred option based on a factory function that returns a fixed option.
+        /// </summary>
+        /// <typeparam name="T">The contained element type of the new option.</typeparam>
+        /// <param name="toFixedFunction">
+        /// A function that returns an <see cref="Opt{T}"/> reflecting the current state of the option.
+        /// </param>
+        /// <returns>An option for which the current state is resolved by calling <paramref name="toFixedFunction"/>.</returns>
+        /// <exception cref="ArgumentNullException">
+        /// <paramref name="toFixedFunction"/> is <see langword="null"/>.
+        /// </exception>
+        public static IOpt<T> Defer<T>(this Func<Opt<T>> toFixedFunction)
+        {
+            if (toFixedFunction == null) throw new ArgumentNullException(nameof(toFixedFunction));
+            return toFixedFunction.DeferRaw();
+        }
+
+        /// <summary>
         /// Creates a fixed, empty option.
         /// </summary>
         /// <typeparam name="T">The element type of the new option.</typeparam>
