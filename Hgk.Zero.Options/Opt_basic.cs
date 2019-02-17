@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace Hgk.Zero.Options
 {
@@ -106,10 +105,7 @@ namespace Hgk.Zero.Options
             }
             else
             {
-                using (var se = source.GetEnumerator())
-                {
-                    return Fix(se);
-                }
+                return source.ResolveOption(Create);
             }
         }
 
@@ -134,7 +130,7 @@ namespace Hgk.Zero.Options
             }
             else
             {
-                return FixUntyped(source.GetEnumerator());
+                return source.ResolveUntypedOption(Create);
             }
         }
 
@@ -155,98 +151,9 @@ namespace Hgk.Zero.Options
             return new DeferredOpt<TSource>(toFixedFunction);
         }
 
-        internal static bool EqualsObject(IOpt a, object b)
-        {
-            if (a == null)
-            {
-                return b == null;
-            }
-            else if (b is IOpt otherOpt)
-            {
-                return EqualsOpt(a, otherOpt);
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        internal static bool EqualsOpt(IOpt a, IOpt b)
-        {
-            if (a == b)
-            {
-                return true;
-            }
-            else if (a == null || b == null)
-            {
-                return false;
-            }
-            else if (a is ISingleResultOpt singleResultA)
-            {
-                return SingleResultOpt.EqualsOpt(singleResultA, b);
-            }
-            else if (b is ISingleResultOpt singleResultB)
-            {
-                return SingleResultOpt.EqualsSingleResultOpt(a.ToFixedSingleResultOpt(), singleResultB);
-            }
-            else
-            {
-                var fixedA = FixUntyped(a);
-                var fixedB = FixUntyped(b);
-                if (fixedA.HasValue)
-                {
-                    return fixedB.HasValue && Equals(fixedA.ValueOrDefault, fixedB.ValueOrDefault);
-                }
-                else
-                {
-                    return !fixedB.HasValue;
-                }
-            }
-        }
-
         internal static MetaSelectOpt<TSource, TResult> MetaSelect<TSource, TResult>(this IOpt<TSource> source, Func<Opt<TSource>, Opt<TResult>> metaselector)
         {
             return new MetaSelectOpt<TSource, TResult>(source, metaselector);
-        }
-
-        private static Opt<TSource> Fix<TSource>(IEnumerator<TSource> source)
-        {
-            if (source.MoveNext())
-            {
-                TSource value = source.Current;
-                if (source.MoveNext())
-                {
-                    throw Error.OptionEnumeratorMoreThanOneElement();
-                }
-                else
-                {
-                    return Full(value);
-                }
-            }
-            else
-            {
-                return Empty<TSource>();
-            }
-        }
-
-        private static Opt<object> FixUntyped(System.Collections.IEnumerator source)
-        {
-            if (source.MoveNext())
-            {
-                object value = source.Current;
-                if (source.MoveNext())
-                {
-                    throw Error.OptionEnumeratorMoreThanOneElement();
-                }
-                else
-                {
-                    return Full(value);
-                }
-            }
-            else
-            {
-                return Empty<object>();
-            }
         }
     }
 }

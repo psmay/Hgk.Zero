@@ -92,6 +92,62 @@ namespace Hgk.Zero.Options
         }
 
         /// <summary>
+        /// Converts a single result option to another value based on its contents.
+        /// </summary>
+        /// <typeparam name="TSource">The element type of <paramref name="source"/>.</typeparam>
+        /// <typeparam name="TResult">The type of the result of this conversion.</typeparam>
+        /// <param name="source">A source single result option.</param>
+        /// <param name="ifZero">
+        /// A function to produce the result if <paramref name="source"/> represents a result of zero elements.
+        /// </param>
+        /// <param name="ifOne">
+        /// A function to produce the result if <paramref name="source"/> represents a result of one
+        /// element, which accepts that element as a parameter.
+        /// </param>
+        /// <param name="ifMoreThanOne">
+        /// A function to produce the result if <paramref name="source"/> represents a result of more
+        /// than one element.
+        /// </param>
+        /// <returns>
+        /// The result of calling <paramref name="ifZero"/>, <paramref name="ifOne"/>, or <paramref
+        /// name="ifMoreThanOne"/> if <paramref name="source"/> represents a result of zero, one, or
+        /// more than one element, respectively.
+        /// </returns>
+        /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
+        /// <exception cref="InvalidOperationException">
+        /// <paramref name="ifZero"/> is <see langword="null"/> and <paramref name="source"/>
+        /// represents a result of zero elements, or <paramref name="ifOne"/> is <see
+        /// langword="null"/> and <paramref name="source"/> represents a result of one element, or
+        /// <paramref name="ifMoreThanOne"/> is <see langword="null"/> and <paramref name="source"/>
+        /// represents a result of more than one element.
+        /// </exception>
+        public static TResult Match<TSource, TResult>(this ISingleResultOpt<TSource> source, Func<TResult> ifZero = null, Func<TSource, TResult> ifOne = null, Func<TResult> ifMoreThanOne = null)
+        {
+            if (source == null) throw new ArgumentNullException(nameof(source));
+            return source.ResolveSingleResultOption((isValidOption, hasValue, value) =>
+            {
+                if (isValidOption)
+                {
+                    if (hasValue)
+                    {
+                        if (ifOne == null) throw Error.MatchCaseFailed();
+                        return ifOne(value);
+                    }
+                    else
+                    {
+                        if (ifZero == null) throw Error.MatchCaseFailed();
+                        return ifZero();
+                    }
+                }
+                else
+                {
+                    if (ifMoreThanOne == null) throw Error.MatchCaseFailed();
+                    return ifMoreThanOne();
+                }
+            });
+        }
+
+        /// <summary>
         /// Converts a single result option to another option based on its contents.
         /// </summary>
         /// <remarks>
@@ -119,6 +175,7 @@ namespace Hgk.Zero.Options
         /// name="ifOne"/>, or <paramref name="ifMoreThanOne"/> if <paramref name="source"/>
         /// represents a result of zero, one, or more than one element, respectively.
         /// </returns>
+        /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
         /// <exception cref="InvalidOperationException">
         /// <paramref name="ifZero"/> is <see langword="null"/> and <paramref name="source"/>
         /// represents a result of zero elements, or <paramref name="ifOne"/> is <see
@@ -153,7 +210,7 @@ namespace Hgk.Zero.Options
         {
             if (source == null) throw new ArgumentNullException(nameof(source));
             if (replacementFactory == null) throw new ArgumentNullException(nameof(replacementFactory));
-            return Opt.DeferRaw(() => ReplaceIfMoreThanOneCore(source, Opt.DeferRaw(() => Opt.Fix(replacementFactory()))));
+            return Opt.DeferRaw(() => ReplaceIfMoreThanOneImmediate(source, Opt.DeferRaw(() => Opt.Fix(replacementFactory()))));
         }
 
         /// <summary>
@@ -177,166 +234,28 @@ namespace Hgk.Zero.Options
         {
             if (source == null) throw new ArgumentNullException(nameof(source));
             if (replacement == null) throw new ArgumentNullException(nameof(replacement));
-            return Opt.DeferRaw(() => ReplaceIfMoreThanOneCore(source, replacement));
+            return Opt.DeferRaw(() => ReplaceIfMoreThanOneImmediate(source, replacement));
         }
 
-        internal static DeferredSingleResultOpt<TSource> Defer<TSource>(Func<FixedSingleResultOpt<TSource>> toFixedSingleResultOptFunction)
+        internal static DeferredSingleResultOpt<TSource> DeferRaw<TSource>(Func<FixedSingleResultOpt<TSource>> toFixedSingleResultOptFunction)
         {
             return new DeferredSingleResultOpt<TSource>(toFixedSingleResultOptFunction);
-        }
-
-        internal static bool Equals(SingleResultQuantity quantityA, object valueOrDefaultA, SingleResultQuantity quantityB, object valueOrDefaultB)
-        {
-            if (quantityA == quantityB)
-            {
-                switch (quantityA)
-                {
-                    case SingleResultQuantity.Zero:
-                        return true;
-
-                    case SingleResultQuantity.One:
-                        return Equals(valueOrDefaultA, valueOrDefaultB);
-
-                    case SingleResultQuantity.MoreThanOne:
-                        return false;
-
-                    default:
-                        throw Error.InvalidSingleResultQuantity();
-                }
-            }
-            return false;
-        }
-
-        internal static bool EqualsObject(ISingleResultOpt a, object b)
-        {
-            if (a == b)
-            {
-                return true;
-            }
-            else if (a == null || b == null)
-            {
-                return false;
-            }
-            else if (b is ISingleResultOpt singleResultOptB)
-            {
-                return EqualsSingleResultOpt(a, singleResultOptB);
-            }
-            else if (b is IOpt optB)
-            {
-                return EqualsOpt(a, optB);
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        internal static bool EqualsOpt(ISingleResultOpt a, IOpt b)
-        {
-            if (a == b)
-            {
-                return true;
-            }
-            else if (a == null || b == null)
-            {
-                return false;
-            }
-            else
-            {
-                var fixedA = a.ToFixedSingleResultOpt();
-                var fixedB = b.ToFixedSingleResultOpt();
-                return Equals(fixedA, fixedB);
-            }
-        }
-
-        internal static bool EqualsSingleResultOpt(ISingleResultOpt a, ISingleResultOpt b)
-        {
-            if (a == b)
-            {
-                return true;
-            }
-            else if (a == null || b == null)
-            {
-                return false;
-            }
-            else
-            {
-                var xa = a.ToFixedSingleResultOpt();
-                var xb = b.ToFixedSingleResultOpt();
-                return Equals(xa.Quantity, xa.ValueOrDefault, xb.Quantity, xb.ValueOrDefault);
-            }
-        }
-
-        internal static IEnumerator<T> GetEnumerator<T>(SingleResultQuantity quantity, T valueOrDefault, bool usingPredicate)
-        {
-            switch (quantity)
-            {
-                case SingleResultQuantity.Zero:
-                    break;
-
-                case SingleResultQuantity.One:
-                    yield return valueOrDefault;
-                    break;
-
-                case SingleResultQuantity.MoreThanOne:
-                    throw Error.MoreThanOneResult(usingPredicate);
-                default:
-                    throw Error.InvalidSingleResultQuantity();
-            }
         }
 
         internal static FixedSingleResultOpt<TSource> GetFixedFromOpt<TSource>(Opt<TSource> source, bool usingPredicate) =>
             GetFixedFromValue(source.HasValue, source.ValueOrDefault, usingPredicate);
 
         internal static FixedSingleResultOpt<TSource> GetFixedFromValue<TSource>(bool hasValue, TSource valueOrDefault, bool usingPredicate) =>
-            new FixedSingleResultOpt<TSource>(hasValue ? SingleResultQuantity.One : SingleResultQuantity.Zero, usingPredicate, valueOrDefault);
+            new FixedSingleResultOpt<TSource>(true, hasValue, valueOrDefault, usingPredicate);
 
         internal static FixedSingleResultOpt<TSource> GetFixedMoreThanOne<TSource>(bool usingPredicate) =>
-            new FixedSingleResultOpt<TSource>(SingleResultQuantity.MoreThanOne, usingPredicate);
+            new FixedSingleResultOpt<TSource>(false, false, default, usingPredicate);
 
         internal static FixedSingleResultOpt<TSource> GetFixedOne<TSource>(bool usingPredicate, TSource value) =>
-            new FixedSingleResultOpt<TSource>(SingleResultQuantity.One, usingPredicate, value);
+            new FixedSingleResultOpt<TSource>(true, true, value, usingPredicate);
 
         internal static FixedSingleResultOpt<TSource> GetFixedZero<TSource>(bool usingPredicate) =>
-            new FixedSingleResultOpt<TSource>(SingleResultQuantity.Zero, usingPredicate);
-
-        internal static TResult Match<T, TResult>(SingleResultQuantity quantity, T valueOrDefault, Func<TResult> ifZero, Func<T, TResult> ifOne, Func<TResult> ifMoreThanOne)
-        {
-            switch (quantity)
-            {
-                case SingleResultQuantity.Zero:
-                    if (ifZero == null) throw Error.MatchCaseFailed();
-                    return ifZero();
-
-                case SingleResultQuantity.One:
-                    if (ifOne == null) throw Error.MatchCaseFailed();
-                    return ifOne(valueOrDefault);
-
-                case SingleResultQuantity.MoreThanOne:
-                    if (ifMoreThanOne == null) throw Error.MatchCaseFailed();
-                    return ifMoreThanOne();
-
-                default:
-                    throw Error.InvalidSingleResultQuantity();
-            }
-        }
-
-        internal static Opt<T> ToFixed<T>(SingleResultQuantity quantity, T valueOrDefault, bool usingPredicate)
-        {
-            switch (quantity)
-            {
-                case SingleResultQuantity.Zero:
-                    return Opt.Empty<T>();
-
-                case SingleResultQuantity.One:
-                    return Opt.Full(valueOrDefault);
-
-                case SingleResultQuantity.MoreThanOne:
-                    throw Error.MoreThanOneResult(usingPredicate);
-                default:
-                    throw Error.InvalidSingleResultQuantity();
-            }
-        }
+            new FixedSingleResultOpt<TSource>(true, false, default, usingPredicate);
 
         internal static FixedSingleResultOpt<T> ToFixedSingleResultOpt<T>(this ISingleResultOpt<T> source)
         {
@@ -373,10 +292,8 @@ namespace Hgk.Zero.Options
             {
                 const bool usingPredicate = false;
 
-                return source.Match(
-                    ifZero: () => GetFixedZero<object>(usingPredicate),
-                    ifOne: value => GetFixedOne(usingPredicate, value),
-                    ifMoreThanOne: () => GetFixedMoreThanOne<object>(usingPredicate));
+                return source.ResolveUntypedSingleResultOption((isValidOption, hasValue, valueOrDefault) =>
+                    new FixedSingleResultOpt<object>(isValidOption, hasValue, valueOrDefault, usingPredicate));
             }
         }
 
@@ -412,67 +329,16 @@ namespace Hgk.Zero.Options
             }
         }
 
-        internal static string ToString(SingleResultQuantity quantity, object valueOrDefault, bool usingPredicate)
-        {
-            var countText = QuantityToString(quantity, usingPredicate);
-
-            if (quantity == SingleResultQuantity.One)
-            {
-                string valueOrDefaultString = string.Concat(valueOrDefault);
-
-                return string.Format(OptStrings.SingleResultOptWithValue, countText, valueOrDefaultString);
-            }
-            else
-            {
-                return string.Format(OptStrings.SingleResultOptWithoutValue, countText);
-            }
-        }
-
-        private static bool Equals(this FixedSingleResultOpt<object> fixedA, FixedSingleResultOpt<object> fixedB)
-        {
-            return Equals(fixedA.Quantity, fixedA.ValueOrDefault, fixedB.Quantity, fixedB.ValueOrDefault);
-        }
-
-        private static string QuantityToString(SingleResultQuantity quantity, bool usingPredicate)
-        {
-            if (usingPredicate)
-            {
-                switch (quantity)
-                {
-                    case SingleResultQuantity.Zero: return OptStrings.MatchesZero;
-                    case SingleResultQuantity.One: return OptStrings.MatchesOne;
-                    case SingleResultQuantity.MoreThanOne: return OptStrings.MatchesMoreThanOne;
-                    default: throw Error.InvalidSingleResultQuantity();
-                }
-            }
-            else
-            {
-                switch (quantity)
-                {
-                    case SingleResultQuantity.Zero: return OptStrings.ElementsZero;
-                    case SingleResultQuantity.One: return OptStrings.ElementsOne;
-                    case SingleResultQuantity.MoreThanOne: return OptStrings.ElementsMoreThanOne;
-                    default: throw Error.InvalidSingleResultQuantity();
-                }
-            }
-        }
-
-        private static Opt<TSource> ReplaceIfMoreThanOneCore<TSource>(ISingleResultOpt<TSource> source, IOpt<TSource> replacement)
+        private static Opt<TSource> ReplaceIfMoreThanOneImmediate<TSource>(ISingleResultOpt<TSource> source, IOpt<TSource> replacement)
         {
             var x = source.ToFixedSingleResultOpt();
-            switch (x.Quantity)
+            if (x.IsValidOption)
             {
-                case SingleResultQuantity.Zero:
-                    return Opt.Empty<TSource>();
-
-                case SingleResultQuantity.One:
-                    return Opt.Full(x.ValueOrDefault);
-
-                case SingleResultQuantity.MoreThanOne:
-                    return Opt.Fix(replacement);
-
-                default:
-                    throw Error.InvalidSingleResultQuantity();
+                return x.HasValue ? Opt.Full(x.ValueOrDefault) : Opt.Empty<TSource>();
+            }
+            else
+            {
+                return Opt.Fix(replacement);
             }
         }
     }

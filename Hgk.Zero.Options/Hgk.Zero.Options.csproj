@@ -20,10 +20,12 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DocumentationFile>Hgk.Zero.Options.xml</DocumentationFile>
+    <NoWarn>1701;1702;NU5125</NoWarn>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DocumentationFile>Hgk.Zero.Options.xml</DocumentationFile>
+    <NoWarn>1701;1702;NU5125</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>

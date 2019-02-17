@@ -102,9 +102,24 @@ namespace Hgk.Zero.Options.Linq
             return (source.HasValue && !predicate(source.ValueOrDefault, 0)) ? source : Opt.Empty<TSource>();
         }
 
-        private static Opt<TSource> WhereRaw<TSource>(this Opt<TSource> source, Func<TSource, int, bool> predicate)
-        {
-            return (source.HasValue && predicate(source.ValueOrDefault, 0)) ? source : Opt.Empty<TSource>();
-        }
+        /// <summary>
+        /// Gets a fixed option containing the element of source if it satisfies predicate, or an
+        /// empty option if there is no such element.
+        /// </summary>
+        private static Opt<TSource> WhereOptRaw<TSource>(this IOpt<TSource> source, Func<TSource, bool> predicate) =>
+            Opt.Fix(source).WhereOptRaw(predicate);
+
+        /// <summary>
+        /// Gets a fixed option containing the element of source if it satisfies predicate, or an
+        /// empty option if there is no such element.
+        /// </summary>
+        private static Opt<TSource> WhereOptRaw<TSource>(this Opt<TSource> source, Func<TSource, bool> predicate) =>
+            source.HasValue && predicate(source.ValueOrDefault) ? source : Opt.Empty<TSource>();
+
+        private static Opt<TSource> WhereRaw<TSource>(this Opt<TSource> source, Func<TSource, int, bool> predicate) =>
+            (source.HasValue && predicate(source.ValueOrDefault, 0)) ? source : Opt.Empty<TSource>();
+
+        private static IOpt<TSource> WhereRaw<TSource>(this IOpt<TSource> source, Func<TSource, bool> predicate) =>
+            source.MetaSelect(opt => opt.WhereRaw(predicate));
     }
 }

@@ -119,6 +119,8 @@ namespace Hgk.Zero.Options.Linq
             return source.ToFixed().TryGetValue(out value);
         }
 
+        internal static IEqualityComparer<T> DefaultIfNull<T>(this IEqualityComparer<T> comparer) => comparer ?? EqualityComparer<T>.Default;
+
         private static IOpt<TSource> SimpleNoop<TSource>(IOpt<TSource> source)
         {
             if (source == null) throw new ArgumentNullException(nameof(source));

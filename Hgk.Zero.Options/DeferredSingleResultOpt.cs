@@ -4,7 +4,7 @@ namespace Hgk.Zero.Options
 {
     /// <summary>
     /// A complete deferred single result option based on the return value of a callback (use <see
-    /// cref="SingleResultOpt.Defer{TSource}(Func{FixedSingleResultOpt{TSource}})"/> to instantiate).
+    /// cref="SingleResultOpt.DeferRaw{TSource}(Func{FixedSingleResultOpt{TSource}})"/> to instantiate).
     /// </summary>
     internal class DeferredSingleResultOpt<T> : AbstractSingleResultOpt<T>
     {

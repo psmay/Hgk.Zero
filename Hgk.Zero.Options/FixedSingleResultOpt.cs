@@ -9,71 +9,148 @@ namespace Hgk.Zero.Options
     /// </summary>
     internal struct FixedSingleResultOpt<T> : ISingleResultOpt<T>, IOptFixable<T>, ISingleResultOptFixable<T>, IEquatable<IOpt>
     {
-        public readonly SingleResultQuantity Quantity;
-        internal T ValueOrDefault;
-        private readonly bool usingPredicate;
-
-        internal FixedSingleResultOpt(SingleResultQuantity quantity, bool usingPredicate, T value = default(T))
+        internal FixedSingleResultOpt(bool isValidOption, bool hasValue, T value, bool usingPredicate)
         {
-            this.Quantity = quantity;
-            this.usingPredicate = usingPredicate;
-
-            switch (quantity)
-            {
-                case SingleResultQuantity.Zero:
-                case SingleResultQuantity.MoreThanOne:
-                    ValueOrDefault = default(T);
-                    break;
-
-                case SingleResultQuantity.One:
-                    ValueOrDefault = value;
-                    break;
-
-                default:
-                    throw Error.InvalidSingleResultQuantity();
-            }
+            IsValidOption = isValidOption;
+            HasValue = isValidOption && hasValue;
+            ValueOrDefault = hasValue ? value : default;
+            UsingPredicate = usingPredicate;
         }
 
-        public override bool Equals(object obj) => SingleResultOpt.EqualsObject(this, obj);
+        internal bool HasValue { get; }
+        internal bool IsValidOption { get; }
+        internal bool UsingPredicate { get; }
+        internal T ValueOrDefault { get; }
 
-        public bool Equals(IOpt other) => SingleResultOpt.EqualsOpt(this, other);
+        public override bool Equals(object obj) => OptEquality.SingleResultOptEqualsObject(this, obj);
 
-        public IEnumerator<T> GetEnumerator() => SingleResultOpt.GetEnumerator(Quantity, ValueOrDefault, usingPredicate);
+        public bool Equals(IOpt other) => OptEquality.SingleResultOptEqualsObject(this, other);
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            IEnumerable<T> x = ToFixed();
+            return x.GetEnumerator();
+        }
 
         public override int GetHashCode()
         {
-            switch (Quantity)
-            {
-                case SingleResultQuantity.Zero:
-                    return 0;
-
-                case SingleResultQuantity.One:
-                    return ValueOrDefault == null ? 0 : ValueOrDefault.GetHashCode();
-
-                case SingleResultQuantity.MoreThanOne:
-                    return -1;
-
-                default:
-                    throw Error.InvalidSingleResultQuantity();
-            }
+            return IsValidOption
+                ? (HasValue && ValueOrDefault != null)
+                    ? ValueOrDefault.GetHashCode()
+                    : 0
+                : -1;
         }
 
-        public TResult Match<TResult>(Func<TResult> ifZero = null, Func<T, TResult> ifOne = null, Func<TResult> ifMoreThanOne = null) =>
-                    SingleResultOpt.Match(Quantity, ValueOrDefault, ifZero, ifOne, ifMoreThanOne);
+        public TResult ResolveOption<TResult>(Func<bool, T, TResult> resultSelector)
+        {
+            if (resultSelector == null) throw new ArgumentNullException(nameof(resultSelector));
+            return ResolveOptionRaw(resultSelector);
+        }
 
-        public TResult Match<TResult>(Func<TResult> ifZero = null, Func<object, TResult> ifOne = null, Func<TResult> ifMoreThanOne = null) =>
-            SingleResultOpt.Match(Quantity, ValueOrDefault, ifZero, ifOne, ifMoreThanOne);
+        public TResult ResolveSingleResultOption<TResult>(Func<bool, bool, T, TResult> resultSelector)
+        {
+            if (resultSelector == null) throw new ArgumentNullException(nameof(resultSelector));
+            return ResolveSingleResultOptionRaw(resultSelector);
+        }
 
-        public Opt<T> ToFixed() => SingleResultOpt.ToFixed(Quantity, ValueOrDefault, usingPredicate);
+        public TResult ResolveUntypedOption<TResult>(Func<bool, object, TResult> resultSelector)
+        {
+            if (resultSelector == null) throw new ArgumentNullException(nameof(resultSelector));
+            return ResolveUntypedOptionRaw(resultSelector);
+        }
+
+        public TResult ResolveUntypedSingleResultOption<TResult>(Func<bool, bool, object, TResult> resultSelector)
+        {
+            if (resultSelector == null) throw new ArgumentNullException(nameof(resultSelector));
+            return ResolveUntypedSingleResultOptionRaw(resultSelector);
+        }
+
+        public Opt<T> ToFixed()
+        {
+            if (IsValidOption)
+            {
+                return Opt.Create(HasValue, ValueOrDefault);
+            }
+            throw Error.MoreThanOneResult(UsingPredicate);
+        }
 
         public FixedSingleResultOpt<T> ToFixedSingleResultOpt() => this;
 
-        public override string ToString() => SingleResultOpt.ToString(Quantity, ValueOrDefault, usingPredicate);
+        public override string ToString()
+        {
+            var description = DescribeCount();
+
+            if (HasValue)
+            {
+                return string.Format(OptStrings.SingleResultOptWithValue, description, ValueOrDefault);
+            }
+            else
+            {
+                return string.Format(OptStrings.SingleResultOptWithoutValue, description);
+            }
+        }
 
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 
-        Opt<object> IOptFixable.ToFixed() => SingleResultOpt.ToFixed<object>(Quantity, ValueOrDefault, usingPredicate);
+        Opt<object> IOptFixable.ToFixed()
+        {
+            if (IsValidOption)
+            {
+                return Opt.Create<object>(HasValue, ValueOrDefault);
+            }
+            throw Error.MoreThanOneResult(UsingPredicate);
+        }
 
-        FixedSingleResultOpt<object> ISingleResultOptFixable.ToFixedSingleResultOpt() => new FixedSingleResultOpt<object>(Quantity, usingPredicate, ValueOrDefault);
+        FixedSingleResultOpt<object> ISingleResultOptFixable.ToFixedSingleResultOpt()
+        {
+            if (this is FixedSingleResultOpt<object> alreadyCorrect)
+            {
+                return alreadyCorrect;
+            }
+            return new FixedSingleResultOpt<object>(IsValidOption, HasValue, ValueOrDefault, UsingPredicate);
+        }
+
+        internal TResult ResolveOptionRaw<TResult>(Func<bool, T, TResult> resultSelector)
+        {
+            if (IsValidOption)
+            {
+                return resultSelector(HasValue, ValueOrDefault);
+            }
+            throw Error.MoreThanOneResult(UsingPredicate);
+        }
+
+        internal TResult ResolveSingleResultOptionRaw<TResult>(Func<bool, bool, T, TResult> resultSelector) =>
+            resultSelector(IsValidOption, HasValue, ValueOrDefault);
+
+        internal TResult ResolveUntypedOptionRaw<TResult>(Func<bool, object, TResult> resultSelector)
+        {
+            if (IsValidOption)
+            {
+                return resultSelector(HasValue, ValueOrDefault);
+            }
+            throw Error.MoreThanOneResult(UsingPredicate);
+        }
+
+        internal TResult ResolveUntypedSingleResultOptionRaw<TResult>(Func<bool, bool, object, TResult> resultSelector) =>
+            resultSelector(IsValidOption, HasValue, ValueOrDefault);
+
+        private string DescribeCount()
+        {
+            if (IsValidOption)
+            {
+                if (HasValue)
+                {
+                    return UsingPredicate ? OptStrings.MatchesOne : OptStrings.ElementsOne;
+                }
+                else
+                {
+                    return UsingPredicate ? OptStrings.MatchesZero : OptStrings.ElementsZero;
+                }
+            }
+            else
+            {
+                return UsingPredicate ? OptStrings.MatchesMoreThanOne : OptStrings.ElementsMoreThanOne;
+            }
+        }
     }
 }

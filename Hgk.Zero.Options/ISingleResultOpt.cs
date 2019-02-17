@@ -24,7 +24,8 @@ namespace Hgk.Zero.Options
     /// <description>
     /// Resolving a single-result option as an ordinary option ( <see cref="IOpt"/>) or enumerable (
     /// <see cref="IEnumerable"/>) will result in an <see cref="InvalidOperationException"/>.
-    /// Operations that resolve immediately (such as a <see langword="foreach"/> loop or <see
+    /// Operations that resolve immediately (such as a <see langword="foreach"/> loop, <see
+    /// cref="IOpt.ResolveUntypedOption{TResult}(Func{bool, object, TResult})"/>, or <see
     /// cref="Opt.FixUntyped(IOpt)"/>) will cause the exception to be thrown immediately, while
     /// deferred operations (such as <see cref="LinqToOpt.OfType{TResult}(IOpt)"/>) will cause the
     /// exception to be thrown when they are resolved themselves.
@@ -32,9 +33,9 @@ namespace Hgk.Zero.Options
     /// </item>
     /// <item>
     /// <description>
-    /// Explicit operations such as <see cref="Match{TResult}(Func{TResult}, Func{object, TResult},
-    /// Func{TResult})"/> can be used to convert a single-result option to another kind of value
-    /// without throwing an exception.
+    /// Explicit operations such as <see cref="ResolveUntypedSingleResultOption{TResult}(Func{bool,
+    /// bool, object, TResult})"/> can be used to convert a single-result option to another kind of
+    /// value without throwing an exception.
     /// </description>
     /// </item>
     /// </list>
@@ -42,8 +43,8 @@ namespace Hgk.Zero.Options
     /// <list type="bullet">
     /// <item>
     /// <description>
-    /// <see cref="Match{TResult}(Func{TResult}, Func{object, TResult}, Func{TResult})"/> must be
-    /// implemented as specified.
+    /// <see cref="ResolveUntypedSingleResultOption{TResult}(Func{bool, bool, object, TResult})"/>
+    /// must be implemented as specified.
     /// </description>
     /// </item>
     /// <item>
@@ -80,33 +81,53 @@ namespace Hgk.Zero.Options
     public interface ISingleResultOpt : IOpt
     {
         /// <summary>
-        /// Converts this single result option to another value based on its contents.
+        /// Resolves the <see cref="object"/>-typed contents of this single result option, producing
+        /// a result using the specified result selector.
         /// </summary>
-        /// <typeparam name="TResult">The result type for this conversion.</typeparam>
-        /// <param name="ifZero">
-        /// A function to produce the result if this single result option represents a result of zero elements.
-        /// </param>
-        /// <param name="ifOne">
-        /// A function to produce the result if this single result option represents a result of one
-        /// element, which accepts that element as a parameter.
-        /// </param>
-        /// <param name="ifMoreThanOne">
-        /// A function to produce the result if this single result option represents a result of more
-        /// than one element.
+        /// <remarks>
+        /// <para>
+        /// The resolver function accepts three parameters: An is-valid-option flag, a has-value
+        /// flag, and a value.
+        /// </para>
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// If this single result option represents one result, the is-valid-option flag and
+        /// has-value flag are <see langword="true"/> and the value parameter is the result value.
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// If this single result option represents zero results, the is-valid-option flag is <see
+        /// langword="true"/>, the has-value flag is <see langword="false"/>, and the value parameter
+        /// is undefined.
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// If this single result option represents more than one result (and is thus not a valid
+        /// option), the is-valid-option flag is <see langword="false"/> and the remaining parameters
+        /// are undefined.
+        /// </description>
+        /// </item>
+        /// </list>
+        /// <para>
+        /// If the has-value flag or the value parameter is undefined, the caller must not use their
+        /// values. To prevent accidental misuse, the implementation should supply <see
+        /// langword="false"/> or <see langword="null"/>, respectively, but this is not required.
+        /// </para>
+        /// </remarks>
+        /// <typeparam name="TResult">The return type of <paramref name="resultSelector"/>.</typeparam>
+        /// <param name="resultSelector">
+        /// A transform function that accepts an is-valid-option flag, a has-value flag, and a value.
         /// </param>
         /// <returns>
-        /// The result of calling <paramref name="ifZero"/>, <paramref name="ifOne"/>, or <paramref
-        /// name="ifMoreThanOne"/> if this single result option represents a result of zero, one, or
-        /// more than one element, respectively.
+        /// The result of calling resultSelector on the current resolved state of this single result option.
         /// </returns>
-        /// <exception cref="InvalidOperationException">
-        /// <paramref name="ifZero"/> is <see langword="null"/> and this single result option
-        /// represents a result of zero elements, or <paramref name="ifOne"/> is <see
-        /// langword="null"/> and this single result option represents a result of one element, or
-        /// <paramref name="ifMoreThanOne"/> is <see langword="null"/> and this single result option
-        /// represents a result of more than one element.
+        /// <exception cref="ArgumentNullException">
+        /// <paramref name="resultSelector"/> is <see langword="null"/>.
         /// </exception>
-        TResult Match<TResult>(Func<TResult> ifZero = null, Func<object, TResult> ifOne = null, Func<TResult> ifMoreThanOne = null);
+        TResult ResolveUntypedSingleResultOption<TResult>(Func<bool, bool, object, TResult> resultSelector);
     }
 
     /// <summary>
@@ -128,7 +149,8 @@ namespace Hgk.Zero.Options
     /// Resolving a single-result option as an ordinary option ( <see cref="IOpt"/> or <see
     /// cref="IOpt{T}"/>) or enumerable ( <see cref="IEnumerable"/> or <see cref="IEnumerable{T}"/>)
     /// will result in an <see cref="InvalidOperationException"/>. Operations that resolve
-    /// immediately (such as a <see langword="foreach"/> loop or <see
+    /// immediately (such as a <see langword="foreach"/> loop, <see
+    /// cref="IOpt{T}.ResolveOption{TResult}(Func{bool, T, TResult})"/>, or <see
     /// cref="Opt.Fix{TSource}(IOpt{TSource})"/>) will cause the exception to be thrown immediately,
     /// while deferred operations (such as <see cref="LinqToOpt.Select{TSource,
     /// TResult}(IOpt{TSource}, Func{TSource, TResult})"/>) will cause the exception to be thrown
@@ -137,8 +159,8 @@ namespace Hgk.Zero.Options
     /// </item>
     /// <item>
     /// <description>
-    /// Explicit operations such as <see cref="Match{TResult}(Func{TResult}, Func{T, TResult},
-    /// Func{TResult})"/> and methods from <see cref="SingleResultOpt"/> such as <see
+    /// Explicit operations such as <see cref="ResolveSingleResultOption{TResult}(Func{bool, bool, T,
+    /// TResult})"/> and methods from <see cref="SingleResultOpt"/> such as <see
     /// cref="SingleResultOpt.EmptyIfMoreThanOne{TSource}(ISingleResultOpt{TSource})"/> can be used
     /// to convert a single-result option to another kind of value without throwing an exception.
     /// </description>
@@ -153,7 +175,7 @@ namespace Hgk.Zero.Options
     /// </item>
     /// <item>
     /// <description>
-    /// <see cref="Match{TResult}(Func{TResult}, Func{T, TResult}, Func{TResult})"/> must be
+    /// <see cref="ResolveSingleResultOption{TResult}(Func{bool, bool, T, TResult})"/> must be
     /// implemented as specified.
     /// </description>
     /// </item>
@@ -195,32 +217,53 @@ namespace Hgk.Zero.Options
     public interface ISingleResultOpt<out T> : IOpt<T>, ISingleResultOpt
     {
         /// <summary>
-        /// Converts this single result option to another value based on its contents.
+        /// Resolves the contents of this single result option, producing a result using the
+        /// specified result selector.
         /// </summary>
-        /// <typeparam name="TResult">The result type for this conversion.</typeparam>
-        /// <param name="ifZero">
-        /// A function to produce the result if this single result option represents a result of zero elements.
-        /// </param>
-        /// <param name="ifOne">
-        /// A function to produce the result if this single result option represents a result of one
-        /// element, which accepts that element as a parameter.
-        /// </param>
-        /// <param name="ifMoreThanOne">
-        /// A function to produce the result if this single result option represents a result of more
-        /// than one element.
+        /// <remarks>
+        /// <para>
+        /// The resolver function accepts three parameters: An is-valid-option flag, a has-value
+        /// flag, and a value.
+        /// </para>
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// If this single result option represents one result, the is-valid-option flag and
+        /// has-value flag are <see langword="true"/> and the value parameter is the result value.
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// If this single result option represents zero results, the is-valid-option flag is <see
+        /// langword="true"/>, the has-value flag is <see langword="false"/>, and the value parameter
+        /// is undefined.
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// If this single result option represents more than one result (and is thus not a valid
+        /// option), the is-valid-option flag is <see langword="false"/> and the remaining parameters
+        /// are undefined.
+        /// </description>
+        /// </item>
+        /// </list>
+        /// <para>
+        /// If the has-value flag or the value parameter is undefined, the caller must not use their
+        /// values. To prevent accidental misuse, the implementation should supply <see
+        /// langword="false"/> or <see langword="default"/>( <typeparamref name="T"/>), respectively,
+        /// but this is not required.
+        /// </para>
+        /// </remarks>
+        /// <typeparam name="TResult">The return type of <paramref name="resultSelector"/>.</typeparam>
+        /// <param name="resultSelector">
+        /// A transform function that accepts an is-valid-option flag, a has-value flag, and a value.
         /// </param>
         /// <returns>
-        /// The result of calling <paramref name="ifZero"/>, <paramref name="ifOne"/>, or <paramref
-        /// name="ifMoreThanOne"/> if this single result option represents a result of zero, one, or
-        /// more than one element, respectively.
+        /// The result of calling resultSelector on the current resolved state of this single result option.
         /// </returns>
-        /// <exception cref="InvalidOperationException">
-        /// <paramref name="ifZero"/> is <see langword="null"/> and this single result option
-        /// represents a result of zero elements, or <paramref name="ifOne"/> is <see
-        /// langword="null"/> and this single result option represents a result of one element, or
-        /// <paramref name="ifMoreThanOne"/> is <see langword="null"/> and this single result option
-        /// represents a result of more than one element.
+        /// <exception cref="ArgumentNullException">
+        /// <paramref name="resultSelector"/> is <see langword="null"/>.
         /// </exception>
-        TResult Match<TResult>(Func<TResult> ifZero = null, Func<T, TResult> ifOne = null, Func<TResult> ifMoreThanOne = null);
+        TResult ResolveSingleResultOption<TResult>(Func<bool, bool, T, TResult> resultSelector);
     }
 }

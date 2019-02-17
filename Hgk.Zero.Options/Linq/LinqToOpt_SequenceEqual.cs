@@ -25,7 +25,7 @@ namespace Hgk.Zero.Options.Linq
                         if (!secondEnumerator.MoveNext())
                         {
                             // second is same length
-                            return (comparer ?? EqualityComparer<TSource>.Default).Equals(opt.ValueOrDefault, onlyValue);
+                            return comparer.DefaultIfNull().Equals(opt.ValueOrDefault, onlyValue);
                         }
                     }
                 }

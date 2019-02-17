@@ -34,14 +34,13 @@ namespace Hgk.Zero.Options.Linq
             return source.MetaSelect(opt => opt.SelectRaw(selector));
         }
 
-        private static Opt<TResult> SelectRaw<TSource, TResult>(this Opt<TSource> source, Func<TSource, TResult> selector)
-        {
-            return source.HasValue ? Opt.Full(selector(source.ValueOrDefault)) : Opt.Empty<TResult>();
-        }
+        private static Opt<TResult> SelectRaw<TSource, TResult>(this Opt<TSource> source, Func<TSource, TResult> selector) =>
+            source.HasValue ? Opt.Full(selector(source.ValueOrDefault)) : Opt.Empty<TResult>();
 
-        private static Opt<TResult> SelectRaw<TSource, TResult>(this Opt<TSource> source, Func<TSource, int, TResult> selector)
-        {
-            return source.HasValue ? Opt.Full(selector(source.ValueOrDefault, 0)) : Opt.Empty<TResult>();
-        }
+        private static Opt<TResult> SelectRaw<TSource, TResult>(this Opt<TSource> source, Func<TSource, int, TResult> selector) =>
+            source.HasValue ? Opt.Full(selector(source.ValueOrDefault, 0)) : Opt.Empty<TResult>();
+
+        private static IOpt<TResult> SelectRaw<TSource, TResult>(this IOpt<TSource> source, Func<TSource, TResult> selector) =>
+            source.MetaSelect(opt => opt.SelectRaw(selector));
     }
 }

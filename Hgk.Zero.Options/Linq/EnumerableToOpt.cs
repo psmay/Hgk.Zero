@@ -158,8 +158,8 @@ namespace Hgk.Zero.Options.Linq
         /// as an ordinary option ( <see cref="IOpt{T}"/>). If <paramref name="source"/> contains
         /// more than one element, enumerating or resolving this option as an ordinary option will
         /// result in an <see cref="InvalidOperationException"/> being thrown. Methods such as <see
-        /// cref="ISingleResultOpt{T}.Match{TResult}(Func{TResult}, Func{T, TResult},
-        /// Func{TResult})"/> and <see
+        /// cref="SingleResultOpt.Match{TSource, TResult}(ISingleResultOpt{TSource}, Func{TResult},
+        /// Func{TSource, TResult}, Func{TResult})"/> and <see
         /// cref="SingleResultOpt.ReplaceIfMoreThanOne{TSource}(ISingleResultOpt{TSource},
         /// IOpt{TSource})"/> can be used to handle the more-than-one case without exceptions.
         /// </para>
@@ -178,7 +178,7 @@ namespace Hgk.Zero.Options.Linq
         public static ISingleResultOpt<TSource> WhereSingle<TSource>(this IEnumerable<TSource> source)
         {
             if (source == null) throw new ArgumentNullException(nameof(source));
-            return SingleResultOpt.Defer(() => source.WhereSingleImmediate());
+            return SingleResultOpt.DeferRaw(() => source.WhereSingleImmediate());
         }
 
         /// <summary>
@@ -200,8 +200,9 @@ namespace Hgk.Zero.Options.Linq
         /// cref="IOpt{T}"/>). If <paramref name="source"/> contains more than one element that
         /// satisfies <paramref name="predicate"/>, enumerating or resolving this option as an
         /// ordinary option will result in an <see cref="InvalidOperationException"/> being thrown.
-        /// Methods such as <see cref="ISingleResultOpt{T}.Match{TResult}(Func{TResult}, Func{T,
-        /// TResult}, Func{TResult})"/> and <see
+        /// Methods such as <see cref="SingleResultOpt.Match{TSource,
+        /// TResult}(ISingleResultOpt{TSource}, Func{TResult}, Func{TSource, TResult},
+        /// Func{TResult})"/> and <see
         /// cref="SingleResultOpt.ReplaceIfMoreThanOne{TSource}(ISingleResultOpt{TSource},
         /// IOpt{TSource})"/> can be used to handle the more-than-one case without exceptions.
         /// </para>
@@ -224,7 +225,7 @@ namespace Hgk.Zero.Options.Linq
         {
             if (source == null) throw new ArgumentNullException(nameof(source));
             if (predicate == null) throw new ArgumentNullException(nameof(source));
-            return SingleResultOpt.Defer(() => source.WhereSingleImmediate(predicate));
+            return SingleResultOpt.DeferRaw(() => source.WhereSingleImmediate(predicate));
         }
 
         private static FixedSingleResultOpt<TSource> EnumeratorSingleToFixedOpt<TSource>(IEnumerator<TSource> source, bool usingPredicate)

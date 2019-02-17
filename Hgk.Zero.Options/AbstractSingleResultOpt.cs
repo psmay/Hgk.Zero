@@ -5,25 +5,41 @@ using System.Collections.Generic;
 namespace Hgk.Zero.Options
 {
     /// <summary>
-    /// An abstract class that implements <see cref="ISingleResultOpt{T}"/>, <see
-    /// cref="IOptFixable{T}"/>, <see cref="ISingleResultOptFixable{T}"/>, and <see
-    /// cref="IEquatable{T}"/> based on the object returned by <see cref="ToFixedSingleResultOpt"/>.
+    /// An abstract single result option based on the implementation of ToFixedSingleResultOpt().
     /// </summary>
     internal abstract class AbstractSingleResultOpt<T> : ISingleResultOpt<T>, IOptFixable<T>, ISingleResultOptFixable<T>, IEquatable<IOpt>
     {
-        public bool Equals(IOpt other) => SingleResultOpt.EqualsOpt(this, other);
+        public bool Equals(IOpt other) => OptEquality.SingleResultOptEqualsObject(this, other);
 
-        public override bool Equals(object obj) => SingleResultOpt.EqualsObject(this, obj);
+        public override bool Equals(object obj) => OptEquality.SingleResultOptEqualsObject(this, obj);
 
         public IEnumerator<T> GetEnumerator() => new OptEnumerator<T>(this);
 
         public override int GetHashCode() => ToFixedSingleResultOpt().GetHashCode();
 
-        public TResult Match<TResult>(Func<TResult> ifZero = null, Func<T, TResult> ifOne = null, Func<TResult> ifMoreThanOne = null) =>
-            ToFixedSingleResultOpt().Match(ifZero, ifOne, ifMoreThanOne);
+        public TResult ResolveOption<TResult>(Func<bool, T, TResult> resultSelector)
+        {
+            if (resultSelector == null) throw new ArgumentNullException(nameof(resultSelector));
+            return ToFixedSingleResultOpt().ResolveOptionRaw(resultSelector);
+        }
 
-        public TResult Match<TResult>(Func<TResult> ifZero = null, Func<object, TResult> ifOne = null, Func<TResult> ifMoreThanOne = null) =>
-            ToFixedSingleResultOpt().Match(ifZero, ifOne, ifMoreThanOne);
+        public TResult ResolveSingleResultOption<TResult>(Func<bool, bool, T, TResult> resultSelector)
+        {
+            if (resultSelector == null) throw new ArgumentNullException(nameof(resultSelector));
+            return ToFixedSingleResultOpt().ResolveSingleResultOptionRaw(resultSelector);
+        }
+
+        public TResult ResolveUntypedOption<TResult>(Func<bool, object, TResult> resultSelector)
+        {
+            if (resultSelector == null) throw new ArgumentNullException(nameof(resultSelector));
+            return ToFixedSingleResultOpt().ResolveUntypedOptionRaw(resultSelector);
+        }
+
+        public TResult ResolveUntypedSingleResultOption<TResult>(Func<bool, bool, object, TResult> resultSelector)
+        {
+            if (resultSelector == null) throw new ArgumentNullException(nameof(resultSelector));
+            return ToFixedSingleResultOpt().ResolveUntypedSingleResultOptionRaw(resultSelector);
+        }
 
         public Opt<T> ToFixed() => ToFixedSingleResultOpt().ToFixed();
 

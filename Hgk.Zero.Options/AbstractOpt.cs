@@ -10,13 +10,25 @@ namespace Hgk.Zero.Options
     /// </summary>
     internal abstract class AbstractOpt<T> : IOpt<T>, IOptFixable<T>, IEquatable<IOpt>
     {
-        public override bool Equals(object obj) => Opt.EqualsObject(this, obj);
+        public override bool Equals(object obj) => OptEquality.PlainOptEqualsObject(this, obj);
 
-        public bool Equals(IOpt other) => Opt.EqualsOpt(this, other);
+        public bool Equals(IOpt other) => OptEquality.PlainOptEqualsObject(this, other);
 
         public virtual IEnumerator<T> GetEnumerator() => new OptEnumerator<T>(this);
 
         public override int GetHashCode() => ToFixed().GetHashCode();
+
+        public TResult ResolveOption<TResult>(Func<bool, T, TResult> resultSelector)
+        {
+            if (resultSelector == null) throw new ArgumentNullException(nameof(resultSelector));
+            return ToFixed().ResolveOptionRaw(resultSelector);
+        }
+
+        public TResult ResolveUntypedOption<TResult>(Func<bool, object, TResult> resultSelector)
+        {
+            if (resultSelector == null) throw new ArgumentNullException(nameof(resultSelector));
+            return ToFixed().ResolveUntypedOptionRaw(resultSelector);
+        }
 
         public abstract Opt<T> ToFixed();
 
