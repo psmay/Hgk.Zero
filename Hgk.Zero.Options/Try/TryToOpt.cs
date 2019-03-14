@@ -1,5 +1,4 @@
-﻿using Hgk.Zero.Options.Convert;
-using System;
+﻿using System;
 
 namespace Hgk.Zero.Options.Try
 {
@@ -31,8 +30,7 @@ namespace Hgk.Zero.Options.Try
     /// <para>
     /// This sample shows how to wrap a call to <see cref="TimeSpan.TryParseExact(string, string[],
     /// IFormatProvider, System.Globalization.TimeSpanStyles, out TimeSpan)"/> to produce an option.
-    /// (Note that this is already done for you by <see cref="ParseToOpt.ParseTimeSpanExact(string,
-    /// string[], IFormatProvider, System.Globalization.TimeSpanStyles)"/>.)
+    /// (Note that this is already done for you in the Hgk.Zero.Options.Convert package.)
     /// </para>
     /// <code>
     /// <![CDATA[

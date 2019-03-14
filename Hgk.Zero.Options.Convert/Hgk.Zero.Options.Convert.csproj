@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageId>Hgk.Zero.Options.Convert</PackageId>
+    <Title>Parsing and conversion tools adapted to use Hgk.Zero.Options</Title>
+    <PackageDescription>Parsing and conversion tools adapted to use Hgk.Zero.Options</PackageDescription>
+    <PackageIconUrl>https://raw.githubusercontent.com/psmay/Hgk.Zero/master/icon64x64.png</PackageIconUrl>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <VersionPrefix>0.0.3</VersionPrefix>
+    <VersionSuffix>$(VersionSuffix)</VersionSuffix>
+    <Authors>Peter S. May</Authors>
+    <Company>hgk.us</Company>
+    <Copyright>© 2018-2019 Peter S. May</Copyright>
+    <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
+    <PackageProjectUrl>http://zero.hgk.us/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/psmay/Hgk.Zero</RepositoryUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <LangVersion>7.1</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>Hgk.Zero.Options.Convert.xml</DocumentationFile>
+    <NoWarn>1701;1702;NU5125</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>Hgk.Zero.Options.Convert.xml</DocumentationFile>
+    <NoWarn>1701;1702;NU5125</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Hgk.Zero.Options\Hgk.Zero.Options.csproj" />
+  </ItemGroup>
+
+</Project>
