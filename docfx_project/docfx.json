@@ -6,6 +6,7 @@
           "src": "..",
           "files": [
             "Hgk.Zero.Options/**.csproj",
+            "Hgk.Zero.Options.Convert/**.csproj",
             "Hgk.Zero.Strings/**.csproj"
           ]
         }
