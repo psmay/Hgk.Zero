@@ -384,7 +384,7 @@ namespace Hgk.Zero.Options.Linq
             else
             {
                 bool hasValue = false;
-                TSource value = default(TSource);
+                TSource value = default;
 
                 foreach (var element in source)
                 {
@@ -442,7 +442,7 @@ namespace Hgk.Zero.Options.Linq
             else
             {
                 bool hasValue = false;
-                TSource value = default(TSource);
+                TSource value = default;
 
                 foreach (var element in source)
                 {

@@ -41,7 +41,7 @@ namespace Hgk.Zero.Options.Linq
                 var opt = source.ToFixed();
                 return opt.ValueOrDefault;
             }
-            return default(TSource);
+            return default;
         }
 
         /// <summary>
@@ -339,7 +339,7 @@ namespace Hgk.Zero.Options.Linq
         {
             if (predicate == null) throw new ArgumentNullException(nameof(predicate));
             var opt = source.ToFixed();
-            return (opt.HasValue && predicate(opt.ValueOrDefault)) ? opt.ValueOrDefault : default(TSource);
+            return (opt.HasValue && predicate(opt.ValueOrDefault)) ? opt.ValueOrDefault : default;
         }
 
         /// <summary>
