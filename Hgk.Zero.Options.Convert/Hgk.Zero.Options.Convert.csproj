@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <PackageId>Hgk.Zero.Options.Convert</PackageId>
@@ -6,7 +6,7 @@
     <PackageDescription>Parsing and conversion tools adapted to use Hgk.Zero.Options</PackageDescription>
     <PackageIconUrl>https://raw.githubusercontent.com/psmay/Hgk.Zero/master/icon64x64.png</PackageIconUrl>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <VersionPrefix>0.0.3</VersionPrefix>
+    <VersionPrefix>0.0.4</VersionPrefix>
     <VersionSuffix>$(VersionSuffix)</VersionSuffix>
     <Authors>Peter S. May</Authors>
     <Company>hgk.us</Company>
