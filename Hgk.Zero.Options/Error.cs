@@ -6,8 +6,6 @@ namespace Hgk.Zero.Options
     {
         internal static ArgumentException ArrayPlusOffTooSmall() => new ArgumentException(ErrorMessages.ArrayPlusOffTooSmall);
 
-        internal static InvalidOperationException InvalidSingleResultQuantity() => new InvalidOperationException("Implementation error - SingleResultQuantity value is invalid");
-
         internal static InvalidOperationException MatchCaseFailed() => new InvalidOperationException(ErrorMessages.MatchCaseFailed);
 
         internal static InvalidOperationException MoreThanOneElement() => new InvalidOperationException(ErrorMessages.MoreThanOneElement);

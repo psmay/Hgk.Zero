@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hgk.Zero.Options.Linq;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -88,7 +89,7 @@ namespace Hgk.Zero.Options
         /// <returns>
         /// <see langword="true"/> if this option equals <paramref name="obj"/>; otherwise, <see langword="false"/>.
         /// </returns>
-        public override bool Equals(object obj) => Opt.EqualsObject(this, obj);
+        public override bool Equals(object obj) => OptEquality.PlainOptEqualsObject(this, obj);
 
         /// <summary>
         /// Gets a hash code for this object based on its contents.
@@ -138,7 +139,7 @@ namespace Hgk.Zero.Options
             // else, no-op
         }
 
-        bool IEquatable<IOpt>.Equals(IOpt other) => Opt.EqualsOpt(this, other);
+        bool IEquatable<IOpt>.Equals(IOpt other) => OptEquality.PlainOptEqualsObject(this, other);
 
         IEnumerator<T> IEnumerable<T>.GetEnumerator() => GetEnumerator();
 
@@ -152,11 +153,27 @@ namespace Hgk.Zero.Options
 
         void IList<T>.RemoveAt(int index) => throw new NotSupportedException();
 
+        TResult IOpt<T>.ResolveOption<TResult>(Func<bool, T, TResult> resultSelector)
+        {
+            if (resultSelector == null) throw new ArgumentNullException(nameof(resultSelector));
+            return ResolveOptionRaw(resultSelector);
+        }
+
+        TResult IOpt.ResolveUntypedOption<TResult>(Func<bool, object, TResult> resultSelector)
+        {
+            if (resultSelector == null) throw new ArgumentNullException(nameof(resultSelector));
+            return ResolveUntypedOptionRaw(resultSelector);
+        }
+
         internal bool Contains(T value, IEqualityComparer<T> comparer) =>
-            HasValue && (comparer ?? EqualityComparer<T>.Default).Equals(ValueOrDefault, value);
+            HasValue && comparer.DefaultIfNull().Equals(ValueOrDefault, value);
 
         internal T ElementAt(int index) =>
             (HasValue && index == 0) ? ValueOrDefault : throw new ArgumentOutOfRangeException(nameof(index));
+
+        internal TResult ResolveOptionRaw<TResult>(Func<bool, T, TResult> resultSelector) => resultSelector(HasValue, ValueOrDefault);
+
+        internal TResult ResolveUntypedOptionRaw<TResult>(Func<bool, object, TResult> resultSelector) => resultSelector(HasValue, ValueOrDefault);
 
         internal Opt<object> UntypedToFixed() => new Opt<object>(HasValue, ValueOrDefault);
 

@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hgk.Zero.Options", "Hgk.Zer
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hgk.Zero.Strings", "Hgk.Zero.Strings\Hgk.Zero.Strings.csproj", "{1D65BA29-3557-4B22-98E8-9E53B860D13C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hgk.Zero.Options.Convert", "Hgk.Zero.Options.Convert\Hgk.Zero.Options.Convert.csproj", "{8EB13041-581A-44D7-A15E-33DAD2C91D9F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{1D65BA29-3557-4B22-98E8-9E53B860D13C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D65BA29-3557-4B22-98E8-9E53B860D13C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D65BA29-3557-4B22-98E8-9E53B860D13C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EB13041-581A-44D7-A15E-33DAD2C91D9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EB13041-581A-44D7-A15E-33DAD2C91D9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EB13041-581A-44D7-A15E-33DAD2C91D9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EB13041-581A-44D7-A15E-33DAD2C91D9F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

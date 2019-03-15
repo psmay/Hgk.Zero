@@ -1,9 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <PackageId>Hgk.Zero.Strings</PackageId>
-    <Title>Enumerable Strings for C#</Title>
-    <PackageDescription>Utilities for strings</PackageDescription>
+    <PackageId>Hgk.Zero.Options.Convert</PackageId>
+    <Title>Parsing and conversion tools adapted to use Hgk.Zero.Options</Title>
+    <PackageDescription>Parsing and conversion tools adapted to use Hgk.Zero.Options</PackageDescription>
     <PackageIconUrl>https://raw.githubusercontent.com/psmay/Hgk.Zero/master/icon64x64.png</PackageIconUrl>
     <TargetFramework>netstandard2.0</TargetFramework>
     <VersionPrefix>0.0.4</VersionPrefix>
@@ -19,18 +19,17 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>Hgk.Zero.Strings.xml</DocumentationFile>
+    <DocumentationFile>Hgk.Zero.Options.Convert.xml</DocumentationFile>
     <NoWarn>1701;1702;NU5125</NoWarn>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile>Hgk.Zero.Strings.xml</DocumentationFile>
+    <DocumentationFile>Hgk.Zero.Options.Convert.xml</DocumentationFile>
     <NoWarn>1701;1702;NU5125</NoWarn>
   </PropertyGroup>
 
-
-
-
-
+  <ItemGroup>
+    <ProjectReference Include="..\Hgk.Zero.Options\Hgk.Zero.Options.csproj" />
+  </ItemGroup>
 
 </Project>

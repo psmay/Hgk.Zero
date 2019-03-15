@@ -1,30 +1,48 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace Hgk.Zero.Options.Linq
 {
     public static partial class LinqToOpt
     {
-        /// <inheritdoc cref="Enumerable.DefaultIfEmpty{TSource}(IEnumerable{TSource})"/>
+        /// <summary>
+        /// Returns a full option containing either the same contents as a specified option, if it is
+        /// full, or the default value for the type, if it is empty.
+        /// </summary>
         /// <remarks>
         /// <para>
         /// This method is implemented using deferred execution; the query represented by this method
         /// is not performed until the contents of the returned option are resolved, such as by enumeration.
         /// </para>
         /// </remarks>
-        public static IOpt<TSource> DefaultIfEmpty<TSource>(this IOpt<TSource> source)
-        {
-            return source.DefaultIfEmpty(default(TSource));
-        }
+        /// <typeparam name="TSource">The type of the elements of <paramref name="source"/>.</typeparam>
+        /// <param name="source">A source option.</param>
+        /// <returns>
+        /// An option that is equivalent to <paramref name="source"/>, if <paramref name="source"/>
+        /// is full; otherwise, a full option containing the <see langword="default"/> value for the type.
+        /// </returns>
+        /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
+        public static IOpt<TSource> DefaultIfEmpty<TSource>(this IOpt<TSource> source) => source.DefaultIfEmpty(default);
 
-        /// <inheritdoc cref="Enumerable.DefaultIfEmpty{TSource}(IEnumerable{TSource}, TSource)"/>
+        /// <summary>
+        /// Returns a full option containing either the same contents as a specified option, if it is
+        /// full, or a specified default value, if it is empty.
+        /// </summary>
         /// <remarks>
         /// <para>
         /// This method is implemented using deferred execution; the query represented by this method
         /// is not performed until the contents of the returned option are resolved, such as by enumeration.
         /// </para>
         /// </remarks>
+        /// <typeparam name="TSource">The type of the elements of <paramref name="source"/>.</typeparam>
+        /// <param name="source">A source option.</param>
+        /// <param name="defaultValue">
+        /// A default value for the result to contain if <paramref name="source"/> is empty.
+        /// </param>
+        /// <returns>
+        /// An option that is equivalent to <paramref name="source"/>, if <paramref name="source"/>
+        /// is full; otherwise, a full option containing <paramref name="defaultValue"/>.
+        /// </returns>
+        /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
         public static IOpt<TSource> DefaultIfEmpty<TSource>(this IOpt<TSource> source, TSource defaultValue)
         {
             if (source == null) throw new ArgumentNullException(nameof(source));

@@ -6,7 +6,7 @@
     <PackageDescription>LINQ-compatible enumerable options</PackageDescription>
     <PackageIconUrl>https://raw.githubusercontent.com/psmay/Hgk.Zero/master/icon64x64.png</PackageIconUrl>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <VersionPrefix>0.0.3</VersionPrefix>
+    <VersionPrefix>0.0.4</VersionPrefix>
     <VersionSuffix>$(VersionSuffix)</VersionSuffix>
     <Authors>Peter S. May</Authors>
     <Company>hgk.us</Company>
@@ -20,10 +20,12 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DocumentationFile>Hgk.Zero.Options.xml</DocumentationFile>
+    <NoWarn>1701;1702;NU5125</NoWarn>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DocumentationFile>Hgk.Zero.Options.xml</DocumentationFile>
+    <NoWarn>1701;1702;NU5125</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
