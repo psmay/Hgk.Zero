@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Interface ISingleResultOpt
    | Hgk.Zero ">
-    <meta name="generator" content="docfx 2.40.10.0">
+    <meta name="generator" content="docfx 2.40.12.0">
     
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,6 +80,9 @@ zero, one, or more than one element.</p>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
+      <a class="xref" href="Hgk.Zero.Options.IOpt.html#Hgk_Zero_Options_IOpt_ResolveUntypedOption__1_System_Func_System_Boolean_System_Object___0__">IOpt.ResolveUntypedOption&lt;TResult&gt;(Func&lt;Boolean, Object, TResult&gt;)</a>
+    </div>
+    <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerable.getenumerator#System_Collections_IEnumerable_GetEnumerator">IEnumerable.GetEnumerator()</a>
     </div>
   </div>
@@ -100,17 +103,17 @@ it behaves differently:
 <ul><li>
 Resolving a single-result option as an ordinary option ( <a class="xref" href="Hgk.Zero.Options.IOpt.html">IOpt</a>) or enumerable (
 <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a>) will result in an <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a>.
-Operations that resolve immediately (such as a <span class="xref">langword_csharp_foreach</span> loop or <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_FixUntyped_Hgk_Zero_Options_IOpt_">FixUntyped(IOpt)</a>) will cause the exception to be thrown immediately, while
+Operations that resolve immediately (such as a <span class="xref">langword_csharp_foreach</span> loop, <a class="xref" href="Hgk.Zero.Options.IOpt.html#Hgk_Zero_Options_IOpt_ResolveUntypedOption__1_System_Func_System_Boolean_System_Object___0__">ResolveUntypedOption&lt;TResult&gt;(Func&lt;Boolean, Object, TResult&gt;)</a>, or <a class="xref" href="Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_FixUntyped_Hgk_Zero_Options_IOpt_">FixUntyped(IOpt)</a>) will cause the exception to be thrown immediately, while
 deferred operations (such as <a class="xref" href="Hgk.Zero.Options.Linq.LinqToOpt.html#Hgk_Zero_Options_Linq_LinqToOpt_OfType__1_Hgk_Zero_Options_IOpt_">OfType&lt;TResult&gt;(IOpt)</a>) will cause the
 exception to be thrown when they are resolved themselves.
 </li><li>
-Explicit operations such as <a class="xref" href="Hgk.Zero.Options.ISingleResultOpt.html#Hgk_Zero_Options_ISingleResultOpt_Match__1_System_Func___0__System_Func_System_Object___0__System_Func___0__">Match&lt;TResult&gt;(Func&lt;TResult&gt;, Func&lt;Object, TResult&gt;, Func&lt;TResult&gt;)</a> can be used to convert a single-result option to another kind of value
-without throwing an exception.
+Explicit operations such as <a class="xref" href="Hgk.Zero.Options.ISingleResultOpt.html#Hgk_Zero_Options_ISingleResultOpt_ResolveUntypedSingleResultOption__1_System_Func_System_Boolean_System_Boolean_System_Object___0__">ResolveUntypedSingleResultOption&lt;TResult&gt;(Func&lt;Boolean, Boolean, Object, TResult&gt;)</a> can be used to convert a single-result option to another kind of
+value without throwing an exception.
 </li></ul>
 <p>The following is information about the contract for this interface.</p>
 <ul><li>
-<a class="xref" href="Hgk.Zero.Options.ISingleResultOpt.html#Hgk_Zero_Options_ISingleResultOpt_Match__1_System_Func___0__System_Func_System_Object___0__System_Func___0__">Match&lt;TResult&gt;(Func&lt;TResult&gt;, Func&lt;Object, TResult&gt;, Func&lt;TResult&gt;)</a> must be
-implemented as specified.
+<a class="xref" href="Hgk.Zero.Options.ISingleResultOpt.html#Hgk_Zero_Options_ISingleResultOpt_ResolveUntypedSingleResultOption__1_System_Func_System_Boolean_System_Boolean_System_Object___0__">ResolveUntypedSingleResultOption&lt;TResult&gt;(Func&lt;Boolean, Boolean, Object, TResult&gt;)</a>
+must be implemented as specified.
 </li><li>
 <a class="xref" href="Hgk.Zero.Options.ISingleResultOpt.html">ISingleResultOpt</a> implements <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a>. The contract of this
 interface requires that the enumerator returned from <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerable.getenumerator#System_Collections_IEnumerable_GetEnumerator">GetEnumerator()</a>
@@ -131,19 +134,20 @@ occurring immediately.)
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/psmay/Hgk.Zero/new/e4ae5b7dfdff3742da4d282ee36244f9736d190c/apiSpec/new?filename=Hgk_Zero_Options_ISingleResultOpt_Match__1_System_Func___0__System_Func_System_Object___0__System_Func___0__.md&amp;value=---%0Auid%3A%20Hgk.Zero.Options.ISingleResultOpt.Match%60%601(System.Func%7B%60%600%7D%2CSystem.Func%7BSystem.Object%2C%60%600%7D%2CSystem.Func%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/psmay/Hgk.Zero/new/6845c5487cf2949cd657fb0c1f30dcd9271fb08f/apiSpec/new?filename=Hgk_Zero_Options_ISingleResultOpt_ResolveUntypedSingleResultOption__1_System_Func_System_Boolean_System_Boolean_System_Object___0__.md&amp;value=---%0Auid%3A%20Hgk.Zero.Options.ISingleResultOpt.ResolveUntypedSingleResultOption%60%601(System.Func%7BSystem.Boolean%2CSystem.Boolean%2CSystem.Object%2C%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/psmay/Hgk.Zero/blob/e4ae5b7dfdff3742da4d282ee36244f9736d190c/Hgk.Zero.Options/ISingleResultOpt.cs/#L109">View Source</a>
+    <a href="https://github.com/psmay/Hgk.Zero/blob/6845c5487cf2949cd657fb0c1f30dcd9271fb08f/Hgk.Zero.Options/ISingleResultOpt.cs/#L130">View Source</a>
   </span>
-  <a id="Hgk_Zero_Options_ISingleResultOpt_Match_" data-uid="Hgk.Zero.Options.ISingleResultOpt.Match*"></a>
-  <h4 id="Hgk_Zero_Options_ISingleResultOpt_Match__1_System_Func___0__System_Func_System_Object___0__System_Func___0__" data-uid="Hgk.Zero.Options.ISingleResultOpt.Match``1(System.Func{``0},System.Func{System.Object,``0},System.Func{``0})">Match&lt;TResult&gt;(Func&lt;TResult&gt;, Func&lt;Object, TResult&gt;, Func&lt;TResult&gt;)</h4>
-  <div class="markdown level1 summary"><p>Converts this single result option to another value based on its contents.</p>
+  <a id="Hgk_Zero_Options_ISingleResultOpt_ResolveUntypedSingleResultOption_" data-uid="Hgk.Zero.Options.ISingleResultOpt.ResolveUntypedSingleResultOption*"></a>
+  <h4 id="Hgk_Zero_Options_ISingleResultOpt_ResolveUntypedSingleResultOption__1_System_Func_System_Boolean_System_Boolean_System_Object___0__" data-uid="Hgk.Zero.Options.ISingleResultOpt.ResolveUntypedSingleResultOption``1(System.Func{System.Boolean,System.Boolean,System.Object,``0})">ResolveUntypedSingleResultOption&lt;TResult&gt;(Func&lt;Boolean, Boolean, Object, TResult&gt;)</h4>
+  <div class="markdown level1 summary"><p>Resolves the <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>-typed contents of this single result option, producing
+a result using the specified result selector.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">TResult Match&lt;TResult&gt;(Func&lt;TResult&gt; ifZero = null, Func&lt;object, TResult&gt; ifOne = null, Func&lt;TResult&gt; ifMoreThanOne = null)</code></pre>
+    <pre><code class="lang-csharp hljs">TResult ResolveUntypedSingleResultOption&lt;TResult&gt;(Func&lt;bool, bool, object, TResult&gt; resultSelector)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -156,23 +160,9 @@ occurring immediately.)
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;TResult&gt;</td>
-        <td><span class="parametername">ifZero</span></td>
-        <td><p>A function to produce the result if this single result option represents a result of zero elements.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>, TResult&gt;</td>
-        <td><span class="parametername">ifOne</span></td>
-        <td><p>A function to produce the result if this single result option represents a result of one
-element, which accepts that element as a parameter.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;TResult&gt;</td>
-        <td><span class="parametername">ifMoreThanOne</span></td>
-        <td><p>A function to produce the result if this single result option represents a result of more
-than one element.</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-4">Func</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>, TResult&gt;</td>
+        <td><span class="parametername">resultSelector</span></td>
+        <td><p>A transform function that accepts an is-valid-option flag, a has-value flag, and a value.</p>
 </td>
       </tr>
     </tbody>
@@ -188,8 +178,7 @@ than one element.</p>
     <tbody>
       <tr>
         <td><span class="xref">TResult</span></td>
-        <td><p>The result of calling <code data-dev-comment-type="paramref" class="paramref">ifZero</code>, <code data-dev-comment-type="paramref" class="paramref">ifOne</code>, or <code data-dev-comment-type="paramref" class="paramref">ifMoreThanOne</code> if this single result option represents a result of zero, one, or
-more than one element, respectively.</p>
+        <td><p>The result of calling resultSelector on the current resolved state of this single result option.</p>
 </td>
       </tr>
     </tbody>
@@ -205,11 +194,32 @@ more than one element, respectively.</p>
     <tbody>
       <tr>
         <td><span class="parametername">TResult</span></td>
-        <td><p>The result type for this conversion.</p>
+        <td><p>The return type of <code data-dev-comment-type="paramref" class="paramref">resultSelector</code>.</p>
 </td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Hgk_Zero_Options_ISingleResultOpt_ResolveUntypedSingleResultOption__1_System_Func_System_Boolean_System_Boolean_System_Object___0___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+The resolver function accepts three parameters: An is-valid-option flag, a has-value
+flag, and a value.
+</p>
+<ul><li>
+If this single result option represents one result, the is-valid-option flag and
+has-value flag are <span class="xref">true</span> and the value parameter is the result value.
+</li><li>
+If this single result option represents zero results, the is-valid-option flag is <span class="xref">true</span>, the has-value flag is <span class="xref">false</span>, and the value parameter
+is undefined.
+</li><li>
+If this single result option represents more than one result (and is thus not a valid
+option), the is-valid-option flag is <span class="xref">false</span> and the remaining parameters
+are undefined.
+</li></ul>
+<p>
+If the has-value flag or the value parameter is undefined, the caller must not use their
+values. To prevent accidental misuse, the implementation should supply <span class="xref">false</span> or <span class="xref">null</span>, respectively, but this is not required.
+</p>
+</div>
   <h5 class="exceptions">Exceptions</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -220,11 +230,8 @@ more than one element, respectively.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></td>
-        <td><p><code data-dev-comment-type="paramref" class="paramref">ifZero</code> is <span class="xref">null</span> and this single result option
-represents a result of zero elements, or <code data-dev-comment-type="paramref" class="paramref">ifOne</code> is <span class="xref">null</span> and this single result option represents a result of one element, or
-<code data-dev-comment-type="paramref" class="paramref">ifMoreThanOne</code> is <span class="xref">null</span> and this single result option
-represents a result of more than one element.</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">resultSelector</code> is <span class="xref">null</span>.</p>
 </td>
       </tr>
     </tbody>
@@ -254,10 +261,10 @@ represents a result of more than one element.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/psmay/Hgk.Zero/new/e4ae5b7dfdff3742da4d282ee36244f9736d190c/apiSpec/new?filename=Hgk_Zero_Options_ISingleResultOpt.md&amp;value=---%0Auid%3A%20Hgk.Zero.Options.ISingleResultOpt%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/psmay/Hgk.Zero/new/6845c5487cf2949cd657fb0c1f30dcd9271fb08f/apiSpec/new?filename=Hgk_Zero_Options_ISingleResultOpt.md&amp;value=---%0Auid%3A%20Hgk.Zero.Options.ISingleResultOpt%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/psmay/Hgk.Zero/blob/e4ae5b7dfdff3742da4d282ee36244f9736d190c/Hgk.Zero.Options/ISingleResultOpt.cs/#L80" class="contribution-link">View Source</a>
+                    <a href="https://github.com/psmay/Hgk.Zero/blob/6845c5487cf2949cd657fb0c1f30dcd9271fb08f/Hgk.Zero.Options/ISingleResultOpt.cs/#L81" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

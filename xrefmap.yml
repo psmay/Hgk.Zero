@@ -7,452 +7,28 @@ references:
   commentId: N:Hgk.Zero.Options
   fullName: Hgk.Zero.Options
   nameWithType: Hgk.Zero.Options
-- uid: Hgk.Zero.Options.Convert
-  name: Hgk.Zero.Options.Convert
-  href: api/Hgk.Zero.Options.Convert.html
-  commentId: N:Hgk.Zero.Options.Convert
-  fullName: Hgk.Zero.Options.Convert
-  nameWithType: Hgk.Zero.Options.Convert
-- uid: Hgk.Zero.Options.Convert.ParseToOpt
-  name: ParseToOpt
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html
-  commentId: T:Hgk.Zero.Options.Convert.ParseToOpt
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt
-  nameWithType: ParseToOpt
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseBoolean(System.String)
-  name: ParseBoolean(String)
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseBoolean_System_String_
-  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseBoolean(System.String)
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseBoolean(System.String)
-  nameWithType: ParseToOpt.ParseBoolean(String)
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseBoolean*
-  name: ParseBoolean
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseBoolean_
-  commentId: Overload:Hgk.Zero.Options.Convert.ParseToOpt.ParseBoolean
-  isSpec: "True"
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseBoolean
-  nameWithType: ParseToOpt.ParseBoolean
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseByte(System.String)
-  name: ParseByte(String)
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseByte_System_String_
-  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseByte(System.String)
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseByte(System.String)
-  nameWithType: ParseToOpt.ParseByte(String)
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseByte(System.String,System.Globalization.NumberStyles,System.IFormatProvider)
-  name: ParseByte(String, NumberStyles, IFormatProvider)
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseByte_System_String_System_Globalization_NumberStyles_System_IFormatProvider_
-  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseByte(System.String,System.Globalization.NumberStyles,System.IFormatProvider)
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseByte(System.String, System.Globalization.NumberStyles, System.IFormatProvider)
-  nameWithType: ParseToOpt.ParseByte(String, NumberStyles, IFormatProvider)
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseByte*
-  name: ParseByte
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseByte_
-  commentId: Overload:Hgk.Zero.Options.Convert.ParseToOpt.ParseByte
-  isSpec: "True"
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseByte
-  nameWithType: ParseToOpt.ParseByte
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseChar(System.String)
-  name: ParseChar(String)
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseChar_System_String_
-  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseChar(System.String)
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseChar(System.String)
-  nameWithType: ParseToOpt.ParseChar(String)
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseChar*
-  name: ParseChar
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseChar_
-  commentId: Overload:Hgk.Zero.Options.Convert.ParseToOpt.ParseChar
-  isSpec: "True"
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseChar
-  nameWithType: ParseToOpt.ParseChar
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTime(System.String)
-  name: ParseDateTime(String)
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseDateTime_System_String_
-  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTime(System.String)
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTime(System.String)
-  nameWithType: ParseToOpt.ParseDateTime(String)
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTime(System.String,System.IFormatProvider,System.Globalization.DateTimeStyles)
-  name: ParseDateTime(String, IFormatProvider, DateTimeStyles)
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseDateTime_System_String_System_IFormatProvider_System_Globalization_DateTimeStyles_
-  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTime(System.String,System.IFormatProvider,System.Globalization.DateTimeStyles)
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTime(System.String, System.IFormatProvider, System.Globalization.DateTimeStyles)
-  nameWithType: ParseToOpt.ParseDateTime(String, IFormatProvider, DateTimeStyles)
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTime*
-  name: ParseDateTime
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseDateTime_
-  commentId: Overload:Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTime
-  isSpec: "True"
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTime
-  nameWithType: ParseToOpt.ParseDateTime
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTimeExact(System.String,System.String,System.IFormatProvider,System.Globalization.DateTimeStyles)
-  name: ParseDateTimeExact(String, String, IFormatProvider, DateTimeStyles)
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseDateTimeExact_System_String_System_String_System_IFormatProvider_System_Globalization_DateTimeStyles_
-  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTimeExact(System.String,System.String,System.IFormatProvider,System.Globalization.DateTimeStyles)
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTimeExact(System.String, System.String, System.IFormatProvider, System.Globalization.DateTimeStyles)
-  nameWithType: ParseToOpt.ParseDateTimeExact(String, String, IFormatProvider, DateTimeStyles)
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTimeExact(System.String,System.String[],System.IFormatProvider,System.Globalization.DateTimeStyles)
-  name: ParseDateTimeExact(String, String[], IFormatProvider, DateTimeStyles)
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseDateTimeExact_System_String_System_String___System_IFormatProvider_System_Globalization_DateTimeStyles_
-  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTimeExact(System.String,System.String[],System.IFormatProvider,System.Globalization.DateTimeStyles)
-  name.vb: ParseDateTimeExact(String, String(), IFormatProvider, DateTimeStyles)
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTimeExact(System.String, System.String[], System.IFormatProvider, System.Globalization.DateTimeStyles)
-  fullName.vb: Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTimeExact(System.String, System.String(), System.IFormatProvider, System.Globalization.DateTimeStyles)
-  nameWithType: ParseToOpt.ParseDateTimeExact(String, String[], IFormatProvider, DateTimeStyles)
-  nameWithType.vb: ParseToOpt.ParseDateTimeExact(String, String(), IFormatProvider, DateTimeStyles)
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTimeExact*
-  name: ParseDateTimeExact
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseDateTimeExact_
-  commentId: Overload:Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTimeExact
-  isSpec: "True"
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTimeExact
-  nameWithType: ParseToOpt.ParseDateTimeExact
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTimeOffset(System.String)
-  name: ParseDateTimeOffset(String)
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseDateTimeOffset_System_String_
-  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTimeOffset(System.String)
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTimeOffset(System.String)
-  nameWithType: ParseToOpt.ParseDateTimeOffset(String)
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTimeOffset(System.String,System.IFormatProvider,System.Globalization.DateTimeStyles)
-  name: ParseDateTimeOffset(String, IFormatProvider, DateTimeStyles)
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseDateTimeOffset_System_String_System_IFormatProvider_System_Globalization_DateTimeStyles_
-  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTimeOffset(System.String,System.IFormatProvider,System.Globalization.DateTimeStyles)
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTimeOffset(System.String, System.IFormatProvider, System.Globalization.DateTimeStyles)
-  nameWithType: ParseToOpt.ParseDateTimeOffset(String, IFormatProvider, DateTimeStyles)
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTimeOffset*
-  name: ParseDateTimeOffset
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseDateTimeOffset_
-  commentId: Overload:Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTimeOffset
-  isSpec: "True"
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTimeOffset
-  nameWithType: ParseToOpt.ParseDateTimeOffset
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTimeOffsetExact(System.String,System.String,System.IFormatProvider,System.Globalization.DateTimeStyles)
-  name: ParseDateTimeOffsetExact(String, String, IFormatProvider, DateTimeStyles)
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseDateTimeOffsetExact_System_String_System_String_System_IFormatProvider_System_Globalization_DateTimeStyles_
-  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTimeOffsetExact(System.String,System.String,System.IFormatProvider,System.Globalization.DateTimeStyles)
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTimeOffsetExact(System.String, System.String, System.IFormatProvider, System.Globalization.DateTimeStyles)
-  nameWithType: ParseToOpt.ParseDateTimeOffsetExact(String, String, IFormatProvider, DateTimeStyles)
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTimeOffsetExact*
-  name: ParseDateTimeOffsetExact
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseDateTimeOffsetExact_
-  commentId: Overload:Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTimeOffsetExact
-  isSpec: "True"
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTimeOffsetExact
-  nameWithType: ParseToOpt.ParseDateTimeOffsetExact
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseDecimal(System.String)
-  name: ParseDecimal(String)
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseDecimal_System_String_
-  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseDecimal(System.String)
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseDecimal(System.String)
-  nameWithType: ParseToOpt.ParseDecimal(String)
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseDecimal(System.String,System.Globalization.NumberStyles,System.IFormatProvider)
-  name: ParseDecimal(String, NumberStyles, IFormatProvider)
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseDecimal_System_String_System_Globalization_NumberStyles_System_IFormatProvider_
-  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseDecimal(System.String,System.Globalization.NumberStyles,System.IFormatProvider)
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseDecimal(System.String, System.Globalization.NumberStyles, System.IFormatProvider)
-  nameWithType: ParseToOpt.ParseDecimal(String, NumberStyles, IFormatProvider)
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseDecimal*
-  name: ParseDecimal
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseDecimal_
-  commentId: Overload:Hgk.Zero.Options.Convert.ParseToOpt.ParseDecimal
-  isSpec: "True"
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseDecimal
-  nameWithType: ParseToOpt.ParseDecimal
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseDouble(System.String)
-  name: ParseDouble(String)
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseDouble_System_String_
-  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseDouble(System.String)
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseDouble(System.String)
-  nameWithType: ParseToOpt.ParseDouble(String)
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseDouble(System.String,System.Globalization.NumberStyles,System.IFormatProvider)
-  name: ParseDouble(String, NumberStyles, IFormatProvider)
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseDouble_System_String_System_Globalization_NumberStyles_System_IFormatProvider_
-  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseDouble(System.String,System.Globalization.NumberStyles,System.IFormatProvider)
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseDouble(System.String, System.Globalization.NumberStyles, System.IFormatProvider)
-  nameWithType: ParseToOpt.ParseDouble(String, NumberStyles, IFormatProvider)
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseDouble*
-  name: ParseDouble
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseDouble_
-  commentId: Overload:Hgk.Zero.Options.Convert.ParseToOpt.ParseDouble
-  isSpec: "True"
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseDouble
-  nameWithType: ParseToOpt.ParseDouble
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseEnum*
-  name: ParseEnum
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseEnum_
-  commentId: Overload:Hgk.Zero.Options.Convert.ParseToOpt.ParseEnum
-  isSpec: "True"
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseEnum
-  nameWithType: ParseToOpt.ParseEnum
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseEnum``1(System.String)
-  name: ParseEnum<TEnum>(String)
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseEnum__1_System_String_
-  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseEnum``1(System.String)
-  name.vb: ParseEnum(Of TEnum)(String)
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseEnum<TEnum>(System.String)
-  fullName.vb: Hgk.Zero.Options.Convert.ParseToOpt.ParseEnum(Of TEnum)(System.String)
-  nameWithType: ParseToOpt.ParseEnum<TEnum>(String)
-  nameWithType.vb: ParseToOpt.ParseEnum(Of TEnum)(String)
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseEnum``1(System.String,System.Boolean)
-  name: ParseEnum<TEnum>(String, Boolean)
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseEnum__1_System_String_System_Boolean_
-  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseEnum``1(System.String,System.Boolean)
-  name.vb: ParseEnum(Of TEnum)(String, Boolean)
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseEnum<TEnum>(System.String, System.Boolean)
-  fullName.vb: Hgk.Zero.Options.Convert.ParseToOpt.ParseEnum(Of TEnum)(System.String, System.Boolean)
-  nameWithType: ParseToOpt.ParseEnum<TEnum>(String, Boolean)
-  nameWithType.vb: ParseToOpt.ParseEnum(Of TEnum)(String, Boolean)
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseGuid(System.String)
-  name: ParseGuid(String)
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseGuid_System_String_
-  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseGuid(System.String)
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseGuid(System.String)
-  nameWithType: ParseToOpt.ParseGuid(String)
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseGuid*
-  name: ParseGuid
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseGuid_
-  commentId: Overload:Hgk.Zero.Options.Convert.ParseToOpt.ParseGuid
-  isSpec: "True"
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseGuid
-  nameWithType: ParseToOpt.ParseGuid
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseGuidExact(System.String,System.String)
-  name: ParseGuidExact(String, String)
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseGuidExact_System_String_System_String_
-  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseGuidExact(System.String,System.String)
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseGuidExact(System.String, System.String)
-  nameWithType: ParseToOpt.ParseGuidExact(String, String)
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseGuidExact*
-  name: ParseGuidExact
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseGuidExact_
-  commentId: Overload:Hgk.Zero.Options.Convert.ParseToOpt.ParseGuidExact
-  isSpec: "True"
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseGuidExact
-  nameWithType: ParseToOpt.ParseGuidExact
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseInt16(System.String)
-  name: ParseInt16(String)
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseInt16_System_String_
-  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseInt16(System.String)
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseInt16(System.String)
-  nameWithType: ParseToOpt.ParseInt16(String)
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseInt16(System.String,System.Globalization.NumberStyles,System.IFormatProvider)
-  name: ParseInt16(String, NumberStyles, IFormatProvider)
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseInt16_System_String_System_Globalization_NumberStyles_System_IFormatProvider_
-  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseInt16(System.String,System.Globalization.NumberStyles,System.IFormatProvider)
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseInt16(System.String, System.Globalization.NumberStyles, System.IFormatProvider)
-  nameWithType: ParseToOpt.ParseInt16(String, NumberStyles, IFormatProvider)
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseInt16*
-  name: ParseInt16
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseInt16_
-  commentId: Overload:Hgk.Zero.Options.Convert.ParseToOpt.ParseInt16
-  isSpec: "True"
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseInt16
-  nameWithType: ParseToOpt.ParseInt16
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseInt32(System.String)
-  name: ParseInt32(String)
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseInt32_System_String_
-  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseInt32(System.String)
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseInt32(System.String)
-  nameWithType: ParseToOpt.ParseInt32(String)
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseInt32(System.String,System.Globalization.NumberStyles,System.IFormatProvider)
-  name: ParseInt32(String, NumberStyles, IFormatProvider)
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseInt32_System_String_System_Globalization_NumberStyles_System_IFormatProvider_
-  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseInt32(System.String,System.Globalization.NumberStyles,System.IFormatProvider)
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseInt32(System.String, System.Globalization.NumberStyles, System.IFormatProvider)
-  nameWithType: ParseToOpt.ParseInt32(String, NumberStyles, IFormatProvider)
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseInt32*
-  name: ParseInt32
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseInt32_
-  commentId: Overload:Hgk.Zero.Options.Convert.ParseToOpt.ParseInt32
-  isSpec: "True"
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseInt32
-  nameWithType: ParseToOpt.ParseInt32
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseInt64(System.String)
-  name: ParseInt64(String)
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseInt64_System_String_
-  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseInt64(System.String)
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseInt64(System.String)
-  nameWithType: ParseToOpt.ParseInt64(String)
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseInt64(System.String,System.Globalization.NumberStyles,System.IFormatProvider)
-  name: ParseInt64(String, NumberStyles, IFormatProvider)
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseInt64_System_String_System_Globalization_NumberStyles_System_IFormatProvider_
-  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseInt64(System.String,System.Globalization.NumberStyles,System.IFormatProvider)
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseInt64(System.String, System.Globalization.NumberStyles, System.IFormatProvider)
-  nameWithType: ParseToOpt.ParseInt64(String, NumberStyles, IFormatProvider)
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseInt64*
-  name: ParseInt64
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseInt64_
-  commentId: Overload:Hgk.Zero.Options.Convert.ParseToOpt.ParseInt64
-  isSpec: "True"
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseInt64
-  nameWithType: ParseToOpt.ParseInt64
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseSByte(System.String)
-  name: ParseSByte(String)
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseSByte_System_String_
-  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseSByte(System.String)
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseSByte(System.String)
-  nameWithType: ParseToOpt.ParseSByte(String)
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseSByte(System.String,System.Globalization.NumberStyles,System.IFormatProvider)
-  name: ParseSByte(String, NumberStyles, IFormatProvider)
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseSByte_System_String_System_Globalization_NumberStyles_System_IFormatProvider_
-  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseSByte(System.String,System.Globalization.NumberStyles,System.IFormatProvider)
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseSByte(System.String, System.Globalization.NumberStyles, System.IFormatProvider)
-  nameWithType: ParseToOpt.ParseSByte(String, NumberStyles, IFormatProvider)
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseSByte*
-  name: ParseSByte
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseSByte_
-  commentId: Overload:Hgk.Zero.Options.Convert.ParseToOpt.ParseSByte
-  isSpec: "True"
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseSByte
-  nameWithType: ParseToOpt.ParseSByte
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseSingle(System.String)
-  name: ParseSingle(String)
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseSingle_System_String_
-  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseSingle(System.String)
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseSingle(System.String)
-  nameWithType: ParseToOpt.ParseSingle(String)
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseSingle(System.String,System.Globalization.NumberStyles,System.IFormatProvider)
-  name: ParseSingle(String, NumberStyles, IFormatProvider)
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseSingle_System_String_System_Globalization_NumberStyles_System_IFormatProvider_
-  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseSingle(System.String,System.Globalization.NumberStyles,System.IFormatProvider)
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseSingle(System.String, System.Globalization.NumberStyles, System.IFormatProvider)
-  nameWithType: ParseToOpt.ParseSingle(String, NumberStyles, IFormatProvider)
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseSingle*
-  name: ParseSingle
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseSingle_
-  commentId: Overload:Hgk.Zero.Options.Convert.ParseToOpt.ParseSingle
-  isSpec: "True"
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseSingle
-  nameWithType: ParseToOpt.ParseSingle
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpan(System.String)
-  name: ParseTimeSpan(String)
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseTimeSpan_System_String_
-  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpan(System.String)
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpan(System.String)
-  nameWithType: ParseToOpt.ParseTimeSpan(String)
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpan(System.String,System.IFormatProvider)
-  name: ParseTimeSpan(String, IFormatProvider)
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseTimeSpan_System_String_System_IFormatProvider_
-  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpan(System.String,System.IFormatProvider)
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpan(System.String, System.IFormatProvider)
-  nameWithType: ParseToOpt.ParseTimeSpan(String, IFormatProvider)
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpan*
-  name: ParseTimeSpan
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseTimeSpan_
-  commentId: Overload:Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpan
-  isSpec: "True"
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpan
-  nameWithType: ParseToOpt.ParseTimeSpan
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpanExact(System.String,System.String,System.IFormatProvider)
-  name: ParseTimeSpanExact(String, String, IFormatProvider)
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseTimeSpanExact_System_String_System_String_System_IFormatProvider_
-  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpanExact(System.String,System.String,System.IFormatProvider)
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpanExact(System.String, System.String, System.IFormatProvider)
-  nameWithType: ParseToOpt.ParseTimeSpanExact(String, String, IFormatProvider)
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpanExact(System.String,System.String,System.IFormatProvider,System.Globalization.TimeSpanStyles)
-  name: ParseTimeSpanExact(String, String, IFormatProvider, TimeSpanStyles)
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseTimeSpanExact_System_String_System_String_System_IFormatProvider_System_Globalization_TimeSpanStyles_
-  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpanExact(System.String,System.String,System.IFormatProvider,System.Globalization.TimeSpanStyles)
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpanExact(System.String, System.String, System.IFormatProvider, System.Globalization.TimeSpanStyles)
-  nameWithType: ParseToOpt.ParseTimeSpanExact(String, String, IFormatProvider, TimeSpanStyles)
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpanExact(System.String,System.String[],System.IFormatProvider)
-  name: ParseTimeSpanExact(String, String[], IFormatProvider)
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseTimeSpanExact_System_String_System_String___System_IFormatProvider_
-  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpanExact(System.String,System.String[],System.IFormatProvider)
-  name.vb: ParseTimeSpanExact(String, String(), IFormatProvider)
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpanExact(System.String, System.String[], System.IFormatProvider)
-  fullName.vb: Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpanExact(System.String, System.String(), System.IFormatProvider)
-  nameWithType: ParseToOpt.ParseTimeSpanExact(String, String[], IFormatProvider)
-  nameWithType.vb: ParseToOpt.ParseTimeSpanExact(String, String(), IFormatProvider)
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpanExact(System.String,System.String[],System.IFormatProvider,System.Globalization.TimeSpanStyles)
-  name: ParseTimeSpanExact(String, String[], IFormatProvider, TimeSpanStyles)
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseTimeSpanExact_System_String_System_String___System_IFormatProvider_System_Globalization_TimeSpanStyles_
-  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpanExact(System.String,System.String[],System.IFormatProvider,System.Globalization.TimeSpanStyles)
-  name.vb: ParseTimeSpanExact(String, String(), IFormatProvider, TimeSpanStyles)
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpanExact(System.String, System.String[], System.IFormatProvider, System.Globalization.TimeSpanStyles)
-  fullName.vb: Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpanExact(System.String, System.String(), System.IFormatProvider, System.Globalization.TimeSpanStyles)
-  nameWithType: ParseToOpt.ParseTimeSpanExact(String, String[], IFormatProvider, TimeSpanStyles)
-  nameWithType.vb: ParseToOpt.ParseTimeSpanExact(String, String(), IFormatProvider, TimeSpanStyles)
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpanExact*
-  name: ParseTimeSpanExact
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseTimeSpanExact_
-  commentId: Overload:Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpanExact
-  isSpec: "True"
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpanExact
-  nameWithType: ParseToOpt.ParseTimeSpanExact
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt16(System.String)
-  name: ParseUInt16(String)
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseUInt16_System_String_
-  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt16(System.String)
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt16(System.String)
-  nameWithType: ParseToOpt.ParseUInt16(String)
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt16(System.String,System.Globalization.NumberStyles,System.IFormatProvider)
-  name: ParseUInt16(String, NumberStyles, IFormatProvider)
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseUInt16_System_String_System_Globalization_NumberStyles_System_IFormatProvider_
-  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt16(System.String,System.Globalization.NumberStyles,System.IFormatProvider)
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt16(System.String, System.Globalization.NumberStyles, System.IFormatProvider)
-  nameWithType: ParseToOpt.ParseUInt16(String, NumberStyles, IFormatProvider)
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt16*
-  name: ParseUInt16
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseUInt16_
-  commentId: Overload:Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt16
-  isSpec: "True"
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt16
-  nameWithType: ParseToOpt.ParseUInt16
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt32(System.String)
-  name: ParseUInt32(String)
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseUInt32_System_String_
-  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt32(System.String)
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt32(System.String)
-  nameWithType: ParseToOpt.ParseUInt32(String)
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt32(System.String,System.Globalization.NumberStyles,System.IFormatProvider)
-  name: ParseUInt32(String, NumberStyles, IFormatProvider)
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseUInt32_System_String_System_Globalization_NumberStyles_System_IFormatProvider_
-  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt32(System.String,System.Globalization.NumberStyles,System.IFormatProvider)
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt32(System.String, System.Globalization.NumberStyles, System.IFormatProvider)
-  nameWithType: ParseToOpt.ParseUInt32(String, NumberStyles, IFormatProvider)
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt32*
-  name: ParseUInt32
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseUInt32_
-  commentId: Overload:Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt32
-  isSpec: "True"
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt32
-  nameWithType: ParseToOpt.ParseUInt32
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt64(System.String)
-  name: ParseUInt64(String)
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseUInt64_System_String_
-  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt64(System.String)
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt64(System.String)
-  nameWithType: ParseToOpt.ParseUInt64(String)
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt64(System.String,System.Globalization.NumberStyles,System.IFormatProvider)
-  name: ParseUInt64(String, NumberStyles, IFormatProvider)
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseUInt64_System_String_System_Globalization_NumberStyles_System_IFormatProvider_
-  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt64(System.String,System.Globalization.NumberStyles,System.IFormatProvider)
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt64(System.String, System.Globalization.NumberStyles, System.IFormatProvider)
-  nameWithType: ParseToOpt.ParseUInt64(String, NumberStyles, IFormatProvider)
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt64*
-  name: ParseUInt64
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseUInt64_
-  commentId: Overload:Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt64
-  isSpec: "True"
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt64
-  nameWithType: ParseToOpt.ParseUInt64
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseVersion(System.String)
-  name: ParseVersion(String)
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseVersion_System_String_
-  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseVersion(System.String)
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseVersion(System.String)
-  nameWithType: ParseToOpt.ParseVersion(String)
-- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseVersion*
-  name: ParseVersion
-  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseVersion_
-  commentId: Overload:Hgk.Zero.Options.Convert.ParseToOpt.ParseVersion
-  isSpec: "True"
-  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseVersion
-  nameWithType: ParseToOpt.ParseVersion
 - uid: Hgk.Zero.Options.IOpt
   name: IOpt
   href: api/Hgk.Zero.Options.IOpt.html
   commentId: T:Hgk.Zero.Options.IOpt
   fullName: Hgk.Zero.Options.IOpt
   nameWithType: IOpt
+- uid: Hgk.Zero.Options.IOpt.ResolveUntypedOption*
+  name: ResolveUntypedOption
+  href: api/Hgk.Zero.Options.IOpt.html#Hgk_Zero_Options_IOpt_ResolveUntypedOption_
+  commentId: Overload:Hgk.Zero.Options.IOpt.ResolveUntypedOption
+  isSpec: "True"
+  fullName: Hgk.Zero.Options.IOpt.ResolveUntypedOption
+  nameWithType: IOpt.ResolveUntypedOption
+- uid: Hgk.Zero.Options.IOpt.ResolveUntypedOption``1(System.Func{System.Boolean,System.Object,``0})
+  name: ResolveUntypedOption<TResult>(Func<Boolean, Object, TResult>)
+  href: api/Hgk.Zero.Options.IOpt.html#Hgk_Zero_Options_IOpt_ResolveUntypedOption__1_System_Func_System_Boolean_System_Object___0__
+  commentId: M:Hgk.Zero.Options.IOpt.ResolveUntypedOption``1(System.Func{System.Boolean,System.Object,``0})
+  name.vb: ResolveUntypedOption(Of TResult)(Func(Of Boolean, Object, TResult))
+  fullName: Hgk.Zero.Options.IOpt.ResolveUntypedOption<TResult>(System.Func<System.Boolean, System.Object, TResult>)
+  fullName.vb: Hgk.Zero.Options.IOpt.ResolveUntypedOption(Of TResult)(System.Func(Of System.Boolean, System.Object, TResult))
+  nameWithType: IOpt.ResolveUntypedOption<TResult>(Func<Boolean, Object, TResult>)
+  nameWithType.vb: IOpt.ResolveUntypedOption(Of TResult)(Func(Of Boolean, Object, TResult))
 - uid: Hgk.Zero.Options.IOpt`1
   name: IOpt<T>
   href: api/Hgk.Zero.Options.IOpt-1.html
@@ -462,28 +38,46 @@ references:
   fullName.vb: Hgk.Zero.Options.IOpt(Of T)
   nameWithType: IOpt<T>
   nameWithType.vb: IOpt(Of T)
+- uid: Hgk.Zero.Options.IOpt`1.ResolveOption*
+  name: ResolveOption
+  href: api/Hgk.Zero.Options.IOpt-1.html#Hgk_Zero_Options_IOpt_1_ResolveOption_
+  commentId: Overload:Hgk.Zero.Options.IOpt`1.ResolveOption
+  isSpec: "True"
+  fullName: Hgk.Zero.Options.IOpt<T>.ResolveOption
+  fullName.vb: Hgk.Zero.Options.IOpt(Of T).ResolveOption
+  nameWithType: IOpt<T>.ResolveOption
+  nameWithType.vb: IOpt(Of T).ResolveOption
+- uid: Hgk.Zero.Options.IOpt`1.ResolveOption``1(System.Func{System.Boolean,`0,``0})
+  name: ResolveOption<TResult>(Func<Boolean, T, TResult>)
+  href: api/Hgk.Zero.Options.IOpt-1.html#Hgk_Zero_Options_IOpt_1_ResolveOption__1_System_Func_System_Boolean__0___0__
+  commentId: M:Hgk.Zero.Options.IOpt`1.ResolveOption``1(System.Func{System.Boolean,`0,``0})
+  name.vb: ResolveOption(Of TResult)(Func(Of Boolean, T, TResult))
+  fullName: Hgk.Zero.Options.IOpt<T>.ResolveOption<TResult>(System.Func<System.Boolean, T, TResult>)
+  fullName.vb: Hgk.Zero.Options.IOpt(Of T).ResolveOption(Of TResult)(System.Func(Of System.Boolean, T, TResult))
+  nameWithType: IOpt<T>.ResolveOption<TResult>(Func<Boolean, T, TResult>)
+  nameWithType.vb: IOpt(Of T).ResolveOption(Of TResult)(Func(Of Boolean, T, TResult))
 - uid: Hgk.Zero.Options.ISingleResultOpt
   name: ISingleResultOpt
   href: api/Hgk.Zero.Options.ISingleResultOpt.html
   commentId: T:Hgk.Zero.Options.ISingleResultOpt
   fullName: Hgk.Zero.Options.ISingleResultOpt
   nameWithType: ISingleResultOpt
-- uid: Hgk.Zero.Options.ISingleResultOpt.Match*
-  name: Match
-  href: api/Hgk.Zero.Options.ISingleResultOpt.html#Hgk_Zero_Options_ISingleResultOpt_Match_
-  commentId: Overload:Hgk.Zero.Options.ISingleResultOpt.Match
+- uid: Hgk.Zero.Options.ISingleResultOpt.ResolveUntypedSingleResultOption*
+  name: ResolveUntypedSingleResultOption
+  href: api/Hgk.Zero.Options.ISingleResultOpt.html#Hgk_Zero_Options_ISingleResultOpt_ResolveUntypedSingleResultOption_
+  commentId: Overload:Hgk.Zero.Options.ISingleResultOpt.ResolveUntypedSingleResultOption
   isSpec: "True"
-  fullName: Hgk.Zero.Options.ISingleResultOpt.Match
-  nameWithType: ISingleResultOpt.Match
-- uid: Hgk.Zero.Options.ISingleResultOpt.Match``1(System.Func{``0},System.Func{System.Object,``0},System.Func{``0})
-  name: Match<TResult>(Func<TResult>, Func<Object, TResult>, Func<TResult>)
-  href: api/Hgk.Zero.Options.ISingleResultOpt.html#Hgk_Zero_Options_ISingleResultOpt_Match__1_System_Func___0__System_Func_System_Object___0__System_Func___0__
-  commentId: M:Hgk.Zero.Options.ISingleResultOpt.Match``1(System.Func{``0},System.Func{System.Object,``0},System.Func{``0})
-  name.vb: Match(Of TResult)(Func(Of TResult), Func(Of Object, TResult), Func(Of TResult))
-  fullName: Hgk.Zero.Options.ISingleResultOpt.Match<TResult>(System.Func<TResult>, System.Func<System.Object, TResult>, System.Func<TResult>)
-  fullName.vb: Hgk.Zero.Options.ISingleResultOpt.Match(Of TResult)(System.Func(Of TResult), System.Func(Of System.Object, TResult), System.Func(Of TResult))
-  nameWithType: ISingleResultOpt.Match<TResult>(Func<TResult>, Func<Object, TResult>, Func<TResult>)
-  nameWithType.vb: ISingleResultOpt.Match(Of TResult)(Func(Of TResult), Func(Of Object, TResult), Func(Of TResult))
+  fullName: Hgk.Zero.Options.ISingleResultOpt.ResolveUntypedSingleResultOption
+  nameWithType: ISingleResultOpt.ResolveUntypedSingleResultOption
+- uid: Hgk.Zero.Options.ISingleResultOpt.ResolveUntypedSingleResultOption``1(System.Func{System.Boolean,System.Boolean,System.Object,``0})
+  name: ResolveUntypedSingleResultOption<TResult>(Func<Boolean, Boolean, Object, TResult>)
+  href: api/Hgk.Zero.Options.ISingleResultOpt.html#Hgk_Zero_Options_ISingleResultOpt_ResolveUntypedSingleResultOption__1_System_Func_System_Boolean_System_Boolean_System_Object___0__
+  commentId: M:Hgk.Zero.Options.ISingleResultOpt.ResolveUntypedSingleResultOption``1(System.Func{System.Boolean,System.Boolean,System.Object,``0})
+  name.vb: ResolveUntypedSingleResultOption(Of TResult)(Func(Of Boolean, Boolean, Object, TResult))
+  fullName: Hgk.Zero.Options.ISingleResultOpt.ResolveUntypedSingleResultOption<TResult>(System.Func<System.Boolean, System.Boolean, System.Object, TResult>)
+  fullName.vb: Hgk.Zero.Options.ISingleResultOpt.ResolveUntypedSingleResultOption(Of TResult)(System.Func(Of System.Boolean, System.Boolean, System.Object, TResult))
+  nameWithType: ISingleResultOpt.ResolveUntypedSingleResultOption<TResult>(Func<Boolean, Boolean, Object, TResult>)
+  nameWithType.vb: ISingleResultOpt.ResolveUntypedSingleResultOption(Of TResult)(Func(Of Boolean, Boolean, Object, TResult))
 - uid: Hgk.Zero.Options.ISingleResultOpt`1
   name: ISingleResultOpt<T>
   href: api/Hgk.Zero.Options.ISingleResultOpt-1.html
@@ -493,24 +87,24 @@ references:
   fullName.vb: Hgk.Zero.Options.ISingleResultOpt(Of T)
   nameWithType: ISingleResultOpt<T>
   nameWithType.vb: ISingleResultOpt(Of T)
-- uid: Hgk.Zero.Options.ISingleResultOpt`1.Match*
-  name: Match
-  href: api/Hgk.Zero.Options.ISingleResultOpt-1.html#Hgk_Zero_Options_ISingleResultOpt_1_Match_
-  commentId: Overload:Hgk.Zero.Options.ISingleResultOpt`1.Match
+- uid: Hgk.Zero.Options.ISingleResultOpt`1.ResolveSingleResultOption*
+  name: ResolveSingleResultOption
+  href: api/Hgk.Zero.Options.ISingleResultOpt-1.html#Hgk_Zero_Options_ISingleResultOpt_1_ResolveSingleResultOption_
+  commentId: Overload:Hgk.Zero.Options.ISingleResultOpt`1.ResolveSingleResultOption
   isSpec: "True"
-  fullName: Hgk.Zero.Options.ISingleResultOpt<T>.Match
-  fullName.vb: Hgk.Zero.Options.ISingleResultOpt(Of T).Match
-  nameWithType: ISingleResultOpt<T>.Match
-  nameWithType.vb: ISingleResultOpt(Of T).Match
-- uid: Hgk.Zero.Options.ISingleResultOpt`1.Match``1(System.Func{``0},System.Func{`0,``0},System.Func{``0})
-  name: Match<TResult>(Func<TResult>, Func<T, TResult>, Func<TResult>)
-  href: api/Hgk.Zero.Options.ISingleResultOpt-1.html#Hgk_Zero_Options_ISingleResultOpt_1_Match__1_System_Func___0__System_Func__0___0__System_Func___0__
-  commentId: M:Hgk.Zero.Options.ISingleResultOpt`1.Match``1(System.Func{``0},System.Func{`0,``0},System.Func{``0})
-  name.vb: Match(Of TResult)(Func(Of TResult), Func(Of T, TResult), Func(Of TResult))
-  fullName: Hgk.Zero.Options.ISingleResultOpt<T>.Match<TResult>(System.Func<TResult>, System.Func<T, TResult>, System.Func<TResult>)
-  fullName.vb: Hgk.Zero.Options.ISingleResultOpt(Of T).Match(Of TResult)(System.Func(Of TResult), System.Func(Of T, TResult), System.Func(Of TResult))
-  nameWithType: ISingleResultOpt<T>.Match<TResult>(Func<TResult>, Func<T, TResult>, Func<TResult>)
-  nameWithType.vb: ISingleResultOpt(Of T).Match(Of TResult)(Func(Of TResult), Func(Of T, TResult), Func(Of TResult))
+  fullName: Hgk.Zero.Options.ISingleResultOpt<T>.ResolveSingleResultOption
+  fullName.vb: Hgk.Zero.Options.ISingleResultOpt(Of T).ResolveSingleResultOption
+  nameWithType: ISingleResultOpt<T>.ResolveSingleResultOption
+  nameWithType.vb: ISingleResultOpt(Of T).ResolveSingleResultOption
+- uid: Hgk.Zero.Options.ISingleResultOpt`1.ResolveSingleResultOption``1(System.Func{System.Boolean,System.Boolean,`0,``0})
+  name: ResolveSingleResultOption<TResult>(Func<Boolean, Boolean, T, TResult>)
+  href: api/Hgk.Zero.Options.ISingleResultOpt-1.html#Hgk_Zero_Options_ISingleResultOpt_1_ResolveSingleResultOption__1_System_Func_System_Boolean_System_Boolean__0___0__
+  commentId: M:Hgk.Zero.Options.ISingleResultOpt`1.ResolveSingleResultOption``1(System.Func{System.Boolean,System.Boolean,`0,``0})
+  name.vb: ResolveSingleResultOption(Of TResult)(Func(Of Boolean, Boolean, T, TResult))
+  fullName: Hgk.Zero.Options.ISingleResultOpt<T>.ResolveSingleResultOption<TResult>(System.Func<System.Boolean, System.Boolean, T, TResult>)
+  fullName.vb: Hgk.Zero.Options.ISingleResultOpt(Of T).ResolveSingleResultOption(Of TResult)(System.Func(Of System.Boolean, System.Boolean, T, TResult))
+  nameWithType: ISingleResultOpt<T>.ResolveSingleResultOption<TResult>(Func<Boolean, Boolean, T, TResult>)
+  nameWithType.vb: ISingleResultOpt(Of T).ResolveSingleResultOption(Of TResult)(Func(Of Boolean, Boolean, T, TResult))
 - uid: Hgk.Zero.Options.Linq
   name: Hgk.Zero.Options.Linq
   href: api/Hgk.Zero.Options.Linq.html
@@ -726,6 +320,15 @@ references:
   fullName.vb: Hgk.Zero.Options.Linq.EnumerableToOpt.WhereSingle(Of TSource)(System.Collections.Generic.IEnumerable(Of TSource), System.Func(Of TSource, System.Boolean))
   nameWithType: EnumerableToOpt.WhereSingle<TSource>(IEnumerable<TSource>, Func<TSource, Boolean>)
   nameWithType.vb: EnumerableToOpt.WhereSingle(Of TSource)(IEnumerable(Of TSource), Func(Of TSource, Boolean))
+- uid: Hgk.Zero.Options.Linq.IOptGrouping`2
+  name: IOptGrouping<TKey, TElement>
+  href: api/Hgk.Zero.Options.Linq.IOptGrouping-2.html
+  commentId: T:Hgk.Zero.Options.Linq.IOptGrouping`2
+  name.vb: IOptGrouping(Of TKey, TElement)
+  fullName: Hgk.Zero.Options.Linq.IOptGrouping<TKey, TElement>
+  fullName.vb: Hgk.Zero.Options.Linq.IOptGrouping(Of TKey, TElement)
+  nameWithType: IOptGrouping<TKey, TElement>
+  nameWithType.vb: IOptGrouping(Of TKey, TElement)
 - uid: Hgk.Zero.Options.Linq.LinqToOpt
   name: LinqToOpt
   href: api/Hgk.Zero.Options.Linq.LinqToOpt.html
@@ -1285,6 +888,128 @@ references:
   fullName.vb: Hgk.Zero.Options.Linq.LinqToOpt.Flatten(Of TSource)(Hgk.Zero.Options.IOpt(Of Hgk.Zero.Options.Opt(Of TSource)))
   nameWithType: LinqToOpt.Flatten<TSource>(IOpt<Opt<TSource>>)
   nameWithType.vb: LinqToOpt.Flatten(Of TSource)(IOpt(Of Opt(Of TSource)))
+- uid: Hgk.Zero.Options.Linq.LinqToOpt.GroupBy*
+  name: GroupBy
+  href: api/Hgk.Zero.Options.Linq.LinqToOpt.html#Hgk_Zero_Options_Linq_LinqToOpt_GroupBy_
+  commentId: Overload:Hgk.Zero.Options.Linq.LinqToOpt.GroupBy
+  isSpec: "True"
+  fullName: Hgk.Zero.Options.Linq.LinqToOpt.GroupBy
+  nameWithType: LinqToOpt.GroupBy
+- uid: Hgk.Zero.Options.Linq.LinqToOpt.GroupBy``2(Hgk.Zero.Options.IOpt{``0},System.Func{``0,``1})
+  name: GroupBy<TSource, TKey>(IOpt<TSource>, Func<TSource, TKey>)
+  href: api/Hgk.Zero.Options.Linq.LinqToOpt.html#Hgk_Zero_Options_Linq_LinqToOpt_GroupBy__2_Hgk_Zero_Options_IOpt___0__System_Func___0___1__
+  commentId: M:Hgk.Zero.Options.Linq.LinqToOpt.GroupBy``2(Hgk.Zero.Options.IOpt{``0},System.Func{``0,``1})
+  name.vb: GroupBy(Of TSource, TKey)(IOpt(Of TSource), Func(Of TSource, TKey))
+  fullName: Hgk.Zero.Options.Linq.LinqToOpt.GroupBy<TSource, TKey>(Hgk.Zero.Options.IOpt<TSource>, System.Func<TSource, TKey>)
+  fullName.vb: Hgk.Zero.Options.Linq.LinqToOpt.GroupBy(Of TSource, TKey)(Hgk.Zero.Options.IOpt(Of TSource), System.Func(Of TSource, TKey))
+  nameWithType: LinqToOpt.GroupBy<TSource, TKey>(IOpt<TSource>, Func<TSource, TKey>)
+  nameWithType.vb: LinqToOpt.GroupBy(Of TSource, TKey)(IOpt(Of TSource), Func(Of TSource, TKey))
+- uid: Hgk.Zero.Options.Linq.LinqToOpt.GroupBy``2(Hgk.Zero.Options.IOpt{``0},System.Func{``0,``1},System.Collections.Generic.IEqualityComparer{``1})
+  name: GroupBy<TSource, TKey>(IOpt<TSource>, Func<TSource, TKey>, IEqualityComparer<TKey>)
+  href: api/Hgk.Zero.Options.Linq.LinqToOpt.html#Hgk_Zero_Options_Linq_LinqToOpt_GroupBy__2_Hgk_Zero_Options_IOpt___0__System_Func___0___1__System_Collections_Generic_IEqualityComparer___1__
+  commentId: M:Hgk.Zero.Options.Linq.LinqToOpt.GroupBy``2(Hgk.Zero.Options.IOpt{``0},System.Func{``0,``1},System.Collections.Generic.IEqualityComparer{``1})
+  name.vb: GroupBy(Of TSource, TKey)(IOpt(Of TSource), Func(Of TSource, TKey), IEqualityComparer(Of TKey))
+  fullName: Hgk.Zero.Options.Linq.LinqToOpt.GroupBy<TSource, TKey>(Hgk.Zero.Options.IOpt<TSource>, System.Func<TSource, TKey>, System.Collections.Generic.IEqualityComparer<TKey>)
+  fullName.vb: Hgk.Zero.Options.Linq.LinqToOpt.GroupBy(Of TSource, TKey)(Hgk.Zero.Options.IOpt(Of TSource), System.Func(Of TSource, TKey), System.Collections.Generic.IEqualityComparer(Of TKey))
+  nameWithType: LinqToOpt.GroupBy<TSource, TKey>(IOpt<TSource>, Func<TSource, TKey>, IEqualityComparer<TKey>)
+  nameWithType.vb: LinqToOpt.GroupBy(Of TSource, TKey)(IOpt(Of TSource), Func(Of TSource, TKey), IEqualityComparer(Of TKey))
+- uid: Hgk.Zero.Options.Linq.LinqToOpt.GroupBy``3(Hgk.Zero.Options.IOpt{``0},System.Func{``0,``1},System.Func{``0,``2})
+  name: GroupBy<TSource, TKey, TElement>(IOpt<TSource>, Func<TSource, TKey>, Func<TSource, TElement>)
+  href: api/Hgk.Zero.Options.Linq.LinqToOpt.html#Hgk_Zero_Options_Linq_LinqToOpt_GroupBy__3_Hgk_Zero_Options_IOpt___0__System_Func___0___1__System_Func___0___2__
+  commentId: M:Hgk.Zero.Options.Linq.LinqToOpt.GroupBy``3(Hgk.Zero.Options.IOpt{``0},System.Func{``0,``1},System.Func{``0,``2})
+  name.vb: GroupBy(Of TSource, TKey, TElement)(IOpt(Of TSource), Func(Of TSource, TKey), Func(Of TSource, TElement))
+  fullName: Hgk.Zero.Options.Linq.LinqToOpt.GroupBy<TSource, TKey, TElement>(Hgk.Zero.Options.IOpt<TSource>, System.Func<TSource, TKey>, System.Func<TSource, TElement>)
+  fullName.vb: Hgk.Zero.Options.Linq.LinqToOpt.GroupBy(Of TSource, TKey, TElement)(Hgk.Zero.Options.IOpt(Of TSource), System.Func(Of TSource, TKey), System.Func(Of TSource, TElement))
+  nameWithType: LinqToOpt.GroupBy<TSource, TKey, TElement>(IOpt<TSource>, Func<TSource, TKey>, Func<TSource, TElement>)
+  nameWithType.vb: LinqToOpt.GroupBy(Of TSource, TKey, TElement)(IOpt(Of TSource), Func(Of TSource, TKey), Func(Of TSource, TElement))
+- uid: Hgk.Zero.Options.Linq.LinqToOpt.GroupBy``3(Hgk.Zero.Options.IOpt{``0},System.Func{``0,``1},System.Func{``0,``2},System.Collections.Generic.IEqualityComparer{``1})
+  name: GroupBy<TSource, TKey, TElement>(IOpt<TSource>, Func<TSource, TKey>, Func<TSource, TElement>, IEqualityComparer<TKey>)
+  href: api/Hgk.Zero.Options.Linq.LinqToOpt.html#Hgk_Zero_Options_Linq_LinqToOpt_GroupBy__3_Hgk_Zero_Options_IOpt___0__System_Func___0___1__System_Func___0___2__System_Collections_Generic_IEqualityComparer___1__
+  commentId: M:Hgk.Zero.Options.Linq.LinqToOpt.GroupBy``3(Hgk.Zero.Options.IOpt{``0},System.Func{``0,``1},System.Func{``0,``2},System.Collections.Generic.IEqualityComparer{``1})
+  name.vb: GroupBy(Of TSource, TKey, TElement)(IOpt(Of TSource), Func(Of TSource, TKey), Func(Of TSource, TElement), IEqualityComparer(Of TKey))
+  fullName: Hgk.Zero.Options.Linq.LinqToOpt.GroupBy<TSource, TKey, TElement>(Hgk.Zero.Options.IOpt<TSource>, System.Func<TSource, TKey>, System.Func<TSource, TElement>, System.Collections.Generic.IEqualityComparer<TKey>)
+  fullName.vb: Hgk.Zero.Options.Linq.LinqToOpt.GroupBy(Of TSource, TKey, TElement)(Hgk.Zero.Options.IOpt(Of TSource), System.Func(Of TSource, TKey), System.Func(Of TSource, TElement), System.Collections.Generic.IEqualityComparer(Of TKey))
+  nameWithType: LinqToOpt.GroupBy<TSource, TKey, TElement>(IOpt<TSource>, Func<TSource, TKey>, Func<TSource, TElement>, IEqualityComparer<TKey>)
+  nameWithType.vb: LinqToOpt.GroupBy(Of TSource, TKey, TElement)(IOpt(Of TSource), Func(Of TSource, TKey), Func(Of TSource, TElement), IEqualityComparer(Of TKey))
+- uid: Hgk.Zero.Options.Linq.LinqToOpt.GroupBy``3(Hgk.Zero.Options.IOpt{``0},System.Func{``0,``1},System.Func{``1,Hgk.Zero.Options.IOpt{``0},``2})
+  name: GroupBy<TSource, TKey, TResult>(IOpt<TSource>, Func<TSource, TKey>, Func<TKey, IOpt<TSource>, TResult>)
+  href: api/Hgk.Zero.Options.Linq.LinqToOpt.html#Hgk_Zero_Options_Linq_LinqToOpt_GroupBy__3_Hgk_Zero_Options_IOpt___0__System_Func___0___1__System_Func___1_Hgk_Zero_Options_IOpt___0____2__
+  commentId: M:Hgk.Zero.Options.Linq.LinqToOpt.GroupBy``3(Hgk.Zero.Options.IOpt{``0},System.Func{``0,``1},System.Func{``1,Hgk.Zero.Options.IOpt{``0},``2})
+  name.vb: GroupBy(Of TSource, TKey, TResult)(IOpt(Of TSource), Func(Of TSource, TKey), Func(Of TKey, IOpt(Of TSource), TResult))
+  fullName: Hgk.Zero.Options.Linq.LinqToOpt.GroupBy<TSource, TKey, TResult>(Hgk.Zero.Options.IOpt<TSource>, System.Func<TSource, TKey>, System.Func<TKey, Hgk.Zero.Options.IOpt<TSource>, TResult>)
+  fullName.vb: Hgk.Zero.Options.Linq.LinqToOpt.GroupBy(Of TSource, TKey, TResult)(Hgk.Zero.Options.IOpt(Of TSource), System.Func(Of TSource, TKey), System.Func(Of TKey, Hgk.Zero.Options.IOpt(Of TSource), TResult))
+  nameWithType: LinqToOpt.GroupBy<TSource, TKey, TResult>(IOpt<TSource>, Func<TSource, TKey>, Func<TKey, IOpt<TSource>, TResult>)
+  nameWithType.vb: LinqToOpt.GroupBy(Of TSource, TKey, TResult)(IOpt(Of TSource), Func(Of TSource, TKey), Func(Of TKey, IOpt(Of TSource), TResult))
+- uid: Hgk.Zero.Options.Linq.LinqToOpt.GroupBy``3(Hgk.Zero.Options.IOpt{``0},System.Func{``0,``1},System.Func{``1,Hgk.Zero.Options.IOpt{``0},``2},System.Collections.Generic.IEqualityComparer{``1})
+  name: GroupBy<TSource, TKey, TResult>(IOpt<TSource>, Func<TSource, TKey>, Func<TKey, IOpt<TSource>, TResult>, IEqualityComparer<TKey>)
+  href: api/Hgk.Zero.Options.Linq.LinqToOpt.html#Hgk_Zero_Options_Linq_LinqToOpt_GroupBy__3_Hgk_Zero_Options_IOpt___0__System_Func___0___1__System_Func___1_Hgk_Zero_Options_IOpt___0____2__System_Collections_Generic_IEqualityComparer___1__
+  commentId: M:Hgk.Zero.Options.Linq.LinqToOpt.GroupBy``3(Hgk.Zero.Options.IOpt{``0},System.Func{``0,``1},System.Func{``1,Hgk.Zero.Options.IOpt{``0},``2},System.Collections.Generic.IEqualityComparer{``1})
+  name.vb: GroupBy(Of TSource, TKey, TResult)(IOpt(Of TSource), Func(Of TSource, TKey), Func(Of TKey, IOpt(Of TSource), TResult), IEqualityComparer(Of TKey))
+  fullName: Hgk.Zero.Options.Linq.LinqToOpt.GroupBy<TSource, TKey, TResult>(Hgk.Zero.Options.IOpt<TSource>, System.Func<TSource, TKey>, System.Func<TKey, Hgk.Zero.Options.IOpt<TSource>, TResult>, System.Collections.Generic.IEqualityComparer<TKey>)
+  fullName.vb: Hgk.Zero.Options.Linq.LinqToOpt.GroupBy(Of TSource, TKey, TResult)(Hgk.Zero.Options.IOpt(Of TSource), System.Func(Of TSource, TKey), System.Func(Of TKey, Hgk.Zero.Options.IOpt(Of TSource), TResult), System.Collections.Generic.IEqualityComparer(Of TKey))
+  nameWithType: LinqToOpt.GroupBy<TSource, TKey, TResult>(IOpt<TSource>, Func<TSource, TKey>, Func<TKey, IOpt<TSource>, TResult>, IEqualityComparer<TKey>)
+  nameWithType.vb: LinqToOpt.GroupBy(Of TSource, TKey, TResult)(IOpt(Of TSource), Func(Of TSource, TKey), Func(Of TKey, IOpt(Of TSource), TResult), IEqualityComparer(Of TKey))
+- uid: Hgk.Zero.Options.Linq.LinqToOpt.GroupBy``4(Hgk.Zero.Options.IOpt{``0},System.Func{``0,``1},System.Func{``0,``2},System.Func{``1,Hgk.Zero.Options.IOpt{``2},``3})
+  name: GroupBy<TSource, TKey, TElement, TResult>(IOpt<TSource>, Func<TSource, TKey>, Func<TSource, TElement>, Func<TKey, IOpt<TElement>, TResult>)
+  href: api/Hgk.Zero.Options.Linq.LinqToOpt.html#Hgk_Zero_Options_Linq_LinqToOpt_GroupBy__4_Hgk_Zero_Options_IOpt___0__System_Func___0___1__System_Func___0___2__System_Func___1_Hgk_Zero_Options_IOpt___2____3__
+  commentId: M:Hgk.Zero.Options.Linq.LinqToOpt.GroupBy``4(Hgk.Zero.Options.IOpt{``0},System.Func{``0,``1},System.Func{``0,``2},System.Func{``1,Hgk.Zero.Options.IOpt{``2},``3})
+  name.vb: GroupBy(Of TSource, TKey, TElement, TResult)(IOpt(Of TSource), Func(Of TSource, TKey), Func(Of TSource, TElement), Func(Of TKey, IOpt(Of TElement), TResult))
+  fullName: Hgk.Zero.Options.Linq.LinqToOpt.GroupBy<TSource, TKey, TElement, TResult>(Hgk.Zero.Options.IOpt<TSource>, System.Func<TSource, TKey>, System.Func<TSource, TElement>, System.Func<TKey, Hgk.Zero.Options.IOpt<TElement>, TResult>)
+  fullName.vb: Hgk.Zero.Options.Linq.LinqToOpt.GroupBy(Of TSource, TKey, TElement, TResult)(Hgk.Zero.Options.IOpt(Of TSource), System.Func(Of TSource, TKey), System.Func(Of TSource, TElement), System.Func(Of TKey, Hgk.Zero.Options.IOpt(Of TElement), TResult))
+  nameWithType: LinqToOpt.GroupBy<TSource, TKey, TElement, TResult>(IOpt<TSource>, Func<TSource, TKey>, Func<TSource, TElement>, Func<TKey, IOpt<TElement>, TResult>)
+  nameWithType.vb: LinqToOpt.GroupBy(Of TSource, TKey, TElement, TResult)(IOpt(Of TSource), Func(Of TSource, TKey), Func(Of TSource, TElement), Func(Of TKey, IOpt(Of TElement), TResult))
+- uid: Hgk.Zero.Options.Linq.LinqToOpt.GroupBy``4(Hgk.Zero.Options.IOpt{``0},System.Func{``0,``1},System.Func{``0,``2},System.Func{``1,Hgk.Zero.Options.IOpt{``2},``3},System.Collections.Generic.IEqualityComparer{``1})
+  name: GroupBy<TSource, TKey, TElement, TResult>(IOpt<TSource>, Func<TSource, TKey>, Func<TSource, TElement>, Func<TKey, IOpt<TElement>, TResult>, IEqualityComparer<TKey>)
+  href: api/Hgk.Zero.Options.Linq.LinqToOpt.html#Hgk_Zero_Options_Linq_LinqToOpt_GroupBy__4_Hgk_Zero_Options_IOpt___0__System_Func___0___1__System_Func___0___2__System_Func___1_Hgk_Zero_Options_IOpt___2____3__System_Collections_Generic_IEqualityComparer___1__
+  commentId: M:Hgk.Zero.Options.Linq.LinqToOpt.GroupBy``4(Hgk.Zero.Options.IOpt{``0},System.Func{``0,``1},System.Func{``0,``2},System.Func{``1,Hgk.Zero.Options.IOpt{``2},``3},System.Collections.Generic.IEqualityComparer{``1})
+  name.vb: GroupBy(Of TSource, TKey, TElement, TResult)(IOpt(Of TSource), Func(Of TSource, TKey), Func(Of TSource, TElement), Func(Of TKey, IOpt(Of TElement), TResult), IEqualityComparer(Of TKey))
+  fullName: Hgk.Zero.Options.Linq.LinqToOpt.GroupBy<TSource, TKey, TElement, TResult>(Hgk.Zero.Options.IOpt<TSource>, System.Func<TSource, TKey>, System.Func<TSource, TElement>, System.Func<TKey, Hgk.Zero.Options.IOpt<TElement>, TResult>, System.Collections.Generic.IEqualityComparer<TKey>)
+  fullName.vb: Hgk.Zero.Options.Linq.LinqToOpt.GroupBy(Of TSource, TKey, TElement, TResult)(Hgk.Zero.Options.IOpt(Of TSource), System.Func(Of TSource, TKey), System.Func(Of TSource, TElement), System.Func(Of TKey, Hgk.Zero.Options.IOpt(Of TElement), TResult), System.Collections.Generic.IEqualityComparer(Of TKey))
+  nameWithType: LinqToOpt.GroupBy<TSource, TKey, TElement, TResult>(IOpt<TSource>, Func<TSource, TKey>, Func<TSource, TElement>, Func<TKey, IOpt<TElement>, TResult>, IEqualityComparer<TKey>)
+  nameWithType.vb: LinqToOpt.GroupBy(Of TSource, TKey, TElement, TResult)(IOpt(Of TSource), Func(Of TSource, TKey), Func(Of TSource, TElement), Func(Of TKey, IOpt(Of TElement), TResult), IEqualityComparer(Of TKey))
+- uid: Hgk.Zero.Options.Linq.LinqToOpt.GroupJoin*
+  name: GroupJoin
+  href: api/Hgk.Zero.Options.Linq.LinqToOpt.html#Hgk_Zero_Options_Linq_LinqToOpt_GroupJoin_
+  commentId: Overload:Hgk.Zero.Options.Linq.LinqToOpt.GroupJoin
+  isSpec: "True"
+  fullName: Hgk.Zero.Options.Linq.LinqToOpt.GroupJoin
+  nameWithType: LinqToOpt.GroupJoin
+- uid: Hgk.Zero.Options.Linq.LinqToOpt.GroupJoin``4(Hgk.Zero.Options.IOpt{``0},Hgk.Zero.Options.IOpt{``1},System.Func{``0,``2},System.Func{``1,``2},System.Func{``0,Hgk.Zero.Options.IOpt{``1},``3})
+  name: GroupJoin<TOuter, TInner, TKey, TResult>(IOpt<TOuter>, IOpt<TInner>, Func<TOuter, TKey>, Func<TInner, TKey>, Func<TOuter, IOpt<TInner>, TResult>)
+  href: api/Hgk.Zero.Options.Linq.LinqToOpt.html#Hgk_Zero_Options_Linq_LinqToOpt_GroupJoin__4_Hgk_Zero_Options_IOpt___0__Hgk_Zero_Options_IOpt___1__System_Func___0___2__System_Func___1___2__System_Func___0_Hgk_Zero_Options_IOpt___1____3__
+  commentId: M:Hgk.Zero.Options.Linq.LinqToOpt.GroupJoin``4(Hgk.Zero.Options.IOpt{``0},Hgk.Zero.Options.IOpt{``1},System.Func{``0,``2},System.Func{``1,``2},System.Func{``0,Hgk.Zero.Options.IOpt{``1},``3})
+  name.vb: GroupJoin(Of TOuter, TInner, TKey, TResult)(IOpt(Of TOuter), IOpt(Of TInner), Func(Of TOuter, TKey), Func(Of TInner, TKey), Func(Of TOuter, IOpt(Of TInner), TResult))
+  fullName: Hgk.Zero.Options.Linq.LinqToOpt.GroupJoin<TOuter, TInner, TKey, TResult>(Hgk.Zero.Options.IOpt<TOuter>, Hgk.Zero.Options.IOpt<TInner>, System.Func<TOuter, TKey>, System.Func<TInner, TKey>, System.Func<TOuter, Hgk.Zero.Options.IOpt<TInner>, TResult>)
+  fullName.vb: Hgk.Zero.Options.Linq.LinqToOpt.GroupJoin(Of TOuter, TInner, TKey, TResult)(Hgk.Zero.Options.IOpt(Of TOuter), Hgk.Zero.Options.IOpt(Of TInner), System.Func(Of TOuter, TKey), System.Func(Of TInner, TKey), System.Func(Of TOuter, Hgk.Zero.Options.IOpt(Of TInner), TResult))
+  nameWithType: LinqToOpt.GroupJoin<TOuter, TInner, TKey, TResult>(IOpt<TOuter>, IOpt<TInner>, Func<TOuter, TKey>, Func<TInner, TKey>, Func<TOuter, IOpt<TInner>, TResult>)
+  nameWithType.vb: LinqToOpt.GroupJoin(Of TOuter, TInner, TKey, TResult)(IOpt(Of TOuter), IOpt(Of TInner), Func(Of TOuter, TKey), Func(Of TInner, TKey), Func(Of TOuter, IOpt(Of TInner), TResult))
+- uid: Hgk.Zero.Options.Linq.LinqToOpt.GroupJoin``4(Hgk.Zero.Options.IOpt{``0},Hgk.Zero.Options.IOpt{``1},System.Func{``0,``2},System.Func{``1,``2},System.Func{``0,Hgk.Zero.Options.IOpt{``1},``3},System.Collections.Generic.IEqualityComparer{``2})
+  name: GroupJoin<TOuter, TInner, TKey, TResult>(IOpt<TOuter>, IOpt<TInner>, Func<TOuter, TKey>, Func<TInner, TKey>, Func<TOuter, IOpt<TInner>, TResult>, IEqualityComparer<TKey>)
+  href: api/Hgk.Zero.Options.Linq.LinqToOpt.html#Hgk_Zero_Options_Linq_LinqToOpt_GroupJoin__4_Hgk_Zero_Options_IOpt___0__Hgk_Zero_Options_IOpt___1__System_Func___0___2__System_Func___1___2__System_Func___0_Hgk_Zero_Options_IOpt___1____3__System_Collections_Generic_IEqualityComparer___2__
+  commentId: M:Hgk.Zero.Options.Linq.LinqToOpt.GroupJoin``4(Hgk.Zero.Options.IOpt{``0},Hgk.Zero.Options.IOpt{``1},System.Func{``0,``2},System.Func{``1,``2},System.Func{``0,Hgk.Zero.Options.IOpt{``1},``3},System.Collections.Generic.IEqualityComparer{``2})
+  name.vb: GroupJoin(Of TOuter, TInner, TKey, TResult)(IOpt(Of TOuter), IOpt(Of TInner), Func(Of TOuter, TKey), Func(Of TInner, TKey), Func(Of TOuter, IOpt(Of TInner), TResult), IEqualityComparer(Of TKey))
+  fullName: Hgk.Zero.Options.Linq.LinqToOpt.GroupJoin<TOuter, TInner, TKey, TResult>(Hgk.Zero.Options.IOpt<TOuter>, Hgk.Zero.Options.IOpt<TInner>, System.Func<TOuter, TKey>, System.Func<TInner, TKey>, System.Func<TOuter, Hgk.Zero.Options.IOpt<TInner>, TResult>, System.Collections.Generic.IEqualityComparer<TKey>)
+  fullName.vb: Hgk.Zero.Options.Linq.LinqToOpt.GroupJoin(Of TOuter, TInner, TKey, TResult)(Hgk.Zero.Options.IOpt(Of TOuter), Hgk.Zero.Options.IOpt(Of TInner), System.Func(Of TOuter, TKey), System.Func(Of TInner, TKey), System.Func(Of TOuter, Hgk.Zero.Options.IOpt(Of TInner), TResult), System.Collections.Generic.IEqualityComparer(Of TKey))
+  nameWithType: LinqToOpt.GroupJoin<TOuter, TInner, TKey, TResult>(IOpt<TOuter>, IOpt<TInner>, Func<TOuter, TKey>, Func<TInner, TKey>, Func<TOuter, IOpt<TInner>, TResult>, IEqualityComparer<TKey>)
+  nameWithType.vb: LinqToOpt.GroupJoin(Of TOuter, TInner, TKey, TResult)(IOpt(Of TOuter), IOpt(Of TInner), Func(Of TOuter, TKey), Func(Of TInner, TKey), Func(Of TOuter, IOpt(Of TInner), TResult), IEqualityComparer(Of TKey))
+- uid: Hgk.Zero.Options.Linq.LinqToOpt.GroupJoin``4(Hgk.Zero.Options.IOpt{``0},System.Collections.Generic.IEnumerable{``1},System.Func{``0,``2},System.Func{``1,``2},System.Func{``0,System.Collections.Generic.IEnumerable{``1},``3})
+  name: GroupJoin<TOuter, TInner, TKey, TResult>(IOpt<TOuter>, IEnumerable<TInner>, Func<TOuter, TKey>, Func<TInner, TKey>, Func<TOuter, IEnumerable<TInner>, TResult>)
+  href: api/Hgk.Zero.Options.Linq.LinqToOpt.html#Hgk_Zero_Options_Linq_LinqToOpt_GroupJoin__4_Hgk_Zero_Options_IOpt___0__System_Collections_Generic_IEnumerable___1__System_Func___0___2__System_Func___1___2__System_Func___0_System_Collections_Generic_IEnumerable___1____3__
+  commentId: M:Hgk.Zero.Options.Linq.LinqToOpt.GroupJoin``4(Hgk.Zero.Options.IOpt{``0},System.Collections.Generic.IEnumerable{``1},System.Func{``0,``2},System.Func{``1,``2},System.Func{``0,System.Collections.Generic.IEnumerable{``1},``3})
+  name.vb: GroupJoin(Of TOuter, TInner, TKey, TResult)(IOpt(Of TOuter), IEnumerable(Of TInner), Func(Of TOuter, TKey), Func(Of TInner, TKey), Func(Of TOuter, IEnumerable(Of TInner), TResult))
+  fullName: Hgk.Zero.Options.Linq.LinqToOpt.GroupJoin<TOuter, TInner, TKey, TResult>(Hgk.Zero.Options.IOpt<TOuter>, System.Collections.Generic.IEnumerable<TInner>, System.Func<TOuter, TKey>, System.Func<TInner, TKey>, System.Func<TOuter, System.Collections.Generic.IEnumerable<TInner>, TResult>)
+  fullName.vb: Hgk.Zero.Options.Linq.LinqToOpt.GroupJoin(Of TOuter, TInner, TKey, TResult)(Hgk.Zero.Options.IOpt(Of TOuter), System.Collections.Generic.IEnumerable(Of TInner), System.Func(Of TOuter, TKey), System.Func(Of TInner, TKey), System.Func(Of TOuter, System.Collections.Generic.IEnumerable(Of TInner), TResult))
+  nameWithType: LinqToOpt.GroupJoin<TOuter, TInner, TKey, TResult>(IOpt<TOuter>, IEnumerable<TInner>, Func<TOuter, TKey>, Func<TInner, TKey>, Func<TOuter, IEnumerable<TInner>, TResult>)
+  nameWithType.vb: LinqToOpt.GroupJoin(Of TOuter, TInner, TKey, TResult)(IOpt(Of TOuter), IEnumerable(Of TInner), Func(Of TOuter, TKey), Func(Of TInner, TKey), Func(Of TOuter, IEnumerable(Of TInner), TResult))
+- uid: Hgk.Zero.Options.Linq.LinqToOpt.GroupJoin``4(Hgk.Zero.Options.IOpt{``0},System.Collections.Generic.IEnumerable{``1},System.Func{``0,``2},System.Func{``1,``2},System.Func{``0,System.Collections.Generic.IEnumerable{``1},``3},System.Collections.Generic.IEqualityComparer{``2})
+  name: GroupJoin<TOuter, TInner, TKey, TResult>(IOpt<TOuter>, IEnumerable<TInner>, Func<TOuter, TKey>, Func<TInner, TKey>, Func<TOuter, IEnumerable<TInner>, TResult>, IEqualityComparer<TKey>)
+  href: api/Hgk.Zero.Options.Linq.LinqToOpt.html#Hgk_Zero_Options_Linq_LinqToOpt_GroupJoin__4_Hgk_Zero_Options_IOpt___0__System_Collections_Generic_IEnumerable___1__System_Func___0___2__System_Func___1___2__System_Func___0_System_Collections_Generic_IEnumerable___1____3__System_Collections_Generic_IEqualityComparer___2__
+  commentId: M:Hgk.Zero.Options.Linq.LinqToOpt.GroupJoin``4(Hgk.Zero.Options.IOpt{``0},System.Collections.Generic.IEnumerable{``1},System.Func{``0,``2},System.Func{``1,``2},System.Func{``0,System.Collections.Generic.IEnumerable{``1},``3},System.Collections.Generic.IEqualityComparer{``2})
+  name.vb: GroupJoin(Of TOuter, TInner, TKey, TResult)(IOpt(Of TOuter), IEnumerable(Of TInner), Func(Of TOuter, TKey), Func(Of TInner, TKey), Func(Of TOuter, IEnumerable(Of TInner), TResult), IEqualityComparer(Of TKey))
+  fullName: Hgk.Zero.Options.Linq.LinqToOpt.GroupJoin<TOuter, TInner, TKey, TResult>(Hgk.Zero.Options.IOpt<TOuter>, System.Collections.Generic.IEnumerable<TInner>, System.Func<TOuter, TKey>, System.Func<TInner, TKey>, System.Func<TOuter, System.Collections.Generic.IEnumerable<TInner>, TResult>, System.Collections.Generic.IEqualityComparer<TKey>)
+  fullName.vb: Hgk.Zero.Options.Linq.LinqToOpt.GroupJoin(Of TOuter, TInner, TKey, TResult)(Hgk.Zero.Options.IOpt(Of TOuter), System.Collections.Generic.IEnumerable(Of TInner), System.Func(Of TOuter, TKey), System.Func(Of TInner, TKey), System.Func(Of TOuter, System.Collections.Generic.IEnumerable(Of TInner), TResult), System.Collections.Generic.IEqualityComparer(Of TKey))
+  nameWithType: LinqToOpt.GroupJoin<TOuter, TInner, TKey, TResult>(IOpt<TOuter>, IEnumerable<TInner>, Func<TOuter, TKey>, Func<TInner, TKey>, Func<TOuter, IEnumerable<TInner>, TResult>, IEqualityComparer<TKey>)
+  nameWithType.vb: LinqToOpt.GroupJoin(Of TOuter, TInner, TKey, TResult)(IOpt(Of TOuter), IEnumerable(Of TInner), Func(Of TOuter, TKey), Func(Of TInner, TKey), Func(Of TOuter, IEnumerable(Of TInner), TResult), IEqualityComparer(Of TKey))
 - uid: Hgk.Zero.Options.Linq.LinqToOpt.Intersect*
   name: Intersect
   href: api/Hgk.Zero.Options.Linq.LinqToOpt.html#Hgk_Zero_Options_Linq_LinqToOpt_Intersect_
@@ -1310,6 +1035,31 @@ references:
   fullName.vb: Hgk.Zero.Options.Linq.LinqToOpt.Intersect(Of TSource)(Hgk.Zero.Options.IOpt(Of TSource), System.Collections.Generic.IEnumerable(Of TSource), System.Collections.Generic.IEqualityComparer(Of TSource))
   nameWithType: LinqToOpt.Intersect<TSource>(IOpt<TSource>, IEnumerable<TSource>, IEqualityComparer<TSource>)
   nameWithType.vb: LinqToOpt.Intersect(Of TSource)(IOpt(Of TSource), IEnumerable(Of TSource), IEqualityComparer(Of TSource))
+- uid: Hgk.Zero.Options.Linq.LinqToOpt.Join*
+  name: Join
+  href: api/Hgk.Zero.Options.Linq.LinqToOpt.html#Hgk_Zero_Options_Linq_LinqToOpt_Join_
+  commentId: Overload:Hgk.Zero.Options.Linq.LinqToOpt.Join
+  isSpec: "True"
+  fullName: Hgk.Zero.Options.Linq.LinqToOpt.Join
+  nameWithType: LinqToOpt.Join
+- uid: Hgk.Zero.Options.Linq.LinqToOpt.Join``4(Hgk.Zero.Options.IOpt{``0},Hgk.Zero.Options.IOpt{``1},System.Func{``0,``2},System.Func{``1,``2},System.Func{``0,``1,``3})
+  name: Join<TOuter, TInner, TKey, TResult>(IOpt<TOuter>, IOpt<TInner>, Func<TOuter, TKey>, Func<TInner, TKey>, Func<TOuter, TInner, TResult>)
+  href: api/Hgk.Zero.Options.Linq.LinqToOpt.html#Hgk_Zero_Options_Linq_LinqToOpt_Join__4_Hgk_Zero_Options_IOpt___0__Hgk_Zero_Options_IOpt___1__System_Func___0___2__System_Func___1___2__System_Func___0___1___3__
+  commentId: M:Hgk.Zero.Options.Linq.LinqToOpt.Join``4(Hgk.Zero.Options.IOpt{``0},Hgk.Zero.Options.IOpt{``1},System.Func{``0,``2},System.Func{``1,``2},System.Func{``0,``1,``3})
+  name.vb: Join(Of TOuter, TInner, TKey, TResult)(IOpt(Of TOuter), IOpt(Of TInner), Func(Of TOuter, TKey), Func(Of TInner, TKey), Func(Of TOuter, TInner, TResult))
+  fullName: Hgk.Zero.Options.Linq.LinqToOpt.Join<TOuter, TInner, TKey, TResult>(Hgk.Zero.Options.IOpt<TOuter>, Hgk.Zero.Options.IOpt<TInner>, System.Func<TOuter, TKey>, System.Func<TInner, TKey>, System.Func<TOuter, TInner, TResult>)
+  fullName.vb: Hgk.Zero.Options.Linq.LinqToOpt.Join(Of TOuter, TInner, TKey, TResult)(Hgk.Zero.Options.IOpt(Of TOuter), Hgk.Zero.Options.IOpt(Of TInner), System.Func(Of TOuter, TKey), System.Func(Of TInner, TKey), System.Func(Of TOuter, TInner, TResult))
+  nameWithType: LinqToOpt.Join<TOuter, TInner, TKey, TResult>(IOpt<TOuter>, IOpt<TInner>, Func<TOuter, TKey>, Func<TInner, TKey>, Func<TOuter, TInner, TResult>)
+  nameWithType.vb: LinqToOpt.Join(Of TOuter, TInner, TKey, TResult)(IOpt(Of TOuter), IOpt(Of TInner), Func(Of TOuter, TKey), Func(Of TInner, TKey), Func(Of TOuter, TInner, TResult))
+- uid: Hgk.Zero.Options.Linq.LinqToOpt.Join``4(Hgk.Zero.Options.IOpt{``0},Hgk.Zero.Options.IOpt{``1},System.Func{``0,``2},System.Func{``1,``2},System.Func{``0,``1,``3},System.Collections.Generic.IEqualityComparer{``2})
+  name: Join<TOuter, TInner, TKey, TResult>(IOpt<TOuter>, IOpt<TInner>, Func<TOuter, TKey>, Func<TInner, TKey>, Func<TOuter, TInner, TResult>, IEqualityComparer<TKey>)
+  href: api/Hgk.Zero.Options.Linq.LinqToOpt.html#Hgk_Zero_Options_Linq_LinqToOpt_Join__4_Hgk_Zero_Options_IOpt___0__Hgk_Zero_Options_IOpt___1__System_Func___0___2__System_Func___1___2__System_Func___0___1___3__System_Collections_Generic_IEqualityComparer___2__
+  commentId: M:Hgk.Zero.Options.Linq.LinqToOpt.Join``4(Hgk.Zero.Options.IOpt{``0},Hgk.Zero.Options.IOpt{``1},System.Func{``0,``2},System.Func{``1,``2},System.Func{``0,``1,``3},System.Collections.Generic.IEqualityComparer{``2})
+  name.vb: Join(Of TOuter, TInner, TKey, TResult)(IOpt(Of TOuter), IOpt(Of TInner), Func(Of TOuter, TKey), Func(Of TInner, TKey), Func(Of TOuter, TInner, TResult), IEqualityComparer(Of TKey))
+  fullName: Hgk.Zero.Options.Linq.LinqToOpt.Join<TOuter, TInner, TKey, TResult>(Hgk.Zero.Options.IOpt<TOuter>, Hgk.Zero.Options.IOpt<TInner>, System.Func<TOuter, TKey>, System.Func<TInner, TKey>, System.Func<TOuter, TInner, TResult>, System.Collections.Generic.IEqualityComparer<TKey>)
+  fullName.vb: Hgk.Zero.Options.Linq.LinqToOpt.Join(Of TOuter, TInner, TKey, TResult)(Hgk.Zero.Options.IOpt(Of TOuter), Hgk.Zero.Options.IOpt(Of TInner), System.Func(Of TOuter, TKey), System.Func(Of TInner, TKey), System.Func(Of TOuter, TInner, TResult), System.Collections.Generic.IEqualityComparer(Of TKey))
+  nameWithType: LinqToOpt.Join<TOuter, TInner, TKey, TResult>(IOpt<TOuter>, IOpt<TInner>, Func<TOuter, TKey>, Func<TInner, TKey>, Func<TOuter, TInner, TResult>, IEqualityComparer<TKey>)
+  nameWithType.vb: LinqToOpt.Join(Of TOuter, TInner, TKey, TResult)(IOpt(Of TOuter), IOpt(Of TInner), Func(Of TOuter, TKey), Func(Of TInner, TKey), Func(Of TOuter, TInner, TResult), IEqualityComparer(Of TKey))
 - uid: Hgk.Zero.Options.Linq.LinqToOpt.Last*
   name: Last
   href: api/Hgk.Zero.Options.Linq.LinqToOpt.html#Hgk_Zero_Options_Linq_LinqToOpt_Last_
@@ -1861,6 +1611,56 @@ references:
   fullName.vb: Hgk.Zero.Options.Linq.LinqToOpt.OfType(Of TResult)(Hgk.Zero.Options.IOpt)
   nameWithType: LinqToOpt.OfType<TResult>(IOpt)
   nameWithType.vb: LinqToOpt.OfType(Of TResult)(IOpt)
+- uid: Hgk.Zero.Options.Linq.LinqToOpt.OrderBy*
+  name: OrderBy
+  href: api/Hgk.Zero.Options.Linq.LinqToOpt.html#Hgk_Zero_Options_Linq_LinqToOpt_OrderBy_
+  commentId: Overload:Hgk.Zero.Options.Linq.LinqToOpt.OrderBy
+  isSpec: "True"
+  fullName: Hgk.Zero.Options.Linq.LinqToOpt.OrderBy
+  nameWithType: LinqToOpt.OrderBy
+- uid: Hgk.Zero.Options.Linq.LinqToOpt.OrderBy``2(Hgk.Zero.Options.IOpt{``0},System.Func{``0,``1})
+  name: OrderBy<TSource, TKey>(IOpt<TSource>, Func<TSource, TKey>)
+  href: api/Hgk.Zero.Options.Linq.LinqToOpt.html#Hgk_Zero_Options_Linq_LinqToOpt_OrderBy__2_Hgk_Zero_Options_IOpt___0__System_Func___0___1__
+  commentId: M:Hgk.Zero.Options.Linq.LinqToOpt.OrderBy``2(Hgk.Zero.Options.IOpt{``0},System.Func{``0,``1})
+  name.vb: OrderBy(Of TSource, TKey)(IOpt(Of TSource), Func(Of TSource, TKey))
+  fullName: Hgk.Zero.Options.Linq.LinqToOpt.OrderBy<TSource, TKey>(Hgk.Zero.Options.IOpt<TSource>, System.Func<TSource, TKey>)
+  fullName.vb: Hgk.Zero.Options.Linq.LinqToOpt.OrderBy(Of TSource, TKey)(Hgk.Zero.Options.IOpt(Of TSource), System.Func(Of TSource, TKey))
+  nameWithType: LinqToOpt.OrderBy<TSource, TKey>(IOpt<TSource>, Func<TSource, TKey>)
+  nameWithType.vb: LinqToOpt.OrderBy(Of TSource, TKey)(IOpt(Of TSource), Func(Of TSource, TKey))
+- uid: Hgk.Zero.Options.Linq.LinqToOpt.OrderBy``2(Hgk.Zero.Options.IOpt{``0},System.Func{``0,``1},System.Collections.Generic.IComparer{``1})
+  name: OrderBy<TSource, TKey>(IOpt<TSource>, Func<TSource, TKey>, IComparer<TKey>)
+  href: api/Hgk.Zero.Options.Linq.LinqToOpt.html#Hgk_Zero_Options_Linq_LinqToOpt_OrderBy__2_Hgk_Zero_Options_IOpt___0__System_Func___0___1__System_Collections_Generic_IComparer___1__
+  commentId: M:Hgk.Zero.Options.Linq.LinqToOpt.OrderBy``2(Hgk.Zero.Options.IOpt{``0},System.Func{``0,``1},System.Collections.Generic.IComparer{``1})
+  name.vb: OrderBy(Of TSource, TKey)(IOpt(Of TSource), Func(Of TSource, TKey), IComparer(Of TKey))
+  fullName: Hgk.Zero.Options.Linq.LinqToOpt.OrderBy<TSource, TKey>(Hgk.Zero.Options.IOpt<TSource>, System.Func<TSource, TKey>, System.Collections.Generic.IComparer<TKey>)
+  fullName.vb: Hgk.Zero.Options.Linq.LinqToOpt.OrderBy(Of TSource, TKey)(Hgk.Zero.Options.IOpt(Of TSource), System.Func(Of TSource, TKey), System.Collections.Generic.IComparer(Of TKey))
+  nameWithType: LinqToOpt.OrderBy<TSource, TKey>(IOpt<TSource>, Func<TSource, TKey>, IComparer<TKey>)
+  nameWithType.vb: LinqToOpt.OrderBy(Of TSource, TKey)(IOpt(Of TSource), Func(Of TSource, TKey), IComparer(Of TKey))
+- uid: Hgk.Zero.Options.Linq.LinqToOpt.OrderByDescending*
+  name: OrderByDescending
+  href: api/Hgk.Zero.Options.Linq.LinqToOpt.html#Hgk_Zero_Options_Linq_LinqToOpt_OrderByDescending_
+  commentId: Overload:Hgk.Zero.Options.Linq.LinqToOpt.OrderByDescending
+  isSpec: "True"
+  fullName: Hgk.Zero.Options.Linq.LinqToOpt.OrderByDescending
+  nameWithType: LinqToOpt.OrderByDescending
+- uid: Hgk.Zero.Options.Linq.LinqToOpt.OrderByDescending``2(Hgk.Zero.Options.IOpt{``0},System.Func{``0,``1})
+  name: OrderByDescending<TSource, TKey>(IOpt<TSource>, Func<TSource, TKey>)
+  href: api/Hgk.Zero.Options.Linq.LinqToOpt.html#Hgk_Zero_Options_Linq_LinqToOpt_OrderByDescending__2_Hgk_Zero_Options_IOpt___0__System_Func___0___1__
+  commentId: M:Hgk.Zero.Options.Linq.LinqToOpt.OrderByDescending``2(Hgk.Zero.Options.IOpt{``0},System.Func{``0,``1})
+  name.vb: OrderByDescending(Of TSource, TKey)(IOpt(Of TSource), Func(Of TSource, TKey))
+  fullName: Hgk.Zero.Options.Linq.LinqToOpt.OrderByDescending<TSource, TKey>(Hgk.Zero.Options.IOpt<TSource>, System.Func<TSource, TKey>)
+  fullName.vb: Hgk.Zero.Options.Linq.LinqToOpt.OrderByDescending(Of TSource, TKey)(Hgk.Zero.Options.IOpt(Of TSource), System.Func(Of TSource, TKey))
+  nameWithType: LinqToOpt.OrderByDescending<TSource, TKey>(IOpt<TSource>, Func<TSource, TKey>)
+  nameWithType.vb: LinqToOpt.OrderByDescending(Of TSource, TKey)(IOpt(Of TSource), Func(Of TSource, TKey))
+- uid: Hgk.Zero.Options.Linq.LinqToOpt.OrderByDescending``2(Hgk.Zero.Options.IOpt{``0},System.Func{``0,``1},System.Collections.Generic.IComparer{``1})
+  name: OrderByDescending<TSource, TKey>(IOpt<TSource>, Func<TSource, TKey>, IComparer<TKey>)
+  href: api/Hgk.Zero.Options.Linq.LinqToOpt.html#Hgk_Zero_Options_Linq_LinqToOpt_OrderByDescending__2_Hgk_Zero_Options_IOpt___0__System_Func___0___1__System_Collections_Generic_IComparer___1__
+  commentId: M:Hgk.Zero.Options.Linq.LinqToOpt.OrderByDescending``2(Hgk.Zero.Options.IOpt{``0},System.Func{``0,``1},System.Collections.Generic.IComparer{``1})
+  name.vb: OrderByDescending(Of TSource, TKey)(IOpt(Of TSource), Func(Of TSource, TKey), IComparer(Of TKey))
+  fullName: Hgk.Zero.Options.Linq.LinqToOpt.OrderByDescending<TSource, TKey>(Hgk.Zero.Options.IOpt<TSource>, System.Func<TSource, TKey>, System.Collections.Generic.IComparer<TKey>)
+  fullName.vb: Hgk.Zero.Options.Linq.LinqToOpt.OrderByDescending(Of TSource, TKey)(Hgk.Zero.Options.IOpt(Of TSource), System.Func(Of TSource, TKey), System.Collections.Generic.IComparer(Of TKey))
+  nameWithType: LinqToOpt.OrderByDescending<TSource, TKey>(IOpt<TSource>, Func<TSource, TKey>, IComparer<TKey>)
+  nameWithType.vb: LinqToOpt.OrderByDescending(Of TSource, TKey)(IOpt(Of TSource), Func(Of TSource, TKey), IComparer(Of TKey))
 - uid: Hgk.Zero.Options.Linq.LinqToOpt.ReplaceIfEmpty*
   name: ReplaceIfEmpty
   href: api/Hgk.Zero.Options.Linq.LinqToOpt.html#Hgk_Zero_Options_Linq_LinqToOpt_ReplaceIfEmpty_
@@ -2332,6 +2132,56 @@ references:
   fullName.vb: Hgk.Zero.Options.Linq.LinqToOpt.TakeWhile(Of TSource)(Hgk.Zero.Options.IOpt(Of TSource), System.Func(Of TSource, System.Int32, System.Boolean))
   nameWithType: LinqToOpt.TakeWhile<TSource>(IOpt<TSource>, Func<TSource, Int32, Boolean>)
   nameWithType.vb: LinqToOpt.TakeWhile(Of TSource)(IOpt(Of TSource), Func(Of TSource, Int32, Boolean))
+- uid: Hgk.Zero.Options.Linq.LinqToOpt.ThenBy*
+  name: ThenBy
+  href: api/Hgk.Zero.Options.Linq.LinqToOpt.html#Hgk_Zero_Options_Linq_LinqToOpt_ThenBy_
+  commentId: Overload:Hgk.Zero.Options.Linq.LinqToOpt.ThenBy
+  isSpec: "True"
+  fullName: Hgk.Zero.Options.Linq.LinqToOpt.ThenBy
+  nameWithType: LinqToOpt.ThenBy
+- uid: Hgk.Zero.Options.Linq.LinqToOpt.ThenBy``2(Hgk.Zero.Options.IOpt{``0},System.Func{``0,``1})
+  name: ThenBy<TSource, TKey>(IOpt<TSource>, Func<TSource, TKey>)
+  href: api/Hgk.Zero.Options.Linq.LinqToOpt.html#Hgk_Zero_Options_Linq_LinqToOpt_ThenBy__2_Hgk_Zero_Options_IOpt___0__System_Func___0___1__
+  commentId: M:Hgk.Zero.Options.Linq.LinqToOpt.ThenBy``2(Hgk.Zero.Options.IOpt{``0},System.Func{``0,``1})
+  name.vb: ThenBy(Of TSource, TKey)(IOpt(Of TSource), Func(Of TSource, TKey))
+  fullName: Hgk.Zero.Options.Linq.LinqToOpt.ThenBy<TSource, TKey>(Hgk.Zero.Options.IOpt<TSource>, System.Func<TSource, TKey>)
+  fullName.vb: Hgk.Zero.Options.Linq.LinqToOpt.ThenBy(Of TSource, TKey)(Hgk.Zero.Options.IOpt(Of TSource), System.Func(Of TSource, TKey))
+  nameWithType: LinqToOpt.ThenBy<TSource, TKey>(IOpt<TSource>, Func<TSource, TKey>)
+  nameWithType.vb: LinqToOpt.ThenBy(Of TSource, TKey)(IOpt(Of TSource), Func(Of TSource, TKey))
+- uid: Hgk.Zero.Options.Linq.LinqToOpt.ThenBy``2(Hgk.Zero.Options.IOpt{``0},System.Func{``0,``1},System.Collections.Generic.IComparer{``1})
+  name: ThenBy<TSource, TKey>(IOpt<TSource>, Func<TSource, TKey>, IComparer<TKey>)
+  href: api/Hgk.Zero.Options.Linq.LinqToOpt.html#Hgk_Zero_Options_Linq_LinqToOpt_ThenBy__2_Hgk_Zero_Options_IOpt___0__System_Func___0___1__System_Collections_Generic_IComparer___1__
+  commentId: M:Hgk.Zero.Options.Linq.LinqToOpt.ThenBy``2(Hgk.Zero.Options.IOpt{``0},System.Func{``0,``1},System.Collections.Generic.IComparer{``1})
+  name.vb: ThenBy(Of TSource, TKey)(IOpt(Of TSource), Func(Of TSource, TKey), IComparer(Of TKey))
+  fullName: Hgk.Zero.Options.Linq.LinqToOpt.ThenBy<TSource, TKey>(Hgk.Zero.Options.IOpt<TSource>, System.Func<TSource, TKey>, System.Collections.Generic.IComparer<TKey>)
+  fullName.vb: Hgk.Zero.Options.Linq.LinqToOpt.ThenBy(Of TSource, TKey)(Hgk.Zero.Options.IOpt(Of TSource), System.Func(Of TSource, TKey), System.Collections.Generic.IComparer(Of TKey))
+  nameWithType: LinqToOpt.ThenBy<TSource, TKey>(IOpt<TSource>, Func<TSource, TKey>, IComparer<TKey>)
+  nameWithType.vb: LinqToOpt.ThenBy(Of TSource, TKey)(IOpt(Of TSource), Func(Of TSource, TKey), IComparer(Of TKey))
+- uid: Hgk.Zero.Options.Linq.LinqToOpt.ThenByDescending*
+  name: ThenByDescending
+  href: api/Hgk.Zero.Options.Linq.LinqToOpt.html#Hgk_Zero_Options_Linq_LinqToOpt_ThenByDescending_
+  commentId: Overload:Hgk.Zero.Options.Linq.LinqToOpt.ThenByDescending
+  isSpec: "True"
+  fullName: Hgk.Zero.Options.Linq.LinqToOpt.ThenByDescending
+  nameWithType: LinqToOpt.ThenByDescending
+- uid: Hgk.Zero.Options.Linq.LinqToOpt.ThenByDescending``2(Hgk.Zero.Options.IOpt{``0},System.Func{``0,``1})
+  name: ThenByDescending<TSource, TKey>(IOpt<TSource>, Func<TSource, TKey>)
+  href: api/Hgk.Zero.Options.Linq.LinqToOpt.html#Hgk_Zero_Options_Linq_LinqToOpt_ThenByDescending__2_Hgk_Zero_Options_IOpt___0__System_Func___0___1__
+  commentId: M:Hgk.Zero.Options.Linq.LinqToOpt.ThenByDescending``2(Hgk.Zero.Options.IOpt{``0},System.Func{``0,``1})
+  name.vb: ThenByDescending(Of TSource, TKey)(IOpt(Of TSource), Func(Of TSource, TKey))
+  fullName: Hgk.Zero.Options.Linq.LinqToOpt.ThenByDescending<TSource, TKey>(Hgk.Zero.Options.IOpt<TSource>, System.Func<TSource, TKey>)
+  fullName.vb: Hgk.Zero.Options.Linq.LinqToOpt.ThenByDescending(Of TSource, TKey)(Hgk.Zero.Options.IOpt(Of TSource), System.Func(Of TSource, TKey))
+  nameWithType: LinqToOpt.ThenByDescending<TSource, TKey>(IOpt<TSource>, Func<TSource, TKey>)
+  nameWithType.vb: LinqToOpt.ThenByDescending(Of TSource, TKey)(IOpt(Of TSource), Func(Of TSource, TKey))
+- uid: Hgk.Zero.Options.Linq.LinqToOpt.ThenByDescending``2(Hgk.Zero.Options.IOpt{``0},System.Func{``0,``1},System.Collections.Generic.IComparer{``1})
+  name: ThenByDescending<TSource, TKey>(IOpt<TSource>, Func<TSource, TKey>, IComparer<TKey>)
+  href: api/Hgk.Zero.Options.Linq.LinqToOpt.html#Hgk_Zero_Options_Linq_LinqToOpt_ThenByDescending__2_Hgk_Zero_Options_IOpt___0__System_Func___0___1__System_Collections_Generic_IComparer___1__
+  commentId: M:Hgk.Zero.Options.Linq.LinqToOpt.ThenByDescending``2(Hgk.Zero.Options.IOpt{``0},System.Func{``0,``1},System.Collections.Generic.IComparer{``1})
+  name.vb: ThenByDescending(Of TSource, TKey)(IOpt(Of TSource), Func(Of TSource, TKey), IComparer(Of TKey))
+  fullName: Hgk.Zero.Options.Linq.LinqToOpt.ThenByDescending<TSource, TKey>(Hgk.Zero.Options.IOpt<TSource>, System.Func<TSource, TKey>, System.Collections.Generic.IComparer<TKey>)
+  fullName.vb: Hgk.Zero.Options.Linq.LinqToOpt.ThenByDescending(Of TSource, TKey)(Hgk.Zero.Options.IOpt(Of TSource), System.Func(Of TSource, TKey), System.Collections.Generic.IComparer(Of TKey))
+  nameWithType: LinqToOpt.ThenByDescending<TSource, TKey>(IOpt<TSource>, Func<TSource, TKey>, IComparer<TKey>)
+  nameWithType.vb: LinqToOpt.ThenByDescending(Of TSource, TKey)(IOpt(Of TSource), Func(Of TSource, TKey), IComparer(Of TKey))
 - uid: Hgk.Zero.Options.Linq.LinqToOpt.ToArray*
   name: ToArray
   href: api/Hgk.Zero.Options.Linq.LinqToOpt.html#Hgk_Zero_Options_Linq_LinqToOpt_ToArray_
@@ -2515,6 +2365,22 @@ references:
   fullName.vb: Hgk.Zero.Options.Opt.Create(Of T)(System.Nullable(Of T))
   nameWithType: Opt.Create<T>(Nullable<T>)
   nameWithType.vb: Opt.Create(Of T)(Nullable(Of T))
+- uid: Hgk.Zero.Options.Opt.Defer*
+  name: Defer
+  href: api/Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Defer_
+  commentId: Overload:Hgk.Zero.Options.Opt.Defer
+  isSpec: "True"
+  fullName: Hgk.Zero.Options.Opt.Defer
+  nameWithType: Opt.Defer
+- uid: Hgk.Zero.Options.Opt.Defer``1(System.Func{Hgk.Zero.Options.Opt{``0}})
+  name: Defer<T>(Func<Opt<T>>)
+  href: api/Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Defer__1_System_Func_Hgk_Zero_Options_Opt___0___
+  commentId: M:Hgk.Zero.Options.Opt.Defer``1(System.Func{Hgk.Zero.Options.Opt{``0}})
+  name.vb: Defer(Of T)(Func(Of Opt(Of T)))
+  fullName: Hgk.Zero.Options.Opt.Defer<T>(System.Func<Hgk.Zero.Options.Opt<T>>)
+  fullName.vb: Hgk.Zero.Options.Opt.Defer(Of T)(System.Func(Of Hgk.Zero.Options.Opt(Of T)))
+  nameWithType: Opt.Defer<T>(Func<Opt<T>>)
+  nameWithType.vb: Opt.Defer(Of T)(Func(Of Opt(Of T)))
 - uid: Hgk.Zero.Options.Opt.Empty*
   name: Empty
   href: api/Hgk.Zero.Options.Opt.html#Hgk_Zero_Options_Opt_Empty_
@@ -2636,6 +2502,44 @@ references:
   fullName.vb: Hgk.Zero.Options.Opt(Of T).HasValue
   nameWithType: Opt<T>.HasValue
   nameWithType.vb: Opt(Of T).HasValue
+- uid: Hgk.Zero.Options.Opt`1.Hgk#Zero#Options#IOpt#ResolveUntypedOption*
+  name: IOpt.ResolveUntypedOption
+  href: api/Hgk.Zero.Options.Opt-1.html#Hgk_Zero_Options_Opt_1_Hgk_Zero_Options_IOpt_ResolveUntypedOption_
+  commentId: Overload:Hgk.Zero.Options.Opt`1.Hgk#Zero#Options#IOpt#ResolveUntypedOption
+  isSpec: "True"
+  name.vb: Hgk.Zero.Options.IOpt.ResolveUntypedOption
+  fullName: Hgk.Zero.Options.Opt<T>.Hgk.Zero.Options.IOpt.ResolveUntypedOption
+  fullName.vb: Hgk.Zero.Options.Opt(Of T).Hgk.Zero.Options.IOpt.ResolveUntypedOption
+  nameWithType: Opt<T>.IOpt.ResolveUntypedOption
+  nameWithType.vb: Opt(Of T).Hgk.Zero.Options.IOpt.ResolveUntypedOption
+- uid: Hgk.Zero.Options.Opt`1.Hgk#Zero#Options#IOpt#ResolveUntypedOption``1(System.Func{System.Boolean,System.Object,``0})
+  name: IOpt.ResolveUntypedOption<TResult>(Func<Boolean, Object, TResult>)
+  href: api/Hgk.Zero.Options.Opt-1.html#Hgk_Zero_Options_Opt_1_Hgk_Zero_Options_IOpt_ResolveUntypedOption__1_System_Func_System_Boolean_System_Object___0__
+  commentId: M:Hgk.Zero.Options.Opt`1.Hgk#Zero#Options#IOpt#ResolveUntypedOption``1(System.Func{System.Boolean,System.Object,``0})
+  name.vb: Hgk.Zero.Options.IOpt.ResolveUntypedOption(Of TResult)(Func(Of Boolean, Object, TResult))
+  fullName: Hgk.Zero.Options.Opt<T>.Hgk.Zero.Options.IOpt.ResolveUntypedOption<TResult>(System.Func<System.Boolean, System.Object, TResult>)
+  fullName.vb: Hgk.Zero.Options.Opt(Of T).Hgk.Zero.Options.IOpt.ResolveUntypedOption(Of TResult)(System.Func(Of System.Boolean, System.Object, TResult))
+  nameWithType: Opt<T>.IOpt.ResolveUntypedOption<TResult>(Func<Boolean, Object, TResult>)
+  nameWithType.vb: Opt(Of T).Hgk.Zero.Options.IOpt.ResolveUntypedOption(Of TResult)(Func(Of Boolean, Object, TResult))
+- uid: Hgk.Zero.Options.Opt`1.Hgk#Zero#Options#IOpt{T}#ResolveOption*
+  name: IOpt<T>.ResolveOption
+  href: api/Hgk.Zero.Options.Opt-1.html#Hgk_Zero_Options_Opt_1_Hgk_Zero_Options_IOpt_T__ResolveOption_
+  commentId: Overload:Hgk.Zero.Options.Opt`1.Hgk#Zero#Options#IOpt{T}#ResolveOption
+  isSpec: "True"
+  name.vb: Hgk.Zero.Options.IOpt<T>.ResolveOption
+  fullName: Hgk.Zero.Options.Opt<T>.Hgk.Zero.Options.IOpt<T>.ResolveOption
+  fullName.vb: Hgk.Zero.Options.Opt(Of T).Hgk.Zero.Options.IOpt<T>.ResolveOption
+  nameWithType: Opt<T>.IOpt<T>.ResolveOption
+  nameWithType.vb: Opt(Of T).Hgk.Zero.Options.IOpt<T>.ResolveOption
+- uid: Hgk.Zero.Options.Opt`1.Hgk#Zero#Options#IOpt{T}#ResolveOption``1(System.Func{System.Boolean,`0,``0})
+  name: IOpt<T>.ResolveOption<TResult>(Func<Boolean, T, TResult>)
+  href: api/Hgk.Zero.Options.Opt-1.html#Hgk_Zero_Options_Opt_1_Hgk_Zero_Options_IOpt_T__ResolveOption__1_System_Func_System_Boolean__0___0__
+  commentId: M:Hgk.Zero.Options.Opt`1.Hgk#Zero#Options#IOpt{T}#ResolveOption``1(System.Func{System.Boolean,`0,``0})
+  name.vb: Hgk.Zero.Options.IOpt<T>.ResolveOption(Of TResult)(Func(Of Boolean, T, TResult))
+  fullName: Hgk.Zero.Options.Opt<T>.Hgk.Zero.Options.IOpt<T>.ResolveOption<TResult>(System.Func<System.Boolean, T, TResult>)
+  fullName.vb: Hgk.Zero.Options.Opt(Of T).Hgk.Zero.Options.IOpt<T>.ResolveOption(Of TResult)(System.Func(Of System.Boolean, T, TResult))
+  nameWithType: Opt<T>.IOpt<T>.ResolveOption<TResult>(Func<Boolean, T, TResult>)
+  nameWithType.vb: Opt(Of T).Hgk.Zero.Options.IOpt<T>.ResolveOption(Of TResult)(Func(Of Boolean, T, TResult))
 - uid: Hgk.Zero.Options.Opt`1.System#Collections#Generic#ICollection{T}#Add(`0)
   name: ICollection<T>.Add(T)
   href: api/Hgk.Zero.Options.Opt-1.html#Hgk_Zero_Options_Opt_1_System_Collections_Generic_ICollection_T__Add__0_
@@ -3061,6 +2965,22 @@ references:
   fullName.vb: Hgk.Zero.Options.SingleResultOpt.ForceSingleResultOpt(Of TSource)(Hgk.Zero.Options.ISingleResultOpt(Of TSource))
   nameWithType: SingleResultOpt.ForceSingleResultOpt<TSource>(ISingleResultOpt<TSource>)
   nameWithType.vb: SingleResultOpt.ForceSingleResultOpt(Of TSource)(ISingleResultOpt(Of TSource))
+- uid: Hgk.Zero.Options.SingleResultOpt.Match*
+  name: Match
+  href: api/Hgk.Zero.Options.SingleResultOpt.html#Hgk_Zero_Options_SingleResultOpt_Match_
+  commentId: Overload:Hgk.Zero.Options.SingleResultOpt.Match
+  isSpec: "True"
+  fullName: Hgk.Zero.Options.SingleResultOpt.Match
+  nameWithType: SingleResultOpt.Match
+- uid: Hgk.Zero.Options.SingleResultOpt.Match``2(Hgk.Zero.Options.ISingleResultOpt{``0},System.Func{``1},System.Func{``0,``1},System.Func{``1})
+  name: Match<TSource, TResult>(ISingleResultOpt<TSource>, Func<TResult>, Func<TSource, TResult>, Func<TResult>)
+  href: api/Hgk.Zero.Options.SingleResultOpt.html#Hgk_Zero_Options_SingleResultOpt_Match__2_Hgk_Zero_Options_ISingleResultOpt___0__System_Func___1__System_Func___0___1__System_Func___1__
+  commentId: M:Hgk.Zero.Options.SingleResultOpt.Match``2(Hgk.Zero.Options.ISingleResultOpt{``0},System.Func{``1},System.Func{``0,``1},System.Func{``1})
+  name.vb: Match(Of TSource, TResult)(ISingleResultOpt(Of TSource), Func(Of TResult), Func(Of TSource, TResult), Func(Of TResult))
+  fullName: Hgk.Zero.Options.SingleResultOpt.Match<TSource, TResult>(Hgk.Zero.Options.ISingleResultOpt<TSource>, System.Func<TResult>, System.Func<TSource, TResult>, System.Func<TResult>)
+  fullName.vb: Hgk.Zero.Options.SingleResultOpt.Match(Of TSource, TResult)(Hgk.Zero.Options.ISingleResultOpt(Of TSource), System.Func(Of TResult), System.Func(Of TSource, TResult), System.Func(Of TResult))
+  nameWithType: SingleResultOpt.Match<TSource, TResult>(ISingleResultOpt<TSource>, Func<TResult>, Func<TSource, TResult>, Func<TResult>)
+  nameWithType.vb: SingleResultOpt.Match(Of TSource, TResult)(ISingleResultOpt(Of TSource), Func(Of TResult), Func(Of TSource, TResult), Func(Of TResult))
 - uid: Hgk.Zero.Options.SingleResultOpt.MatchOpt*
   name: MatchOpt
   href: api/Hgk.Zero.Options.SingleResultOpt.html#Hgk_Zero_Options_SingleResultOpt_MatchOpt_
