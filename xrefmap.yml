@@ -7,6 +7,446 @@ references:
   commentId: N:Hgk.Zero.Options
   fullName: Hgk.Zero.Options
   nameWithType: Hgk.Zero.Options
+- uid: Hgk.Zero.Options.Convert
+  name: Hgk.Zero.Options.Convert
+  href: api/Hgk.Zero.Options.Convert.html
+  commentId: N:Hgk.Zero.Options.Convert
+  fullName: Hgk.Zero.Options.Convert
+  nameWithType: Hgk.Zero.Options.Convert
+- uid: Hgk.Zero.Options.Convert.ParseToOpt
+  name: ParseToOpt
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html
+  commentId: T:Hgk.Zero.Options.Convert.ParseToOpt
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt
+  nameWithType: ParseToOpt
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseBoolean(System.String)
+  name: ParseBoolean(String)
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseBoolean_System_String_
+  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseBoolean(System.String)
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseBoolean(System.String)
+  nameWithType: ParseToOpt.ParseBoolean(String)
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseBoolean*
+  name: ParseBoolean
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseBoolean_
+  commentId: Overload:Hgk.Zero.Options.Convert.ParseToOpt.ParseBoolean
+  isSpec: "True"
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseBoolean
+  nameWithType: ParseToOpt.ParseBoolean
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseByte(System.String)
+  name: ParseByte(String)
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseByte_System_String_
+  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseByte(System.String)
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseByte(System.String)
+  nameWithType: ParseToOpt.ParseByte(String)
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseByte(System.String,System.Globalization.NumberStyles,System.IFormatProvider)
+  name: ParseByte(String, NumberStyles, IFormatProvider)
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseByte_System_String_System_Globalization_NumberStyles_System_IFormatProvider_
+  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseByte(System.String,System.Globalization.NumberStyles,System.IFormatProvider)
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseByte(System.String, System.Globalization.NumberStyles, System.IFormatProvider)
+  nameWithType: ParseToOpt.ParseByte(String, NumberStyles, IFormatProvider)
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseByte*
+  name: ParseByte
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseByte_
+  commentId: Overload:Hgk.Zero.Options.Convert.ParseToOpt.ParseByte
+  isSpec: "True"
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseByte
+  nameWithType: ParseToOpt.ParseByte
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseChar(System.String)
+  name: ParseChar(String)
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseChar_System_String_
+  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseChar(System.String)
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseChar(System.String)
+  nameWithType: ParseToOpt.ParseChar(String)
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseChar*
+  name: ParseChar
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseChar_
+  commentId: Overload:Hgk.Zero.Options.Convert.ParseToOpt.ParseChar
+  isSpec: "True"
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseChar
+  nameWithType: ParseToOpt.ParseChar
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTime(System.String)
+  name: ParseDateTime(String)
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseDateTime_System_String_
+  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTime(System.String)
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTime(System.String)
+  nameWithType: ParseToOpt.ParseDateTime(String)
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTime(System.String,System.IFormatProvider,System.Globalization.DateTimeStyles)
+  name: ParseDateTime(String, IFormatProvider, DateTimeStyles)
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseDateTime_System_String_System_IFormatProvider_System_Globalization_DateTimeStyles_
+  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTime(System.String,System.IFormatProvider,System.Globalization.DateTimeStyles)
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTime(System.String, System.IFormatProvider, System.Globalization.DateTimeStyles)
+  nameWithType: ParseToOpt.ParseDateTime(String, IFormatProvider, DateTimeStyles)
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTime*
+  name: ParseDateTime
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseDateTime_
+  commentId: Overload:Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTime
+  isSpec: "True"
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTime
+  nameWithType: ParseToOpt.ParseDateTime
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTimeExact(System.String,System.String,System.IFormatProvider,System.Globalization.DateTimeStyles)
+  name: ParseDateTimeExact(String, String, IFormatProvider, DateTimeStyles)
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseDateTimeExact_System_String_System_String_System_IFormatProvider_System_Globalization_DateTimeStyles_
+  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTimeExact(System.String,System.String,System.IFormatProvider,System.Globalization.DateTimeStyles)
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTimeExact(System.String, System.String, System.IFormatProvider, System.Globalization.DateTimeStyles)
+  nameWithType: ParseToOpt.ParseDateTimeExact(String, String, IFormatProvider, DateTimeStyles)
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTimeExact(System.String,System.String[],System.IFormatProvider,System.Globalization.DateTimeStyles)
+  name: ParseDateTimeExact(String, String[], IFormatProvider, DateTimeStyles)
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseDateTimeExact_System_String_System_String___System_IFormatProvider_System_Globalization_DateTimeStyles_
+  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTimeExact(System.String,System.String[],System.IFormatProvider,System.Globalization.DateTimeStyles)
+  name.vb: ParseDateTimeExact(String, String(), IFormatProvider, DateTimeStyles)
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTimeExact(System.String, System.String[], System.IFormatProvider, System.Globalization.DateTimeStyles)
+  fullName.vb: Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTimeExact(System.String, System.String(), System.IFormatProvider, System.Globalization.DateTimeStyles)
+  nameWithType: ParseToOpt.ParseDateTimeExact(String, String[], IFormatProvider, DateTimeStyles)
+  nameWithType.vb: ParseToOpt.ParseDateTimeExact(String, String(), IFormatProvider, DateTimeStyles)
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTimeExact*
+  name: ParseDateTimeExact
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseDateTimeExact_
+  commentId: Overload:Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTimeExact
+  isSpec: "True"
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTimeExact
+  nameWithType: ParseToOpt.ParseDateTimeExact
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTimeOffset(System.String)
+  name: ParseDateTimeOffset(String)
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseDateTimeOffset_System_String_
+  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTimeOffset(System.String)
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTimeOffset(System.String)
+  nameWithType: ParseToOpt.ParseDateTimeOffset(String)
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTimeOffset(System.String,System.IFormatProvider,System.Globalization.DateTimeStyles)
+  name: ParseDateTimeOffset(String, IFormatProvider, DateTimeStyles)
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseDateTimeOffset_System_String_System_IFormatProvider_System_Globalization_DateTimeStyles_
+  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTimeOffset(System.String,System.IFormatProvider,System.Globalization.DateTimeStyles)
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTimeOffset(System.String, System.IFormatProvider, System.Globalization.DateTimeStyles)
+  nameWithType: ParseToOpt.ParseDateTimeOffset(String, IFormatProvider, DateTimeStyles)
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTimeOffset*
+  name: ParseDateTimeOffset
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseDateTimeOffset_
+  commentId: Overload:Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTimeOffset
+  isSpec: "True"
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTimeOffset
+  nameWithType: ParseToOpt.ParseDateTimeOffset
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTimeOffsetExact(System.String,System.String,System.IFormatProvider,System.Globalization.DateTimeStyles)
+  name: ParseDateTimeOffsetExact(String, String, IFormatProvider, DateTimeStyles)
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseDateTimeOffsetExact_System_String_System_String_System_IFormatProvider_System_Globalization_DateTimeStyles_
+  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTimeOffsetExact(System.String,System.String,System.IFormatProvider,System.Globalization.DateTimeStyles)
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTimeOffsetExact(System.String, System.String, System.IFormatProvider, System.Globalization.DateTimeStyles)
+  nameWithType: ParseToOpt.ParseDateTimeOffsetExact(String, String, IFormatProvider, DateTimeStyles)
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTimeOffsetExact*
+  name: ParseDateTimeOffsetExact
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseDateTimeOffsetExact_
+  commentId: Overload:Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTimeOffsetExact
+  isSpec: "True"
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseDateTimeOffsetExact
+  nameWithType: ParseToOpt.ParseDateTimeOffsetExact
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseDecimal(System.String)
+  name: ParseDecimal(String)
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseDecimal_System_String_
+  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseDecimal(System.String)
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseDecimal(System.String)
+  nameWithType: ParseToOpt.ParseDecimal(String)
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseDecimal(System.String,System.Globalization.NumberStyles,System.IFormatProvider)
+  name: ParseDecimal(String, NumberStyles, IFormatProvider)
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseDecimal_System_String_System_Globalization_NumberStyles_System_IFormatProvider_
+  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseDecimal(System.String,System.Globalization.NumberStyles,System.IFormatProvider)
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseDecimal(System.String, System.Globalization.NumberStyles, System.IFormatProvider)
+  nameWithType: ParseToOpt.ParseDecimal(String, NumberStyles, IFormatProvider)
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseDecimal*
+  name: ParseDecimal
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseDecimal_
+  commentId: Overload:Hgk.Zero.Options.Convert.ParseToOpt.ParseDecimal
+  isSpec: "True"
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseDecimal
+  nameWithType: ParseToOpt.ParseDecimal
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseDouble(System.String)
+  name: ParseDouble(String)
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseDouble_System_String_
+  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseDouble(System.String)
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseDouble(System.String)
+  nameWithType: ParseToOpt.ParseDouble(String)
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseDouble(System.String,System.Globalization.NumberStyles,System.IFormatProvider)
+  name: ParseDouble(String, NumberStyles, IFormatProvider)
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseDouble_System_String_System_Globalization_NumberStyles_System_IFormatProvider_
+  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseDouble(System.String,System.Globalization.NumberStyles,System.IFormatProvider)
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseDouble(System.String, System.Globalization.NumberStyles, System.IFormatProvider)
+  nameWithType: ParseToOpt.ParseDouble(String, NumberStyles, IFormatProvider)
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseDouble*
+  name: ParseDouble
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseDouble_
+  commentId: Overload:Hgk.Zero.Options.Convert.ParseToOpt.ParseDouble
+  isSpec: "True"
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseDouble
+  nameWithType: ParseToOpt.ParseDouble
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseEnum*
+  name: ParseEnum
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseEnum_
+  commentId: Overload:Hgk.Zero.Options.Convert.ParseToOpt.ParseEnum
+  isSpec: "True"
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseEnum
+  nameWithType: ParseToOpt.ParseEnum
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseEnum``1(System.String)
+  name: ParseEnum<TEnum>(String)
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseEnum__1_System_String_
+  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseEnum``1(System.String)
+  name.vb: ParseEnum(Of TEnum)(String)
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseEnum<TEnum>(System.String)
+  fullName.vb: Hgk.Zero.Options.Convert.ParseToOpt.ParseEnum(Of TEnum)(System.String)
+  nameWithType: ParseToOpt.ParseEnum<TEnum>(String)
+  nameWithType.vb: ParseToOpt.ParseEnum(Of TEnum)(String)
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseEnum``1(System.String,System.Boolean)
+  name: ParseEnum<TEnum>(String, Boolean)
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseEnum__1_System_String_System_Boolean_
+  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseEnum``1(System.String,System.Boolean)
+  name.vb: ParseEnum(Of TEnum)(String, Boolean)
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseEnum<TEnum>(System.String, System.Boolean)
+  fullName.vb: Hgk.Zero.Options.Convert.ParseToOpt.ParseEnum(Of TEnum)(System.String, System.Boolean)
+  nameWithType: ParseToOpt.ParseEnum<TEnum>(String, Boolean)
+  nameWithType.vb: ParseToOpt.ParseEnum(Of TEnum)(String, Boolean)
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseGuid(System.String)
+  name: ParseGuid(String)
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseGuid_System_String_
+  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseGuid(System.String)
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseGuid(System.String)
+  nameWithType: ParseToOpt.ParseGuid(String)
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseGuid*
+  name: ParseGuid
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseGuid_
+  commentId: Overload:Hgk.Zero.Options.Convert.ParseToOpt.ParseGuid
+  isSpec: "True"
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseGuid
+  nameWithType: ParseToOpt.ParseGuid
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseGuidExact(System.String,System.String)
+  name: ParseGuidExact(String, String)
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseGuidExact_System_String_System_String_
+  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseGuidExact(System.String,System.String)
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseGuidExact(System.String, System.String)
+  nameWithType: ParseToOpt.ParseGuidExact(String, String)
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseGuidExact*
+  name: ParseGuidExact
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseGuidExact_
+  commentId: Overload:Hgk.Zero.Options.Convert.ParseToOpt.ParseGuidExact
+  isSpec: "True"
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseGuidExact
+  nameWithType: ParseToOpt.ParseGuidExact
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseInt16(System.String)
+  name: ParseInt16(String)
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseInt16_System_String_
+  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseInt16(System.String)
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseInt16(System.String)
+  nameWithType: ParseToOpt.ParseInt16(String)
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseInt16(System.String,System.Globalization.NumberStyles,System.IFormatProvider)
+  name: ParseInt16(String, NumberStyles, IFormatProvider)
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseInt16_System_String_System_Globalization_NumberStyles_System_IFormatProvider_
+  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseInt16(System.String,System.Globalization.NumberStyles,System.IFormatProvider)
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseInt16(System.String, System.Globalization.NumberStyles, System.IFormatProvider)
+  nameWithType: ParseToOpt.ParseInt16(String, NumberStyles, IFormatProvider)
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseInt16*
+  name: ParseInt16
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseInt16_
+  commentId: Overload:Hgk.Zero.Options.Convert.ParseToOpt.ParseInt16
+  isSpec: "True"
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseInt16
+  nameWithType: ParseToOpt.ParseInt16
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseInt32(System.String)
+  name: ParseInt32(String)
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseInt32_System_String_
+  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseInt32(System.String)
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseInt32(System.String)
+  nameWithType: ParseToOpt.ParseInt32(String)
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseInt32(System.String,System.Globalization.NumberStyles,System.IFormatProvider)
+  name: ParseInt32(String, NumberStyles, IFormatProvider)
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseInt32_System_String_System_Globalization_NumberStyles_System_IFormatProvider_
+  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseInt32(System.String,System.Globalization.NumberStyles,System.IFormatProvider)
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseInt32(System.String, System.Globalization.NumberStyles, System.IFormatProvider)
+  nameWithType: ParseToOpt.ParseInt32(String, NumberStyles, IFormatProvider)
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseInt32*
+  name: ParseInt32
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseInt32_
+  commentId: Overload:Hgk.Zero.Options.Convert.ParseToOpt.ParseInt32
+  isSpec: "True"
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseInt32
+  nameWithType: ParseToOpt.ParseInt32
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseInt64(System.String)
+  name: ParseInt64(String)
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseInt64_System_String_
+  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseInt64(System.String)
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseInt64(System.String)
+  nameWithType: ParseToOpt.ParseInt64(String)
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseInt64(System.String,System.Globalization.NumberStyles,System.IFormatProvider)
+  name: ParseInt64(String, NumberStyles, IFormatProvider)
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseInt64_System_String_System_Globalization_NumberStyles_System_IFormatProvider_
+  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseInt64(System.String,System.Globalization.NumberStyles,System.IFormatProvider)
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseInt64(System.String, System.Globalization.NumberStyles, System.IFormatProvider)
+  nameWithType: ParseToOpt.ParseInt64(String, NumberStyles, IFormatProvider)
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseInt64*
+  name: ParseInt64
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseInt64_
+  commentId: Overload:Hgk.Zero.Options.Convert.ParseToOpt.ParseInt64
+  isSpec: "True"
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseInt64
+  nameWithType: ParseToOpt.ParseInt64
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseSByte(System.String)
+  name: ParseSByte(String)
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseSByte_System_String_
+  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseSByte(System.String)
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseSByte(System.String)
+  nameWithType: ParseToOpt.ParseSByte(String)
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseSByte(System.String,System.Globalization.NumberStyles,System.IFormatProvider)
+  name: ParseSByte(String, NumberStyles, IFormatProvider)
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseSByte_System_String_System_Globalization_NumberStyles_System_IFormatProvider_
+  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseSByte(System.String,System.Globalization.NumberStyles,System.IFormatProvider)
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseSByte(System.String, System.Globalization.NumberStyles, System.IFormatProvider)
+  nameWithType: ParseToOpt.ParseSByte(String, NumberStyles, IFormatProvider)
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseSByte*
+  name: ParseSByte
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseSByte_
+  commentId: Overload:Hgk.Zero.Options.Convert.ParseToOpt.ParseSByte
+  isSpec: "True"
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseSByte
+  nameWithType: ParseToOpt.ParseSByte
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseSingle(System.String)
+  name: ParseSingle(String)
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseSingle_System_String_
+  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseSingle(System.String)
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseSingle(System.String)
+  nameWithType: ParseToOpt.ParseSingle(String)
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseSingle(System.String,System.Globalization.NumberStyles,System.IFormatProvider)
+  name: ParseSingle(String, NumberStyles, IFormatProvider)
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseSingle_System_String_System_Globalization_NumberStyles_System_IFormatProvider_
+  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseSingle(System.String,System.Globalization.NumberStyles,System.IFormatProvider)
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseSingle(System.String, System.Globalization.NumberStyles, System.IFormatProvider)
+  nameWithType: ParseToOpt.ParseSingle(String, NumberStyles, IFormatProvider)
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseSingle*
+  name: ParseSingle
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseSingle_
+  commentId: Overload:Hgk.Zero.Options.Convert.ParseToOpt.ParseSingle
+  isSpec: "True"
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseSingle
+  nameWithType: ParseToOpt.ParseSingle
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpan(System.String)
+  name: ParseTimeSpan(String)
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseTimeSpan_System_String_
+  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpan(System.String)
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpan(System.String)
+  nameWithType: ParseToOpt.ParseTimeSpan(String)
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpan(System.String,System.IFormatProvider)
+  name: ParseTimeSpan(String, IFormatProvider)
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseTimeSpan_System_String_System_IFormatProvider_
+  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpan(System.String,System.IFormatProvider)
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpan(System.String, System.IFormatProvider)
+  nameWithType: ParseToOpt.ParseTimeSpan(String, IFormatProvider)
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpan*
+  name: ParseTimeSpan
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseTimeSpan_
+  commentId: Overload:Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpan
+  isSpec: "True"
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpan
+  nameWithType: ParseToOpt.ParseTimeSpan
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpanExact(System.String,System.String,System.IFormatProvider)
+  name: ParseTimeSpanExact(String, String, IFormatProvider)
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseTimeSpanExact_System_String_System_String_System_IFormatProvider_
+  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpanExact(System.String,System.String,System.IFormatProvider)
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpanExact(System.String, System.String, System.IFormatProvider)
+  nameWithType: ParseToOpt.ParseTimeSpanExact(String, String, IFormatProvider)
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpanExact(System.String,System.String,System.IFormatProvider,System.Globalization.TimeSpanStyles)
+  name: ParseTimeSpanExact(String, String, IFormatProvider, TimeSpanStyles)
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseTimeSpanExact_System_String_System_String_System_IFormatProvider_System_Globalization_TimeSpanStyles_
+  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpanExact(System.String,System.String,System.IFormatProvider,System.Globalization.TimeSpanStyles)
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpanExact(System.String, System.String, System.IFormatProvider, System.Globalization.TimeSpanStyles)
+  nameWithType: ParseToOpt.ParseTimeSpanExact(String, String, IFormatProvider, TimeSpanStyles)
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpanExact(System.String,System.String[],System.IFormatProvider)
+  name: ParseTimeSpanExact(String, String[], IFormatProvider)
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseTimeSpanExact_System_String_System_String___System_IFormatProvider_
+  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpanExact(System.String,System.String[],System.IFormatProvider)
+  name.vb: ParseTimeSpanExact(String, String(), IFormatProvider)
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpanExact(System.String, System.String[], System.IFormatProvider)
+  fullName.vb: Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpanExact(System.String, System.String(), System.IFormatProvider)
+  nameWithType: ParseToOpt.ParseTimeSpanExact(String, String[], IFormatProvider)
+  nameWithType.vb: ParseToOpt.ParseTimeSpanExact(String, String(), IFormatProvider)
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpanExact(System.String,System.String[],System.IFormatProvider,System.Globalization.TimeSpanStyles)
+  name: ParseTimeSpanExact(String, String[], IFormatProvider, TimeSpanStyles)
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseTimeSpanExact_System_String_System_String___System_IFormatProvider_System_Globalization_TimeSpanStyles_
+  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpanExact(System.String,System.String[],System.IFormatProvider,System.Globalization.TimeSpanStyles)
+  name.vb: ParseTimeSpanExact(String, String(), IFormatProvider, TimeSpanStyles)
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpanExact(System.String, System.String[], System.IFormatProvider, System.Globalization.TimeSpanStyles)
+  fullName.vb: Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpanExact(System.String, System.String(), System.IFormatProvider, System.Globalization.TimeSpanStyles)
+  nameWithType: ParseToOpt.ParseTimeSpanExact(String, String[], IFormatProvider, TimeSpanStyles)
+  nameWithType.vb: ParseToOpt.ParseTimeSpanExact(String, String(), IFormatProvider, TimeSpanStyles)
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpanExact*
+  name: ParseTimeSpanExact
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseTimeSpanExact_
+  commentId: Overload:Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpanExact
+  isSpec: "True"
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseTimeSpanExact
+  nameWithType: ParseToOpt.ParseTimeSpanExact
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt16(System.String)
+  name: ParseUInt16(String)
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseUInt16_System_String_
+  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt16(System.String)
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt16(System.String)
+  nameWithType: ParseToOpt.ParseUInt16(String)
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt16(System.String,System.Globalization.NumberStyles,System.IFormatProvider)
+  name: ParseUInt16(String, NumberStyles, IFormatProvider)
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseUInt16_System_String_System_Globalization_NumberStyles_System_IFormatProvider_
+  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt16(System.String,System.Globalization.NumberStyles,System.IFormatProvider)
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt16(System.String, System.Globalization.NumberStyles, System.IFormatProvider)
+  nameWithType: ParseToOpt.ParseUInt16(String, NumberStyles, IFormatProvider)
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt16*
+  name: ParseUInt16
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseUInt16_
+  commentId: Overload:Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt16
+  isSpec: "True"
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt16
+  nameWithType: ParseToOpt.ParseUInt16
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt32(System.String)
+  name: ParseUInt32(String)
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseUInt32_System_String_
+  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt32(System.String)
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt32(System.String)
+  nameWithType: ParseToOpt.ParseUInt32(String)
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt32(System.String,System.Globalization.NumberStyles,System.IFormatProvider)
+  name: ParseUInt32(String, NumberStyles, IFormatProvider)
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseUInt32_System_String_System_Globalization_NumberStyles_System_IFormatProvider_
+  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt32(System.String,System.Globalization.NumberStyles,System.IFormatProvider)
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt32(System.String, System.Globalization.NumberStyles, System.IFormatProvider)
+  nameWithType: ParseToOpt.ParseUInt32(String, NumberStyles, IFormatProvider)
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt32*
+  name: ParseUInt32
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseUInt32_
+  commentId: Overload:Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt32
+  isSpec: "True"
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt32
+  nameWithType: ParseToOpt.ParseUInt32
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt64(System.String)
+  name: ParseUInt64(String)
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseUInt64_System_String_
+  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt64(System.String)
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt64(System.String)
+  nameWithType: ParseToOpt.ParseUInt64(String)
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt64(System.String,System.Globalization.NumberStyles,System.IFormatProvider)
+  name: ParseUInt64(String, NumberStyles, IFormatProvider)
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseUInt64_System_String_System_Globalization_NumberStyles_System_IFormatProvider_
+  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt64(System.String,System.Globalization.NumberStyles,System.IFormatProvider)
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt64(System.String, System.Globalization.NumberStyles, System.IFormatProvider)
+  nameWithType: ParseToOpt.ParseUInt64(String, NumberStyles, IFormatProvider)
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt64*
+  name: ParseUInt64
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseUInt64_
+  commentId: Overload:Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt64
+  isSpec: "True"
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseUInt64
+  nameWithType: ParseToOpt.ParseUInt64
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseVersion(System.String)
+  name: ParseVersion(String)
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseVersion_System_String_
+  commentId: M:Hgk.Zero.Options.Convert.ParseToOpt.ParseVersion(System.String)
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseVersion(System.String)
+  nameWithType: ParseToOpt.ParseVersion(String)
+- uid: Hgk.Zero.Options.Convert.ParseToOpt.ParseVersion*
+  name: ParseVersion
+  href: api/Hgk.Zero.Options.Convert.ParseToOpt.html#Hgk_Zero_Options_Convert_ParseToOpt_ParseVersion_
+  commentId: Overload:Hgk.Zero.Options.Convert.ParseToOpt.ParseVersion
+  isSpec: "True"
+  fullName: Hgk.Zero.Options.Convert.ParseToOpt.ParseVersion
+  nameWithType: ParseToOpt.ParseVersion
 - uid: Hgk.Zero.Options.IOpt
   name: IOpt
   href: api/Hgk.Zero.Options.IOpt.html
